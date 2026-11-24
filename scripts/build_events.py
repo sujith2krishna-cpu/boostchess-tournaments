@@ -45,6 +45,7 @@ from sources import aicf, chessbase_calendar, chessfee, chessresults_ind  # noqa
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
+import daily  # noqa: E402
 
 SOURCE_MODULES = {
     "aicf": aicf,
@@ -575,6 +576,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
 
     snapshots, source_meta, source_stats = {}, {}, {}
+    blocked: set[str] = set()
     problems: list[str] = []
     attempted = succeeded = 0
     for name in AUTOMATIC_SOURCES:
@@ -611,6 +613,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
                 meta["last_success"] = now_iso
                 succeeded += 1
             except SourceSkipped as exc:
+                blocked.add(name)
                 meta.update(status="skipped", message=str(exc))
                 meta["last_error"] = {"at": now_iso, "message": str(exc)}
                 problems.append(f"{name}: {exc}")
@@ -668,6 +671,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         live = [e for e in snapshots[name]["events"] if not e["gone_from_source"]]
         per_source[name] = {
             "status": source_meta[name]["status"], "message": source_meta[name]["message"],
+            "blocked": name in blocked,
             "requests": source_stats[name].get("requests", 0), "found": len(live),
             "by_status": dict(Counter(status(e, today) for e in live)),
             "with_register_url": sum(1 for e in live if e["register_url"]),
@@ -691,6 +695,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "possible_duplicates": duplicates,
         "per_source": per_source,
         "only_timestamps_changed": timestamps_only,
+        "changes": count_changes(previous_events, events),
         "warnings": warnings,
         "events": events,
     }
@@ -737,13 +742,19 @@ def main(argv=None) -> int:
     parser.add_argument("--force", action="store_true",
                         help="fetch a source even if it was already fetched today")
     parser.add_argument("--github-output", metavar="FILE",
-                        help="append 'real_changes=true|false' to FILE (for a GitHub Action)")
+                        help="append 'real_changes=true|false' and 'commit_message=...' to FILE "
+                             "(for a GitHub Action)")
+    parser.add_argument("--summary-file", metavar="FILE",
+                        help="append a markdown summary of the run to FILE (the job summary)")
     args = parser.parse_args(argv)
     try:
         html = Path(args.html).read_text(encoding="utf-8") if args.html else None
         report = run(args.data_dir, html=html, skip_if_fetched_today=not args.force and html is None)
     except BuildError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
+        daily.write_summary(args.summary_file, daily.failure_markdown(str(exc)))
+        if daily.running_in_github():
+            print(f"::error title=Tournament data run failed::{str(exc).splitlines()[0]}")
         if not isinstance(exc, DataFileError):
             print("Existing data was left untouched.", file=sys.stderr)
         return exc.exit_code
@@ -751,6 +762,11 @@ def main(argv=None) -> int:
     if args.github_output:
         with open(args.github_output, "a", encoding="utf-8") as handle:
             handle.write(f"real_changes={'false' if report['only_timestamps_changed'] else 'true'}\n")
+            handle.write(f"commit_message={daily.commit_message(report)}\n")
+    daily.write_summary(args.summary_file, daily.summary_markdown(report))
+    if daily.running_in_github():
+        for line in daily.annotations(report):
+            print(line)
     return 0
 
 
