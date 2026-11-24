@@ -164,8 +164,8 @@ def test_github_output_flag_and_summary_line(data_dir, tmp_path, capsys):
     out = tmp_path / "gh_output.txt"
     args = ["--html", str(page), "--data-dir", str(data_dir), "--github-output", str(out)]
     assert be.main(args) == 0
-    assert out.read_text() == "real_changes=true\n"          # first run: new data
+    assert out.read_text().splitlines()[0] == "real_changes=true"  # first run: new data
     assert "real changes" in capsys.readouterr().out
     assert be.main(args) == 0
-    assert out.read_text() == "real_changes=true\nreal_changes=false\n"  # nothing but timestamps
+    assert out.read_text().splitlines()[2] == "real_changes=false"  # nothing but timestamps
     assert "none, only last_seen/generated_at differ" in capsys.readouterr().out

@@ -48,6 +48,19 @@ shared by the web site and the Android app, so changing its shape affects both.
 - We only link to registration pages; `register_url` is set only when a page clearly labels
   it as registration.
 
+## The daily workflow (`.github/workflows/daily.yml`)
+
+- **Never make the workflow push anything except `data/` changes.** The commit step stages
+  `data` only and refuses if anything else is staged. No force pushes, no other branches.
+- **Never add secrets or personal tokens.** Use only the built-in `GITHUB_TOKEN`
+  (`contents: write` for the data commit; `pages: write` / `id-token: write` only where
+  Pages needs them). No `secrets.` anywhere in the workflow.
+- Tests run first; a failing test stops everything. The commit happens only when
+  `real_changes == 'true'`. The heartbeat (`scripts/heartbeat.py`) fails the run when a source
+  has had no successful fetch for 7 days. `tests/test_daily.py` checks these rules in the
+  workflow file; keep them true when you edit it.
+- Pages publishes only `data/`. `scripts/verify_published.py` checks the live files.
+
 ## Layout
 
 - `scripts/build_events.py` — the run (`run()`), manual files, joining, meta, CLI.
@@ -84,5 +97,4 @@ shared by the web site and the Android app, so changing its shape affects both.
 
 ## Not done yet
 
-- GitHub Action to run daily (task T2).
 - ChessBase calendar: only the default month of each year page is readable without its data service.

@@ -446,6 +446,23 @@ def only_timestamps_changed(previous_doc, previous_meta, new_doc, new_meta) -> b
     return _comparable(previous_doc, previous_meta) == _comparable(new_doc, new_meta)
 
 
+def count_changes(previous_events, new_events) -> dict:
+    """How many events are new / changed (not counting last_seen) / newly no longer listed."""
+    old = {e["id"]: canonical(e) for e in previous_events or []}
+    new = changed = gone = 0
+    for event in new_events:
+        before = old.get(event["id"])
+        if before is None:
+            new += 1
+            continue
+        if {k: v for k, v in before.items() if k != "last_seen"} != \
+                {k: v for k, v in event.items() if k != "last_seen"}:
+            changed += 1
+            if event["gone_from_source"] and not before["gone_from_source"]:
+                gone += 1
+    return {"new": new, "changed": changed, "gone": gone}
+
+
 def sort_key(event: dict):
     start = event.get("start") or event.get("end") or "9999-12-31"
     return (start, event.get("end") or start, event["id"])

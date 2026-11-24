@@ -104,6 +104,7 @@ python scripts/build_events.py
 ```
 
 A source that was already fetched today is skipped (add `--force` to override).
+`--summary-file` and `--github-output` are for the daily Action.
 `--html some-saved-aicf-page.html` runs offline with a saved AICF page only.
 
 To run the tests: `pip install -r requirements-dev.txt` and then `pytest`.
@@ -111,6 +112,61 @@ To run the tests: `pip install -r requirements-dev.txt` and then `pytest`.
 At the end it prints a short summary per source and overall: events found, how
 many are ongoing, upcoming or past today (Indian time), how many have a register
 link, how many were joined, and possible duplicates.
+
+## The daily run (GitHub Action)
+
+Every day at **21:40 UTC (03:10 India time)** GitHub runs `.github/workflows/daily.yml`:
+
+1. runs the tests first (if one fails, nothing is fetched or committed);
+2. runs `scripts/build_events.py` (all politeness rules above apply);
+3. **commits the new data to `main` only if something real changed** (not just
+   timestamps), as `github-actions[bot]`, with a message like
+   `data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, chessfee, chessresults_ind, chessbase_calendar)`.
+   Only the `data/` folder is ever committed;
+4. publishes the `data/` folder on GitHub Pages (whether or not anything was committed) and
+   checks the published files;
+5. **heartbeat:** if any source has had no successful fetch for 7 days, the run fails and
+   names the source.
+
+Every run has a **job summary** (open the run on GitHub, then *Summary*): per-source
+counts, ongoing / upcoming / past, any problems, and whether something was committed.
+
+### Published addresses (for the website and the app)
+
+- <https://sujith2krishna-cpu.github.io/boostchess-tournaments/events.json>
+- <https://sujith2krishna-cpu.github.io/boostchess-tournaments/meta.json>
+
+Only the `data/` folder is published. GitHub Pages sends
+`Access-Control-Allow-Origin: *`, so a web page can read the file straight from the browser;
+every run checks that, that the file is valid JSON, and that its `schema_version` is the one this
+code writes.
+
+### Run it by hand
+
+On GitHub: **Actions** tab, **Daily tournament data** on the left, **Run workflow** button
+(branch `main`), **Run workflow**. A source that was already fetched on the same Indian day is
+skipped (one run per site per day), so a second press the same day does nothing new.
+
+### What a failure e-mail means
+
+GitHub e-mails you when a run fails. Open the run, then *Summary* and the red step:
+
+| Red step | Meaning | What to do |
+|---|---|---|
+| **Run the tests** | The code or a test is broken. Nothing was fetched. | Fix the code (or revert the last change). |
+| **Build the data** | *Every* source failed (or a manual file has a mistake: the message names the file and line). Nothing was written. | Fix the manual row; otherwise wait a day, then see `data/meta.json` → `sources` → `last_error`. |
+| **Heartbeat** | One source has had no good fetch for 7 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
+| **Check the published files** | The published `events.json` is wrong or not reachable. | Re-run the workflow; if it repeats, check Settings → Pages. |
+
+If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
+**Problems** list in the summary. The failed source keeps its old events.
+
+### Pausing the schedule
+
+Actions tab → **Daily tournament data** → the **...** menu at the top right → **Disable workflow**
+(turn it back on the same way). Nothing is lost while it is off. GitHub may also switch off
+scheduled runs by itself if a repository has no activity for 60 days; if that e-mail ever comes,
+press **Enable workflow**.
 
 ## The files
 

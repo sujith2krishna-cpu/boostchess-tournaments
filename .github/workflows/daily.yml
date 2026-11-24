@@ -1,0 +1,134 @@
+name: Daily tournament data
+
+# Runs every day at 21:40 UTC (03:10 India time) and on the "Run workflow" button.
+# It tests the code, reads the tournament sources politely, commits the data (only when
+# something real changed) and publishes the data/ folder on GitHub Pages.
+on:
+  schedule:
+    - cron: "40 21 * * *"
+  workflow_dispatch:
+
+# One run at a time; a run that is already going is never cancelled half way.
+concurrency:
+  group: daily-tournament-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write   # push the data commit
+      pages: write      # configure-pages
+    outputs:
+      published: ${{ steps.upload.outcome == 'success' }}
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install requirements
+        run: python -m pip install -r requirements.txt -r requirements-dev.txt
+
+      # Tests come first: if one fails, nothing is fetched and nothing is committed.
+      - name: Run the tests
+        run: python -m pytest -q
+
+      - name: Build the data (reads the sources)
+        id: build
+        run: python scripts/build_events.py --github-output "$GITHUB_OUTPUT" --summary-file "$GITHUB_STEP_SUMMARY"
+
+      # Only data/ is ever committed, and only when something real changed.
+      - name: Commit the data
+        id: commit
+        if: steps.build.outputs.real_changes == 'true'
+        env:
+          COMMIT_MESSAGE: ${{ steps.build.outputs.commit_message }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --name-only | grep -qv '^data/'; then
+            echo "::error::Refusing to commit anything outside data/"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "Nothing staged."
+            exit 0
+          fi
+          git commit -m "$COMMIT_MESSAGE"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Say what was committed
+        if: steps.build.outcome == 'success'
+        env:
+          COMMITTED: ${{ steps.commit.outputs.committed }}
+          SHA: ${{ steps.commit.outputs.sha }}
+        run: |
+          if [ "$COMMITTED" = "true" ]; then
+            echo "**Committed to main:** yes (\`$SHA\`)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "**Committed to main:** no (nothing changed except timestamps)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # The website data is published whether or not anything was committed.
+      - name: Configure Pages
+        if: steps.build.outcome == 'success'
+        uses: actions/configure-pages@v6
+
+      - name: Upload data/ for Pages
+        id: upload
+        if: steps.build.outcome == 'success'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: data
+
+      # Last, so the data is still published when it fails: any source with no
+      # successful fetch for 7 days makes the run fail (and GitHub e-mails you).
+      - name: Heartbeat (is any source silent for 7 days?)
+        if: steps.build.outcome == 'success'
+        run: python scripts/heartbeat.py --summary-file "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    needs: build
+    if: ${{ !cancelled() && needs.build.outputs.published == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      - name: Check out the repository (for the check script)
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install requirements
+        run: python -m pip install -r requirements.txt
+
+      - name: Check the published files (valid JSON, schema version, CORS header)
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/verify_published.py "$PAGE_URL" --summary-file "$GITHUB_STEP_SUMMARY"
