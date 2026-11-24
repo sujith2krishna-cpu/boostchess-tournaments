@@ -21,7 +21,7 @@ def test_two_codes_and_under_11_open_girls_fide_rated(data_dir):
                 code="472290/472291")
     assert event["id"] == "aicf-472290"
     assert event["codes"] == ["472290", "472291"]
-    assert event["tags"] == {"formats": [], "fide_rated": True, "age": "U11",
+    assert event["tags"] == {"formats": [], "fide_rated": True, "age": ["U11"],
                              "open": True, "girls": True}
 
 
@@ -138,13 +138,18 @@ def test_sorted_by_start_with_unusable_dates_last(data_dir):
 
 # ---- tags ---------------------------------------------------------------
 @pytest.mark.parametrize("name, age", [
-    ("Under-11 Open", "U11"), ("U-11 Open", "U11"), ("U11 Open", "U11"),
-    ("Under 11 Open", "U11"), ("UNDER – 11 Girls", "U11"), ("under-9", "U9"),
-    ("Under 12 & 18 Team Championship", None),            # several age groups
-    ("UNDER-12 & UNDER-18 Championship", None),
-    ("Below 1700 FIDE Rated Open", None),                 # a rating, not an age
-    ("Under 1600 Open", None),
-    ("Cup Tournament 2026", None),
+    ("Under-11 Open", ["U11"]), ("U-11 Open", ["U11"]), ("U11 Open", ["U11"]),
+    ("Under 11 Open", ["U11"]), ("UNDER – 11 Girls", ["U11"]), ("under-9", ["U9"]),
+    ("4th National School Team Chess (Under 12 & 18)", ["U12", "U18"]),
+    ("UNDER-12 & UNDER-18 Championship", ["U12", "U18"]),
+    ("U-9, 11 and 13 Open", ["U9", "U11", "U13"]),
+    ("Under 15/U17 Girls", ["U15", "U17"]),
+    ("U-18 & U-12 Open", ["U12", "U18"]),                  # always sorted, no repeats
+    ("Under 13, 14 Oct Open", ["U13"]),                    # "14 Oct" is a date, not an age
+    ("Below 1700 FIDE Rated Open", []),                    # a rating, not an age
+    ("Under 1600 Open", []),
+    ("Under 40 Veterans", []),
+    ("Cup Tournament 2026", []),
 ])
 def test_age_tag(name, age):
     assert be.derive_tags(name)["age"] == age
@@ -164,7 +169,7 @@ def test_format_tags(name, formats):
 
 def test_other_tags_are_true_or_null():
     tags = be.derive_tags("Girls Chess Championship")
-    assert tags == {"formats": [], "fide_rated": None, "age": None, "open": None, "girls": True}
+    assert tags == {"formats": [], "fide_rated": None, "age": [], "open": None, "girls": True}
     assert be.derive_tags("FIDE Open Rapid Rating Chess")["fide_rated"] is True
     assert be.derive_tags("Unrated Open")["fide_rated"] is None
     assert be.derive_tags("FIDE Master Memorial Cup")["fide_rated"] is None

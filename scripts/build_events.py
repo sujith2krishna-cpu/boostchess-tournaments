@@ -45,7 +45,7 @@ RETRY_WAIT_SECONDS = 5
 MIN_ROWS = 100  # a page with fewer rows is treated as a broken fetch
 MIN_FRACTION_OF_PREVIOUS = 0.5  # ... and so is one with under half of last time
 MAX_SUSPECT_FRACTION = 0.5  # more bad dates than this means the layout changed
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2  # 2: tags.age is a list; every event has a country
 
 # India has no daylight saving, so a fixed offset is exactly Asia/Kolkata and
 # needs no extra package (zoneinfo needs tzdata on Windows).
@@ -297,21 +297,28 @@ def valid_url(href) -> str | None:
     return absolute
 
 
-_AGE = re.compile(r"(?<![A-Za-z])(?:under|u)[\s\-–—.]*(\d{1,2})(?!\d)", re.I)
-_AGE_MORE = re.compile(r"\s*(?:&|and|,|/)\s*(?:under|u)?[\s\-–]*\d{1,2}(?!\d)", re.I)
+_AGE = re.compile(r"(?<![A-Za-z])(?:under|u)[\s\-\u2013\u2014.]*(\d{1,2})(?!\d)", re.I)
+# "Under 12 & 18", "U-9, 11, 13", "U11/U13": more ages joined to one already found
+# (but not a date like "Under 13, 14 Oct").
+_AGE_MORE = re.compile(
+    r"\s*(?:&|and|,|/)\s*(?:under|u)?[\s\-\u2013]*(\d{1,2})(?!\d)"
+    r"(?!\s*(?:st|nd|rd|th)?\s*(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec))", re.I)
 
 
-def age_from_text(text: str) -> str | None:
-    """'U11' from 'Under-11' / 'U-11' / 'U11' / 'Under 11'; None if absent or mixed."""
-    ages = set()
+def ages_from_text(text: str) -> list[str]:
+    """Age groups as a list: 'Under 12 & 18' -> ['U12', 'U18']; nothing found -> []."""
+    found = set()
     for match in _AGE.finditer(text):
-        value = int(match.group(1))
-        if not 4 <= value <= 25:
-            continue
-        if _AGE_MORE.match(text, match.end()):
-            return None  # "Under 12 & 18": several age groups, so we do not pick one
-        ages.add(f"U{value}")
-    return ages.pop() if len(ages) == 1 else None
+        values = [int(match.group(1))]
+        position = match.end()
+        while True:
+            more = _AGE_MORE.match(text, position)
+            if not more:
+                break
+            values.append(int(more.group(1)))
+            position = more.end()
+        found.update(v for v in values if 4 <= v <= 25)
+    return [f"U{v}" for v in sorted(found)]
 
 
 def derive_tags(name: str) -> dict:
@@ -323,7 +330,7 @@ def derive_tags(name: str) -> dict:
     return {
         "formats": formats,
         "fide_rated": True if fide else None,
-        "age": age_from_text(name),
+        "age": ages_from_text(name),
         "open": True if re.search(r"\bopen\b", name, re.I) else None,
         "girls": True if re.search(r"\bgirls?\b", name, re.I) else None,
     }
@@ -333,22 +340,47 @@ def derive_tags(name: str) -> dict:
 # Event records
 # --------------------------------------------------------------------------
 EVENT_KEYS = (
-    "id", "codes", "name", "start", "end", "place_text", "state", "city",
+    "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
     "brochure_url", "source", "register_url", "organiser", "tags", "flags",
     "raw_dates", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
-TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", None),
+TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
                 ("open", None), ("girls", None))
 FLAG_DEFAULTS = (("dates_suspect", False), ("code_expanded", False),
                  ("code_unclear", False))
 EVENT_DEFAULTS = {
     "codes": [], "start": None, "end": None, "place_text": None, "state": None,
-    "city": None, "brochure_url": None, "register_url": None, "organiser": None,
+    "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
     "raw_dates": None, "gone_from_source": False, "cancelled": False,
     "hidden": False, "note": None, "overridden": None,
 }
 OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city")
+
+
+# Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
+# calendar that lists events from many countries must supply its own code per event.
+COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "chessfee": "IN", "chessresults_ind": "IN"}
+ISO_COUNTRIES = frozenset("""
+AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS
+BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE
+EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM
+HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC
+LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA
+NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW
+SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO
+TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW
+""".split())
+
+
+def country_for(source: str | None, country: str | None = None) -> str | None:
+    """'IN' for the Indian sources; for chessbase_calendar the event's own ISO code or None."""
+    if source in COUNTRY_BY_SOURCE:
+        return COUNTRY_BY_SOURCE[source]
+    if source == "chessbase_calendar":
+        code = (country or "").strip().upper()
+        return code if code in ISO_COUNTRIES else None
+    return None
 
 
 def canonical(event: dict) -> dict:
@@ -359,6 +391,10 @@ def canonical(event: dict) -> dict:
     for key in EVENT_KEYS:
         if key == "tags":
             out[key] = {k: copy.deepcopy(tags_in.get(k, d)) for k, d in TAG_DEFAULTS}
+            age = out[key]["age"]  # schema 1 stored one string (or null); schema 2 a list
+            out[key]["age"] = [] if age is None else [age] if isinstance(age, str) else age
+        elif key == "country":
+            out[key] = event["country"] if "country" in event else country_for(event.get("source"))
         elif key == "flags":
             out[key] = {k: bool(flags_in.get(k, d)) for k, d in FLAG_DEFAULTS}
         elif key in event:
@@ -366,6 +402,25 @@ def canonical(event: dict) -> dict:
         else:
             out[key] = copy.deepcopy(EVENT_DEFAULTS[key])
     return out
+
+
+def _comparable(doc: dict, meta: dict) -> tuple:
+    """Everything in the output except the timestamps (generated_at, every last_seen)."""
+    events = [{k: v for k, v in canonical(e).items() if k != "last_seen"}
+              for e in (doc or {}).get("events", [])]
+    return (doc or {}).get("schema_version"), events, {
+        k: v for k, v in (meta or {}).items() if k != "generated_at"}
+
+
+def only_timestamps_changed(previous_doc, previous_meta, new_doc, new_meta) -> bool:
+    """True when the new files differ from the old only in generated_at / last_seen.
+
+    A daily job can use this to skip a pointless commit. With no previous data
+    there is always something real to commit, so this is False.
+    """
+    if not previous_doc or not previous_doc.get("events"):
+        return False
+    return _comparable(previous_doc, previous_meta) == _comparable(new_doc, new_meta)
 
 
 def sort_key(event: dict):
@@ -466,6 +521,7 @@ def event_from_row(row: dict, today: date) -> dict:
         "place_text": place["place_text"],
         "state": place["state"],
         "city": place["city"],
+        "country": country_for("aicf"),
         "brochure_url": brochure,
         "source": "aicf",
         "tags": derive_tags(name),
@@ -699,11 +755,12 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
                             "and/or classical.")
         tags["formats"] = [f for f in FORMAT_ORDER if f in wanted or f in tags["formats"]]
     if row.get("age"):
-        age = age_from_text(row["age"]) if not re.fullmatch(r"\d+", row["age"]) else None
-        if age is None:
-            problems.append(f"age '{row['age']}' is not understood. Write it like U11 or Under-11.")
+        ages = [] if re.fullmatch(r"[\d\s,/&]+", row["age"]) else ages_from_text(row["age"])
+        if not ages:
+            problems.append(f"age '{row['age']}' is not understood. Write it like U11, Under-11 "
+                            "or, for several groups, U12/U18.")
         else:
-            tags["age"] = age
+            tags["age"] = ages
     urls = {}
     for column, field in (("link", "register_url"), ("brochure_url", "brochure_url")):
         if row.get(column):
@@ -725,6 +782,7 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
         "place_text": place["place_text"],
         "state": state,
         "city": place["city"],
+        "country": country_for("manual"),
         "brochure_url": urls.get("brochure_url"),
         "source": "manual",
         "register_url": urls.get("register_url"),
@@ -932,6 +990,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, fetch=fetch_html,
         "gone_from_source_count": sum(1 for e in events if e["gone_from_source"]),
     }
     document = {"schema_version": SCHEMA_VERSION, "generated_at": generated_at, "events": events}
+    timestamps_only = only_timestamps_changed(previous_doc, previous_meta, document, meta)
     write_files(data_dir, {"events.json": dump_json(document), "meta.json": dump_json(meta)})
 
     visible = [e for e in events if not e["hidden"]]
@@ -947,6 +1006,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, fetch=fetch_html,
         "hidden_count": len(events) - len(visible),
         "cancelled_count": sum(1 for e in events if e["cancelled"]),
         "missing_brochure_count": sum(1 for e in events if e["brochure_url"] is None),
+        "only_timestamps_changed": timestamps_only,
         "warnings": warnings,
         "events": events,
     }
@@ -970,6 +1030,9 @@ def print_summary(report: dict) -> None:
     print("  By status (not hidden): "
           + ", ".join(f"{name} {counts.get(name, 0)}"
                       for name in ("ongoing", "upcoming", "past", "unknown")))
+    print("  Changes vs last run   : "
+          + ("none, only last_seen/generated_at differ" if report["only_timestamps_changed"]
+             else "real changes"))
     for warning in report["warnings"]:
         print(f"  WARNING: {warning}")
 
@@ -981,6 +1044,8 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="Build data/events.json from the AICF events page.")
     parser.add_argument("--html", help="read this saved HTML file instead of fetching the live page")
     parser.add_argument("--data-dir", default=str(DATA_DIR), help="where data/ lives")
+    parser.add_argument("--github-output", metavar="FILE",
+                        help="append 'real_changes=true|false' to FILE (for a GitHub Action)")
     args = parser.parse_args(argv)
     try:
         html = Path(args.html).read_text(encoding="utf-8") if args.html else None
@@ -991,6 +1056,9 @@ def main(argv=None) -> int:
             print("Existing data was left untouched.", file=sys.stderr)
         return exc.exit_code
     print_summary(report)
+    if args.github_output:
+        with open(args.github_output, "a", encoding="utf-8") as handle:
+            handle.write(f"real_changes={'false' if report['only_timestamps_changed'] else 'true'}\n")
     return 0
 
 

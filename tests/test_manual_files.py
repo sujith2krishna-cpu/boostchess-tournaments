@@ -27,7 +27,7 @@ def test_manual_event_is_added_with_source_manual(data_dir):
     assert (event["city"], event["state"]) == ("Pune", "Maharashtra")
     assert event["register_url"] == "https://example.org/register"
     assert event["brochure_url"] == "https://example.org/b.pdf"
-    assert event["tags"]["formats"] == ["rapid"] and event["tags"]["age"] == "U11"
+    assert event["tags"]["formats"] == ["rapid"] and event["tags"]["age"] == ["U11"]
     assert event["note"] == "Entry at the door"
     assert report["meta"]["manual_count"] == 1 and report["meta"]["total"] == 2
 

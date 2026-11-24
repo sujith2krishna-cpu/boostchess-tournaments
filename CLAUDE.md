@@ -41,6 +41,12 @@ web site and the Android app, so changing its shape affects both.
   run; replaced values are remembered in `overridden` so removing a row restores them.
 - No `status` is stored. `status(event, today)` computes ongoing/upcoming/past in
   Indian time (fixed UTC+05:30, no DST, so no `tzdata` needed).
+- Schema version is `SCHEMA_VERSION` (now 2). Bump it, update the README and add a
+  migration in `canonical()` whenever the shape of an event changes; old stored
+  events (gone from the page) are read through `canonical()`.
+- `tags.age` is a sorted list (`[]` when unknown). `country` comes from `country_for()`.
+- `only_timestamps_changed()` tells a daily job whether anything except
+  `generated_at`/`last_seen` changed (`--github-output` writes `real_changes=...`).
 - Output is deterministic: UTF-8, LF, 2-space indent, fixed key order. Only
   `generated_at` (and `last_seen` for events on the page) change between runs.
 - Do not hit the live site while developing. Use `--html tests/fixtures/...` or

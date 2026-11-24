@@ -45,13 +45,23 @@ dates, and how many are ongoing, upcoming or past today (Indian time).
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "generated_at": "2026-11-24T10:30:00+05:30",
   "events": [ { ...one event... } ]
 }
 ```
 
-Events are sorted by start date. One event looks like this:
+Events are sorted by start date.
+
+**Schema version 2** (web and Android must read this version). What changed from
+version 1:
+
+- `tags.age` is now a **list**: `["U11"]` for one age group, `["U12","U18"]` for
+  "Under 12 & 18", and `[]` when the name gives none. (Version 1 had a single
+  text or `null`.)
+- Every event has a new `country` field (right after `city`).
+
+One event looks like this:
 
 | Field | Meaning |
 |---|---|
@@ -61,10 +71,11 @@ Events are sorted by start date. One event looks like this:
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when AICF's date is unreadable. |
 | `place_text` | Place exactly as a person would read it, e.g. `Banka, Bihar`. |
 | `state`, `city` | Best guess from the place, or `null` when we are not sure. |
+| `country` | Two-letter country code (ISO 3166), e.g. `IN`. Always `IN` for AICF and manual events. Future sources: `IN` for chessfee and chessresults_ind; for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
 | `source` | `aicf` or `manual`. |
 | `register_url`, `organiser` | Empty (`null`) for now. |
-| `tags` | `formats` (list of `classical`, `rapid`, `blitz`), `fide_rated` (`true` or `null`), `age` (like `U11` or `null`), `open`, `girls` (`true` or `null`). Only set when the name clearly says so; never guessed. |
+| `tags` | `formats` (list of `classical`, `rapid`, `blitz`), `fide_rated` (`true` or `null`), `age` (a list like `["U11"]` or `["U12","U18"]`, empty when unknown), `open`, `girls` (`true` or `null`). Only set when the name clearly says so; never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`. |
 | `raw_dates` | The dates exactly as AICF wrote them, kept when they look wrong. |
 | `first_seen`, `last_seen` | The first and last day we saw it on the AICF page. |
@@ -114,7 +125,7 @@ Tips:
   name or start date creates a new event. It may not start with `aicf-`.
 - If a value contains a comma, put it in double quotes, like `"Pune, Maharashtra"`.
 - `format` can be `rapid`, `blitz`, `classical` (or e.g. `rapid/blitz`). `age`
-  can be `U11` or `Under-11`. `link` and `brochure_url` must start with `https://`.
+  can be `U11` or `Under-11`, or several groups like `U12/U18`. `link` and `brochure_url` must start with `https://`.
 - `state` may be left empty; we try to work it out from `place`.
 - To remove an event you added, delete its line. (Git keeps the history of the file.)
 
@@ -163,4 +174,7 @@ guessed. Use `overrides.csv` to correct it once you have checked the brochure.
 - Everything here is public information. There are no passwords, keys or tokens
   in this repository; please keep it that way.
 - `last_seen` and `generated_at` change on every run; the rest of the files only
-  change when something real changes.
+  change when something real changes. At the end of a run the tool says whether
+  only those two changed ("Changes vs last run"). A daily job can use
+  `python scripts/build_events.py --github-output "$GITHUB_OUTPUT"`, which adds
+  `real_changes=true` or `real_changes=false`, to skip a pointless commit.
