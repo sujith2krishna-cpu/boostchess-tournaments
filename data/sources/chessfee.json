@@ -1,0 +1,1630 @@
+{
+  "source": "chessfee",
+  "found": 32,
+  "listing": {
+    "https://www.chessfee.com/tmt_details.php?id=1860": "185366e3663d",
+    "https://www.chessfee.com/tmt_details.php?id=1727": "ef4f9d3a333b",
+    "https://www.chessfee.com/tmt_details.php?id=1857": "bf7c79c9b326",
+    "https://www.chessfee.com/tmt_details.php?id=1800": "c5490ee29f82",
+    "https://www.chessfee.com/tmt_details.php?id=1817": "09355085e91a",
+    "https://www.chessfee.com/tmt_details.php?id=1824": "eaf446a94d58",
+    "https://www.chessfee.com/tmt_details.php?id=1835": "238c4144c327",
+    "https://www.chessfee.com/tmt_details.php?id=1837": "582fe3b2b26c",
+    "https://www.chessfee.com/tmt_details.php?id=1847": "5a3c1e88c056",
+    "https://www.chessfee.com/tmt_details.php?id=1853": "d03c9de5e4d7",
+    "https://www.chessfee.com/tmt_details.php?id=1864": "09a878d195a9",
+    "https://www.chessfee.com/tmt_details.php?id=1865": "a9573b9ffccb",
+    "https://www.chessfee.com/tmt_details.php?id=1866": "045a8642eaf4",
+    "https://www.chessfee.com/tmt_details.php?id=1869": "4b2733e093b6",
+    "https://www.chessfee.com/tmt_details.php?id=1815": "b339e31dfcc9",
+    "https://www.chessfee.com/tmt_details.php?id=1848": "99f2a1ae35e5",
+    "https://www.chessfee.com/tmt_details.php?id=1842": "41325c2d7414",
+    "https://www.chessfee.com/tmt_details.php?id=1846": "fb181bedcd84",
+    "https://www.chessfee.com/tmt_details.php?id=1850": "11b011da2d03",
+    "https://www.chessfee.com/tmt_details.php?id=1856": "e0437649aada",
+    "https://www.chessfee.com/tmt_details.php?id=1858": "3ca3fed5af18",
+    "https://www.chessfee.com/tmt_details.php?id=1859": "fd1e4f9fa1dd",
+    "https://www.chessfee.com/tmt_details.php?id=1863": "f618100d9520",
+    "https://www.chessfee.com/tmt_details.php?id=1867": "534c4346027a",
+    "https://www.chessfee.com/tmt_details.php?id=1868": "ee3b1995597a",
+    "https://www.chessfee.com/tmt_details.php?id=1870": "98296f6a3c07",
+    "https://www.chessfee.com/tmt_details.php?id=1871": "a57cfc073b3b",
+    "https://www.chessfee.com/tmt_details.php?id=1873": "9113dcf44e67",
+    "https://www.chessfee.com/tmt_details.php?id=1836": "7f1ffeaa37ae",
+    "https://www.chessfee.com/tmt_details.php?id=1862": "85540f32319c",
+    "https://www.chessfee.com/tmt_details.php?id=1832": "729e7842cdde",
+    "https://www.chessfee.com/tmt_details.php?id=1872": "f8ff8a304e84"
+  },
+  "events": [
+    {
+      "id": "chessfee-1860",
+      "codes": [],
+      "name": "VIDVATH CHESS TROPHY - INTER-DISTRICT SCHOOL LEVEL RAPID CHESS TOURNAMENT – 27 NOV 2026",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "place_text": "Vidvath PU College, Guruvayankere",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/VIDVATH%20CHESS%20TROPHY-27NOV.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1860",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1860",
+          "register_url": "https://www.chessfee.com/treg.php?id=1860"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1860",
+      "organiser": "Jagannath Adapa",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "INTER-DISTRICT"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1727",
+      "codes": [],
+      "name": "2nd Manchester City Below 1800 International Fide Rated Tournament – 27 NOV",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "place_text": "Sri Krishna Goundar Kalyana Mandapam, Ganapathy, Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Manchester-FIDE%20TMT%20BELOW%201800%20-27-29%20NOV.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1727",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1727",
+          "register_url": "https://www.chessfee.com/treg.php?id=1727"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1727",
+      "organiser": "Veer Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE BELOW 1800 - PRIZE MONEY Rs. 11,50,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1857",
+      "codes": [],
+      "name": "NAMMA CHESS ACADEMY - 5th TAMIL NADU STATE LEVEL CHILDREN’S CHESS TOURNAMENT 2026 – 28 NOV",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Velankanni Public School Senior Secondary, Kodungaiyur, Chennai – 600118",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/28%20NOV-Namma%20Chess%20Academy%20Tournament%202026.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1857",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1857",
+          "register_url": "https://www.chessfee.com/treg.php?id=1857"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1857",
+      "organiser": "Namma Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1800",
+      "codes": [],
+      "name": "KERALA - ChessInd Academy’s 2nd International Open FIDE Rated Rapid Chess Tournament – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Naipunya Public School, Seaport - Airport Rd, Judgemukku, Thrikkakara, Edappally, Kochi, Kerala",
+      "state": "Kerala",
+      "city": "Kochi",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV%20-%20FIDE%20RAPID%20-%20Chessind%20Acdemy%202nd%20Fide%20Rapid%20Chess%20Tournament.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1800",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1800",
+          "register_url": "https://www.chessfee.com/treg.php?id=1800"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1800",
+      "organiser": "ChessInd Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 4,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1817",
+      "codes": [],
+      "name": "CHENNAI - PRINCE 1ST STATE LEVEL CHILDREN CHESS TOURNAMENT – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Prince Shri Venkateshwara Arts and Science College, Gowrivakkam, Chennai 600073",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-TN%20STATE%20TMT-GM%20Prince.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
+          "register_url": "https://www.chessfee.com/treg.php?id=1817"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1817",
+      "organiser": "G. MASILAMANI",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1824",
+      "codes": [],
+      "name": "CHENNAI - SHREE RUDHRAA STATE LEVEL CHESS TOURNAMENT 2026 - 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "CHENNAI - SHREE RUDHRAA STATE LEVEL CHESS TOURNAMENT 2026 - 29 NOV",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/SHREE%20RUDHRAA%20PROSPECTUS.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1824",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1824",
+          "register_url": "https://www.chessfee.com/treg.php?id=1824"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1824",
+      "organiser": "SHREE RUDHRAA CULTURAL AND EDUCATIONAL TRUST",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1835",
+      "codes": [],
+      "name": "CHENNAI - 4th TN State Level Children’s Chess Tournament 2026 – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "MOHAMED SATHAK A.J. COLLEGE OF ENGINEERING, No. 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603 103.",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV%204th_State%20Level%20Tournament.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1835",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1835",
+          "register_url": "https://www.chessfee.com/treg.php?id=1835"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1835",
+      "organiser": "SRI RAGHAVENDRA CHESS ACADEMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1837",
+      "codes": [],
+      "name": "TIRUNELVELI - 1st Masters Cup TN State Level Chess Tournament 2026 – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Magdelene Matric Hr. Sec. School, Palayamkottai, Tirunelveli",
+      "state": "Tamil Nadu",
+      "city": "Tirunelveli",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE%20LVL%20TMT-TIRUNEVELI.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1837",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1837",
+          "register_url": "https://www.chessfee.com/treg.php?id=1837"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1837",
+      "organiser": "Masters Chess Club",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1847",
+      "codes": [],
+      "name": "KRISHNAGIRI - 1st RIMS INTERNATIONAL FIDE RAPID RATED CHESS TOURNAMENT – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "RIMS VIDYASHRAM SCHOOL, Kuppam Road, Kathinayanapalli, Krishnagiri - 635120.",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-FIDE%20RAPID-RIMS-KRISHNAGIRI.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1847",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1847",
+          "register_url": "https://www.chessfee.com/treg.php?id=1847"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1847",
+      "organiser": "VIVEKANANDA CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 2,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1853",
+      "codes": [],
+      "name": "ENPASSANT 1st TAMIL NADU STATE LEVEL CHILDREN'S CHESS TOURNAMENT – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Velankanni Public Senior Secondary School, Phase, II, R-10, Block, Muthamizh Nagar, Kodungaiyur, Chennai – 600118",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20Enpassant%20Children%20Chess%20Tournament.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1853",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1853",
+          "register_url": "https://www.chessfee.com/treg.php?id=1853"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1853",
+      "organiser": "Enpassant Chess School",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1864",
+      "codes": [],
+      "name": "DINDIGUL - PANNAI BVR Marimuthu Memorial 2nd State Level Open & Children Chess Tournament - 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Pannai Public School, Arokiasami Nagar, Trichy Road, Dindigul",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-200.DGL_.26-27.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1864",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1864",
+          "register_url": "https://www.chessfee.com/treg.php?id=1864"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1864",
+      "organiser": "Mr. Siva",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1865",
+      "codes": [],
+      "name": "MADURAI - Global Sports Foundation 11th TN State level Children Chess Tournament 2026 – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "De Nobili Matriculation Higher Secondary School, near Govt. ITI, Industrial Estate, K. Pudur, Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/GSF_Tourney%20MADURAI%20-%2029%20NOV.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1865",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1865",
+          "register_url": "https://www.chessfee.com/treg.php?id=1865"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1865",
+      "organiser": "GLOBAL SPORTS FOUNDATION",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1866",
+      "codes": [],
+      "name": "THANJAVUR - K.R. PALANIVELU MEMORIAL 2nd GOLD COIN STATE LEVEL CHILDRENS CHESS TOURNAMENT 2026 – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Karanthai Tamil Sangam, Karanthai, Thanjavur - 613002.",
+      "state": "Tamil Nadu",
+      "city": "Thanjavur",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29NOV-TN%20STATE%20LVL%20TMT-THANJAVUR.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1866",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1866",
+          "register_url": "https://www.chessfee.com/treg.php?id=1866"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1866",
+      "organiser": "Mr.Senthil Kumaran Palanivelu",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1869",
+      "codes": [],
+      "name": "GENIUS CHESS ACADEMY - 4th TN STATE LEVEL OPEN & CHILDREN'S CHESS TOURNAMENT 2026 – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "APTSMPS MATRICULATION SCHOOL, ARUPPUKOTTAI.",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE-%20ARUPPUKOTTAI.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1869",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1869",
+          "register_url": "https://www.chessfee.com/treg.php?id=1869"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1869",
+      "organiser": "Mr. P. Ramar",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1815",
+      "codes": [],
+      "name": "DRAGON CHESS ACADEMY 1ST INTERNATIONAL OPEN FIDE CHESS TOURNAMENT 2026 – 2 to 6 DEC",
+      "start": "2026-12-02",
+      "end": "2026-12-06",
+      "place_text": "Rohini College of Engineering & Technology, Palkulam, Anjugramam, Kanyakumari, Tamil Nadu - 641006.",
+      "state": "Tamil Nadu",
+      "city": "Kanyakumari",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/2-6%20DEC%20Dragon%20Chess%20FIDE%20TMT%20-%20KANYAKUMARI_compressed.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1815",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1815",
+          "register_url": "https://www.chessfee.com/treg.php?id=1815"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1815",
+      "organiser": "DRAGON CHESS ACADEMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE TMT - PRIZE MONEY Rs. 11,00,001/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1848",
+      "codes": [],
+      "name": "Chessinfo & Golden Knights Chess Academy 1st International FIDE Rating Below 1700 Chess Tournament 2026 – 4 DEC",
+      "start": "2026-12-04",
+      "end": "2026-12-06",
+      "place_text": "Papa Seth Mahal, Railway Station Road, Tirupattur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/4-6%20BELOW%201800%20Tirupattur_Prospectus%20NEW.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
+          "register_url": "https://www.chessfee.com/treg.php?id=1848"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1848",
+      "organiser": "Mr. D Anand",
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE TMT - BELOW 1700 -PRIZE MONEY Rs.6,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1842",
+      "codes": [],
+      "name": "CHENNAI - MOHAMED SATHAK COLLEGE OF ARTS AND SCIENCE 1st TN State Level Children’s Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "MOHAMED SATHAK COLLEGE OF ARTS AND SCIENCE, 13, Medavakkam Main Road, Sholinganallur, Chennai, Tamil Nadu – 600119.",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6th%20Dec%20State%20Level%20Tournament%202026.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1842",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1842",
+          "register_url": "https://www.chessfee.com/treg.php?id=1842"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1842",
+      "organiser": "SATHYAN K",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1846",
+      "codes": [],
+      "name": "PLAYU 3rd INTERNATIONAL FIDE RAPID RATED OPEN CHESS TOURNAMENT – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Hall Of Chess, Jawaharlal Nehru Stadium, Periamet, Chennai-600003",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Playu%203rd%20Open%20Chess%20Tournament%20FIDE%20RAPID%20-%206%20DEC.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1846",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1846",
+          "register_url": "https://www.chessfee.com/treg.php?id=1846"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1846",
+      "organiser": "Mr. Shiraj",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 4,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1850",
+      "codes": [],
+      "name": "MADURAI - Vetri Chess Academy 1st TN State Level Children’s Cycle & Open Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Manikam Ramaswami College of Arts and Science, Pamban Swamy Nagar, Thiruparamkundram, Madurai-625005",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20TN%20STATE%20LVL%20TMT%20-%20MADURAI.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1850",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1850",
+          "register_url": "https://www.chessfee.com/treg.php?id=1850"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1850",
+      "organiser": "Vetri Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1856",
+      "codes": [],
+      "name": "CQSCA'S 2nd STATE LEVEL CHILDREN'S CHESS TOURNAMENT 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "LOTUS INTERNATIONAL SCHOOL, PENNADAM, CUDDALORE DISTRICT",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20-%20CUDDALORE%20-%20TN%20STATE%20LVL%20TMT.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1856",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1856",
+          "register_url": "https://www.chessfee.com/treg.php?id=1856"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1856",
+      "organiser": "Mr.BALAKUMARAN GURUSAMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1858",
+      "codes": [],
+      "name": "SALEM - 3rd BattleField International Open FIDE Rapid Rating Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "AVS College of Arts and Science, Ramalingapuram, Attur Main Road, Salem - 636106, Tamilnadu",
+      "state": "Tamil Nadu",
+      "city": "Salem",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/3rd%20Battle%20Field%20International%20Open%20FIDE%20Rapid%20Rating%20Chess%20Tournament%202026.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1858",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1858",
+          "register_url": "https://www.chessfee.com/treg.php?id=1858"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1858",
+      "organiser": "FA B Jayaprakash",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1859",
+      "codes": [],
+      "name": "ANANDHAN CHESS ACADEMY - 12th TN State Level Children Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Sri Sankara Global Academy, Pammal, Chennai-75",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/ACA-12th%20TN%20State%20-%206%20DEC.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1859",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1859",
+          "register_url": "https://www.chessfee.com/treg.php?id=1859"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1859",
+      "organiser": "ANANDHAN CHESS ACADEMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1863",
+      "codes": [],
+      "name": "KOVILPATTI - Unique Chess Academy 1st Tamilnadu State Level Children & Open Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "St. Paul Matric. Higher Secondary School, Kovilpatti",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1863",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1863",
+          "register_url": "https://www.chessfee.com/treg.php?id=1863"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1863",
+      "organiser": "Mariammal V",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1867",
+      "codes": [],
+      "name": "VETRIOUS CHESS ACADEMY – TN STATE LEVEL CHILDREN’S CHESS TOURNAMENT – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "S.K. Mahal (A/C), Muthukadai, (Ammoor Road), Ranipet District.",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-218.RAN_.26-27.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1867",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1867",
+          "register_url": "https://www.chessfee.com/treg.php?id=1867"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1867",
+      "organiser": "M. Vinoth",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1868",
+      "codes": [],
+      "name": "THANJAVUR - ROTARY CLUB 4TH TN STATE LEVEL CHILDRENS AND U25 CHESS TOURNAMENT 2026 - 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Kalyanasundaram Hr. Sec. School, Thanjavur",
+      "state": "Tamil Nadu",
+      "city": "Thanjavur",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6DEC-TN%20STAT%20TMT%20-THANJAVUR.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1868",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1868",
+          "register_url": "https://www.chessfee.com/treg.php?id=1868"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1868",
+      "organiser": "Mr. RAJKUMAR",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U25"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1870",
+      "codes": [],
+      "name": "5th Harshana Chess Academy TN State Level Children’s Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "San Academy, Radial Road, Pallikaranai",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC-5TH%20HARSHANA-TN%20STATE%20LVL%20TMT.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1870",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1870",
+          "register_url": "https://www.chessfee.com/treg.php?id=1870"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1870",
+      "organiser": "Harshana Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1871",
+      "codes": [],
+      "name": "TIRUPUR - Kangeyam Institutions 1st TN State Level Children & Open Chess Tournament 2026 - 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Kangeyam Institute of Technology, EBET Knowledge, Nathakadiyur, Kangeyam, Tirupur",
+      "state": "Tamil Nadu",
+      "city": "Tirupur",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Kangeyam%20Institutions%201st%20State%20Level%20Chess%20Tournament%20Prospectus.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1871",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1871",
+          "register_url": "https://www.chessfee.com/treg.php?id=1871"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1871",
+      "organiser": "Dr. K Nehru",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1873",
+      "codes": [],
+      "name": "AKKARE TROPHY - Open & Age Category Rapid Chess Tournament - 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Chinmayi Auditorium, Shree Mahishamardini Temple, Matanthabettu, Kodimbady, Puttur, Dakshina Kannada",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Akkare%20Trophy%20Chess%20Fee.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1873",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1873",
+          "register_url": "https://www.chessfee.com/treg.php?id=1873"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1873",
+      "organiser": "Soundarya",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Open & Age Category Rapid Chess Tournament @ Dakshina Kannada"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1836",
+      "codes": [],
+      "name": "ROTARY CLUB SULLIA & SULLIA CHESS ASSOCIATION 3rd SCA OPEN RAPID TOURNAMENT – 13 DEC",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Rotary Community Hall, Rotary Primary School, Sullia",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/3RD%20DEC-%20SCA%20OPEN%20RAPID%20REVISED.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1836",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1836",
+          "register_url": "https://www.chessfee.com/treg.php?id=1836"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1836",
+      "organiser": "Mr. Hariprasad",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Rapid Chess Tournament – SULLIA"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1862",
+      "codes": [],
+      "name": "NAMAKKAL - KANDASWAMI JUNIOR CHESS CHAMPIONSHIP 2026 – 13 DEC - ONLY UNDER 16",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Kandaswami Kandar Matriculation Hr. Sec. School, 113-1, N. Thiruchengode, Namakkal Dt. – 638182",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1862",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1862",
+          "register_url": "https://www.chessfee.com/treg.php?id=1862"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1862",
+      "organiser": "NATHAN CHESS ACADEMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U16"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS - UNDER 16"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1832",
+      "codes": [],
+      "name": "Eight Square Chess Academy 4th International FIDE Rated Rapid Chess Tournament 2027 – 10 JAN",
+      "start": "2027-01-10",
+      "end": "2027-01-10",
+      "place_text": "Hall of Chess, Jawaharlal Nehru Stadium",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/ECA_Rapid%20-%2010%20JAN%202027.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
+          "register_url": "https://www.chessfee.com/treg.php?id=1832"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1832",
+      "organiser": "Ms. Sivaranjani S",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 3,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1872",
+      "codes": [],
+      "name": "ICC – CHESSFEE International FIDE Rapid Rating Chess Tournament 2027 – 6th Edition - 31 JAN",
+      "start": "2027-01-31",
+      "end": "2027-01-31",
+      "place_text": "Sri Krishna Gounder Kalayana Mandapam, Maniyakarampalayam Road, Ganapathy, Coimbatore, Tamil Nadu – 641006",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/ICC%20Rapid%20RATING%20TMT%202027%20CHESSFEE.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1872",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1872",
+          "register_url": "https://www.chessfee.com/treg.php?id=1872"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1872",
+      "organiser": "Indian Chess Consortium (ICC)",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 3,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

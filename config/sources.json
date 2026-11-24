@@ -1,0 +1,6 @@
+{
+  "aicf": {"enabled": true},
+  "chessfee": {"enabled": true},
+  "chessresults_ind": {"enabled": true},
+  "chessbase_calendar": {"enabled": true}
+}

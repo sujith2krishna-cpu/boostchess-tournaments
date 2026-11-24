@@ -68,3 +68,101 @@ def by_id(folder):
 
 def write_manual(folder, text, name="events.csv"):
     (folder / "manual" / name).write_text(text, encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# A pretend internet for the source tests: nothing here touches the network.
+# ---------------------------------------------------------------------------
+SOURCE_FIXTURES = ROOT / "tests" / "fixtures" / "sources"
+ALL_SOURCES_ON = {name: True for name in be.SOURCE_MODULES}
+
+
+def fx(name):
+    return (SOURCE_FIXTURES / name).read_text(encoding="utf-8")
+
+
+class FakeResponse:
+    def __init__(self, status_code, body, url):
+        self.status_code = status_code
+        self.content = body.encode("utf-8") if isinstance(body, str) else body
+        self.url = url
+
+
+class FakeWeb:
+    """Stands in for requests.get / requests.post and records every call."""
+
+    def __init__(self):
+        self.routes = {}
+        self.calls = []
+
+    def add(self, url, body, status=200, method="GET"):
+        self.routes[(method, url)] = (status, body)
+
+    def _answer(self, method, url, data=None, headers=None):
+        self.calls.append({"method": method, "url": url, "data": data, "headers": headers})
+        status, body = self.routes.get((method, url), (404, "not found"))
+        if callable(body):
+            body = body(data)
+        return FakeResponse(status, body, url)
+
+    def get(self, url, headers=None, timeout=None):
+        assert timeout, "every request needs a timeout"
+        return self._answer("GET", url, headers=headers)
+
+    def post(self, url, data=None, headers=None, timeout=None):
+        assert timeout, "every request needs a timeout"
+        return self._answer("POST", url, data=data, headers=headers)
+
+    def urls(self, host=None):
+        return [c["url"] for c in self.calls if host is None or host in c["url"]]
+
+
+@pytest.fixture
+def web(monkeypatch):
+    fake = FakeWeb()
+    fake.sleeps = []
+    monkeypatch.setattr(be.requests, "get", fake.get)
+    monkeypatch.setattr(be.requests, "post", fake.post)
+    monkeypatch.setattr(be.time, "sleep", lambda seconds: fake.sleeps.append(seconds))
+    for host in ("aicf.in", "www.chessfee.com", "chess-results.com", "chessbase.in"):
+        fake.add(f"https://{host}/robots.txt", "User-agent: *\nAllow: /\n")
+    return fake
+
+
+CF = "https://www.chessfee.com/"
+CR = "https://chess-results.com/"
+CB = "https://chessbase.in/"
+CR_FED = CR + "fed.aspx?lan=1&fed=IND"
+
+
+def serve_chessfee(web, details=("1860",)):
+    web.add(CF + "tournament_ongoing.php", fx("chessfee_ongoing_p1.html"))
+    web.add(CF + "tournament_ongoing.php?page=2", fx("chessfee_ongoing_p2.html"))
+    web.add(CF + "tournament_ongoing.php?page=3", fx("chessfee_ongoing_p2.html"))
+    web.add(CF + "upcoming_tournaments.php", fx("chessfee_upcoming.html"))
+    for event_id in details:
+        web.add(CF + f"tmt_details.php?id={event_id}", fx(f"chessfee_detail_{event_id}.html"))
+
+
+def serve_chessresults(web):
+    option_pages = {"1": "chessresults_list_running.html", "2": "chessresults_list_next7.html",
+                    "3": "chessresults_list_later.html"}
+    web.add(CR_FED, fx("chessresults_fed_ind.html"))
+    web.add(CR_FED, lambda data: fx(option_pages.get(data["combo_tur_sel"], "chessresults_fed_ind.html")),
+            method="POST")
+    for tnr in ("1528935", "1539989", "1549496", "1550001"):
+        web.add(CR + f"tnr{tnr}.aspx?lan=1&turdet=YES", fx(f"chessresults_tnr{tnr}.html"))
+
+
+def serve_chessbase(web):
+    web.add(CB + "chess-calendar", fx("chessbase_calendar.html"))
+    web.add(CB + "chess-calendar/2027", fx("chessbase_calendar_2027.html"))
+    web.add(CB + "chess-calendar/2028", fx("chessbase_calendar_2028.html"))
+
+
+def serve_aicf(web, rows):
+    web.add("https://aicf.in/all-events/", make_html(rows))
+
+
+def run_all(folder, now=NOW, config=None, **kwargs):
+    return be.run(folder, config=config or ALL_SOURCES_ON, now=now, min_rows=1, **kwargs)

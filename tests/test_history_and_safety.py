@@ -6,7 +6,8 @@ import pytest
 import requests
 
 import build_events as be
-from conftest import (NOW, build, by_id, load_doc, load_events, make_html, padding, row)
+from conftest import (NOW, build, by_id, load_doc, load_events, make_html, padding, row,
+                      serve_aicf, web)  # noqa: F401
 
 NEXT_DAY = NOW + timedelta(days=1)
 
@@ -59,7 +60,8 @@ def test_exact_duplicate_rows_collapse_to_one(data_dir):
 
 # ---- bad fetch: existing data untouched ---------------------------------
 def snapshot(folder):
-    return {p.name: p.read_bytes() for p in sorted(folder.iterdir()) if p.is_file()}
+    return {p.relative_to(folder).as_posix(): p.read_bytes() for p in sorted(folder.rglob("*"))
+            if p.is_file() and "manual" not in p.relative_to(folder).parts}
 
 
 def test_too_few_rows_stops_and_leaves_data_untouched(data_dir):
@@ -93,15 +95,15 @@ def test_mostly_unreadable_dates_means_layout_changed(data_dir):
     assert not (data_dir / "events.json").exists()
 
 
-def test_failed_download_leaves_data_untouched(data_dir):
-    build(data_dir, padding(150))
+def test_failed_download_leaves_data_untouched(data_dir, web):
+    serve_aicf(web, padding(150))
+    be.run(data_dir, config={"aicf": True, "chessfee": False, "chessresults_ind": False,
+                             "chessbase_calendar": False}, now=NOW)
     before = snapshot(data_dir)
-
-    def broken():
-        raise be.SourceError("Could not fetch: boom")
-
-    with pytest.raises(be.SourceError):
-        be.run(data_dir, fetch=broken, now=NEXT_DAY)
+    web.add("https://aicf.in/all-events/", "down", status=500)
+    with pytest.raises(be.SourceError, match="HTTP 500"):
+        be.run(data_dir, config={"aicf": True, "chessfee": False, "chessresults_ind": False,
+                                 "chessbase_calendar": False}, now=NEXT_DAY)
     assert snapshot(data_dir) == before
 
 
@@ -110,62 +112,6 @@ def test_broken_previous_file_is_not_overwritten(data_dir):
     with pytest.raises(be.BuildError, match="cannot be read"):
         build(data_dir, [row()])
     assert (data_dir / "events.json").read_text(encoding="utf-8") == "{ not json"
-
-
-# ---- fetching -----------------------------------------------------------
-class FakeResponse:
-    def __init__(self, status_code=200, content=b"<html></html>"):
-        self.status_code, self.content = status_code, content
-
-
-@pytest.fixture
-def no_sleep(monkeypatch):
-    monkeypatch.setattr(be.time, "sleep", lambda s: None)
-
-
-def test_fetch_sends_clear_user_agent_and_timeout(monkeypatch):
-    seen = {}
-
-    def fake_get(url, headers, timeout):
-        seen.update(url=url, headers=headers, timeout=timeout)
-        return FakeResponse(content="café".encode("utf-8"))
-
-    monkeypatch.setattr(be.requests, "get", fake_get)
-    assert be.fetch_html() == "café"
-    assert seen["url"] == "https://aicf.in/all-events/"
-    assert seen["headers"]["User-Agent"].startswith("BoostchessBot (+https://github.com/")
-    assert seen["timeout"] == be.REQUEST_TIMEOUT_SECONDS
-
-
-def test_fetch_retries_once_after_a_network_error(monkeypatch, no_sleep):
-    calls = []
-
-    def fake_get(url, headers, timeout):
-        calls.append(1)
-        if len(calls) == 1:
-            raise requests.ConnectionError("down")
-        return FakeResponse()
-
-    monkeypatch.setattr(be.requests, "get", fake_get)
-    assert be.fetch_html() == "<html></html>" and len(calls) == 2
-
-
-def test_fetch_gives_up_after_one_retry(monkeypatch, no_sleep):
-    calls = []
-    monkeypatch.setattr(be.requests, "get",
-                        lambda url, headers, timeout: calls.append(1) or FakeResponse(503))
-    with pytest.raises(be.SourceError, match="HTTP 503"):
-        be.fetch_html()
-    assert len(calls) == 2
-
-
-def test_fetch_does_not_retry_a_404(monkeypatch, no_sleep):
-    calls = []
-    monkeypatch.setattr(be.requests, "get",
-                        lambda url, headers, timeout: calls.append(1) or FakeResponse(404))
-    with pytest.raises(be.SourceError, match="HTTP 404"):
-        be.fetch_html()
-    assert len(calls) == 1
 
 
 # ---- determinism and file format ----------------------------------------
@@ -193,14 +139,14 @@ def test_file_format_utf8_two_space_indent_stable_key_order(data_dir):
     raw = (data_dir / "events.json").read_bytes()
     assert not raw.startswith(b"\xef\xbb\xbf") and b"\r" not in raw and raw.endswith(b"}\n")
     text = raw.decode("utf-8")
-    assert text.startswith('{\n  "schema_version": 2,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
+    assert text.startswith('{\n  "schema_version": 3,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
     assert "Café – Open" in text  # real characters, not \u escapes
     event = load_events(data_dir)[0]
     assert list(event) == list(be.EVENT_KEYS)
     assert "status" not in event
     assert list(json.loads((data_dir / "meta.json").read_text("utf-8"))) == [
         "generated_at", "scraped_count", "manual_count", "total", "suspect_dates_count",
-        "missing_state_count", "gone_from_source_count"]
+        "missing_state_count", "gone_from_source_count", "sources"]
 
 
 def test_meta_counts(data_dir):

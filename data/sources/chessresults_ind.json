@@ -1,0 +1,2802 @@
+{
+  "source": "chessresults_ind",
+  "found": 150,
+  "listing": {
+    "https://chess-results.com/tnr1549496.aspx?lan=1": "4fdb6c03b383",
+    "https://chess-results.com/tnr1539989.aspx?lan=1": "2bc2494d9b22",
+    "https://chess-results.com/tnr1539933.aspx?lan=1": "086f5795bdc2",
+    "https://chess-results.com/tnr1539912.aspx?lan=1": "07ffe2368ea6",
+    "https://chess-results.com/tnr1540004.aspx?lan=1": "4a0b0138926b",
+    "https://chess-results.com/tnr1540001.aspx?lan=1": "e8eee31747f5",
+    "https://chess-results.com/tnr1539939.aspx?lan=1": "89ebdf805cf6",
+    "https://chess-results.com/tnr1539942.aspx?lan=1": "63479c4149af",
+    "https://chess-results.com/tnr1539999.aspx?lan=1": "b734f2682606",
+    "https://chess-results.com/tnr1539994.aspx?lan=1": "54a852d9140e",
+    "https://chess-results.com/tnr1539972.aspx?lan=1": "15fb2cc41e5d",
+    "https://chess-results.com/tnr1539979.aspx?lan=1": "573f8bb609e4",
+    "https://chess-results.com/tnr1539984.aspx?lan=1": "e9fe214bb2ca",
+    "https://chess-results.com/tnr1549714.aspx?lan=1": "cc5b27468969",
+    "https://chess-results.com/tnr1549711.aspx?lan=1": "66c72d9cfea7",
+    "https://chess-results.com/tnr1549700.aspx?lan=1": "64ef664c29a9",
+    "https://chess-results.com/tnr1538066.aspx?lan=1": "1ea75c45a9f0",
+    "https://chess-results.com/tnr1543823.aspx?lan=1": "7f9b960b4241",
+    "https://chess-results.com/tnr1540462.aspx?lan=1": "7024ce7c29ca",
+    "https://chess-results.com/tnr1545418.aspx?lan=1": "022944b5954a",
+    "https://chess-results.com/tnr1549904.aspx?lan=1": "31a77f0d39bd",
+    "https://chess-results.com/tnr1549873.aspx?lan=1": "f1a9bf272ccc",
+    "https://chess-results.com/tnr1549418.aspx?lan=1": "f4003268cd80",
+    "https://chess-results.com/tnr1549170.aspx?lan=1": "c011668a913d",
+    "https://chess-results.com/tnr1549721.aspx?lan=1": "17faeb6fe647",
+    "https://chess-results.com/tnr1549718.aspx?lan=1": "bcb1233a11c7",
+    "https://chess-results.com/tnr1549723.aspx?lan=1": "3ee99c0a586f",
+    "https://chess-results.com/tnr1549717.aspx?lan=1": "dadad7aaeb2c",
+    "https://chess-results.com/tnr1549712.aspx?lan=1": "3c211ac116f2",
+    "https://chess-results.com/tnr1549708.aspx?lan=1": "4d212da381e0",
+    "https://chess-results.com/tnr1549705.aspx?lan=1": "b6651e717fb2",
+    "https://chess-results.com/tnr1542669.aspx?lan=1": "caf03347a52e",
+    "https://chess-results.com/tnr1538678.aspx?lan=1": "738834ac44d1",
+    "https://chess-results.com/tnr1545399.aspx?lan=1": "89d4577cdb7b",
+    "https://chess-results.com/tnr1549910.aspx?lan=1": "116543ca29af",
+    "https://chess-results.com/tnr1549911.aspx?lan=1": "590f92dcfca7",
+    "https://chess-results.com/tnr1549909.aspx?lan=1": "3e589e4e4702",
+    "https://chess-results.com/tnr1549912.aspx?lan=1": "ef0c317da206",
+    "https://chess-results.com/tnr1545241.aspx?lan=1": "c74fd7fef7c2",
+    "https://chess-results.com/tnr1544472.aspx?lan=1": "785f02cd0ee8",
+    "https://chess-results.com/tnr1549736.aspx?lan=1": "782f13425180",
+    "https://chess-results.com/tnr1547250.aspx?lan=1": "ed80cdd3a437",
+    "https://chess-results.com/tnr1544464.aspx?lan=1": "53bee9d6378b",
+    "https://chess-results.com/tnr1549735.aspx?lan=1": "6ba9ac303fe9",
+    "https://chess-results.com/tnr1549732.aspx?lan=1": "38cd0e780ec0",
+    "https://chess-results.com/tnr1544459.aspx?lan=1": "6396216ad59d",
+    "https://chess-results.com/tnr1544461.aspx?lan=1": "050fffe5b4fa",
+    "https://chess-results.com/tnr1547459.aspx?lan=1": "46d351fdd0c1",
+    "https://chess-results.com/tnr1544463.aspx?lan=1": "7ab2abe98f19",
+    "https://chess-results.com/tnr1549729.aspx?lan=1": "45cf5e97e81d",
+    "https://chess-results.com/tnr1550108.aspx?lan=1": "2e46a9e86ae2",
+    "https://chess-results.com/tnr1550104.aspx?lan=1": "be2c13654cdd",
+    "https://chess-results.com/tnr1550102.aspx?lan=1": "05928bca6e95",
+    "https://chess-results.com/tnr1550100.aspx?lan=1": "261866a266f4",
+    "https://chess-results.com/tnr1544771.aspx?lan=1": "12c76ca26d4f"
+  },
+  "events": [
+    {
+      "id": "chessresults_ind-1539912",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-07 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539912&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539912.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539912.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U7"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539933",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-07 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539933&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539933.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539933.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U7"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539939",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-09 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539939&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539939.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539939.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U9"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539942",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-09 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539942&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539942.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539942.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U9"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539972",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-11 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539972&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539972.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539972.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539979",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-11 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539979&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539979.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539979.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539984",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-13 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539984&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539984.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539984.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539989",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-13 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539989&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539989.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539989.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539994",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-15 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539994&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539994.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539994.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539999",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-15 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539999&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539999.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539999.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1540001",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-17 B)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540001&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540001.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540001.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1540004",
+      "codes": [],
+      "name": "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-17 G)",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "St. Xaviar International School, Adarsh Gram, Near Bairiya Bus Stand Muzaffarpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540004&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540004.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540004.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1547459",
+      "codes": [],
+      "name": "GENIUS CHESS ACADEMY COMBINED INTERNAL OPEN TEAM CHESS TOUNAMENT 2026 FROM 22-24 NOV 2026 AT HADDO AND RGT SRI VIJAYA PURAM",
+      "start": "2026-11-22",
+      "end": "2026-11-24",
+      "place_text": "SRI VIJAYA PURAM",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1547459.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547459.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GENIUS CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1543823",
+      "codes": [],
+      "name": "⬛️⬜️ ♔♕♘Maestro Classical Tournament Nov 23rd 24th ♚♛♞ ⬛️⬜️ VENUE: MAESTRO CHESS ACADEMY Attapur Pillar 141.",
+      "start": "2026-11-23",
+      "end": "2026-11-24",
+      "place_text": "Maestro Chess Academy Attapur Pillar 141.",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1543823.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1543823.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Maestro Chess Academy",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538066",
+      "codes": [],
+      "name": "National Open Chess Tournament for the Visually Challenged 2026",
+      "start": "2026-11-23",
+      "end": "2026-11-26",
+      "place_text": "The Blind People's Association Vastrapur, Ahmedabad, Gujarat 380015",
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538066.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538066.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Viral Trivedi 46621318",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538678",
+      "codes": [],
+      "name": "A2H Half Day Prize Money Chess Tournament 24 Nov 2026 Tuesday( 2pm to 5PM) Entry Fee Rs. 500 - Cont",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Smart Kennedy School - Kukatpally",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538678.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538678.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "A2H",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1540462",
+      "codes": [],
+      "name": "A2H Blitz Prize Money Chess Tournament 24 Nov 2026 Tuesday( 5:15PM to 6:45PM) Entry Fee Rs. 500 - Cont",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Smart Kennedy School - Kukatpally",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540462.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540462.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "A2H",
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1542669",
+      "codes": [],
+      "name": "OPEN CHESS TOURNAMENT BATHINDA-2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Hotel Gold Star, Bibi Wala Road, Behind Mehta Motors, Bathinda Punjab",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1542669.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1542669.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Shatranj Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544459",
+      "codes": [],
+      "name": "Punjab_State_School_Chess_Championship_U08 BOYS",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Bathinda",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544459.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544459.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544461",
+      "codes": [],
+      "name": "Punjab_State_School_Chess_Championship_U08 GIRLS",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Bathinda",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544461.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544461.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544463",
+      "codes": [],
+      "name": "Punjab_State_School_Chess_Championship_U16 GIRLS",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Bathinda",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544463.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544463.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U16"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544464",
+      "codes": [],
+      "name": "Punjab_State_School_Chess_Championship_U16 Boys",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Bathinda",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544464.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544464.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U16"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544472",
+      "codes": [],
+      "name": "MUNGELI DISTRICT MINI CATEGORY (U-13 BOYS & GIRLS) RANKING CHESS CHAMPIONSHIP 2026, LORMI",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "BLOCK SPORTS CENTER, LORMI",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544472.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544472.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "MUNGELI JILA SHATRANJ SANGH",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1545241",
+      "codes": [],
+      "name": "CITY CHESS FORUM PRACTICE TOURNAMENT 24TH NOVEMBER 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "BAGHAJATIN",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1545241.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545241.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "CITY CHESS FORUM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1545399",
+      "codes": [],
+      "name": "Inter Matrix Open Under 16 Chess Tournament 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Matrix Chess Academy, Malviya Nagar, Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1545399.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545399.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Matrix Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U16"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1545418",
+      "codes": [],
+      "name": "Inter Matrix open Blitz chess Tournament 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Matrix Chess Academy, Malviya Nagar, Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1545418.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545418.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Matrix Chess Academy",
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1547250",
+      "codes": [],
+      "name": "8th ACA Under-17 Open Chess Tournament 2026, Guwahati",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1547250.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547250.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Achiever Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U17"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549418",
+      "codes": [],
+      "name": "2nd GOUR BANGA CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "Baluchaya Auditorium Hall, Balurghat, Dakshin Dinajpur",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549418.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549418.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "DAKSHIN DINAJPUR ZILLA DABA SANGSTHA",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549496",
+      "codes": [],
+      "name": "Kai. Ramchandra Kabnurkar Chashak 2026 Open Kolhapur",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549496.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549496.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Anu's Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549700",
+      "codes": [],
+      "name": "Kai. Ramchandra Kabnurkar Chashak 2026 U09 Kolhapur",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549700.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549700.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Anu's Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U9"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549705",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U07 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549705.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549705.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U7"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549708",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U09 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549708.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549708.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U9"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549711",
+      "codes": [],
+      "name": "Kai. Ramchandra Kabnurkar Chashak 2026 U12 Kolhapur",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549711.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549711.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Anu's Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U12"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549712",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U11 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549712.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549712.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549714",
+      "codes": [],
+      "name": "U15 Kai. Ramchandra Kabnurkar Chashak 2026 Kolhapur",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549714.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549714.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Anu's Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549717",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U13 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549717.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549717.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549718",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U15 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549718.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549718.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549721",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U17 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549721.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549721.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549723",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM U19 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549723.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549723.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [
+          "U19"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549729",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM F09 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549729.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549729.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549732",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM F11 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549732.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549732.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549735",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM F15 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549735.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549735.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549736",
+      "codes": [],
+      "name": "KHASDAR KRIDA SANGRAM F17 CHESS TOURNAMENT 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549736.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549736.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549873",
+      "codes": [],
+      "name": "BSCA Blitz Chess Tournament",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "BS Chess Academy",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549873.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549873.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "BS Chess Academy",
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549904",
+      "codes": [],
+      "name": "PEEKAY STEEL CASTING - CHESS 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "place_text": "PK STEEL MODEN KOZHIKKODE",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549904.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549904.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "RAKESH K , DILEEP KUMAR K, ABDULLAH NAZEER",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549170",
+      "codes": [],
+      "name": "West Zone Inter-University Chess (Men) Tournament 2026–27",
+      "start": "2026-11-24",
+      "end": "2026-11-27",
+      "place_text": "Apex University, Achrol, Jaipur, Rajasthan",
+      "state": "Rajasthan",
+      "city": "Jaipur",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549170.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549170.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "APEX University, Jaipur",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549909",
+      "codes": [],
+      "name": "U8 Winmore Academy Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-29",
+      "place_text": "Winmore Academy Jakkur Bangalore",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549910",
+      "codes": [],
+      "name": "U10 Winmore Academy Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-29",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U10"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549911",
+      "codes": [],
+      "name": "U13 Winmore Academy Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-29",
+      "place_text": "Winmore Academy Jakkur Bangalore",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549912",
+      "codes": [],
+      "name": "U17 Winmore Academy Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-24",
+      "end": "2026-11-29",
+      "place_text": "Winmore Academy Jakkur Bangalore",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544771",
+      "codes": [],
+      "name": "1st Next Step Chess Academy One Day Rapid Chess Championship 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Next Step Chess Academy Udharbond",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544771.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544771.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Next Step Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550100",
+      "codes": [],
+      "name": "KOLLAM DISTRICT CHESS IN SCHOOLS TEAM CHESS CHAMPIONSHIP 2026-CAT 1 ( LKG - IV Std)",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Oxford School Auditorium, Karavaloor",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550100.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550100.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550104",
+      "codes": [],
+      "name": "KOLLAM DISTRICT CHESS IN SCHOOLS TEAM CHESS CHAMPIONSHIP 2026-CAT 2 ( LKG - VIII Std)",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Oxford School Auditorium, Karavaloor",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550104.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550104.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550108",
+      "codes": [],
+      "name": "KOLLAM DISTRICT CHESS IN SCHOOLS TEAM CHESS CHAMPIONSHIP 2026-CAT 3 ( LKG - Plus Two)",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Oxford School Auditorium, Karavaloor",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550108.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550108.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550102",
+      "codes": [],
+      "name": "14th Rising Star Chess Academy Open Rapid Chess Tournament 2026,Gola Road,Patna Total Cash Prize Rs. 11000 - For entry or any queries",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550102.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550102.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Rising Star Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-24",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}
