@@ -2,6 +2,8 @@
   "source": "chessresults_ind",
   "found": 150,
   "listing": {
+    "https://chess-results.com/tnr1540937.aspx?lan=1": "bbdf7c4d3e04",
+    "https://chess-results.com/tnr1549170.aspx?lan=1": "c011668a913d",
     "https://chess-results.com/tnr1549496.aspx?lan=1": "4fdb6c03b383",
     "https://chess-results.com/tnr1539989.aspx?lan=1": "2bc2494d9b22",
     "https://chess-results.com/tnr1539933.aspx?lan=1": "086f5795bdc2",
@@ -25,7 +27,6 @@
     "https://chess-results.com/tnr1549904.aspx?lan=1": "31a77f0d39bd",
     "https://chess-results.com/tnr1549873.aspx?lan=1": "f1a9bf272ccc",
     "https://chess-results.com/tnr1549418.aspx?lan=1": "f4003268cd80",
-    "https://chess-results.com/tnr1549170.aspx?lan=1": "c011668a913d",
     "https://chess-results.com/tnr1549721.aspx?lan=1": "17faeb6fe647",
     "https://chess-results.com/tnr1549718.aspx?lan=1": "bcb1233a11c7",
     "https://chess-results.com/tnr1549723.aspx?lan=1": "3ee99c0a586f",
@@ -51,12 +52,64 @@
     "https://chess-results.com/tnr1544461.aspx?lan=1": "050fffe5b4fa",
     "https://chess-results.com/tnr1547459.aspx?lan=1": "46d351fdd0c1",
     "https://chess-results.com/tnr1544463.aspx?lan=1": "7ab2abe98f19",
-    "https://chess-results.com/tnr1549729.aspx?lan=1": "45cf5e97e81d",
+    "https://chess-results.com/tnr1539360.aspx?lan=1": "e0880dbc5f16",
+    "https://chess-results.com/tnr1532678.aspx?lan=1": "8e6618616c02",
+    "https://chess-results.com/tnr1502344.aspx?lan=1": "5e282edeba9f",
+    "https://chess-results.com/tnr1534051.aspx?lan=1": "996cac259f64",
+    "https://chess-results.com/tnr1550114.aspx?lan=1": "17562decc3be",
+    "https://chess-results.com/tnr1550116.aspx?lan=1": "bc968ded1e1e",
+    "https://chess-results.com/tnr1550113.aspx?lan=1": "1e4c1baf17c1",
+    "https://chess-results.com/tnr1535743.aspx?lan=1": "4167d77e45d3",
+    "https://chess-results.com/tnr1550104.aspx?lan=1": "49e2448d811f",
     "https://chess-results.com/tnr1550108.aspx?lan=1": "2e46a9e86ae2",
-    "https://chess-results.com/tnr1550104.aspx?lan=1": "be2c13654cdd",
     "https://chess-results.com/tnr1550102.aspx?lan=1": "05928bca6e95",
     "https://chess-results.com/tnr1550100.aspx?lan=1": "261866a266f4",
-    "https://chess-results.com/tnr1544771.aspx?lan=1": "12c76ca26d4f"
+    "https://chess-results.com/tnr1544771.aspx?lan=1": "12c76ca26d4f",
+    "https://chess-results.com/tnr1528935.aspx?lan=1": "803a385d5870",
+    "https://chess-results.com/tnr1550089.aspx?lan=1": "b861eaffb3c7",
+    "https://chess-results.com/tnr1549794.aspx?lan=1": "417b5fa08a81",
+    "https://chess-results.com/tnr1549791.aspx?lan=1": "fb49ffe6c4e2",
+    "https://chess-results.com/tnr1549789.aspx?lan=1": "4b68406d6479",
+    "https://chess-results.com/tnr1549784.aspx?lan=1": "b61423b1d3b9",
+    "https://chess-results.com/tnr1549781.aspx?lan=1": "3fb22dbb8d29",
+    "https://chess-results.com/tnr1539596.aspx?lan=1": "ea5d501447f6",
+    "https://chess-results.com/tnr1538510.aspx?lan=1": "430c3acacbd4",
+    "https://chess-results.com/tnr1544675.aspx?lan=1": "3c6ecf84e0c1",
+    "https://chess-results.com/tnr1550030.aspx?lan=1": "b55f69bf03c7",
+    "https://chess-results.com/tnr1547750.aspx?lan=1": "026a5e4de842",
+    "https://chess-results.com/tnr1547773.aspx?lan=1": "a59e43ab956d",
+    "https://chess-results.com/tnr1550028.aspx?lan=1": "0655ae425f67",
+    "https://chess-results.com/tnr1550026.aspx?lan=1": "f65504cd7219",
+    "https://chess-results.com/tnr1550023.aspx?lan=1": "6c9e72a93c5f",
+    "https://chess-results.com/tnr1550022.aspx?lan=1": "4b66e7dd5cda",
+    "https://chess-results.com/tnr1549184.aspx?lan=1": "9171e6d84341",
+    "https://chess-results.com/tnr1526947.aspx?lan=1": "2897856c993a",
+    "https://chess-results.com/tnr1550009.aspx?lan=1": "c57955b889ae",
+    "https://chess-results.com/tnr1549077.aspx?lan=1": "2908268b047f",
+    "https://chess-results.com/tnr1519396.aspx?lan=1": "1c53e57f7880",
+    "https://chess-results.com/tnr1519392.aspx?lan=1": "9f22561a32ad",
+    "https://chess-results.com/tnr1519390.aspx?lan=1": "29d6b041604a",
+    "https://chess-results.com/tnr1538873.aspx?lan=1": "aac8be62b1a1",
+    "https://chess-results.com/tnr1543357.aspx?lan=1": "ced09a07ba47",
+    "https://chess-results.com/tnr1538695.aspx?lan=1": "023ab7360d01",
+    "https://chess-results.com/tnr1535011.aspx?lan=1": "127832fccaa1",
+    "https://chess-results.com/tnr1535026.aspx?lan=1": "2a78656a2447",
+    "https://chess-results.com/tnr1535032.aspx?lan=1": "aaf9c77aaca5",
+    "https://chess-results.com/tnr1535043.aspx?lan=1": "e5c3e07c777b",
+    "https://chess-results.com/tnr1535035.aspx?lan=1": "bf1861853300",
+    "https://chess-results.com/tnr1535038.aspx?lan=1": "f43aa2693bc3",
+    "https://chess-results.com/tnr1539869.aspx?lan=1": "0bca2d4e232b",
+    "https://chess-results.com/tnr1538660.aspx?lan=1": "15e91d270fb0",
+    "https://chess-results.com/tnr1538666.aspx?lan=1": "ca5f99d1109a",
+    "https://chess-results.com/tnr1539020.aspx?lan=1": "3d0735976ef4",
+    "https://chess-results.com/tnr1539367.aspx?lan=1": "df84643f10d7",
+    "https://chess-results.com/tnr1548787.aspx?lan=1": "52f14425360f",
+    "https://chess-results.com/tnr1548779.aspx?lan=1": "eb1797216451",
+    "https://chess-results.com/tnr1533242.aspx?lan=1": "6502ebded106",
+    "https://chess-results.com/tnr1544300.aspx?lan=1": "fc608e25e514",
+    "https://chess-results.com/tnr1545810.aspx?lan=1": "e379adb0f798",
+    "https://chess-results.com/tnr1538096.aspx?lan=1": "76876bb6fe73",
+    "https://chess-results.com/tnr1519549.aspx?lan=1": "0f900b754545"
   },
   "events": [
     {
@@ -103,7 +156,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -154,7 +207,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -205,7 +258,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -256,7 +309,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -307,7 +360,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -358,7 +411,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -409,7 +462,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -460,7 +513,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -511,7 +564,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -562,7 +615,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -613,7 +666,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -664,7 +717,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -713,7 +766,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -762,7 +815,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -811,7 +864,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -860,7 +913,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -909,7 +962,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -958,7 +1011,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1009,7 +1062,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1060,7 +1113,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1111,7 +1164,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1162,7 +1215,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1213,7 +1266,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1262,7 +1315,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1313,7 +1366,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1362,7 +1415,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1413,7 +1466,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1462,7 +1515,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1511,7 +1564,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1562,7 +1615,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1611,7 +1664,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1660,7 +1713,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1711,7 +1764,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1760,7 +1813,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1811,7 +1864,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1860,7 +1913,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1909,7 +1962,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -1958,7 +2011,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2007,7 +2060,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2055,7 +2108,7 @@
       "raw_dates": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-24",
-      "gone_from_source": false,
+      "gone_from_source": true,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -2101,7 +2154,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2148,7 +2201,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2195,7 +2248,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2244,7 +2297,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2293,7 +2346,56 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1540937",
+      "codes": [],
+      "name": "North Zone Inter University Chess (MEN) Championship 2026-27",
+      "start": "2026-11-24",
+      "end": "2026-11-27",
+      "place_text": "Amity University Gurugram, Haryana",
+      "state": "Haryana",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Amity University Gurugram",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2342,7 +2444,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2393,7 +2495,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2444,7 +2546,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2495,7 +2597,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2546,7 +2648,309 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550113",
+      "codes": [],
+      "name": "REGULAR PLAYING SESSION 158 ( TOURNAMENT TRAINING IN COGNIZANCE ACADEMY)",
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "place_text": "COGNIZANCE ACADEMY EDAPPALLY",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550113.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550113.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "COGNIZANCE ACADEMY",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1528935",
+      "codes": [],
+      "name": "5th Sajjan Academy Open Blitz Chess Tournament 2026 PRIZE FUND - 50,000/- Early Bird Rs 500/- till 10th November 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Sri Sai Palace Convention Centre, NICE Road, Junction, SH17, Kengeri, BNG-60",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1528935&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1528935.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1528935.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=61557"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://circlechess.com/registration?id=61557",
+      "organiser": "Sajjan Academy",
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538660",
+      "codes": [],
+      "name": "14th LCCA UNDER 06 CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Perunthalaivar Kamarajar Samooga Nalakoodam, Ayya Thaangal, Santhaiyadi, KK Dist",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538660.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538660.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U6"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538666",
+      "codes": [],
+      "name": "14th LCCA UNDER 11 GIRLS CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Perunthalaivar Kamarajar Samooga Nalakoodam, Ayya Thaangal, Santhaiyadi, KK Dist",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538666.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538666.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539020",
+      "codes": [],
+      "name": "14th LCCA UNDER 11 BOYS CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Perunthalaivar Kamarajar Samooga Nalakoodam, Ayya Thaangal, Santhaiyadi, KK Dist",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539020.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539020.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539869",
+      "codes": [],
+      "name": "14th LCCA UNDER 08 CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Perunthalaivar Kamarajar Samooga Nalakoodam, Ayya Thaangal, Santhaiyadi, KK Dist",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539869.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539869.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2595,7 +2999,105 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1547750",
+      "codes": [],
+      "name": "28 Nov | Namma Chess Academy 5th Tamil Nadu State Level Children’s Chess Tournament",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Velankanni Public Senior Secondary School, Muthamizh Nagar, Kodungaiyur, Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547750&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1547750.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547750.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Namma Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550089",
+      "codes": [],
+      "name": "REGULAR PLAYING SESSION 157 ( TOURNAMENT TRAINING IN COGNIZANCE ACADEMY) SPECIAL REGULAR PLAYING SESSION",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "COGNIZANCE ACADEMY EDAPPALLY",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550089.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550089.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "COGNIZANCE ACADEMY",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2644,7 +3146,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2693,7 +3195,7 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2742,7 +3244,1754 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1502344",
+      "codes": [],
+      "name": "Khannur Fide Rapid Rating Chess Tournament 2026 494719/KA(R)/2026 November 29th 2026, 3 lakh cash Prize,",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Lotus Convention Center, Ramamurthy Nagar, Bengaluru",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=54993"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://circlechess.com/registration?id=54993",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1519390",
+      "codes": [],
+      "name": "KING,S MAZE U12 OPEN CHESS TOURNAMENT 29TH NOVEMBER SAGARA. Registration contact",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "SAGARA",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1519390.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519390.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U12"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1519392",
+      "codes": [],
+      "name": "KING,S MAZE U15 OPEN CHESS TOURNAMENT 29TH NOVEMBER SAGARA. Registration contact",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "SAGARA",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1519392.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519392.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1519396",
+      "codes": [],
+      "name": "KING,S MAZE OPEN CHESS TOURNAMENT 29TH NOVEMBER SAGARA. Registration contact",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "SAGARA",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1519396.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519396.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1526947",
+      "codes": [],
+      "name": "10th WMA Inter School Rapid Rating Chess Tournamnet 2026 1 lakh Prize worth For Registration : ( Ravi Kant)",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "The Green School International, Lokhra",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1526947.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1526947.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Winning Move Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1532678",
+      "codes": [
+        "502180"
+      ],
+      "name": "Chessind Academy's 2nd FIDE Rated Open Rapid Chess Tournament AICF Event Code:502180/KL(R)/2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Naipunya Public School, Kakkanad",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "ChessInd Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1534051",
+      "codes": [],
+      "name": "Prince Shri Venkateshwara Arts and Science College State Level Chess Tournament on 29/11/2026 @ Gowrivakkam",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Prince Shri Venkateshwara Arts and Science College,Gowrivakkam,Chennai-073",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GM Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535011",
+      "codes": [],
+      "name": "UNDER-06 GIRLS CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, HYD on 29th Nov, 2026 (F REE LUNCH FOR PLAYERS) 20 PRIZES (TROPHIES) ENTRY FEE RS.750",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Venue Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Naga",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535011.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535011.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U6"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535026",
+      "codes": [],
+      "name": "UNDER-12 GIRLS CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, HYD on 29th Nov, 2026 (F REE LUNCH FOR PLAYERS) 20 PRIZES (TROPHIES) ENTRY FEE RS.750",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535026.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535026.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U12"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535032",
+      "codes": [],
+      "name": "UNDER-16 GIRLS CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, HYD on 29th Nov, 2026 (F REE LUNCH FOR PLAYERS) 20 PRIZES (TROPHIES) ENTRY FEE RS.750",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535032.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535032.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U16"
+        ],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535035",
+      "codes": [],
+      "name": "MEN PARENTS CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, HYD on 29th Nov, 2026 (FR EE LUNCH FOR PLAYERS) 10 PRIZES (TROPHIES) ENTYR FEE Rs.900",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535035.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535035.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535038",
+      "codes": [],
+      "name": "WOMEN PARENTS CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, HYD on 29th Nov, 2026 (FR EE LUNCH FOR PLAYERS) 10 PRIZES (TROPHIES) ENTYR FEE Rs.900",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535038.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535038.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535043",
+      "codes": [],
+      "name": "OPEN PRIZE MONEY AGE 45+ CHESS TOURNAMENT At MPH, PRAGATHI NAGAR, on 29th Nov (FREE LUNCH FOR PLAYERS) ENTYR FEE Rs.450",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535043.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535043.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "OGCA @ BRAIN GYM",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1535743",
+      "codes": [],
+      "name": "Shri Dhaniram Suryavanshi Memorial 4th Open Rapid Chess Tournament",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Gyan Banquet Hall, Ujhani, Budaun",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1535743.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1535743.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "DSP Club",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538510",
+      "codes": [],
+      "name": "3rd Freestyle Open Chess Tournament 1st Round reporting Starts at 09.30 am on 29/11/2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Chennai Citi Centre, Dr., Radhakrishnan Salai, Mylapore, Chennai - 600004",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538510.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538510.aspx?lan=1",
+          "register_url": "https://ticket360.co.in/events/3rd-open-freestyle-chess-tournament"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://ticket360.co.in/events/3rd-open-freestyle-chess-tournament",
+      "organiser": "64 Squares Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538695",
+      "codes": [],
+      "name": "SHREE RUDHRAA State Level chess Tournament - 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "JN Stadium",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538695.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538695.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Shree Rudhraa Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538873",
+      "codes": [],
+      "name": "29th NOV 2026-MOHAMED SATHAK AJ COLLEGE OF ENGINEERING COLLEGE - SIRUSERI 4TH TN STATE LEVEL CHESS TMT, CONTACT: SATHYAN K - 1st ROUND@ 9:00AM",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "SRI RAGHAVENDRA CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539360",
+      "codes": [],
+      "name": "K.R.Palanivelu Memorial 2nd Gold Coin State Level Children's chess tmt-Karanthai -U07,U09,U11,U13,U17- 1st Prize - 1/4 Gram Gold Coin",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Karanthai Tamil Sangam, Karanthai, Thanjavur-613002",
+      "state": "Tamil Nadu",
+      "city": "Thanjavur",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Magnum Professional Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U7",
+          "U9",
+          "U11",
+          "U13",
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539596",
+      "codes": [],
+      "name": "Dr O. P. Bansal Memorial One Day Rapid Chess Tournament , Indore | Organised By Ahilya Chess Club",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "SGSITS Indore",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Ahilya Chess Club",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1543357",
+      "codes": [],
+      "name": "2nd MVIT King Trophy International Rapid FIDE Rating Chess Tournament 2026 | Nov 29th | Prize Fund : ₹3 Lakhs",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Manakula Vinayagar Institute Of Technology, Madagadipet, Puducherry 605107",
+      "state": "Puducherry",
+      "city": "Madagadipet",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1543357&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Mr. Vasanthakumar M",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544675",
+      "codes": [],
+      "name": "2nd SGCA PRAYAGRAJ OPEN RAPID CHESS TOURNAMENT 29th November 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544675.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544675.aspx?lan=1",
+          "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSdtRtGaaNNHJjCUzx2C3DfoStjbNdltyNBNBxqN6qS_qxI72Q/viewform?usp=publish-editor"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSdtRtGaaNNHJjCUzx2C3DfoStjbNdltyNBNBxqN6qS_qxI72Q/viewform?usp=publish-editor",
+      "organiser": "SGCA, MR SRI RAM DWIVEDI (Org. Secretary)",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1547773",
+      "codes": [],
+      "name": "29 Nov | Enpassant 1st Tamil Nadu State Level Children's Chess Tournament",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Velankanni Public Senior Secondary School, Muthamizh Nagar, Kodungaiyur, Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547773&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Enpassant Chess School",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549077",
+      "codes": [],
+      "name": "GreenSchool's AP Staete Open Chess Tournament @ 29th Nov 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549077.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549077.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549184",
+      "codes": [],
+      "name": "Lokmat Mahagames 2026-27",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "School of Scholars Bhandara",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549184.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549184.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "LOKMAT BHANDARA",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549781",
+      "codes": [],
+      "name": "2nd Castle & Crown All Bengal (Under 8) Rapid Chess Tounament @Rishra",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549781.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549781.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Castle & Crown Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549784",
+      "codes": [],
+      "name": "2nd Castle & Crown All Bengal (Under 10) Rapid Chess Tounament @Rishra",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549784.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549784.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Castle & Crown Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U10"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549789",
+      "codes": [],
+      "name": "2nd Castle & Crown All Bengal (Under 12) Rapid Chess Tounament @Rishra",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549789.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549789.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Castle & Crown Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U12"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549791",
+      "codes": [],
+      "name": "2nd Castle & Crown All Bengal (Under 14) Rapid Chess Tounament @Rishra",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549791.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549791.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Castle & Crown Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U14"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549794",
+      "codes": [],
+      "name": "2nd Castle & Crown All Bengal (Open) Rapid Chess Tounament @Rishra",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549794.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549794.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Castle & Crown Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550009",
+      "codes": [],
+      "name": "Rotary Rapid Chess Tournament 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Mangalji Bhai Thakkar Sports Complex, Shree Panchavati Education Society, Nashik",
+      "state": "Maharashtra",
+      "city": "Nashik",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550009.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550009.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Rotary Club of Nashik North",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550022",
+      "codes": [],
+      "name": "4th All Bengal Open One Day Rapid Chess Tournament 26 ( Under-9 ).@ 29/11/26.",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GSF Recreation Club, Cossipore, Kolkata- 700002.",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550022.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550022.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U9"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550023",
+      "codes": [],
+      "name": "4th All Bengal Open One Day Rapid Chess Tournament 26 ( Under-11 ).@ 29/11/26.",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GSF Recreation Club, Cossipore, Kolkata- 700002.",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550023.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550023.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U11"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550026",
+      "codes": [],
+      "name": "4th All Bengal Open One Day Rapid Chess Tournament 26 ( Under-13 ).@ 29/11/26.",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GSF Recreation Club, Cossipore, Kolkata- 700002.",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550026.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550026.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U13"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550028",
+      "codes": [],
+      "name": "4th All Bengal Open One Day Rapid Chess Tournament 26 ( Under-15 ).@ 29/11/26.",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GSF Recreation Club, Cossipore, Kolkata- 700002.",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550028.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550028.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [
+          "U15"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550030",
+      "codes": [],
+      "name": "4th All Bengal Open One Day Rapid Chess Tournament 26 ( OPEN ).@ 29/11/26.",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GSF Recreation Club, Cossipore, Kolkata- 700002.",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550030.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550030.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -2791,7 +5040,501 @@
       },
       "raw_dates": null,
       "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550114",
+      "codes": [],
+      "name": "💐SILVER LEAF Tirupur District Level Children Chess Tournament 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Silver Leaf Montessori School, Andipalayam, Tirupur",
+      "state": "Tamil Nadu",
+      "city": "Tirupur",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550114.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550114.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "SILVER LEAF MONTESSORI SCHOOL",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1550116",
+      "codes": [],
+      "name": "1st Masters cup State Level Children Tournament 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": null,
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Masters chess club",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1533242",
+      "codes": [],
+      "name": "KANCHI CHESS ACADEMY - Inter School Children's Chess Tournament on 06-12-2026.",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Rajashwari Hall Cultural Centre, Vilakkadi Koil Street, Kanchipuram",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1533242.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1533242.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "KANCHI CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1539367",
+      "codes": [],
+      "name": "♞!! FIRST PRIZE DGT-CHESS CLOCK !!♞ Anandhan 12th State Level Tournament on | 06/12/2026 | @ Pammal Chennai-75 | ☎ / )",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Sri Sankara Global Cambridge International School, Pammal , Chennai-075",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
+          "register_url": "https://www.easypaychess.com/tmt.asp?i=2592"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
+      "organiser": "Anandhan Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1545810",
+      "codes": [],
+      "name": "GIRISTUTI CHECKMATE SCHOOL OF CHESS PRESENTS Under-18 Children's Day Fide Rapid Rating Chess Tournament 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Belgaum",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "GIRISTUTI CHECKMATE SCHOOL OF CHESS PRESENTS",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [
+          "U18"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1548779",
+      "codes": [],
+      "name": "40th National Junior Girls Championship 2025 Kolkata",
+      "start": "2026-12-11",
+      "end": "2026-12-19",
+      "place_text": "Eastern Railway Sports Academy Complex, Majerhat, Kolkata",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1548779&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1548779.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1548779.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Sara Bangla Daba Sanghtha",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": true,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1548787",
+      "codes": [],
+      "name": "55th National Junior Championship 2025 Kolkata",
+      "start": "2026-12-11",
+      "end": "2026-12-19",
+      "place_text": "Eastern Railway Sports Academy Complex, Majerhat, Kolkata",
+      "state": "West Bengal",
+      "city": "Kolkata",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1548787&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1548787.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1548787.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Sara Bangla Daba Sanghtha",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1519549",
+      "codes": [],
+      "name": "24th North East FIDE Rating Chess Championship",
+      "start": "2026-12-15",
+      "end": "2026-12-19",
+      "place_text": "The Covenant Hall,",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": "Nagaland Chess Association",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1544300",
+      "codes": [],
+      "name": "Puneeth Rajkumar Cup All India Fide Rating Open Chess Tournament 2026 511685/KA(R)/2026 December 20th 2026",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Guru Bhavan, AVK College Road, Davangere",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538096",
+      "codes": [],
+      "name": "1st All India Under-08 Rapid Chess Festival (Below 1600 FIDE Standard & Rapid Ratings) at Tiruchengode (TN) on 01/01/2027",
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "place_text": "Sengunthar Kalyana Mandapam, Periya Pavadi Street, Tiruchengode, Namakkal Dt",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538096.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538096.aspx?lan=1",
+          "register_url": "https://ticket360.co.in/events/1st-all-india-open-under-8-rapid-chess-festival"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": "https://ticket360.co.in/events/1st-all-india-open-under-8-rapid-chess-festival",
+      "organiser": "JP Anand Chess Academy (Reg. No: UDYAM-TN-) Tiruchengode",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
