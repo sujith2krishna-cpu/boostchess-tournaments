@@ -19,7 +19,7 @@ def files_snapshot(folder):
 def test_manual_event_is_added_with_source_manual(data_dir):
     write_manual(data_dir, EVENTS_HEADER + (
         "club-open-2027,Pune Club Rapid Under-11,05-01-2027,06-01-2027,\"Pune, Maharashtra\","
-        ",https://example.org/register,https://example.org/b.pdf,rapid,,Entry at the door\n"))
+        ",,https://example.org/register,https://example.org/b.pdf,rapid,,Entry at the door\n"))
     report = build(data_dir, [row("AICF one", "400001")])
     event = by_id(data_dir)["club-open-2027"]
     assert event["source"] == "manual" and event["codes"] == []
@@ -34,8 +34,8 @@ def test_manual_event_is_added_with_source_manual(data_dir):
 
 def test_manual_dates_in_both_styles_and_one_day_default(data_dir):
     write_manual(data_dir, EVENTS_HEADER
-                 + ",Iso style,2027-02-03,2027-02-04,Goa,,,,,,\n"
-                 + ",One day only,03-02-2027,,Goa,,,,,,\n")
+                 + ",Iso style,2027-02-03,2027-02-04,Goa,,,,,,,\n"
+                 + ",One day only,03-02-2027,,Goa,,,,,,,\n")
     build(data_dir, [row()])
     manual = {e["name"]: e for e in load_events(data_dir) if e["source"] == "manual"}
     assert (manual["Iso style"]["start"], manual["Iso style"]["end"]) == ("2027-02-03", "2027-02-04")
@@ -44,7 +44,7 @@ def test_manual_dates_in_both_styles_and_one_day_default(data_dir):
 
 
 def test_manual_id_is_stable_between_runs(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + ",Stable Cup,03-02-2027,,Goa,,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + ",Stable Cup,03-02-2027,,Goa,,,,,,,\n")
     build(data_dir, [row()])
     first = {e["id"]: e for e in load_events(data_dir) if e["source"] == "manual"}
     build(data_dir, [row()], now=NEXT_DAY)
@@ -55,17 +55,17 @@ def test_manual_id_is_stable_between_runs(data_dir):
 
 
 @pytest.mark.parametrize("line, expected", [
-    (",,03-02-2027,,Goa,,,,,,", "line 2: the name is empty"),
-    (",Cup,,,Goa,,,,,,", "line 2: start_date is empty"),
-    (",Cup,31-02-2027,,Goa,,,,,,", "line 2: start_date '31-02-2027' is not a date"),
-    (",Cup,05-02-2027,03-02-2027,Goa,,,,,,", "line 2: end_date 2027-02-03 is before start_date 2027-02-05"),
-    (",Cup,03-02-2027,,Goa,Tamilnaduu,,,,,", "line 2: state 'Tamilnaduu' is not an Indian state"),
-    (",Cup,03-02-2027,,Goa,,example.org,,,,", "line 2: link 'example.org' is not a full web address"),
-    (",Cup,03-02-2027,,Goa,,,,fast,,", "line 2: format 'fast' is not understood"),
-    (",Cup,03-02-2027,,Goa,,,,,eleven,", "line 2: age 'eleven' is not understood"),
-    ("aicf-123456,Cup,03-02-2027,,Goa,,,,,,", "reserved for AICF events"),
-    ("bad id,Cup,03-02-2027,,Goa,,,,,,", "may only use letters"),
-    (",Cup,03-02-2027,,Goa,,,,,,extra,more", "more values than the header has columns"),
+    (",,03-02-2027,,Goa,,,,,,,", "line 2: the name is empty"),
+    (",Cup,,,Goa,,,,,,,", "line 2: start_date is empty"),
+    (",Cup,31-02-2027,,Goa,,,,,,,", "line 2: start_date '31-02-2027' is not a date"),
+    (",Cup,05-02-2027,03-02-2027,Goa,,,,,,,", "line 2: end_date 2027-02-03 is before start_date 2027-02-05"),
+    (",Cup,03-02-2027,,Goa,Tamilnaduu,,,,,,", "line 2: state 'Tamilnaduu' is not an Indian state"),
+    (",Cup,03-02-2027,,Goa,,,example.org,,,,", "line 2: link 'example.org' is not a full web address"),
+    (",Cup,03-02-2027,,Goa,,,,,fast,,", "line 2: format 'fast' is not understood"),
+    (",Cup,03-02-2027,,Goa,,,,,,eleven,", "line 2: age 'eleven' is not understood"),
+    ("aicf-123456,Cup,03-02-2027,,Goa,,,,,,,", "reserved for AICF events"),
+    ("bad id,Cup,03-02-2027,,Goa,,,,,,,", "may only use letters"),
+    (",Cup,03-02-2027,,Goa,,,,,,,extra,more", "more values than the header has columns"),
 ])
 def test_manual_row_error_stops_with_plain_message_and_writes_nothing(data_dir, line, expected):
     build(data_dir, [row("Existing", "400001")])
@@ -83,9 +83,9 @@ def test_manual_row_error_stops_with_plain_message_and_writes_nothing(data_dir, 
 
 def test_all_mistakes_are_listed_together_with_their_lines(data_dir):
     write_manual(data_dir, EVENTS_HEADER
-                 + ",Fine,03-02-2027,,Goa,,,,,,\n"
-                 + ",,03-02-2027,,Goa,,,,,,\n"
-                 + ",Late,xx,,Goa,,,,,,\n")
+                 + ",Fine,03-02-2027,,Goa,,,,,,,\n"
+                 + ",,03-02-2027,,Goa,,,,,,,\n"
+                 + ",Late,xx,,Goa,,,,,,,\n")
     with pytest.raises(be.DataFileError) as caught:
         build(data_dir, [row()])
     message = str(caught.value)
@@ -100,20 +100,20 @@ def test_wrong_header_names_the_problem(data_dir):
 
 
 def test_duplicate_manual_id_names_both_lines(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + "x1,A,03-02-2027,,Goa,,,,,,\nx1,B,04-02-2027,,Goa,,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + "x1,A,03-02-2027,,Goa,,,,,,,\nx1,B,04-02-2027,,Goa,,,,,,,\n")
     with pytest.raises(be.DataFileError, match="line 3: id 'x1' is already used on line 2"):
         build(data_dir, [row()])
 
 
 def test_manual_ids_may_not_use_the_aicf_prefix(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + "aicf-x,A,03-02-2027,,Goa,,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + "aicf-x,A,03-02-2027,,Goa,,,,,,,\n")
     with pytest.raises(be.DataFileError, match="reserved"):
         build(data_dir, [row()])
 
 
 def test_excel_style_file_with_bom_and_blank_lines_is_fine(data_dir):
     (data_dir / "manual" / "events.csv").write_bytes(
-        b"\xef\xbb\xbf" + (EVENTS_HEADER + "\n,Cup,03-02-2027,,Goa,,,,,,\n\n").encode("utf-8"))
+        b"\xef\xbb\xbf" + (EVENTS_HEADER + "\n,Cup,03-02-2027,,Goa,,,,,,,\n\n").encode("utf-8"))
     build(data_dir, [row()])
     assert sum(1 for e in load_events(data_dir) if e["source"] == "manual") == 1
 
@@ -187,7 +187,7 @@ def test_removing_an_override_also_works_for_a_gone_event(data_dir):
 
 
 def test_override_beats_manual_beats_scraped(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + "mine,My Cup,10-01-2027,11-01-2027,Goa,,,,,,Original note\n")
+    write_manual(data_dir, EVENTS_HEADER + "mine,My Cup,10-01-2027,11-01-2027,Goa,,,,,,,Original note\n")
     with_override(data_dir, "mine,20-01-2027,21-01-2027,,,,,Moved")
     build(data_dir, [row()])
     event = by_id(data_dir)["mine"]
@@ -227,7 +227,7 @@ def test_override_mistakes_stop_with_line_numbers_and_write_nothing(data_dir, li
 
 
 def test_manual_event_removed_from_the_csv_leaves_the_data(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + "mine,My Cup,10-01-2027,,Goa,,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + "mine,My Cup,10-01-2027,,Goa,,,,,,,\n")
     build(data_dir, [row()])
     write_manual(data_dir, EVENTS_HEADER)
     build(data_dir, [row()], now=NEXT_DAY)

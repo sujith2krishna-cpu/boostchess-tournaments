@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Build data/events.json and data/meta.json from the AICF "All Events" page.
+"""Build data/events.json and data/meta.json from the chess tournament sources.
 
 Run from the repository root:
 
     python scripts/build_events.py
 
-What it does, in short:
-  1. reads the manual files (data/manual/events.csv and overrides.csv) and stops
-     with a plain-words message if a row has a mistake;
-  2. fetches https://aicf.in/all-events/ once (single retry) and parses the table;
-  3. refuses to continue if the page looks wrong (too few rows), leaving the
-     existing data untouched;
-  4. merges with the previous data/events.json so events are never deleted;
-  5. applies overrides and writes events.json + meta.json.
+Sources (each its own module in scripts/sources/, switched on or off in
+config/sources.json): aicf, chessfee, chessresults_ind, chessbase_calendar. Plus your
+own events in data/manual/events.csv and fixes in data/manual/overrides.csv.
+
+What a run does, in short:
+  1. reads the manual files and stops with a plain-words message if a row has a mistake;
+  2. for every switched-on source: reads robots.txt, fetches politely, parses; a source
+     that fails (or returns less than half of last time) keeps its previous events and the
+     failure is written to meta.json, while the other sources carry on;
+  3. keeps history (events are never deleted), joins entries that share an AICF event
+     code, flags look-alikes, applies overrides;
+  4. writes events.json and meta.json (and one snapshot per source in data/sources/).
 
 Only `requests` and `beautifulsoup4` are used besides the standard library.
 """
@@ -21,7 +25,6 @@ from __future__ import annotations
 import argparse
 import copy
 import csv
-import hashlib
 import io
 import json
 import os
@@ -29,575 +32,59 @@ import re
 import sys
 import time
 from collections import Counter, defaultdict
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
 
-import requests
-from bs4 import BeautifulSoup
+import requests  # noqa: F401  (tests patch requests.get through this module)
 
-SOURCE_URL = "https://aicf.in/all-events/"
-USER_AGENT = (
-    "BoostchessBot (+https://github.com/sujith2krishna-cpu/boostchess-tournaments)"
-)
-REQUEST_TIMEOUT_SECONDS = 30
-RETRY_WAIT_SECONDS = 5
-MIN_ROWS = 100  # a page with fewer rows is treated as a broken fetch
-MIN_FRACTION_OF_PREVIOUS = 0.5  # ... and so is one with under half of last time
-MAX_SUSPECT_FRACTION = 0.5  # more bad dates than this means the layout changed
-SCHEMA_VERSION = 2  # 2: tags.age is a list; every event has a country
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-# India has no daylight saving, so a fixed offset is exactly Asia/Kolkata and
-# needs no extra package (zoneinfo needs tzdata on Windows).
-IST = timezone(timedelta(hours=5, minutes=30), "Asia/Kolkata")
+from eventlib import *  # noqa: E402,F401,F403
+from eventlib import _from_iso, _iso, _key  # noqa: E402,F401
+from sources import aicf, chessbase_calendar, chessfee, chessresults_ind  # noqa: E402
+from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
+                          events_from_rows, parse_html)
+from sources.polite import PoliteClient  # noqa: E402
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
-
-EVENTS_CSV_COLUMNS = (
-    "id", "name", "start_date", "end_date", "place", "state", "link",
-    "brochure_url", "format", "age", "note",
-)
-OVERRIDES_CSV_COLUMNS = (
-    "key", "start_date", "end_date", "place", "state", "hide", "cancelled", "note",
-)
-FORMAT_ORDER = ("classical", "rapid", "blitz")
+SOURCE_MODULES = {
+    "aicf": aicf,
+    "chessfee": chessfee,
+    "chessresults_ind": chessresults_ind,
+    "chessbase_calendar": chessbase_calendar,
+}
+CONFIG_PATH = ROOT / "config" / "sources.json"  # noqa: F405
 
 
 # --------------------------------------------------------------------------
-# Errors
+# Configuration: which sources are switched on
 # --------------------------------------------------------------------------
-class BuildError(Exception):
-    """Something went wrong; nothing has been written."""
-
-    exit_code = 1
-
-
-class SourceError(BuildError):
-    """The AICF page could not be fetched or looks wrong."""
-
-    exit_code = 2
-
-
-class DataFileError(BuildError):
-    """A mistake in one of the hand-edited files in data/manual/."""
-
-    exit_code = 3
-
-
-# --------------------------------------------------------------------------
-# Small text helpers
-# --------------------------------------------------------------------------
-def clean_text(text) -> str:
-    text = (text or "").replace("\xa0", " ").replace("​", "")
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def clean_name(text) -> str:
-    text = clean_text(text)
-    # A lone replacement character between spaces is a broken dash on the page.
-    return re.sub(r"(?<= )�(?= )", "–", text)
-
-
-def normalise_name(name: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
-
-
-def short_hash(text: str, length: int = 8) -> str:
-    return hashlib.sha1(text.encode("utf-8")).hexdigest()[:length]
-
-
-def today_in_india(now: datetime | None = None) -> date:
-    now = now or datetime.now(IST)
-    return now.astimezone(IST).date()
-
-
-# --------------------------------------------------------------------------
-# Dates
-# --------------------------------------------------------------------------
-_DMY = re.compile(r"^(\d{1,2})-(\d{1,2})-(\d{4})$")
-_YMD = re.compile(r"^(\d{4})-(\d{1,2})-(\d{1,2})$")
-
-
-def parse_date(text, allow_iso: bool = False) -> date | None:
-    """DD-MM-YYYY (and YYYY-MM-DD when allowed). None if it is not a real date."""
-    text = clean_text(text)
-    match = _DMY.match(text)
-    if match:
-        day, month, year = (int(g) for g in match.groups())
-    elif allow_iso and (match := _YMD.match(text)):
-        year, month, day = (int(g) for g in match.groups())
-    else:
-        return None
+def load_config(path: Path = CONFIG_PATH, warnings: list[str] | None = None) -> dict[str, bool]:
+    """{source: enabled}. A source missing from the file is switched on."""
+    enabled = {name: True for name in SOURCE_MODULES}
+    if not Path(path).exists():
+        if warnings is not None:
+            warnings.append(f"{path} not found; every source is switched on.")
+        return enabled
     try:
-        return date(year, month, day)
-    except ValueError:
-        return None
-
-
-def _iso(value: date | None) -> str | None:
-    return value.isoformat() if value else None
-
-
-def _from_iso(text) -> date | None:
-    if not text:
-        return None
-    try:
-        return date.fromisoformat(text)
-    except ValueError:
-        return None
-
-
-def status(event: dict, today: date) -> str:
-    """'upcoming', 'ongoing' or 'past' for an event, judged on `today` (India).
-
-    A missing or unusable end date counts as a one-day event (end = start).
-    Returns 'unknown' when there is no usable date at all.
-    """
-    start = _from_iso(event.get("start"))
-    end = _from_iso(event.get("end"))
-    if start is None:
-        # Only an end date is known: we can say "past", but not more.
-        if end is not None and today > end:
-            return "past"
-        return "unknown"
-    if end is None or end < start:
-        end = start
-    if today < start:
-        return "upcoming"
-    if today <= end:
-        return "ongoing"
-    return "past"
+        raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise BuildError(f"config/sources.json cannot be read ({exc}). Fix the file; nothing was run.")
+    if not isinstance(raw, dict):
+        raise BuildError('config/sources.json must look like {"aicf": {"enabled": true}, ...}.')
+    for name, setting in raw.items():
+        if name not in SOURCE_MODULES:
+            raise BuildError(f"config/sources.json: unknown source '{name}'. "
+                             f"Known sources: {', '.join(SOURCE_MODULES)}.")
+        flag = setting.get("enabled") if isinstance(setting, dict) else None
+        if not isinstance(flag, bool):
+            raise BuildError(f'config/sources.json: "{name}" needs {{"enabled": true}} or '
+                             '{"enabled": false}.')
+        enabled[name] = flag
+    return enabled
 
 
 # --------------------------------------------------------------------------
-# States, cities, places
-# --------------------------------------------------------------------------
-STATES = (
-    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
-    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
-    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
-    "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
-    "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal",
-    # union territories
-    "Andaman and Nicobar Islands", "Chandigarh",
-    "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Jammu and Kashmir",
-    "Ladakh", "Lakshadweep", "Puducherry",
-)
-
-
-def _key(text: str) -> str:
-    text = text.lower().replace("&", " and ")
-    return re.sub(r"\s+", " ", re.sub(r"[^a-z ]", " ", text)).strip()
-
-
-_STATE_BY_KEY = {_key(s): s for s in STATES}
-_STATE_BY_KEY.update({
-    "mp": "Madhya Pradesh", "up": "Uttar Pradesh", "wb": "West Bengal",
-    "tn": "Tamil Nadu", "ap": "Andhra Pradesh", "hp": "Himachal Pradesh",
-    "tamilnadu": "Tamil Nadu", "orissa": "Odisha", "pondicherry": "Puducherry",
-    "chattisgarh": "Chhattisgarh", "chhatisgarh": "Chhattisgarh",
-    "uttaranchal": "Uttarakhand", "new delhi": "Delhi", "nct of delhi": "Delhi",
-    "jammu": "Jammu and Kashmir", "kashmir": "Jammu and Kashmir",
-    "jammu kashmir": "Jammu and Kashmir", "j and k": "Jammu and Kashmir",
-    "jk": "Jammu and Kashmir", "andaman and nicobar": "Andaman and Nicobar Islands",
-    "dadra and nagar haveli": "Dadra and Nagar Haveli and Daman and Diu",
-    "daman and diu": "Dadra and Nagar Haveli and Daman and Diu",
-})
-
-# Only cities that sit in exactly one state. Anything doubtful (Bilaspur,
-# Aurangabad, Udaipur, ...) is left out so the state stays null.
-_CITY_TO_STATE = {
-    "Tamil Nadu": "chennai, coimbatore, madurai, tiruchirappalli, trichy, salem, "
-                  "tirunelveli, vellore, erode, tiruppur, tirupur, thanjavur, nagercoil, "
-                  "kanyakumari, cuddalore, chengalpattu, thiruvarur",
-    "Maharashtra": "mumbai, navi mumbai, pune, nagpur, nashik, thane",
-    "Karnataka": "bengaluru, bangalore, mysuru, mysore, mangalore, mangaluru, belagavi",
-    "Telangana": "hyderabad, secunderabad",
-    "West Bengal": "kolkata, siliguri",
-    "Gujarat": "ahmedabad, surat, vadodara",
-    "Madhya Pradesh": "bhopal, indore, jabalpur, burhanpur",
-    "Chhattisgarh": "raipur",
-    "Andhra Pradesh": "visakhapatnam, vijayawada",
-    "Uttarakhand": "dehradun",
-    "Uttar Pradesh": "lucknow",
-    "Rajasthan": "jaipur",
-    "Bihar": "patna",
-    "Kerala": "kochi, thiruvananthapuram",
-    "Odisha": "bhubaneswar",
-    "Jharkhand": "ranchi",
-    "Assam": "guwahati",
-}
-_CITY_BY_KEY = {
-    _key(city): state
-    for state, cities in _CITY_TO_STATE.items()
-    for city in cities.split(",")
-}
-
-
-def lookup_state(text: str) -> str | None:
-    return _STATE_BY_KEY.get(_key(text))
-
-
-def parse_place(raw) -> dict:
-    """Split a raw place into place_text, city and state (best effort, else null)."""
-    parts = [p for p in (clean_text(x).strip(" .") for x in re.split(r"[\n,]+", raw or "")) if p]
-    place_text = ", ".join(parts) or None
-    state = None
-    state_index = None
-    for index in range(len(parts) - 1, -1, -1):
-        found = lookup_state(parts[index])
-        if found:
-            state, state_index = found, index
-            break
-    if state is None:
-        for part in reversed(parts):
-            found = _CITY_BY_KEY.get(_key(part))
-            if found:
-                state = found
-                break
-    city_parts = [p for i, p in enumerate(parts) if i != state_index]
-    return {"place_text": place_text, "city": city_parts[0] if city_parts else None,
-            "state": state}
-
-
-# --------------------------------------------------------------------------
-# Event codes, brochure links, tags
-# --------------------------------------------------------------------------
-def parse_codes(text) -> tuple[list[str], dict]:
-    """6-digit codes from the code cell. '472175/76' means 472175 and 472176."""
-    codes: list[str] = []
-    expanded = unclear = False
-    for token in re.findall(r"\d+", text or ""):
-        if len(token) == 6:
-            code = token
-        elif len(token) < 6 and codes:
-            code = codes[0][: 6 - len(token)] + token
-            expanded = True
-        else:
-            unclear = True
-            continue
-        if code not in codes:
-            codes.append(code)
-    return codes, {"code_expanded": expanded, "code_unclear": unclear}
-
-
-def valid_url(href) -> str | None:
-    """An absolute http(s) URL with a real-looking host, else None."""
-    href = clean_text(href).replace(" ", "%20")
-    if not href or href.startswith("#"):
-        return None
-    absolute = urljoin(SOURCE_URL, href)
-    parsed = urlparse(absolute)
-    host = parsed.hostname or ""
-    if parsed.scheme not in ("http", "https") or "." not in host:
-        return None
-    if host.replace(".", "").isdigit():
-        return None
-    return absolute
-
-
-_AGE = re.compile(r"(?<![A-Za-z])(?:under|u)[\s\-\u2013\u2014.]*(\d{1,2})(?!\d)", re.I)
-# "Under 12 & 18", "U-9, 11, 13", "U11/U13": more ages joined to one already found
-# (but not a date like "Under 13, 14 Oct").
-_AGE_MORE = re.compile(
-    r"\s*(?:&|and|,|/)\s*(?:under|u)?[\s\-\u2013]*(\d{1,2})(?!\d)"
-    r"(?!\s*(?:st|nd|rd|th)?\s*(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec))", re.I)
-
-
-def ages_from_text(text: str) -> list[str]:
-    """Age groups as a list: 'Under 12 & 18' -> ['U12', 'U18']; nothing found -> []."""
-    found = set()
-    for match in _AGE.finditer(text):
-        values = [int(match.group(1))]
-        position = match.end()
-        while True:
-            more = _AGE_MORE.match(text, position)
-            if not more:
-                break
-            values.append(int(more.group(1)))
-            position = more.end()
-        found.update(v for v in values if 4 <= v <= 25)
-    return [f"U{v}" for v in sorted(found)]
-
-
-def derive_tags(name: str) -> dict:
-    """Conservative tags from the name. Anything unsure stays empty."""
-    formats = [f for f in FORMAT_ORDER if re.search(rf"\b{f}\b", name, re.I)]
-    fide = bool(re.search(r"\bfide\b", name, re.I)) and bool(
-        re.search(r"\b(?:rated|rating|ratings)\b", name, re.I)
-    ) and not re.search(r"\b(?:un|non)[\s-]?rated\b", name, re.I)
-    return {
-        "formats": formats,
-        "fide_rated": True if fide else None,
-        "age": ages_from_text(name),
-        "open": True if re.search(r"\bopen\b", name, re.I) else None,
-        "girls": True if re.search(r"\bgirls?\b", name, re.I) else None,
-    }
-
-
-# --------------------------------------------------------------------------
-# Event records
-# --------------------------------------------------------------------------
-EVENT_KEYS = (
-    "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
-    "brochure_url", "source", "register_url", "organiser", "tags", "flags",
-    "raw_dates", "first_seen", "last_seen", "gone_from_source", "cancelled",
-    "hidden", "note", "overridden",
-)
-TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
-                ("open", None), ("girls", None))
-FLAG_DEFAULTS = (("dates_suspect", False), ("code_expanded", False),
-                 ("code_unclear", False))
-EVENT_DEFAULTS = {
-    "codes": [], "start": None, "end": None, "place_text": None, "state": None,
-    "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
-    "raw_dates": None, "gone_from_source": False, "cancelled": False,
-    "hidden": False, "note": None, "overridden": None,
-}
-OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city")
-
-
-# Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
-# calendar that lists events from many countries must supply its own code per event.
-COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "chessfee": "IN", "chessresults_ind": "IN"}
-ISO_COUNTRIES = frozenset("""
-AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS
-BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE
-EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM
-HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC
-LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA
-NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW
-SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO
-TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW
-""".split())
-
-
-def country_for(source: str | None, country: str | None = None) -> str | None:
-    """'IN' for the Indian sources; for chessbase_calendar the event's own ISO code or None."""
-    if source in COUNTRY_BY_SOURCE:
-        return COUNTRY_BY_SOURCE[source]
-    if source == "chessbase_calendar":
-        code = (country or "").strip().upper()
-        return code if code in ISO_COUNTRIES else None
-    return None
-
-
-def canonical(event: dict) -> dict:
-    """The event with keys in the one fixed order (and defaults filled in)."""
-    tags_in = event.get("tags") or {}
-    flags_in = event.get("flags") or {}
-    out = {}
-    for key in EVENT_KEYS:
-        if key == "tags":
-            out[key] = {k: copy.deepcopy(tags_in.get(k, d)) for k, d in TAG_DEFAULTS}
-            age = out[key]["age"]  # schema 1 stored one string (or null); schema 2 a list
-            out[key]["age"] = [] if age is None else [age] if isinstance(age, str) else age
-        elif key == "country":
-            out[key] = event["country"] if "country" in event else country_for(event.get("source"))
-        elif key == "flags":
-            out[key] = {k: bool(flags_in.get(k, d)) for k, d in FLAG_DEFAULTS}
-        elif key in event:
-            out[key] = copy.deepcopy(event[key])
-        else:
-            out[key] = copy.deepcopy(EVENT_DEFAULTS[key])
-    return out
-
-
-def _comparable(doc: dict, meta: dict) -> tuple:
-    """Everything in the output except the timestamps (generated_at, every last_seen)."""
-    events = [{k: v for k, v in canonical(e).items() if k != "last_seen"}
-              for e in (doc or {}).get("events", [])]
-    return (doc or {}).get("schema_version"), events, {
-        k: v for k, v in (meta or {}).items() if k != "generated_at"}
-
-
-def only_timestamps_changed(previous_doc, previous_meta, new_doc, new_meta) -> bool:
-    """True when the new files differ from the old only in generated_at / last_seen.
-
-    A daily job can use this to skip a pointless commit. With no previous data
-    there is always something real to commit, so this is False.
-    """
-    if not previous_doc or not previous_doc.get("events"):
-        return False
-    return _comparable(previous_doc, previous_meta) == _comparable(new_doc, new_meta)
-
-
-def sort_key(event: dict):
-    start = event.get("start") or event.get("end") or "9999-12-31"
-    return (start, event.get("end") or start, event["id"])
-
-
-# --------------------------------------------------------------------------
-# Fetching and parsing the AICF page
-# --------------------------------------------------------------------------
-def fetch_html(url: str = SOURCE_URL) -> str:
-    """One polite request, one retry on a network error or a 5xx answer."""
-    last_problem = "unknown problem"
-    for attempt in (1, 2):
-        try:
-            response = requests.get(
-                url, headers={"User-Agent": USER_AGENT}, timeout=REQUEST_TIMEOUT_SECONDS
-            )
-        except requests.RequestException as exc:
-            last_problem = f"network problem: {exc}"
-        else:
-            if response.status_code == 200:
-                return response.content.decode("utf-8", errors="replace")
-            last_problem = f"the server answered HTTP {response.status_code}"
-            if response.status_code < 500:
-                break  # a 4xx will not get better by asking again
-        if attempt == 1:
-            time.sleep(RETRY_WAIT_SECONDS)
-    raise SourceError(f"Could not fetch {url}: {last_problem}.")
-
-
-EXPECTED_HEADERS = ("name of tournament", "event code", "start date", "end date",
-                    "place", "brochure")
-
-
-def parse_html(html: str) -> tuple[list[dict], int]:
-    """Raw rows from the events table, plus the number of rows we had to skip."""
-    soup = BeautifulSoup(html, "html.parser")
-    table = None
-    for candidate in soup.find_all("table"):
-        first = candidate.find("tr")
-        if first and [clean_text(c.get_text()).lower()
-                      for c in first.find_all(["th", "td"])][:6] == list(EXPECTED_HEADERS):
-            table = candidate
-            break
-    if table is None:
-        raise SourceError(
-            "The events table was not found on the AICF page (expected the columns "
-            + ", ".join(EXPECTED_HEADERS) + "). The page layout may have changed."
-        )
-    rows, skipped = [], 0
-    for tr in table.find_all("tr"):
-        cells = tr.find_all(["td", "th"])
-        if cells and all(c.name == "th" for c in cells):
-            continue  # header row
-        if not any(clean_text(c.get_text()) for c in cells):
-            continue  # blank row
-        if len(cells) < len(EXPECTED_HEADERS):
-            skipped += 1
-            continue
-        name = clean_name(cells[0].get_text(" "))
-        if not name:
-            skipped += 1
-            continue
-        rows.append({
-            "name": name,
-            "code": cells[1].get_text(" "),
-            "start": cells[2].get_text(" "),
-            "end": cells[3].get_text(" "),
-            "place": cells[4].get_text("\n"),
-            "hrefs": [a.get("href", "") for a in cells[5].find_all("a")],
-        })
-    return rows, skipped
-
-
-def event_from_row(row: dict, today: date) -> dict:
-    """Turn one raw AICF row into a normalised event. Bad dates are kept, flagged."""
-    name = row["name"]
-    codes, code_flags = parse_codes(row["code"])
-    raw_start, raw_end = clean_text(row["start"]), clean_text(row["end"])
-    start, end = parse_date(raw_start), parse_date(raw_end)
-    suspect = start is None or end is None or end < start
-    for value in (start, end):
-        if value is not None and not today.year - 2 <= value.year <= today.year + 3:
-            suspect = True  # a valid date, but a year that is surely a typo
-    if codes:
-        event_id = f"aicf-{codes[0]}"
-    else:
-        event_id = "aicf-" + short_hash(f"{normalise_name(name)}|{_iso(start) or raw_start}")
-    place = parse_place(row["place"])
-    brochure = next((u for u in (valid_url(h) for h in row["hrefs"]) if u), None)
-    return canonical({
-        "id": event_id,
-        "codes": codes,
-        "name": name,
-        "start": _iso(start),
-        "end": _iso(end),
-        "place_text": place["place_text"],
-        "state": place["state"],
-        "city": place["city"],
-        "country": country_for("aicf"),
-        "brochure_url": brochure,
-        "source": "aicf",
-        "tags": derive_tags(name),
-        "flags": {"dates_suspect": suspect, **code_flags},
-        "raw_dates": {"start": raw_start, "end": raw_end} if suspect else None,
-        "first_seen": today.isoformat(),
-        "last_seen": today.isoformat(),
-    })
-
-
-def events_from_rows(rows: list[dict], today: date) -> tuple[list[dict], int]:
-    """Normalise rows, collapse exact duplicate rows and give every event a unique id."""
-    events = [event_from_row(r, today) for r in rows]
-    kept: dict[tuple, dict] = {}
-    duplicates = 0
-    for event in events:
-        signature = (event["id"], normalise_name(event["name"]), event["start"], event["end"],
-                     (event["raw_dates"] or {}).get("start"), (event["raw_dates"] or {}).get("end"),
-                     event["place_text"])
-        if signature in kept:
-            duplicates += 1
-            if not kept[signature]["brochure_url"]:
-                kept[signature]["brochure_url"] = event["brochure_url"]
-        else:
-            kept[signature] = event
-    unique = list(kept.values())
-    # Different events that share a code (it happens): the first, by date, keeps
-    # the plain id; the others get a short suffix made from their name.
-    groups = defaultdict(list)
-    for event in unique:
-        groups[event["id"]].append(event)
-    used = {i for i, group in groups.items() if len(group) == 1}
-    for event_id, group in groups.items():
-        if len(group) == 1:
-            continue
-        group.sort(key=lambda e: (e["start"] or "9999", normalise_name(e["name"]), e["end"] or ""))
-        used.add(event_id)
-        for event in group[1:]:
-            number = 0
-            candidate = f"{event_id}-{short_hash(normalise_name(event['name']), 6)}"
-            while candidate in used:
-                number += 1
-                candidate = f"{event_id}-{short_hash(normalise_name(event['name']) + str(number), 6)}"
-            event["id"] = candidate
-            used.add(candidate)
-    return unique, duplicates
-
-
-def check_page_is_sane(row_count: int, skipped: int, events: list[dict],
-                       previous_count: int, min_rows: int) -> None:
-    """Never trust the layout silently: stop before anything is written."""
-    if row_count < min_rows:
-        raise SourceError(
-            f"The AICF page gave only {row_count} event rows (at least {min_rows} expected). "
-            "The page may be broken or its layout changed. Existing data left untouched."
-        )
-    if previous_count and row_count < previous_count * MIN_FRACTION_OF_PREVIOUS:
-        raise SourceError(
-            f"The AICF page gave {row_count} event rows, fewer than half of the "
-            f"{previous_count} from the previous run. Existing data left untouched."
-        )
-    if skipped > max(5, row_count * 0.05):
-        raise SourceError(
-            f"{skipped} rows of the AICF page could not be read (only {row_count} were). "
-            "The page layout may have changed. Existing data left untouched."
-        )
-    suspect = sum(1 for e in events if e["flags"]["dates_suspect"])
-    if len(events) >= 20 and suspect > len(events) * MAX_SUSPECT_FRACTION:
-        raise SourceError(
-            f"{suspect} of {len(events)} rows have unreadable dates, so the date format "
-            "probably changed. Existing data left untouched."
-        )
-
-
-# --------------------------------------------------------------------------
-# History: previous events.json
+# History: snapshots (one file per source) and the previous events.json
 # --------------------------------------------------------------------------
 def load_json(path: Path):
     if not path.exists():
@@ -612,7 +99,7 @@ def load_json(path: Path):
 
 
 def restore_base(event: dict) -> dict:
-    """Undo overrides on a stored event, giving the values AICF itself reported."""
+    """Undo overrides on a stored event, giving the values the source itself reported."""
     event = canonical(event)
     for field, original in (event["overridden"] or {}).items():
         if field in OVERRIDABLE_FIELDS:
@@ -625,22 +112,32 @@ def restore_base(event: dict) -> dict:
     return event
 
 
+def load_snapshot(data_dir: Path, name: str, previous_events: list[dict]) -> dict:
+    """What we last knew about one source: {'events': [...], 'listing': {...}, 'found': n}."""
+    stored = load_json(data_dir / "sources" / f"{name}.json")
+    if stored is not None:
+        return {"events": [canonical(e) for e in stored.get("events", [])],
+                "listing": stored.get("listing", {}), "found": stored.get("found")}
+    # Data written before snapshots existed: AICF events live in events.json.
+    legacy = [restore_base(e) for e in previous_events if e.get("source") == name]
+    return {"events": legacy, "listing": {}, "found": None}
+
+
 def merge_history(scraped: list[dict], previous: list[dict], today: date) -> list[dict]:
-    """Keep every AICF event ever seen. New AICF values win; vanished ones are kept."""
-    previous_aicf = {e["id"]: e for e in previous if e.get("source") == "aicf"}
-    merged = []
-    seen_ids = set()
+    """Keep every event ever seen. New values win; vanished events are kept as gone."""
+    old_by_id = {e["id"]: e for e in previous}
+    merged, seen = [], set()
     for event in scraped:
-        old = previous_aicf.get(event["id"])
+        old = old_by_id.get(event["id"])
         if old and old.get("first_seen"):
             event["first_seen"] = old["first_seen"]
         event["last_seen"] = today.isoformat()
         event["gone_from_source"] = False
-        seen_ids.add(event["id"])
+        seen.add(event["id"])
         merged.append(event)
-    for event_id, old in previous_aicf.items():
-        if event_id not in seen_ids:
-            kept = restore_base(old)
+    for event_id, old in old_by_id.items():
+        if event_id not in seen:
+            kept = canonical(old)
             kept["gone_from_source"] = True  # last_seen stays as it was
             merged.append(kept)
     return merged
@@ -710,7 +207,7 @@ def _date_problem(text: str, what: str) -> str:
 def event_from_manual_row(line: int, row: dict, rel: str, today: date,
                           errors: list[str]) -> dict | None:
     problems: list[str] = []
-    name = clean_name(row.get("name", ""))
+    name = clean_name(strip_phones(row.get("name", "")))
     if not name:
         problems.append("the name is empty.")
     start = end = None
@@ -737,13 +234,18 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
             problems.append(f"id '{event_id}' starts with 'aicf-', which is reserved for AICF events.")
     elif name and start:
         event_id = "manual-" + short_hash(f"{normalise_name(name)}|{start.isoformat()}")
+    country = (row.get("country") or "IN").strip().upper()
+    if country not in ISO_COUNTRIES:
+        problems.append(f"country '{row['country']}' is not a two-letter country code. Use IN for "
+                        "India, or for example US, GB, CA, AU; leave it empty for India.")
+        country = "IN"
+    place_text = strip_phones(row.get("place", ""))
+    place = parse_place(place_text) if country == "IN" else parse_place_abroad(country, place_text)
     state = None
-    place = parse_place(row.get("place", ""))
     if row.get("state"):
-        state = lookup_state(row["state"])
-        if state is None:
-            problems.append(f"state '{row['state']}' is not an Indian state or union territory I "
-                            "know. Check the spelling (for example 'Tamil Nadu').")
+        state, problem = resolve_state(country, row["state"])
+        if problem:
+            problems.append(problem)
     else:
         state = place["state"]
     tags = derive_tags(name)
@@ -782,14 +284,14 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
         "place_text": place["place_text"],
         "state": state,
         "city": place["city"],
-        "country": country_for("manual"),
+        "country": country,
         "brochure_url": urls.get("brochure_url"),
         "source": "manual",
         "register_url": urls.get("register_url"),
         "tags": tags,
         "first_seen": today.isoformat(),
         "last_seen": today.isoformat(),
-        "note": row.get("note") or None,
+        "note": strip_phones(row.get("note", "")) or None,
     })
 
 
@@ -840,12 +342,7 @@ def load_overrides(data_dir: Path, errors: list[str], warnings: list[str]) -> li
                 if item[column] is None:
                     errors.append(f"{rel} line {line}: " + _date_problem(row[column], column))
         item["place"] = row.get("place") or None
-        item["state"] = None
-        if row.get("state"):
-            item["state"] = lookup_state(row["state"])
-            if item["state"] is None:
-                errors.append(f"{rel} line {line}: state '{row['state']}' is not an Indian state "
-                              "or union territory I know. Check the spelling.")
+        item["state"] = row.get("state") or None  # checked against each event's country later
         item["hide"] = _yes(row.get("hide", ""), "hide", line, rel, errors)
         item["cancelled"] = _yes(row.get("cancelled", ""), "cancelled", line, rel, errors)
         item["note"] = row.get("note") or None
@@ -882,6 +379,13 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
                             f"{len(targets)} events, so the row was applied to all of them. "
                             "Use the event id to pick one.")
         for event in targets:
+            country = event["country"] or "IN"
+            state_value = None
+            if item["state"]:
+                state_value, problem = resolve_state(country, item["state"])
+                if problem:
+                    errors.append(f"{rel} line {item['line']}: {problem}")
+                    continue
             if item["start_date"] or item["end_date"]:
                 new_start = item["start_date"].isoformat() if item["start_date"] else event["start"]
                 new_end = item["end_date"].isoformat() if item["end_date"] else event["end"]
@@ -896,18 +400,20 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
                     event["start"] and event["end"] and event["end"] >= event["start"]
                 )
             if item["place"]:
-                place = parse_place(item["place"])
+                place = (parse_place(item["place"]) if country == "IN"
+                         else parse_place_abroad(country, item["place"]))
                 change(event, "place_text", place["place_text"])
                 change(event, "city", place["city"])
-                change(event, "state", item["state"] or place["state"])
-            elif item["state"]:
-                change(event, "state", item["state"])
+                change(event, "state", state_value or place["state"])
+            elif state_value:
+                change(event, "state", state_value)
             if item["hide"]:
                 event["hidden"] = True
             if item["cancelled"]:
                 event["cancelled"] = True
             if item["note"]:
                 event["note"] = item["note"]
+
 
 
 # --------------------------------------------------------------------------
@@ -924,7 +430,9 @@ def write_files(data_dir: Path, payloads: dict[str, bytes]) -> None:
     temporary = {}
     try:
         for name, payload in payloads.items():
-            tmp = data_dir / f".{name}.tmp"
+            target = data_dir / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            tmp = target.with_name(f".{target.name}.tmp")
             tmp.write_bytes(payload)
             temporary[name] = tmp
         for name, tmp in temporary.items():
@@ -935,24 +443,129 @@ def write_files(data_dir: Path, payloads: dict[str, bytes]) -> None:
                 tmp.unlink()
 
 
+
+# --------------------------------------------------------------------------
+# Joining sources
+# --------------------------------------------------------------------------
+def _link(event: dict) -> dict:
+    return {"source": event["source"], "source_url": event["source_url"],
+            "register_url": event["register_url"]}
+
+
+def _join(members: list[dict]) -> dict:
+    """One event from several entries. Priority: manual > aicf > the other sources."""
+    members = sorted(members, key=lambda e: (source_rank(e["source"]), e["id"]))
+    event = copy.deepcopy(members[0])
+    links = []
+    for member in members:
+        link = _link(member)
+        if link not in links:
+            links.append(link)
+    for other in members[1:]:
+        for field in ("brochure_url", "register_url", "organiser", "city", "state", "place_text"):
+            if event[field] is None:
+                event[field] = other[field]
+        event["tags"] = merge_tags(event["tags"], other["tags"])
+        event["codes"] = event["codes"] + [c for c in other["codes"] if c not in event["codes"]]
+        event["cancelled"] = event["cancelled"] or other["cancelled"]
+        event["first_seen"] = min(event["first_seen"], other["first_seen"])
+        event["last_seen"] = max(event["last_seen"], other["last_seen"])
+    event["gone_from_source"] = all(m["gone_from_source"] for m in members)
+    event["sources"] = links
+    event["verified"] = any(m["source"] in VERIFIED_SOURCES for m in members)
+    return event
+
+
+def join_by_aicf_code(entries: list[dict], warnings: list[str]) -> tuple[list[dict], Counter]:
+    """Join entries ONLY when they share an AICF event code. Returns (events, joined per source)."""
+    parent = list(range(len(entries)))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    first_with_code: dict[str, int] = {}
+    for index, entry in enumerate(entries):
+        for code in entry["codes"]:
+            if code in first_with_code:
+                parent[find(index)] = find(first_with_code[code])
+            else:
+                first_with_code[code] = index
+    groups: dict[int, list[int]] = defaultdict(list)
+    for index in range(len(entries)):
+        groups[find(index)].append(index)
+    events, joined = [], Counter()
+    for members in groups.values():
+        group = [entries[i] for i in members]
+        if len(group) == 1:
+            events.append(group[0])
+        elif sum(1 for e in group if e["source"] == "aicf") > 1:
+            if any(e["source"] != "aicf" for e in group):
+                warnings.append("Several AICF events share one code (" + ", ".join(
+                    e["id"] for e in group if e["source"] == "aicf") + "); entries with that "
+                    "code were not joined.")
+            events.extend(group)
+        else:
+            events.append(_join(group))
+            joined.update(e["source"] for e in group)
+    return events, joined
+
+
+def flag_possible_duplicates(events: list[dict]) -> int:
+    """Same start date + very similar name + same city, from different sources: keep both, flag."""
+    by_start: dict[str, list[dict]] = defaultdict(list)
+    for event in events:
+        if event["start"] and event["city"]:
+            by_start[event["start"]].append(event)
+    flagged = 0
+    for group in by_start.values():
+        group.sort(key=lambda e: (source_rank(e["source"]), e["id"]))
+        for index, event in enumerate(group):
+            for better in group[:index]:
+                if (better["source"] != event["source"]
+                        and better["city"].casefold() == event["city"].casefold()
+                        and similar_names(better["name"], event["name"])):
+                    event["flags"]["possible_duplicate_of"] = better["id"]
+                    flagged += 1
+                    break
+    return flagged
+
+
 # --------------------------------------------------------------------------
 # The whole run
 # --------------------------------------------------------------------------
-def run(data_dir=DATA_DIR, *, html: str | None = None, fetch=fetch_html,
-        now: datetime | None = None, min_rows: int = MIN_ROWS) -> dict:
-    """Do a full build. Returns a report; raises BuildError (and writes nothing) on trouble."""
+def _source_meta(previous: dict | None, now_iso: str) -> dict:
+    previous = previous or {}
+    return {"last_success": previous.get("last_success"), "last_error": previous.get("last_error")}
+
+
+def _count(snapshot: dict) -> int:
+    return sum(1 for e in snapshot["events"] if not e["gone_from_source"])
+
+
+def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = None,
+        min_rows: int = MIN_ROWS, config: dict | None = None,
+        skip_if_fetched_today: bool = False) -> dict:
+    """Do a full build. Returns a report; raises BuildError (and writes nothing) on trouble.
+
+    `html` is a saved AICF page (offline use); with it, only AICF is read unless `config` says more.
+    """
     data_dir = Path(data_dir)
     now = (now or datetime.now(IST)).astimezone(IST).replace(microsecond=0)
     today = now.date()
+    now_iso = now.isoformat()
     warnings: list[str] = []
+    offline = config is None and html is not None
+    if config is None:
+        config = ({"aicf": True, **{n: False for n in SOURCE_MODULES if n != "aicf"}}
+                  if offline else load_config(warnings=warnings))
 
     previous_doc = load_json(data_dir / "events.json") or {}
     previous_meta = load_json(data_dir / "meta.json") or {}
     previous_events = previous_doc.get("events", [])
-    previous_count = previous_meta.get("scraped_count")
-    if previous_count is None:
-        previous_count = sum(1 for e in previous_events
-                             if e.get("source") == "aicf" and not e.get("gone_from_source"))
+    previous_sources = previous_meta.get("sources") or {}
 
     # Hand-edited files first: a typo there should stop us before we fetch anything.
     errors: list[str] = []
@@ -961,51 +574,122 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, fetch=fetch_html,
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
 
-    page = html if html is not None else fetch()
-    rows, skipped = parse_html(page)
-    scraped, duplicates = events_from_rows(rows, today)
-    check_page_is_sane(len(rows), skipped, scraped, previous_count, min_rows)
+    snapshots, source_meta, source_stats = {}, {}, {}
+    problems: list[str] = []
+    attempted = succeeded = 0
+    for name in AUTOMATIC_SOURCES:
+        module = SOURCE_MODULES[name]
+        snapshot = load_snapshot(data_dir, name, previous_events)
+        before = previous_sources.get(name)
+        if before is None and name == "aicf" and previous_meta.get("generated_at"):
+            before = {"last_success": previous_meta["generated_at"]}  # data from before sources[]
+        meta = {"enabled": bool(config.get(name, False)), "status": "ok", "message": None,
+                **_source_meta(before, now_iso)}
+        stats = {"requests": 0}
+        if not meta["enabled"]:
+            meta.update(status="disabled", message=("not read in offline mode (--html)" if offline
+                                                    else "switched off in config/sources.json"))
+        elif skip_if_fetched_today and (meta["last_success"] or "")[:10] == today.isoformat():
+            meta.update(status="skipped", message="already fetched today (at most one run per day)")
+            succeeded += 1
+        else:
+            attempted += 1
+            client = PoliteClient(module.SITE_URL)
+            options = {"html": html, "min_rows": min_rows} if name == "aicf" else {}
+            try:
+                if not (name == "aicf" and html is not None):
+                    client.load_robots()  # robots.txt first, at the start of every run
+                scraped, listing, found_stats = module.fetch(client, snapshot, today, **options)
+                found = found_stats.get("found", len(scraped))
+                known = snapshot.get("found") or _count(snapshot)
+                if known >= 5 and found < known * MIN_FRACTION_OF_PREVIOUS:  # noqa: F405
+                    raise SourceError(f"{name} returned {found} events, fewer than half of the "
+                                      f"{known} from the previous run. Its previous events were kept.")
+                snapshot = {"events": merge_history(scraped, snapshot["events"], today),
+                            "listing": listing, "found": found}
+                stats.update(found_stats)
+                meta["last_success"] = now_iso
+                succeeded += 1
+            except SourceSkipped as exc:
+                meta.update(status="skipped", message=str(exc))
+                meta["last_error"] = {"at": now_iso, "message": str(exc)}
+                problems.append(f"{name}: {exc}")
+            except Exception as exc:  # one broken site must never stop the others
+                text = str(exc) if isinstance(exc, BuildError) else f"{type(exc).__name__}: {exc}"
+                meta.update(status="failed", message=text)
+                meta["last_error"] = {"at": now_iso, "message": text}
+                problems.append(f"{name}: {text}")
+            stats["requests"] = client.requests_made
+        meta["count"] = _count(snapshot)
+        snapshots[name], source_meta[name], source_stats[name] = snapshot, meta, stats
 
-    events = merge_history(scraped, previous_events, today)
+    if attempted and succeeded == 0:
+        raise SourceError("No source could be read, so nothing was written. "
+                          + " | ".join(problems))
+
+    # ---- join, flag, override -------------------------------------------------------
+    entries = [e for name in AUTOMATIC_SOURCES for e in snapshots[name]["events"]]
+    entries.extend(manual_events)
     previous_manual = {e["id"]: e for e in previous_events if e.get("source") == "manual"}
     for event in manual_events:
         old = previous_manual.get(event["id"])
         if old and old.get("first_seen"):
             event["first_seen"] = old["first_seen"]
-    events.extend(manual_events)
-
+    events, joined = join_by_aicf_code([canonical(e) for e in entries], warnings)
+    duplicates = flag_possible_duplicates(events)
     apply_overrides(events, overrides, errors, warnings)
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
 
     events = sorted((canonical(e) for e in events), key=sort_key)
-    generated_at = now.isoformat()
     meta = {
-        "generated_at": generated_at,
-        "scraped_count": sum(1 for e in events if e["source"] == "aicf" and not e["gone_from_source"]),
+        "generated_at": now_iso,
+        "scraped_count": sum(1 for e in events if e["source"] != "manual" and not e["gone_from_source"]),
         "manual_count": sum(1 for e in events if e["source"] == "manual"),
         "total": len(events),
         "suspect_dates_count": sum(1 for e in events if e["flags"]["dates_suspect"]),
         "missing_state_count": sum(1 for e in events if e["state"] is None),
         "gone_from_source_count": sum(1 for e in events if e["gone_from_source"]),
+        "sources": source_meta,
     }
-    document = {"schema_version": SCHEMA_VERSION, "generated_at": generated_at, "events": events}
+    document = {"schema_version": SCHEMA_VERSION, "generated_at": now_iso, "events": events}
     timestamps_only = only_timestamps_changed(previous_doc, previous_meta, document, meta)
-    write_files(data_dir, {"events.json": dump_json(document), "meta.json": dump_json(meta)})
+    payloads = {"events.json": dump_json(document), "meta.json": dump_json(meta)}
+    for name, snapshot in snapshots.items():
+        if snapshot["events"] or (data_dir / "sources" / f"{name}.json").exists():
+            payloads[f"sources/{name}.json"] = dump_json({
+                "source": name, "found": snapshot["found"], "listing": snapshot["listing"],
+                "events": [canonical(e) for e in sorted(snapshot["events"], key=sort_key)]})
+    write_files(data_dir, payloads)
 
     visible = [e for e in events if not e["hidden"]]
+    per_source = {}
+    for name in AUTOMATIC_SOURCES:
+        live = [e for e in snapshots[name]["events"] if not e["gone_from_source"]]
+        per_source[name] = {
+            "status": source_meta[name]["status"], "message": source_meta[name]["message"],
+            "requests": source_stats[name].get("requests", 0), "found": len(live),
+            "by_status": dict(Counter(status(e, today) for e in live)),
+            "with_register_url": sum(1 for e in live if e["register_url"]),
+            "joined": joined[name], "stats": source_stats[name],
+            "possible_duplicates": sum(1 for e in events
+                                       if e["source"] == name and e["flags"]["possible_duplicate_of"]),
+        }
+    aicf_stats = source_stats.get("aicf", {})
     return {
         "meta": meta,
         "today": today.isoformat(),
-        "rows_on_page": len(rows),
-        "rows_skipped": skipped,
-        "duplicate_rows_collapsed": duplicates,
+        "rows_on_page": aicf_stats.get("rows_on_page", 0),
+        "rows_skipped": aicf_stats.get("rows_skipped", 0),
+        "duplicate_rows_collapsed": aicf_stats.get("duplicate_rows_collapsed", 0),
         "new_events": sum(1 for e in events if e["first_seen"] == today.isoformat()
-                          and e["source"] == "aicf"),
+                          and e["source"] != "manual"),
         "status_counts": dict(Counter(status(e, today) for e in visible)),
         "hidden_count": len(events) - len(visible),
         "cancelled_count": sum(1 for e in events if e["cancelled"]),
         "missing_brochure_count": sum(1 for e in events if e["brochure_url"] is None),
+        "possible_duplicates": duplicates,
+        "per_source": per_source,
         "only_timestamps_changed": timestamps_only,
         "warnings": warnings,
         "events": events,
@@ -1016,13 +700,18 @@ def print_summary(report: dict) -> None:
     meta = report["meta"]
     counts = report["status_counts"]
     print(f"Done. Today in India: {report['today']}")
-    print(f"  Rows on the AICF page : {report['rows_on_page']} "
-          f"({report['duplicate_rows_collapsed']} exact duplicate rows collapsed, "
-          f"{report['rows_skipped']} unreadable rows skipped)")
-    print(f"  New events this run   : {report['new_events']}")
+    for name, info in report["per_source"].items():
+        by = info["by_status"]
+        line = (f"  {name:<19}: {info['status']:<8} {info['found']:>4} events "
+                f"(ongoing {by.get('ongoing', 0)}, upcoming {by.get('upcoming', 0)}, "
+                f"past {by.get('past', 0)}), {info['with_register_url']} with a register link, "
+                f"{info['requests']} requests")
+        print(line + (f" -- {info['message']}" if info["message"] else ""))
     print(f"  Total events          : {meta['total']} "
-          f"(AICF {meta['scraped_count']}, manual {meta['manual_count']}, "
+          f"(automatic {meta['scraped_count']}, manual {meta['manual_count']}, "
           f"gone from source {meta['gone_from_source_count']})")
+    print(f"  Joined (shared code)  : {sum(i['joined'] for i in report['per_source'].values())} "
+          f"entries; possible duplicates flagged: {report['possible_duplicates']}")
     print(f"  Suspect dates         : {meta['suspect_dates_count']}")
     print(f"  Missing state         : {meta['missing_state_count']}")
     print(f"  Missing brochure      : {report['missing_brochure_count']}")
@@ -1041,15 +730,18 @@ def main(argv=None) -> int:
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8", errors="replace")
-    parser = argparse.ArgumentParser(description="Build data/events.json from the AICF events page.")
-    parser.add_argument("--html", help="read this saved HTML file instead of fetching the live page")
+    parser = argparse.ArgumentParser(description="Build data/events.json from the chess sources.")
+    parser.add_argument("--html", help="read this saved AICF page instead of fetching (offline; "
+                                       "only AICF is read)")
     parser.add_argument("--data-dir", default=str(DATA_DIR), help="where data/ lives")
+    parser.add_argument("--force", action="store_true",
+                        help="fetch a source even if it was already fetched today")
     parser.add_argument("--github-output", metavar="FILE",
                         help="append 'real_changes=true|false' to FILE (for a GitHub Action)")
     args = parser.parse_args(argv)
     try:
         html = Path(args.html).read_text(encoding="utf-8") if args.html else None
-        report = run(args.data_dir, html=html)
+        report = run(args.data_dir, html=html, skip_if_fetched_today=not args.force and html is None)
     except BuildError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         if not isinstance(exc, DataFileError):

@@ -1,5 +1,6 @@
 """Schema version 2: age is a list, every event has a country, timestamp-only detection."""
 import json
+import shutil
 from datetime import timedelta
 
 import pytest
@@ -22,7 +23,7 @@ def test_age_is_a_list_in_the_output(data_dir):
 
 def test_schema_version_is_2(data_dir):
     build(data_dir, [row()])
-    assert load_doc(data_dir)["schema_version"] == be.SCHEMA_VERSION == 2
+    assert load_doc(data_dir)["schema_version"] == be.SCHEMA_VERSION == 3
 
 
 @pytest.mark.parametrize("cell, expected", [
@@ -30,7 +31,7 @@ def test_schema_version_is_2(data_dir):
     ("Under 12 & 18", ["U12", "U18"]), ("u9, u11", ["U9", "U11"]),
 ])
 def test_manual_age_column_accepts_one_or_several_groups(data_dir, cell, expected):
-    write_manual(data_dir, EVENTS_HEADER + f',Cup,03-02-2027,,Goa,,,,,"{cell}",\n')
+    write_manual(data_dir, EVENTS_HEADER + f',Cup,03-02-2027,,Goa,,,,,,"{cell}",\n')
     build(data_dir, [row()])
     manual = next(e for e in load_events(data_dir) if e["source"] == "manual")
     assert manual["tags"]["age"] == expected
@@ -38,7 +39,7 @@ def test_manual_age_column_accepts_one_or_several_groups(data_dir, cell, expecte
 
 @pytest.mark.parametrize("cell", ["eleven", "11", "12/18"])
 def test_manual_age_column_rejects_unclear_values(data_dir, cell):
-    write_manual(data_dir, EVENTS_HEADER + f',Cup,03-02-2027,,Goa,,,,,"{cell}",\n')
+    write_manual(data_dir, EVENTS_HEADER + f',Cup,03-02-2027,,Goa,,,,,,"{cell}",\n')
     with pytest.raises(be.DataFileError, match="line 2: age"):
         build(data_dir, [row()])
 
@@ -52,18 +53,19 @@ def test_old_schema_data_is_migrated_for_events_that_left_the_page(data_dir):
         del event["country"]
     doc["schema_version"] = 1
     (data_dir / "events.json").write_text(json.dumps(doc), encoding="utf-8")
+    shutil.rmtree(data_dir / "sources")  # data written before per-source snapshots existed
     build(data_dir, [row("Stays", "400003"), row("Stays too", "400004")], now=NEXT_DAY)
     events = by_id(data_dir)
     assert events["aicf-400001"]["gone_from_source"] is True
     assert events["aicf-400001"]["tags"]["age"] == ["U11"]
     assert events["aicf-400002"]["tags"]["age"] == []
     assert {e["country"] for e in events.values()} == {"IN"}
-    assert load_doc(data_dir)["schema_version"] == 2
+    assert load_doc(data_dir)["schema_version"] == 3
 
 
 # ---- country ------------------------------------------------------------
 def test_every_event_has_a_country_and_state_city_are_unchanged(data_dir):
-    write_manual(data_dir, EVENTS_HEADER + ",Pune Cup,03-02-2027,,\"Pune, Maharashtra\",,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + ",Pune Cup,03-02-2027,,\"Pune, Maharashtra\",,,,,,,\n")
     build(data_dir, [row("A", "400001", place="Banka,\nBihar"), row("B", "400002", place="")])
     events = load_events(data_dir)
     assert [e["country"] for e in events] == ["IN"] * 3
@@ -124,7 +126,7 @@ def test_any_real_change_is_reported(data_dir, second_page):
 def test_a_changed_manual_file_or_override_counts_as_real(data_dir):
     rows = [row("A", "400001")]
     build(data_dir, rows)
-    write_manual(data_dir, EVENTS_HEADER + ",Cup,03-02-2027,,Goa,,,,,,\n")
+    write_manual(data_dir, EVENTS_HEADER + ",Cup,03-02-2027,,Goa,,,,,,,\n")
     assert build(data_dir, rows, now=NEXT_DAY)["only_timestamps_changed"] is False
     assert build(data_dir, rows, now=NEXT_DAY + timedelta(days=1))["only_timestamps_changed"] is True
     write_manual(data_dir, "key,start_date,end_date,place,state,hide,cancelled,note\n"
