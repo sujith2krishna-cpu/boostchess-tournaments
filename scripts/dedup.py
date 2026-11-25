@@ -25,15 +25,17 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 from eventlib import (STATES, VERIFIED_SOURCES, _CITY_BY_KEY, _STATE_BY_KEY, _key,
-                      ages_from_text, clean_text, merge_tags, source_rank)
+                      ages_from_text, clean_text, kerala_district, merge_tags, source_rank)
 
 SAME_AT = 0.80
 POSSIBLE_AT = 0.50
 NAME_WEIGHT, PLACE_WEIGHT, END_WEIGHT = 0.85, 0.10, 0.05
 MIN_DISTINCT_WORDS = 2  # fewer distinctive words than this can never prove "same" by name alone
 
-# Primary choice after "AICF with good dates": manual, chessfee, then the rest.
-PRIMARY_ORDER = ("manual", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
+# Primary choice after "AICF with good dates": manual, kca, chessfee, then the rest.
+PRIMARY_ORDER = ("manual", "kca", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
+# Sources whose "city" is a district (a town inside that district is not a different place).
+DISTRICT_SOURCES = frozenset({"kca"})
 
 FILLER = frozenset("""
 chess tournament tournaments tmt international intl open fide rated rating ratings edition the of
@@ -146,6 +148,24 @@ def _same_text(a, b) -> bool | None:
     return _flat(a) == _flat(b)
 
 
+def _same_city(ea: dict, eb: dict) -> bool | None:
+    """Like _same_text for cities, but a KCA district matches the towns inside it.
+
+    Both places known Kerala districts or towns: same district or not. A district against a
+    town we do not know: unknown (None), never "different".
+    """
+    if ea.get("source") not in DISTRICT_SOURCES and eb.get("source") not in DISTRICT_SOURCES:
+        return _same_text(ea.get("city"), eb.get("city"))
+    if not ea.get("city") or not eb.get("city"):
+        return None
+    if _flat(ea["city"]) == _flat(eb["city"]):
+        return True
+    da, db = kerala_district(ea["city"]), kerala_district(eb["city"])
+    if da and db:
+        return da == db
+    return None
+
+
 def _chess_results_page(event: dict) -> str | None:
     for url in (event.get("source_url"), event.get("results_url")):
         match = re.search(r"chess-results\.com/(?:\w+\.aspx\?)?tnr(\d+)", url or "", re.I)
@@ -190,7 +210,7 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
         return out(1.0, "same", "same Chess-Results page")
     if _same_text(ea.get("state"), eb.get("state")) is False:
         return out(0, "different", "different state", hard=True)
-    if _same_text(ea.get("city"), eb.get("city")) is False:
+    if _same_city(ea, eb) is False:
         return out(0, "different", "different city", hard=True)
     if a.start is None or b.start is None:
         return out(0, "different", "start date unknown")
@@ -207,7 +227,7 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
         reason += " (too few distinctive words)"
     if a.brochure and a.brochure == b.brochure:
         name, reason = 1.0, "same brochure link"
-    city = _same_text(ea.get("city"), eb.get("city"))
+    city = _same_city(ea, eb)
     state = _same_text(ea.get("state"), eb.get("state"))
     place = 1.0 if city else 0.5 if state else 0.0
     end = 1.0 if a.end and a.end == b.end else 0.0

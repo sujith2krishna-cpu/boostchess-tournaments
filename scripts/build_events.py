@@ -6,7 +6,7 @@ Run from the repository root:
     python scripts/build_events.py
 
 Sources (each its own module in scripts/sources/, switched on or off in
-config/sources.json): aicf, chessfee, chessresults_ind, chessbase_calendar. Plus your
+config/sources.json): aicf, kca, chessfee, chessresults_ind, chessbase_calendar. Plus your
 own events in data/manual/events.csv and fixes in data/manual/overrides.csv.
 
 What a run does, in short:
@@ -41,7 +41,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from eventlib import *  # noqa: E402,F401,F403
 from eventlib import _from_iso, _iso, _key  # noqa: E402,F401
-from sources import aicf, chessbase_calendar, chessfee, chessresults_ind  # noqa: E402
+from sources import aicf, chessbase_calendar, chessfee, chessresults_ind, kca  # noqa: E402
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
@@ -51,6 +51,7 @@ import dedup  # noqa: E402
 
 SOURCE_MODULES = {
     "aicf": aicf,
+    "kca": kca,
     "chessfee": chessfee,
     "chessresults_ind": chessresults_ind,
     "chessbase_calendar": chessbase_calendar,
@@ -509,7 +510,8 @@ def fill_tags(event: dict) -> None:
     text = " ".join([event["name"] or ""] + list(event["tags"]["categories"] or []))
     if not event["tags"]["formats"]:
         event["tags"]["formats"] = formats_in(text)
-    if event["tags"]["fide_rated"] is None:
+    # A KCA "STATE" event is rated by the state association; its name alone says nothing more.
+    if event["tags"]["fide_rated"] is None and kca.STATE_CATEGORY not in event["tags"]["categories"]:
         event["tags"]["fide_rated"], event["tags"]["fide_how"] = fide_evidence(text)
 
 
