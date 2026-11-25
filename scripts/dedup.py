@@ -315,6 +315,11 @@ def _finish_group(members: list[dict]) -> None:
     primary["sources"] = [l for i, l in enumerate(links) if l not in links[:i]]
     known = (primary["tags"]["formats"], primary["tags"]["fide_rated"],
              primary["tags"]["fide_how"])  # settled by _inherit_tags
+    if primary["city"] is None:
+        # A town (Kochi) says more than a district (Ernakulam): districts fill the gap last.
+        town = next((m["city"] for m in others
+                     if m["city"] and m["source"] not in DISTRICT_SOURCES), None)
+        primary["city"] = town
     for other in others:
         for field in ("register_url", "results_url", "brochure_url", "city", "state", "place_text",
                       "organiser"):

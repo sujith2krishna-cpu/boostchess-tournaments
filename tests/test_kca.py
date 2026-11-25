@@ -212,6 +212,7 @@ def test_chessind_rapid_groups_with_the_aicf_record_not_twice(web, data_dir):
     assert by["kca-736-CAK-2026"]["merged_into"] == "aicf-502180"
     assert by["aicf-502180"]["merged_into"] is None
     assert [x["source"] for x in by["aicf-502180"]["also_listed_on"]] == ["kca", "chessfee", "chessresults_ind"]
+    assert by["aicf-502180"]["city"] == "Kochi"  # chessfee's town beats KCA's district
     assert report["per_source"]["kca"]["found"] == 22
 
 
