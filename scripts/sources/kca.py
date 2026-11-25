@@ -49,14 +49,25 @@ def _month_day(month: str, day: str, year: str) -> date | None:
         return None
 
 
+def crosses_new_year(text: str) -> bool:
+    """'Dec 29 - Jan 02, 2026': the start month comes later in the year than the end month."""
+    match = _DATES.search(text or "")
+    if not match:
+        return False
+    start, end = _month_day(match.group(1), "1", "2000"), _month_day(match.group(3), "1", "2000")
+    return bool(start and end and start.month > end.month)
+
+
 def parse_dates(text: str) -> tuple[date | None, date | None]:
-    """Both dates in the year written at the end. A range that crosses into a new year comes
-    out with the end before the start, and is then flagged, not fixed (no guessing)."""
+    """The site writes the year once, and it is the END date's year. So a range whose start
+    month is later than its end month ("Dec 29 - Jan 02, 2026") starts in the year before
+    (29 Dec 2025 to 2 Jan 2026). That is how the page is written, not a guess."""
     match = _DATES.search(text or "")
     if not match:
         return None, None
     m1, d1, m2, d2, year = match.groups()
-    return _month_day(m1, d1, year), _month_day(m2, d2, year)
+    start_year = str(int(year) - 1) if crosses_new_year(text) else year
+    return _month_day(m1, d1, start_year), _month_day(m2, d2, year)
 
 
 def _rows(pane, page_url: str, tab: str) -> list[dict]:
@@ -175,6 +186,9 @@ def build_event(entry: dict, detail: dict | None, today: date) -> dict:
     title = clean_name(strip_phones(_SPACED_POSSESSIVE.sub("'s", entry["title"])))
     start, end = parse_dates(entry["date_text"])
     suspect, raw_dates = check_dates(start, end, entry["date_text"], entry["date_text"], today)
+    if crosses_new_year(entry["date_text"]) and raw_dates is None:
+        # the start year comes from reading the page's format: keep what the page said
+        raw_dates = {"start": entry["date_text"], "end": entry["date_text"]}
     district = strip_phones(entry["district"]).strip(" -–") or None  # "-" means none given
     place_text = join_place((detail or {}).get("venue"), district, "Kerala")
     tags = derive_tags(title)
@@ -209,8 +223,7 @@ def build_event(entry: dict, detail: dict | None, today: date) -> dict:
 
 
 def _recent(entry: dict, today: date) -> bool:
-    """Ended in the last RECENT_DAYS days. The end date carries the year the site wrote, so it
-    is the one to trust ("Dec 29 - Jan 02, 2026" ended in January 2026)."""
+    """Ended in the last RECENT_DAYS days ("Dec 29 - Jan 02, 2026" ended in January 2026)."""
     start, end = parse_dates(entry["date_text"])
     last = end or start
     return last is not None and last >= today - timedelta(days=RECENT_DAYS)
