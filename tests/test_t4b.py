@@ -400,7 +400,13 @@ ATHENS = ("aicf-482567", "aicf-482568", "aicf-482569", "aicf-482570", "aicf-4826
     ("Kerala International Open", True, "inferred"),
     ("Kerala Chess Open FIDE Rated", True, "stated"),
     ("State Level Open Chess Tournament", None, None),
-    ("St. Xavier International School Chess Championship", None, None),  # a school's name
+    # "school" anywhere stops the "International" rule (a school's name or a school championship)
+    ("St. Xavier International School Chess Championship", None, None),
+    ("ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-07 B)", None, None),
+    ("Global Indian International Schools Inter-School Open Chess Tournament", None, None),
+    ("Delhi Public School International FIDE Rated Open", True, "stated"),  # FIDE/rated still counts
+    ("Ryan International School Unrated Rapid", False, "stated"),
+    ("Grandmaster Open at Sunrise School Hall", True, "inferred"),  # only the International rule stops
     ("Non-rated International Open", False, "stated"),
     ("GM Rajesh Memorial Not Rated Rapid", False, "stated"),
     ("Unrated Grandmaster Open", False, "stated"),

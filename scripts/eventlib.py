@@ -342,7 +342,8 @@ _INFERRED_RATED = (
                r"(?:open|tournaments?|chess|category)\b"),
     re.compile(r"(?i)\b(?:im|gm)[\s-]*norms?\b|\bnorms?[\s-]+tournaments?\b"),
 )
-_INTERNATIONAL = re.compile(r"(?i)\binternational\b(?![\s-]+(?:public[\s-]+|residential[\s-]+)?schools?\b)")
+_INTERNATIONAL = re.compile(r"(?i)\binternational\b")
+_SCHOOL = re.compile(r"(?i)\bschools?\b")  # "St. Xavier International ... School": a school's name
 _INTERNATIONAL_WITH = re.compile(r"(?i)\b(?:open|tournaments?|chess|rating)\b")
 
 
@@ -360,7 +361,7 @@ def fide_evidence(text: str) -> tuple[bool | None, str | None]:
     if _RATED.search(text) or _FIDE_WITH.search(text):
         return True, "stated"
     if any(p.search(text) for p in _INFERRED_RATED) or (
-            _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text)):
+            _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text) and not _SCHOOL.search(text)):
         return True, "inferred"
     return None, None
 
