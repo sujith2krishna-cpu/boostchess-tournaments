@@ -1,6 +1,7 @@
 # CLAUDE.md — boostchess-tournaments
 
-Gathers chess tournaments (AICF, chessfee, Chess-Results India, ChessBase India calendar)
+Gathers chess tournaments (AICF, Kerala Chess Association, chessfee, Chess-Results India,
+ChessBase India calendar)
 into `data/events.json`, keeps history, accepts manual events and overrides. The JSON is
 shared by the web site and the Android app, so changing its shape affects both.
 
@@ -70,7 +71,7 @@ shared by the web site and the Android app, so changing its shape affects both.
 - `scripts/dedup.py` — finding the same tournament across sources and grouping it (pure).
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
-- `scripts/sources/` — one module per site (`aicf`, `chessfee`, `chessresults_ind`,
+- `scripts/sources/` — one module per site (`aicf`, `kca`, `chessfee`, `chessresults_ind`,
   `chessbase_calendar`) with `fetch(client, previous, today, **options)` returning
   `(events, listing_state, stats)`; `polite.py` is the shared client. Switch sources in
   `config/sources.json`.
@@ -83,7 +84,8 @@ shared by the web site and the Android app, so changing its shape affects both.
 - Only `requests` and `beautifulsoup4` (pinned in `requirements.txt`) plus the standard library.
   `pytest` is in `requirements-dev.txt`.
 - Event id: `aicf-<first code>`; no code gives `aicf-<hash of name + start>`; two different events
-  sharing a code get a name-hash suffix. Other sources: `<source>-<their id>`. Manual ids never
+  sharing a code get a name-hash suffix. Other sources: `<source>-<their id>` (KCA: `kca-736-CAK-2026` from code
+  `736/CAK/2026`, which also goes into `codes`). Manual ids never
   start with `aicf-`.
 - Duplicates (`scripts/dedup.py`): records are **grouped, never removed or hidden**. Every event
   has `group_id`; non-primary members get `merged_into`; the primary gets `also_listed_on` and fills
@@ -92,7 +94,8 @@ shared by the web site and the Android app, so changing its shape affects both.
   (shared AICF code or Chess-Results page beats 2–5; same brochure beats the name only), score
   ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
   algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
-  dates, else manual > chessfee > chessresults_ind > chessbase_calendar. If two AICF events share a
+  dates, else manual > kca > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
+  district: it matches the towns inside it (`kerala_district()`), unknown towns never block. If two AICF events share a
   code, that code proves nothing. Every same/possible pair goes to `data/review/dedup_review.csv`.
 - Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
   `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
