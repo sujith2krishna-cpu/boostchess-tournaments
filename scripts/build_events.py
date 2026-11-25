@@ -510,7 +510,7 @@ def fill_tags(event: dict) -> None:
     if not event["tags"]["formats"]:
         event["tags"]["formats"] = formats_in(text)
     if event["tags"]["fide_rated"] is None:
-        event["tags"]["fide_rated"] = fide_rated_in(text)
+        event["tags"]["fide_rated"], event["tags"]["fide_how"] = fide_evidence(text)
 
 
 def review_csv(rows: list[dict]) -> bytes:

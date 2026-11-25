@@ -21,7 +21,7 @@ def test_two_codes_and_under_11_open_girls_fide_rated(data_dir):
                 code="472290/472291")
     assert event["id"] == "aicf-472290"
     assert event["codes"] == ["472290", "472291"]
-    assert event["tags"] == {"formats": [], "fide_rated": True, "age": ["U11"],
+    assert event["tags"] == {"formats": [], "fide_rated": True, "fide_how": "stated", "age": ["U11"],
                              "open": True, "girls": True, "categories": []}
 
 
@@ -169,7 +169,7 @@ def test_format_tags(name, formats):
 
 def test_other_tags_are_true_or_null():
     tags = be.derive_tags("Girls Chess Championship")
-    assert tags == {"formats": [], "fide_rated": None, "age": [], "open": None, "girls": True,
+    assert tags == {"formats": [], "fide_rated": None, "fide_how": None, "age": [], "open": None, "girls": True,
                     "categories": []}
     assert be.derive_tags("FIDE Open Rapid Rating Chess")["fide_rated"] is True
     assert be.derive_tags("Unrated Open")["fide_rated"] is False  # schema 5: said non-rated

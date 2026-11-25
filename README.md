@@ -240,8 +240,21 @@ Events are sorted by start date.
   one event; **all records stay** and are grouped. New fields `group_id`, `merged_into`,
   `also_listed_on` (right after `verified`) and `dates_from` (after `raw_dates`).
   **Show only events whose `merged_into` is `null`.** `tags.fide_rated` can now also be `false`
-  (the name says non-rated). New counts in `meta.json`: `groups_count`, `merged_count`,
+  (the name says non-rated), and the new `tags.fide_how` says where a `true`/`false` comes from
+  (see below). New counts in `meta.json`: `groups_count`, `merged_count`,
   `possible_duplicates_count`.
+
+**How `fide_rated` is decided** (`true` still simply means "FIDE rated"):
+
+| `fide_how` | When |
+|---|---|
+| `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so, or another site's record of the same tournament says so. |
+| `"inferred"` | The name does not say "FIDE"/"rated", but uses words only FIDE-rated events use: "Grandmaster"/"GM" followed by Open, Tournament, Chess or Category; "IM norm", "GM norm", "norm tournament"; or "International" together with Open, Tournament, Chess or Rating (not "International School"). Also a section of a festival whose sibling section is rated: siblings share the same brochure link, or the same name once the section part (category letter, rating limit, age group, format) is removed, with the same start date and city. |
+| `null` | `fide_rated` is `null`: nothing says either way. |
+
+A name that says non-rated / unrated / not rated is always `false`, whatever else it says. Only a
+`true` is ever passed from a sibling section or from another record of the same tournament; a
+`false` never is.
 - **Version 4:** new field `results_url` (right after `register_url`): where the results are.
   For Chess-Results events it is the tournament page; for others it is empty until a link is
   known (you can add one in `overrides.csv`). It stays on the event after the event ends.
@@ -274,7 +287,7 @@ One event looks like this:
 | `register_url` | The organiser's registration link, if a site shows one (or you add one). We only link to it. |
 | `results_url` | Where to see results, e.g. the Chess-Results tournament page; `null` when not known. |
 | `organiser` | Organiser's name when a site shows one. |
-| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
+| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `fide_how` (`"stated"`, `"inferred"` or `null`, see "How `fide_rated` is decided"), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
 | `raw_dates` | The dates exactly as the source wrote them, kept when they look wrong. |
 | `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |

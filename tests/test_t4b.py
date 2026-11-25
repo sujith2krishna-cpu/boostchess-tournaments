@@ -356,7 +356,7 @@ def test_category_labels_fill_gaps_in_stored_events(data_dir):
     assert (tags["formats"], tags["fide_rated"]) == (["rapid"], True)
 
 
-def test_format_and_fide_are_inherited_within_a_group_only_when_members_agree():
+def test_format_and_fide_are_inherited_within_a_group():
     a = ev("aicf-1", "Golden Knights Masters Cup", "2026-12-01")
     b = ev("chessfee-1", "Golden Knights Masters Cup", "2026-12-01",
            tags={"formats": ["rapid"], "fide_rated": True})
@@ -366,15 +366,92 @@ def test_format_and_fide_are_inherited_within_a_group_only_when_members_agree():
     events, _, _ = group(ev("aicf-2", "Golden Knights Masters Cup", "2026-12-01"),
                          ev("chessfee-2", "Golden Knights Masters Cup", "2026-12-01"))
     assert events["aicf-2"]["tags"]["formats"] == [] and events["aicf-2"]["tags"]["fide_rated"] is None
-    # members disagree: nobody inherits
+    # a true on any member fills a null primary; a false is never passed on
     c = ev("aicf-3", "Golden Knights Masters Cup", "2026-12-01")
     d = ev("chessfee-3", "Golden Knights Masters Cup", "2026-12-01", tags={"fide_rated": True})
     e = ev("chessresults_ind-3", "Golden Knights Masters Cup", "2026-12-01", tags={"fide_rated": False})
     events, _, _ = group(c, d, e)
-    assert events["aicf-3"]["tags"]["fide_rated"] is None
+    assert events["aicf-3"]["merged_into"] is None
+    assert (events["aicf-3"]["tags"]["fide_rated"], events["aicf-3"]["tags"]["fide_how"]) == (True, "stated")
+    assert events["chessresults_ind-3"]["tags"]["fide_rated"] is False
+    f = ev("aicf-4", "Golden Knights Masters Cup", "2026-12-01")
+    g = ev("chessfee-4", "Golden Knights Masters Cup", "2026-12-01", tags={"fide_rated": False})
+    events, _, _ = group(f, g)
+    assert events["aicf-4"]["tags"]["fide_rated"] is None
 
 
 def test_committed_events_read_cleanly_as_schema_5():
     doc = load_doc(ROOT / "data")
     for event in doc["events"]:
         assert list(be.canonical(event)) == list(be.EVENT_KEYS)
+
+
+# ---- FIDE name rule, fide_how, sections ------------------------------------------------
+ATHENS = ("aicf-482567", "aicf-482568", "aicf-482569", "aicf-482570", "aicf-482662")
+
+
+@pytest.mark.parametrize("text, rated, how", [
+    ("Athens of the East 6 th International Grandmaster Chess Tournaments – (Category – A Above 2100)",
+     True, "inferred"),
+    ("1st Akshaya GM Category B Below 2000", True, "inferred"),
+    ("Delhi Grand Master Open", True, "inferred"),
+    ("Tamil Nadu IM Norm Closed Circuit", True, "inferred"),
+    ("Kolkata Norm Tournament 2027", True, "inferred"),
+    ("Kerala International Open", True, "inferred"),
+    ("Kerala Chess Open FIDE Rated", True, "stated"),
+    ("State Level Open Chess Tournament", None, None),
+    ("St. Xavier International School Chess Championship", None, None),  # a school's name
+    ("Non-rated International Open", False, "stated"),
+    ("GM Rajesh Memorial Not Rated Rapid", False, "stated"),
+    ("Unrated Grandmaster Open", False, "stated"),
+])
+def test_fide_name_rule(text, rated, how):
+    assert be.fide_evidence(text) == (rated, how)
+    tags = be.derive_tags(text)
+    assert (tags["fide_rated"], tags["fide_how"]) == (rated, how)
+
+
+def test_all_five_athens_sections_are_rated(data_dir):
+    snapshot_dir(data_dir, list(REAL.values()))
+    run_offline(data_dir)
+    events = by_id(data_dir)
+    for event_id in ATHENS:
+        assert (events[event_id]["tags"]["fide_rated"], events[event_id]["tags"]["fide_how"]) == \
+            (True, "inferred"), event_id
+
+
+def test_sections_share_a_true_flag_never_a_false_one():
+    pdf = "https://aicf.in/festival.pdf"
+    a = ev("aicf-1", "Golden Knights Festival Category A FIDE Rated", "2026-12-01", brochure_url=pdf)
+    b = ev("aicf-2", "Golden Knights Festival Category B", "2026-12-03", brochure_url=pdf)
+    c = ev("aicf-3", "Golden Knights Festival Category C", "2026-12-04", brochure_url=pdf,
+           tags={"fide_rated": False, "fide_how": "stated"})
+    # same name once the section is removed, same start date and city
+    d = ev("aicf-4", "Silver Pawns Cup Below 1600 Rated", "2026-12-10", city="Salem")
+    e = ev("aicf-5", "Silver Pawns Cup Above 1600", "2026-12-10", city="Salem")
+    f = ev("aicf-6", "Silver Pawns Cup Under-11", "2026-12-11", city="Salem")  # other start date
+    events = {x["id"]: x for x in (a, b, c, d, e, f)}
+    for x in events.values():
+        be.fill_tags(x)
+    assert dedup.share_fide_with_sections(list(events.values())) == 2
+    assert (events["aicf-2"]["tags"]["fide_rated"], events["aicf-2"]["tags"]["fide_how"]) == (True, "inferred")
+    assert events["aicf-3"]["tags"]["fide_rated"] is False  # its own "false" stays
+    assert (events["aicf-5"]["tags"]["fide_rated"], events["aicf-5"]["tags"]["fide_how"]) == (True, "inferred")
+    assert events["aicf-6"]["tags"]["fide_rated"] is None
+    # a false is never shared
+    g = ev("aicf-7", "Bronze Rooks Cup Non-rated", "2026-12-10", brochure_url="https://x.in/r.pdf")
+    h = ev("aicf-8", "Bronze Rooks Cup Kids", "2026-12-10", brochure_url="https://x.in/r.pdf")
+    for x in (g, h):
+        be.fill_tags(x)
+    dedup.share_fide_with_sections([g, h])
+    assert h["tags"]["fide_rated"] is None
+
+
+def test_old_stored_tags_get_fide_how():
+    stored = be.canonical({"id": "aicf-1", "name": "X", "source": "aicf", "first_seen": "2026-11-01",
+                           "last_seen": "2026-11-02", "tags": {"fide_rated": True}})
+    assert stored["tags"]["fide_how"] == "stated"
+    blank = be.canonical({"id": "aicf-2", "name": "X", "source": "aicf", "first_seen": "2026-11-01",
+                          "last_seen": "2026-11-02", "tags": {}})
+    assert blank["tags"]["fide_how"] is None
+    assert list(stored["tags"])[:3] == ["formats", "fide_rated", "fide_how"]

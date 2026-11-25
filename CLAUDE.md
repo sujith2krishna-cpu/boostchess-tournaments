@@ -95,7 +95,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   dates, else manual > chessfee > chessresults_ind > chessbase_calendar. If two AICF events share a
   code, that code proves nothing. Every same/possible pair goes to `data/review/dedup_review.csv`.
 - Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
-  `fide_rated` is true / false (says non-rated) / null.
+  `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
+  (grandmaster, norm or "International ... Open" names, or a rated sibling section) / null. Only a
+  true is ever shared (sections, groups); a false never is.
 - Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`.
 - No `status` is stored. `status(event, today)` computes ongoing/upcoming/past in Indian time
   (fixed UTC+05:30, no DST, so no `tzdata` needed).

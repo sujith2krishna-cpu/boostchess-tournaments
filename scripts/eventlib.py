@@ -335,22 +335,49 @@ def formats_in(text: str) -> list[str]:
     return [f for f in FORMAT_ORDER if re.search(rf"(?i)\b(?:{_FORMAT_WORDS[f]})\b", text or "")]
 
 
-def fide_rated_in(text: str) -> bool | None:
-    """True when the text says rated ("FIDE Rated", "Rapid Rating", "FIDE RAPID"),
-    False when it says non-rated / unrated, None when it says nothing."""
-    text = text or ""
+# Words that do not say "FIDE rated" but only occur on FIDE-rated events: a grandmaster event,
+# a norm event, an "International" open / tournament (the AICF lists these only when rated).
+_INFERRED_RATED = (
+    re.compile(r"(?i)\b(?:grand[\s-]*masters?|gm)\b[\s\-–—:('‘]*"
+               r"(?:open|tournaments?|chess|category)\b"),
+    re.compile(r"(?i)\b(?:im|gm)[\s-]*norms?\b|\bnorms?[\s-]+tournaments?\b"),
+)
+_INTERNATIONAL = re.compile(r"(?i)\binternational\b(?![\s-]+(?:public[\s-]+|residential[\s-]+)?schools?\b)")
+_INTERNATIONAL_WITH = re.compile(r"(?i)\b(?:open|tournaments?|chess|rating)\b")
+
+
+def fide_evidence(text: str) -> tuple[bool | None, str | None]:
+    """(fide_rated, fide_how) from a piece of text.
+
+    (False, "stated") when it says non-rated / unrated / not rated;
+    (True, "stated") when it says FIDE rated ("FIDE Rated", "Rapid Rating", "FIDE RAPID");
+    (True, "inferred") for grandmaster / norm / "International ... Open|Tournament|Chess" names;
+    (None, None) when it says nothing.
+    """
+    text = clean_text(text)
     if _NON_RATED.search(text):
-        return False
+        return False, "stated"
     if _RATED.search(text) or _FIDE_WITH.search(text):
-        return True
-    return None
+        return True, "stated"
+    if any(p.search(text) for p in _INFERRED_RATED) or (
+            _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text)):
+        return True, "inferred"
+    return None, None
+
+
+def fide_rated_in(text: str) -> bool | None:
+    """Only the "stated" part of fide_evidence(): True / False when the text says so, else None."""
+    value, how = fide_evidence(text)
+    return value if how == "stated" else None
 
 
 def derive_tags(name: str) -> dict:
     """Conservative tags from the name. Anything unsure stays empty."""
+    fide_rated, fide_how = fide_evidence(name)
     return {
         "formats": formats_in(name),
-        "fide_rated": fide_rated_in(name),
+        "fide_rated": fide_rated,
+        "fide_how": fide_how,
         "age": ages_from_text(name),
         "open": True if re.search(r"\bopen\b", name, re.I) else None,
         "girls": True if re.search(r"\bgirls?\b", name, re.I) else None,
@@ -369,7 +396,7 @@ EVENT_KEYS = (
     "raw_dates", "dates_from", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
-TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
+TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("fide_how", None), ("age", []),
                 ("open", None), ("girls", None), ("categories", []))
 FLAG_DEFAULTS = (("dates_suspect", False), ("code_expanded", False),
                  ("code_unclear", False))
@@ -431,6 +458,8 @@ def canonical(event: dict) -> dict:
             out[key] = {k: copy.deepcopy(tags_in.get(k, d)) for k, d in TAG_DEFAULTS}
             age = out[key]["age"]  # schema 1 stored one string (or null); schema 2 a list
             out[key]["age"] = [] if age is None else [age] if isinstance(age, str) else age
+            if "fide_how" not in tags_in:  # before fide_how, only what a name or site said was stored
+                out[key]["fide_how"] = "stated" if out[key]["fide_rated"] is not None else None
         elif key == "country":
             out[key] = event["country"] if "country" in event else country_for(event.get("source"))
         elif key == "flags":
@@ -705,8 +734,15 @@ def merge_tags(primary: dict, other: dict) -> dict:
                         key=lambda a: int(a[1:]))
     for key in ("open", "girls"):
         out[key] = out.get(key) or other.get(key) or None
-    if out.get("fide_rated") is None:  # True / False from the primary win; a gap is filled
-        out["fide_rated"] = other.get("fide_rated")
+    if out.get("fide_rated") is None and other.get("fide_rated") is not None:
+        # True / False from the primary win; a gap is filled (a site's own flag counts as stated)
+        out["fide_rated"] = other["fide_rated"]
+        out["fide_how"] = other.get("fide_how") or "stated"
+    elif out.get("fide_rated") is True and other.get("fide_rated") is True \
+            and out.get("fide_how") == "inferred" and (other.get("fide_how") or "stated") == "stated":
+        out["fide_how"] = "stated"  # a site saying so beats our inference
+    if out.get("fide_rated") is None:
+        out["fide_how"] = None
     return out
 
 

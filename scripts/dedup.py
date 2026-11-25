@@ -269,12 +269,13 @@ def _inherit_tags(members: list[dict]) -> None:
         for m in members:
             if not m["tags"]["formats"]:
                 m["tags"]["formats"] = known
-    rated = {m["tags"]["fide_rated"] for m in members if m["tags"]["fide_rated"] is not None}
-    if len(rated) == 1:
-        value = next(iter(rated))
+    # A "true" on any record of the tournament fills the gaps; "false" is never passed on.
+    rated = [m for m in members if m["tags"]["fide_rated"] is True]
+    if rated:
+        how = "stated" if any(m["tags"]["fide_how"] == "stated" for m in rated) else "inferred"
         for m in members:
             if m["tags"]["fide_rated"] is None:
-                m["tags"]["fide_rated"] = value
+                m["tags"]["fide_rated"], m["tags"]["fide_how"] = True, how
 
 
 def _finish_group(members: list[dict]) -> None:
@@ -292,7 +293,8 @@ def _finish_group(members: list[dict]) -> None:
     links = [{"source": m["source"], "source_url": m["source_url"], "register_url": m["register_url"]}
              for m in [primary] + others]
     primary["sources"] = [l for i, l in enumerate(links) if l not in links[:i]]
-    known = (primary["tags"]["formats"], primary["tags"]["fide_rated"])  # settled by _inherit_tags
+    known = (primary["tags"]["formats"], primary["tags"]["fide_rated"],
+             primary["tags"]["fide_how"])  # settled by _inherit_tags
     for other in others:
         for field in ("register_url", "results_url", "brochure_url", "city", "state", "place_text",
                       "organiser"):
@@ -302,7 +304,7 @@ def _finish_group(members: list[dict]) -> None:
         primary["codes"] = primary["codes"] + [c for c in other["codes"] if c not in primary["codes"]]
         seen = [x for x in (primary["first_seen"], other["first_seen"]) if x]
         primary["first_seen"] = min(seen) if seen else None
-    primary["tags"]["formats"], primary["tags"]["fide_rated"] = known
+    primary["tags"]["formats"], primary["tags"]["fide_rated"], primary["tags"]["fide_how"] = known
     primary["gone_from_source"] = all(m["gone_from_source"] for m in members)
     primary["verified"] = any(m["source"] in VERIFIED_SOURCES for m in members)
     if primary["flags"]["dates_suspect"]:
@@ -311,6 +313,47 @@ def _finish_group(members: list[dict]) -> None:
             primary["start"], primary["end"] = good["start"], good["end"]
             primary["dates_from"] = good["id"]
             primary["flags"]["dates_suspect"] = False  # raw_dates still holds what the source said
+
+
+def share_fide_with_sections(events: list[dict]) -> int:
+    """Sections of one festival share a true fide_rated (never a false one).
+
+    Siblings: the same brochure link, or the same name once the section words (category letter,
+    rating limit, age group, format) are removed, with the same start date and city.
+    A record that gets its flag this way has fide_how "inferred". Returns how many were filled.
+    """
+    parent = list(range(len(events)))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    first: dict[tuple, int] = {}
+    for index, event in enumerate(events):
+        keys = []
+        if event.get("brochure_url"):
+            keys.append(("brochure", event["brochure_url"].strip().lower()))
+        words = name_words(event["name"] or "", event.get("city"))
+        if len(words) >= MIN_DISTINCT_WORDS and event.get("start") and event.get("city"):
+            keys.append(("name", words, event["start"], _flat(event["city"])))
+        for key in keys:
+            if key in first:
+                parent[find(index)] = find(first[key])
+            else:
+                first[key] = index
+    clusters = defaultdict(list)
+    for index, event in enumerate(events):
+        clusters[find(index)].append(event)
+    filled = 0
+    for members in clusters.values():
+        if len(members) > 1 and any(m["tags"]["fide_rated"] is True for m in members):
+            for m in members:
+                if m["tags"]["fide_rated"] is None:
+                    m["tags"]["fide_rated"], m["tags"]["fide_how"] = True, "inferred"
+                    filled += 1
+    return filled
 
 
 def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> dict:
@@ -323,6 +366,7 @@ def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> 
     for e in events:
         e["group_id"], e["merged_into"], e["also_listed_on"], e["dates_from"] = e["id"], None, [], None
         e["flags"]["possible_duplicate_of"] = None
+    share_fide_with_sections(events)
     features = [Features(e) for e in events]
     index_of = {f.id: i for i, f in enumerate(features)}
     aicf_by_code = defaultdict(list)
