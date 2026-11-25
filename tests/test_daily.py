@@ -189,6 +189,8 @@ def test_heartbeat_command_exit_codes(tmp_path, capsys):
     from datetime import datetime
     now = datetime.now(be.IST)
     good = meta_with(aicf=now.isoformat(), chessfee=(now - timedelta(days=2)).isoformat())
+    # chessfee failed an hour ago: tried (no missed fetch), and 2 days is not yet "gone quiet"
+    good["sources"]["chessfee"]["last_error"] = {"at": (now - timedelta(hours=1)).isoformat(), "message": "x"}
     (tmp_path / "meta.json").write_text(json.dumps(good), encoding="utf-8")
     assert heartbeat.main(["--data-dir", str(tmp_path)]) == 0
     assert "Heartbeat ok" in capsys.readouterr().out

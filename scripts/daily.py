@@ -8,6 +8,8 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
+import quality
+
 SOURCE_ORDER = ("aicf", "kca", "chessfee", "chessresults_ind", "chessbase_calendar")
 
 
@@ -79,7 +81,10 @@ def summary_markdown(report: dict) -> str:
         lines += ["", "No source problems."]
     for warning in report.get("warnings", []):
         lines.append(f"- warning: {warning}")
-    return "\n".join(lines) + "\n"
+    text = "\n".join(lines) + "\n"
+    if report.get("quality"):
+        text += quality.summary_markdown(report["quality"])
+    return text
 
 
 def failure_markdown(message: str) -> str:
@@ -88,8 +93,11 @@ def failure_markdown(message: str) -> str:
 
 def annotations(report: dict) -> list[str]:
     """GitHub warning lines (they show up on the run page) for failed or blocked sources."""
-    return [f"::warning title={name} problem::{message.replace(chr(10), ' ')}"
-            for name, message in problems(report)]
+    lines = [f"::warning title={name} problem::{message.replace(chr(10), ' ')}"
+             for name, message in problems(report)]
+    lines += [f"::warning title=Quality alert::{alert['message']}"
+              for alert in (report.get("quality") or {}).get("alerts", [])]
+    return lines
 
 
 def write_summary(path: str | None, text: str) -> None:

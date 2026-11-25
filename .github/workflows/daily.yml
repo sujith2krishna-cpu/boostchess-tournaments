@@ -46,6 +46,12 @@ jobs:
       - name: Run the tests
         run: python -m pytest -q
 
+      # For the missed-fetch alarm: what meta.json said before this run, and when the run began.
+      - name: Remember meta.json from before the build
+        run: |
+          if [ -f data/meta.json ]; then cp data/meta.json "$RUNNER_TEMP/meta-before.json"; fi
+          echo "RUN_STARTED=$(date -u +%Y-%m-%dT%H:%M:%S+00:00)" >> "$GITHUB_ENV"
+
       - name: Build the data (reads the sources)
         id: build
         env:
@@ -106,11 +112,14 @@ jobs:
           path: data
 
       # Last, so the data is still published when it fails: the run fails (and GitHub
-      # e-mails you) when the newest fetch of any source is over 30 hours old, or when
-      # one source has had no successful fetch for 3 days.
-      - name: Heartbeat (stale data after 30 hours, silent source after 3 days)
+      # e-mails you) when the newest fetch of any source is over 30 hours old, when
+      # one source has had no successful fetch for 3 days, or when a source was due for
+      # more than 6 hours without a fetch attempt (GitHub skipped scheduled runs).
+      - name: Heartbeat (stale data 30 h, silent source 3 days, missed fetch 6 h)
         if: steps.build.outcome == 'success'
-        run: python scripts/heartbeat.py --summary-file "$GITHUB_STEP_SUMMARY"
+        run: >-
+          python scripts/heartbeat.py --summary-file "$GITHUB_STEP_SUMMARY"
+          --before "$RUNNER_TEMP/meta-before.json" --started "$RUN_STARTED"
 
   deploy:
     needs: build

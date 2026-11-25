@@ -81,14 +81,47 @@ def _strip_place_prefix(name: str, city: str | None = None) -> str:
     return name
 
 
+# Tails that Chess-Results (mostly) adds after the real name. Each is only removed at the very
+# end of the name, and something must be left before it.
+_SEP = r"[\s,;:|>\-–—]*"
+_TAIL_ORGANISER = re.compile(rf"{_SEP}\borgani[sz]ed\s+by\b.*$", re.I)
+_TAIL_PERSON = re.compile(rf"{_SEP}\(\s*(?:mr|mrs|ms|miss|dr|shri|sri|smt|prof)\b\.?[^()]*\)\s*$", re.I)
+_RANGE = r"(?:-|–|—|to|till|&|and)"  # "2 to 6 Dec", "27-29 Nov"
+_TAIL_DATE = re.compile(
+    rf"{_SEP}(?:\b{_DAY}(?:\s*{_RANGE}\s*{_DAY})?\s*{_MONTH}\.?,?(?:\s*(?:19|20)\d{{2}})?"
+    rf"|\b{_MONTH}\.?\s*{_DAY}(?:\s*{_RANGE}\s*{_DAY})?,?(?:\s*(?:19|20)\d{{2}})?"
+    r"|\b\d{1,2}[./-]\d{1,2}[./-](?:19|20)?\d{2})\s*$", re.I)
+
+
+def strip_name_tails(name: str, city: str | None = None) -> str:
+    """Drop trailing 'Organised by ...', '(Mr. ...)', dates ('20th Dec 2026') and a place that
+    equals the event's city, repeatedly: '... Tournament -> 27 Nov 2026 - 29 Nov 2026 - Coimbatore'
+    becomes '... Tournament'."""
+    text = clean_text(name or "")
+    place = None
+    if city and _flat(city):
+        words = r"[\s.\-]+".join(re.escape(w) for w in _flat(city).split())
+        place = re.compile(rf"{_SEP}\(?\b{words}\b\)?\.?\s*$", re.I)
+    while True:
+        before = text
+        for pattern in (_TAIL_ORGANISER, _TAIL_PERSON, _TAIL_DATE, place):
+            if pattern is None:
+                continue
+            match = pattern.search(text)
+            if match and text[:match.start()].strip(" ,;:|>-–—"):
+                text = text[:match.start()].rstrip()
+        if text == before:
+            return text
+
+
 def name_words(name: str, city: str | None = None) -> frozenset[str]:
     """The distinctive words of a tournament name, as a set (order does not matter).
 
-    Removed: punctuation, dates written in the title, years, Indian state names, filler words,
-    and the section words (rating limits, age groups, category letters, formats), which the
-    section guard compares on their own.
+    Removed: name tails (strip_name_tails), punctuation, dates written in the title, years,
+    Indian state names, filler words, and the section words (rating limits, age groups,
+    category letters, formats), which the section guard compares on their own.
     """
-    text = _POSSESSIVE.sub("", _strip_place_prefix(clean_text(name), city).lower())
+    text = _POSSESSIVE.sub("", _strip_place_prefix(strip_name_tails(name, city), city).lower())
     text = _LIMIT.sub(" ", text)  # before the years: "below 2000" is a rating, not a year
     text = _YEAR_RANGE.sub(" ", text)
     text = _DATE_IN_TITLE.sub(" ", text)
@@ -182,7 +215,7 @@ class Features:
         self.id = event["id"]
         self.source = event["source"]
         self.words = name_words(event["name"] or "", event.get("city"))
-        self.sections = sections(event["name"] or "")
+        self.sections = sections(strip_name_tails(event["name"] or "", event.get("city")))
         self.start = _day(event.get("start"))
         self.end = _day(event.get("end"))
         self.codes = frozenset(event.get("codes") or [])
@@ -322,7 +355,7 @@ def _finish_group(members: list[dict]) -> None:
         primary["city"] = town
     for other in others:
         for field in ("register_url", "results_url", "brochure_url", "city", "state", "place_text",
-                      "organiser"):
+                      "organiser", "registration_deadline"):
             if primary[field] is None and other[field] is not None:
                 primary[field] = other[field]
         primary["tags"] = merge_tags(primary["tags"], other["tags"])
