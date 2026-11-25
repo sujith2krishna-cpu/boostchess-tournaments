@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T00:28:06+05:30",
+  "generated_at": "2026-11-25T10:04:55+05:30",
   "scraped_count": 611,
   "manual_count": 0,
   "total": 612,
@@ -9,32 +9,32 @@
   "sources": {
     "aicf": {
       "enabled": true,
-      "status": "ok",
-      "message": null,
+      "status": "skipped",
+      "message": "already fetched today (at most one run per day)",
       "last_success": "2026-11-25T00:28:06+05:30",
       "last_error": null,
       "count": 442
     },
     "chessfee": {
       "enabled": true,
-      "status": "ok",
-      "message": null,
+      "status": "skipped",
+      "message": "already fetched today (at most one run per day)",
       "last_success": "2026-11-25T00:28:06+05:30",
       "last_error": null,
       "count": 32
     },
     "chessresults_ind": {
       "enabled": true,
-      "status": "ok",
-      "message": null,
+      "status": "skipped",
+      "message": "already fetched today (at most one run per day)",
       "last_success": "2026-11-25T00:28:06+05:30",
       "last_error": null,
       "count": 108
     },
     "chessbase_calendar": {
       "enabled": true,
-      "status": "ok",
-      "message": null,
+      "status": "skipped",
+      "message": "already fetched today (at most one run per day)",
       "last_success": "2026-11-25T00:28:06+05:30",
       "last_error": {
         "at": "2026-11-24T22:47:21+05:30",
