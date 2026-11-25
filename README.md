@@ -234,7 +234,7 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 | **Heartbeat**, "Stale data" | No source has been fetched for over 30 hours: the schedule has stopped or every source fails (the run still published the old data). | Open the Actions tab: are runs happening every 3 hours? If not, see "Pausing the schedule" (it may be switched off). If they run, read the summary of the last ones. |
 | **Heartbeat**, "Missed fetch" | A source was due for over 6 hours and nothing tried to fetch it. Almost always GitHub skipped scheduled runs (it does this when it is busy); the run that raised the alarm has usually fetched it already. | Open the Actions tab: is there a run every 3 hours? A one-off gap needs nothing. If it keeps happening, tell the developer (the schedule may need more runs). If runs happen but fetch nothing, the 12-hour rule has a bug. |
 | **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 3 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
-| **Check the published files** | The published `events.json` is wrong or not reachable. | Re-run the workflow; if it repeats, check Settings → Pages. |
+| **Check the published files** | A published file (`events.json`, `meta.json`, `quality.json`, `review.csv`) is wrong or not reachable, or the review counts in `quality.json` do not match `review.csv`. | Re-run the workflow; if it repeats, check Settings → Pages. |
 
 If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
 **Problems** list in the summary. The failed source keeps its old events.
