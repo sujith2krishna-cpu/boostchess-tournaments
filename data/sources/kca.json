@@ -1,0 +1,1284 @@
+{
+  "source": "kca",
+  "found": 22,
+  "listing": {
+    "kca-736-CAK-2026": "24974bbc13a2",
+    "kca-743-CAK-2026": "fd96bf625b10",
+    "kca-746-CAK-2026": "93df543e783a",
+    "kca-747-CAK-2026": "fbd51783b830",
+    "kca-740-CAK-2026": "ed52126da43f",
+    "kca-738-CAK-2026": "1a71d0e8bd28",
+    "kca-741-CAK-2026": "f249508e7801",
+    "kca-737-CAK-2026": "1a6ef2ca5067",
+    "kca-744-CAK-2026": "a572bf4635e3",
+    "kca-729-CAK-2026": "1c6442c656c9",
+    "kca-730-CAK-2026": "238ae8e1276d",
+    "kca-745-CAK-2026": "a496c8cea424",
+    "kca-739-CAK-2026": "a110b6e438ea",
+    "kca-742-CAK-2026": "f8f30b1319b2",
+    "kca-734-CAK-2026": "8beb2c59ee6d",
+    "kca-721-CAK-2026": "4d29413b6cd3",
+    "kca-732-CAK-2026": "80d92d39bd10",
+    "kca-696-CAK-2026": "8b9f6752b1d7",
+    "kca-723-CAK-2026": "6a983272a65d",
+    "kca-733-CAK-2026": "3e71043d0a31",
+    "kca-735-CAK-2026": "30046180e982",
+    "kca-722-CAK-2026": "2491a6cf6a8b"
+  },
+  "events": [
+    {
+      "id": "kca-722-CAK-2026",
+      "codes": [
+        "722/CAK/2026"
+      ],
+      "name": "TENDENZA One day Below 1700",
+      "start": "2026-09-27",
+      "end": "2026-09-27",
+      "place_text": "Thrissur, Kerala",
+      "state": "Kerala",
+      "city": "Thrissur",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/MrYy8158VPSKJnCGhDCH47mtkIe1bDdJ4z5vpeXN.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/722",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/722",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-722-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-733-CAK-2026",
+      "codes": [
+        "733/CAK/2026"
+      ],
+      "name": "DonBosco Interschool / Collegiate All Kerala Open",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "place_text": "Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/TTIuhmQfT9TqsiYlIzN97ifqjCrUcXuf0jOVumD6.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/733",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/733",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-733-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-735-CAK-2026",
+      "codes": [
+        "735/CAK/2026"
+      ],
+      "name": "Sanjose Mind Clash 2026",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "place_text": "Kannur, Kerala",
+      "state": "Kerala",
+      "city": "Kannur",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/d4iuom3Hqrm4gljyyQEX7B1nuUmbgSMR5MVaY33u.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/735",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/735",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-735-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-723-CAK-2026",
+      "codes": [
+        "723/CAK/2026"
+      ],
+      "name": "ROTARY MASTERS CUP 2026",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "place_text": "Thrissur, Kerala",
+      "state": "Kerala",
+      "city": "Thrissur",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/0PVbwVPJoTxm4LNtAl23CFZbrwbXIunavNkmjZMb.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/723",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/723",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-723-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-696-CAK-2026",
+      "codes": [
+        "696/CAK/2026"
+      ],
+      "name": "11th Chessmii International FIDE Rated Below 1700 Chess Tournament",
+      "start": "2026-10-16",
+      "end": "2026-10-18",
+      "place_text": "Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/jRWPEfIeD1T4YzBm9WgGE7ZaCgOGEE3IUn2e8z2g.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/696",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/696",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-696-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-732-CAK-2026",
+      "codes": [
+        "732/CAK/2026"
+      ],
+      "name": "One Day Chess Tournament, Below1700",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "place_text": "Kottayam, Kerala",
+      "state": "Kerala",
+      "city": "Kottayam",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/732",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/732",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-732-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-721-CAK-2026",
+      "codes": [
+        "721/CAK/2026"
+      ],
+      "name": "ROYAL GAMBIT SEASON 4 INTER SCHOOL ONE DAY TMT",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "place_text": "Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/721",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/721",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-721-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-734-CAK-2026",
+      "codes": [
+        "734/CAK/2026"
+      ],
+      "name": "ONE-DAY STATE-LEVEL SENIOR AND JUNIOR OPEN CHESS TOURNAMENT 2026",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "place_text": "Malappuram, Kerala",
+      "state": "Kerala",
+      "city": "Malappuram",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/734",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/734",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-734-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-742-CAK-2026",
+      "codes": [
+        "742/CAK/2026"
+      ],
+      "name": "SEVANA OPEN CHESS TOURNAMENT",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "place_text": "Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/742",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/742",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-742-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-739-CAK-2026",
+      "codes": [
+        "739/CAK/2026"
+      ],
+      "name": "Deva 3 rd International open FIDE rated rapid chess, 2026",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "place_text": "Kozhikode, Kerala",
+      "state": "Kerala",
+      "city": "Kozhikode",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/maI5KS4Ch3V0WejJ5vO0umshLfguOKJA9aOwn7dr.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/739",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/739",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-739-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-736-CAK-2026",
+      "codes": [
+        "736/CAK/2026"
+      ],
+      "name": "Chessind Academy's 2nd International FIDE Rated Open Rapid Chess Tournament",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Naipunya public school, kakkanad cochin, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/VLdKTRpNXZhqxbxIApvE54ERHxfGqbGC07DuCWgd.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/736",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/736",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-736-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-743-CAK-2026",
+      "codes": [
+        "743/CAK/2026"
+      ],
+      "name": "CAK - CiS State Inter School Team Chess Exposure Championship – 2026 ~ Category 1 (LKG - STD 4)",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "De Paul Auditorium, Angamaly, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/6mvkVZlA3yYvr6v6ZFj9PFUftzpWZLvpr9ndsvmr.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/743",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/743",
+          "register_url": "https://chessmii.com/st-tournament/5"
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-743-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://chessmii.com/st-tournament/5",
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-746-CAK-2026",
+      "codes": [
+        "746/CAK/2026"
+      ],
+      "name": "CAK - CiS State Inter School Team Chess Exposure Championship – 2026 ~ Category 2 (LKG - STD 8)",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "De Paul Auditorium, Angamaly, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/UBpAhgJ8IIxemyTiH7V61alnmgIza3mhHBUHQNPg.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/746",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/746",
+          "register_url": "https://chessmii.com/st-tournament/5"
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-746-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://chessmii.com/st-tournament/5",
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-747-CAK-2026",
+      "codes": [
+        "747/CAK/2026"
+      ],
+      "name": "CAK - CiS State Inter School Team Chess Exposure Championship – 2026 ~ Category 3 (LKG - STD 12)",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "De Paul Auditorium, Angamaly, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/QAhyGPzumyAQzTCnHewx7deoPau7U5FNRVcVXocN.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/747",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/747",
+          "register_url": "https://chessmii.com/st-tournament/5"
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-747-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://chessmii.com/st-tournament/5",
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-740-CAK-2026",
+      "codes": [
+        "740/CAK/2026"
+      ],
+      "name": "3rd M.A.L.C. All Kerala Below 1700 Chess Tournament – 2026",
+      "start": "2026-12-26",
+      "end": "2026-12-26",
+      "place_text": "Galaxy Auditorium, Eriyad, Cheraman, Thrissur, Kerala",
+      "state": "Kerala",
+      "city": "Thrissur",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/Ms7vuKqVseZ00QmXjRhJHHAj8Ayx73bDOkpsFp6T.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/740",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/740",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-740-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-738-CAK-2026",
+      "codes": [
+        "738/CAK/2026"
+      ],
+      "name": "4th ASA ALL KERALA OPEN CHESS TOURNAMENT In Association with Eight Times Eight Chess Academy",
+      "start": "2026-12-27",
+      "end": "2026-12-27",
+      "place_text": "CSA AUDITORIUM ANGAMALY, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/738",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/738",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-738-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-741-CAK-2026",
+      "codes": [
+        "741/CAK/2026"
+      ],
+      "name": "MET ALL KERALA CHESS TOURNAMENT",
+      "start": "2027-01-09",
+      "end": "2027-01-09",
+      "place_text": "MET ARTS&SCIENCE COLLAGE KALLACHI NADAPURAM, Kozhikode, Kerala",
+      "state": "Kerala",
+      "city": "Kozhikode",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/0cWBQBOPmJ5cRmth7dWSdqjHSDcYTvkC3UCpTmKq.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/741",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/741",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-741-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-737-CAK-2026",
+      "codes": [
+        "737/CAK/2026"
+      ],
+      "name": "ROYAL FOCUS ALL KERALA U -19 CHESS TOURNAMENT",
+      "start": "2027-01-23",
+      "end": "2027-01-23",
+      "place_text": "ROYAL FOCUS CHESS ACADEMY MATHER SQUARE, ERANAKULAM SU, Ernakulam, Kerala",
+      "state": "Kerala",
+      "city": "Ernakulam",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/737",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/737",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-737-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U19"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-744-CAK-2026",
+      "codes": [
+        "744/CAK/2026"
+      ],
+      "name": "Future Chess Academy & Pawns Chess Academy, Chalakudy, Kerala.",
+      "start": "2027-02-07",
+      "end": "2027-02-07",
+      "place_text": "CSA AUDITORIUM ANGAMALY, Thrissur, Kerala",
+      "state": "Kerala",
+      "city": "Thrissur",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/744",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/744",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-744-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-729-CAK-2026",
+      "codes": [
+        "729/CAK/2026"
+      ],
+      "name": "Rapid FIDE Rated Tournament",
+      "start": "2027-02-13",
+      "end": "2027-02-14",
+      "place_text": "Premier chess acdemy, 3rd floor, Dianby world, Vazhuthacaud, Trivandrum, Kerala, Thiruvananthapuram",
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/eDUOdW7w6CoOz5G24OvTquCfOldh9waWGGPMOO4j.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/729",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/729",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-729-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-730-CAK-2026",
+      "codes": [
+        "730/CAK/2026"
+      ],
+      "name": "Blitz FIDE Rated Tournament",
+      "start": "2027-02-14",
+      "end": "2027-02-14",
+      "place_text": "Premier chess acdemy, 3rd floor, Dianby world, Vazhuthacaud, Trivandrum, Kerala, Thiruvananthapuram",
+      "state": "Kerala",
+      "city": "Thiruvananthapuram",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/GIWaF4IgzhPLf3Uuzx0MsIAeaQstp7qhrFPQMw33.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/730",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/730",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-730-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "kca-745-CAK-2026",
+      "codes": [
+        "745/CAK/2026"
+      ],
+      "name": "ALL KERALA OPEN CHESS TOURNAMENT ( BELOW - 1700 )",
+      "start": "2027-04-04",
+      "end": "2027-04-04",
+      "place_text": "Kinattingal tennis & sports academy, puzhakkal, Thrissur, Kerala",
+      "state": "Kerala",
+      "city": "Thrissur",
+      "country": "IN",
+      "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/NQ5z62VqgZ3ySzjSE5YIncqsW2bWeAzt3eQ854CB.pdf",
+      "source": "kca",
+      "source_url": "https://www.keralachessassociation.com/events/745",
+      "sources": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/745",
+          "register_url": null
+        }
+      ],
+      "listed_by": "kca",
+      "verified": true,
+      "group_id": "kca-745-CAK-2026",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "KCA state rated"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

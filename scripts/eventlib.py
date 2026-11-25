@@ -231,6 +231,37 @@ _CITY_BY_KEY = {
 }
 
 
+# Kerala's 14 districts, with old spellings and the main towns in each. The Kerala Chess
+# Association gives a district, not a town, so "Ernakulam" and "Kochi" must be able to match.
+_KERALA_DISTRICTS = {
+    "Thiruvananthapuram": "trivandrum, tvm, attingal, neyyattinkara, varkala, nedumangad",
+    "Kollam": "quilon, karunagappally, kottarakkara, punalur",
+    "Pathanamthitta": "thiruvalla, tiruvalla, adoor, ranni",
+    "Alappuzha": "alleppey, cherthala, kayamkulam, mavelikkara, haripad",
+    "Kottayam": "changanacherry, changanassery, pala, vaikom, ettumanoor",
+    "Idukki": "thodupuzha, kattappana, munnar",
+    "Ernakulam": "kochi, cochin, aluva, kakkanad, edappally, angamaly, muvattupuzha, perumbavoor, "
+                 "kothamangalam, tripunithura, thrippunithura, kalamassery, north paravur",
+    "Thrissur": "trichur, guruvayur, chalakudy, irinjalakuda, kodungallur, kunnamkulam",
+    "Palakkad": "palghat, ottapalam, shoranur, mannarkkad",
+    "Malappuram": "tirur, manjeri, perinthalmanna, kottakkal, ponnani",
+    "Kozhikode": "calicut, vadakara, koyilandy, feroke",
+    "Wayanad": "kalpetta, sulthan bathery, mananthavady",
+    "Kannur": "cannanore, thalassery, tellicherry, payyanur, taliparamba",
+    "Kasaragod": "kasargod, kasaragode, kanhangad",
+}
+_KERALA_DISTRICT_BY_KEY = {}
+for _district, _towns in _KERALA_DISTRICTS.items():
+    _KERALA_DISTRICT_BY_KEY[_key(_district)] = _district
+    for _town in _towns.split(","):
+        _KERALA_DISTRICT_BY_KEY[_key(_town)] = _district
+
+
+def kerala_district(text) -> str | None:
+    """'Kochi' -> 'Ernakulam', 'Calicut' -> 'Kozhikode'; None when the place is not known."""
+    return _KERALA_DISTRICT_BY_KEY.get(_key(text)) if text else None
+
+
 def lookup_state(text: str) -> str | None:
     return _STATE_BY_KEY.get(_key(text))
 
@@ -412,12 +443,17 @@ EVENT_DEFAULTS = {
 OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
-# describe the same event. (Override > manual > aicf > the rest.)
-SOURCE_PRIORITY = ("manual", "aicf", "chessfee", "chessresults_ind", "chessbase_calendar")
+# describe the same event. (Override > manual > aicf > kca > the rest.)
+SOURCE_PRIORITY = ("manual", "aicf", "kca", "chessfee", "chessresults_ind", "chessbase_calendar")
 AUTOMATIC_SOURCES = SOURCE_PRIORITY[1:]
-LISTED_BY = {"manual": "manual", "aicf": "aicf", "chessfee": "chessfee",
+LISTED_BY = {"manual": "manual", "aicf": "aicf", "kca": "kca", "chessfee": "chessfee",
              "chessresults_ind": "chess-results", "chessbase_calendar": "chessbase"}
-VERIFIED_SOURCES = frozenset({"aicf", "manual"})
+# What a person should read for each source (the website keeps its own copy: FEED_BY).
+SOURCE_LABELS = {"manual": "Added by hand", "aicf": "All India Chess Federation",
+                 "kca": "Kerala Chess Association", "chessfee": "chessfee",
+                 "chessresults_ind": "Chess-Results", "chessbase_calendar": "ChessBase India"}
+# The national federation, and a state association affiliated to it.
+VERIFIED_SOURCES = frozenset({"aicf", "kca", "manual"})
 
 
 def source_rank(source: str | None) -> int:
@@ -426,7 +462,8 @@ def source_rank(source: str | None) -> int:
 
 # Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
 # calendar that lists events from many countries must supply its own code per event.
-COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "chessfee": "IN", "chessresults_ind": "IN"}
+COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "kca": "IN", "chessfee": "IN",
+                     "chessresults_ind": "IN"}
 ISO_COUNTRIES = frozenset("""
 AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS
 BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE

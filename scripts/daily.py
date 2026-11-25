@@ -8,7 +8,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-SOURCE_ORDER = ("aicf", "chessfee", "chessresults_ind", "chessbase_calendar")
+SOURCE_ORDER = ("aicf", "kca", "chessfee", "chessresults_ind", "chessbase_calendar")
 
 
 def _names(report: dict, wanted: tuple[str, ...]) -> list[str]:
