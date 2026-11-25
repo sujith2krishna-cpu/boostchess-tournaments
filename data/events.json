@@ -35,6 +35,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -91,6 +92,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -147,6 +149,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -203,6 +206,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -259,6 +263,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -313,6 +318,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -369,6 +375,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -424,6 +431,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U11"
         ],
@@ -482,6 +490,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -536,6 +545,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -591,6 +601,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -648,6 +659,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U11"
         ],
@@ -706,6 +718,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -762,6 +775,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -818,6 +832,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -874,6 +889,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -930,6 +946,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -986,6 +1003,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1040,6 +1058,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1094,6 +1113,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -1150,6 +1170,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1204,6 +1225,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1260,6 +1282,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1316,6 +1339,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1372,6 +1396,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1426,6 +1451,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1482,6 +1508,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1538,6 +1565,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1594,6 +1622,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1650,6 +1679,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1706,6 +1736,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1760,6 +1791,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U19"
         ],
@@ -1816,6 +1848,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1873,6 +1906,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1927,6 +1961,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -1981,6 +2016,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -2037,6 +2073,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -2091,6 +2128,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2145,6 +2183,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2201,6 +2240,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2260,6 +2300,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2314,6 +2355,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2370,6 +2412,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2426,6 +2469,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2482,6 +2526,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2536,6 +2581,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2590,6 +2636,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -2646,6 +2693,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2702,6 +2750,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2756,6 +2805,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2810,6 +2860,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2864,6 +2915,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -2918,6 +2970,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -2974,6 +3027,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3030,6 +3084,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3086,6 +3141,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3142,6 +3198,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3198,6 +3255,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3254,6 +3312,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3308,6 +3367,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3362,6 +3422,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3414,6 +3475,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3467,7 +3529,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -3522,6 +3585,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -3576,6 +3640,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3630,6 +3695,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3686,6 +3752,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3742,6 +3809,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3798,6 +3866,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -3854,6 +3923,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3908,6 +3978,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -3962,6 +4033,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4016,6 +4088,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U13"
         ],
@@ -4072,6 +4145,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U13"
         ],
@@ -4128,6 +4202,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4184,6 +4259,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4240,6 +4316,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -4296,6 +4373,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4352,6 +4430,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -4405,7 +4484,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -4462,6 +4542,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -4515,7 +4596,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -4571,7 +4653,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -4628,6 +4711,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4682,6 +4766,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -4736,6 +4821,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -4789,7 +4875,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -4843,7 +4930,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -4898,6 +4986,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -4954,6 +5043,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5009,6 +5099,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U9"
         ],
@@ -5067,6 +5158,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5123,6 +5215,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5179,6 +5272,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5235,6 +5329,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -5291,6 +5386,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -5344,7 +5440,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5399,6 +5496,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5452,7 +5550,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5507,6 +5606,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5561,6 +5661,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5615,6 +5716,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5670,6 +5772,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U13"
         ],
@@ -5725,7 +5828,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5782,6 +5886,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -5838,6 +5943,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -5892,6 +5998,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -5946,6 +6053,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6000,6 +6108,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6054,6 +6163,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -6108,6 +6218,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -6162,6 +6273,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -6218,6 +6330,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6274,6 +6387,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6330,6 +6444,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6387,6 +6502,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6443,6 +6559,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6497,6 +6614,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6551,6 +6669,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6607,6 +6726,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6660,7 +6780,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -6714,7 +6835,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -6771,6 +6893,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6827,6 +6950,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6883,6 +7007,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6939,6 +7064,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6993,6 +7119,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7047,6 +7174,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7101,6 +7229,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7155,6 +7284,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7209,6 +7339,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7265,6 +7396,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7321,6 +7453,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7377,6 +7510,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -7432,6 +7566,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U7"
         ],
@@ -7487,7 +7622,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -7542,6 +7678,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -7596,6 +7733,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -7652,6 +7790,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -7708,6 +7847,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7762,6 +7902,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7816,6 +7957,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -7869,7 +8011,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -7926,6 +8069,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -7982,6 +8126,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8038,6 +8183,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8094,6 +8240,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8150,6 +8297,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8206,6 +8354,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8262,6 +8411,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8316,6 +8466,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8371,6 +8522,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U25"
         ],
@@ -8429,6 +8581,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8483,6 +8636,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -8537,6 +8691,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8593,6 +8748,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8647,6 +8803,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8703,6 +8860,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8759,6 +8917,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8813,6 +8972,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8867,6 +9027,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -8921,6 +9082,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U17"
         ],
@@ -8979,6 +9141,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -9033,6 +9196,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9092,6 +9256,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9146,6 +9311,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -9202,6 +9368,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9256,6 +9423,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9312,6 +9480,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9368,6 +9537,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9424,6 +9594,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -9479,6 +9650,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -9535,6 +9707,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9589,6 +9762,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9645,6 +9819,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -9701,6 +9876,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -9757,6 +9933,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9813,6 +9990,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9869,6 +10047,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -9925,6 +10104,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9981,6 +10161,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10037,6 +10218,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10093,6 +10275,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10147,6 +10330,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10201,6 +10385,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10255,6 +10440,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10309,6 +10495,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10363,6 +10550,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10419,6 +10607,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10475,6 +10664,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10531,6 +10721,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10585,6 +10776,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": true,
@@ -10639,6 +10831,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10693,6 +10886,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10752,6 +10946,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10808,6 +11003,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10864,6 +11060,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -10920,6 +11117,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -10974,6 +11172,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11028,6 +11227,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -11082,6 +11282,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": true,
@@ -11138,6 +11339,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -11194,6 +11396,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": true,
@@ -11250,6 +11453,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -11306,6 +11510,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": true,
@@ -11362,6 +11567,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -11416,6 +11622,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11472,6 +11679,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11528,6 +11736,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11584,6 +11793,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11640,6 +11850,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11694,6 +11905,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11748,6 +11960,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -11802,6 +12015,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11856,6 +12070,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11910,6 +12125,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -11966,6 +12182,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12022,6 +12239,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12078,6 +12296,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -12132,6 +12351,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -12187,6 +12407,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12",
           "U18"
@@ -12244,6 +12465,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12298,6 +12520,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -12354,6 +12577,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -12410,6 +12634,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12464,6 +12689,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -12518,6 +12744,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12572,6 +12799,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -12628,6 +12856,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12684,6 +12913,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12740,6 +12970,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12794,6 +13025,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12848,6 +13080,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12902,6 +13135,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -12956,6 +13190,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -13010,6 +13245,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -13064,6 +13300,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13123,6 +13360,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13179,6 +13417,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13233,6 +13472,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13289,6 +13529,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13345,6 +13586,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13401,6 +13643,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13455,6 +13698,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13509,6 +13753,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13565,6 +13810,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13621,6 +13867,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13677,6 +13924,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13733,6 +13981,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13789,6 +14038,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13843,6 +14093,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13897,6 +14148,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -13952,6 +14204,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -14010,6 +14263,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -14066,6 +14320,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14122,6 +14377,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14176,6 +14432,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -14230,6 +14487,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14286,6 +14544,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14340,6 +14599,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14396,6 +14656,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14452,6 +14713,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14506,6 +14768,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14560,6 +14823,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -14616,6 +14880,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -14672,6 +14937,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14728,6 +14994,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14784,6 +15051,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14843,6 +15111,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -14897,6 +15166,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14951,6 +15221,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15007,6 +15278,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15063,6 +15335,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15119,6 +15392,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15175,6 +15449,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -15231,6 +15506,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15286,6 +15562,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -15342,6 +15619,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -15398,6 +15676,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15452,6 +15731,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15508,6 +15788,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -15564,6 +15845,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15618,6 +15900,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15674,6 +15957,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15728,6 +16012,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -15784,6 +16069,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15840,6 +16126,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15896,6 +16183,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -15952,6 +16240,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16008,6 +16297,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16064,6 +16354,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16120,6 +16411,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16176,6 +16468,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16230,6 +16523,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16286,6 +16580,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16340,6 +16635,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16409,6 +16705,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16463,6 +16760,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16532,6 +16830,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16586,6 +16885,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16639,7 +16939,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -16696,6 +16997,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16752,6 +17054,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16806,6 +17109,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16860,6 +17164,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -16922,6 +17227,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16978,6 +17284,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17034,6 +17341,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17090,6 +17398,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17146,6 +17455,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17200,6 +17510,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17255,6 +17566,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12",
           "U18"
@@ -17312,6 +17624,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17368,6 +17681,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17422,6 +17736,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17478,6 +17793,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17534,6 +17850,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17591,6 +17908,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17660,6 +17978,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17714,6 +18033,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17768,6 +18088,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17825,6 +18146,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -17894,6 +18216,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17948,6 +18271,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18004,6 +18328,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18060,6 +18385,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18116,6 +18442,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18172,6 +18499,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18228,6 +18556,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18284,6 +18613,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18338,6 +18668,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18392,6 +18723,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18448,6 +18780,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18504,6 +18837,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18558,6 +18892,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18614,6 +18949,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18670,6 +19006,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18739,6 +19076,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18795,6 +19133,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18851,6 +19190,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -18905,6 +19245,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18961,6 +19302,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19015,6 +19357,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19069,6 +19412,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19123,6 +19467,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19182,6 +19527,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19238,6 +19584,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19294,6 +19641,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19350,6 +19698,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19406,6 +19755,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19459,7 +19809,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U7"
         ],
@@ -19515,7 +19866,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U7"
         ],
@@ -19571,7 +19923,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U9"
         ],
@@ -19627,7 +19980,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U9"
         ],
@@ -19683,7 +20037,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U11"
         ],
@@ -19739,7 +20094,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U11"
         ],
@@ -19795,7 +20151,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U13"
         ],
@@ -19851,7 +20208,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U13"
         ],
@@ -19907,7 +20265,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U15"
         ],
@@ -19963,7 +20322,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U15"
         ],
@@ -20019,7 +20379,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U17"
         ],
@@ -20075,7 +20436,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U17"
         ],
@@ -20132,6 +20494,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -20186,6 +20549,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -20240,6 +20604,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -20294,6 +20659,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -20348,6 +20714,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -20402,6 +20769,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -20456,6 +20824,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U8"
         ],
@@ -20512,6 +20881,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U8"
         ],
@@ -20568,6 +20938,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U16"
         ],
@@ -20624,6 +20995,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U16"
         ],
@@ -20680,6 +21052,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -20736,6 +21109,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -20790,6 +21164,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U16"
         ],
@@ -20846,6 +21221,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -20900,6 +21276,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -20956,6 +21333,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21010,6 +21388,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -21064,6 +21443,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U9"
         ],
@@ -21118,6 +21498,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U7"
         ],
@@ -21172,6 +21553,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U9"
         ],
@@ -21228,6 +21610,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12"
         ],
@@ -21282,6 +21665,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -21338,6 +21722,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -21392,6 +21777,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -21446,6 +21832,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -21500,6 +21887,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -21554,6 +21942,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U19"
         ],
@@ -21608,6 +21997,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21660,6 +22050,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21712,6 +22103,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21764,6 +22156,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21818,6 +22211,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21872,6 +22266,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21926,6 +22321,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -21980,6 +22376,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -22034,6 +22431,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U8"
         ],
@@ -22090,6 +22488,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U10"
         ],
@@ -22146,6 +22545,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -22202,6 +22602,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -22258,6 +22659,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -22314,6 +22716,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -22368,6 +22771,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22422,6 +22826,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22476,6 +22881,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -22532,6 +22938,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22586,6 +22993,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22653,6 +23061,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -22707,6 +23116,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -22765,6 +23175,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22832,6 +23243,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -22888,6 +23300,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -22942,6 +23355,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U6"
         ],
@@ -22998,6 +23412,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -23054,6 +23469,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -23110,6 +23526,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U8"
         ],
@@ -23166,6 +23583,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23220,6 +23638,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23274,6 +23693,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23328,6 +23748,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23382,6 +23803,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23436,6 +23858,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -23492,6 +23915,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -23548,6 +23972,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -23617,6 +24042,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -23673,6 +24099,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -23754,6 +24181,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -23812,6 +24240,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -23868,6 +24297,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -23924,6 +24354,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -23978,6 +24409,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -24032,6 +24464,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24101,6 +24534,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24155,6 +24589,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24209,6 +24644,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24265,6 +24701,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -24334,6 +24771,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24388,6 +24826,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -24442,6 +24881,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24496,6 +24936,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24550,6 +24991,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -24606,6 +25048,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -24660,6 +25103,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12"
         ],
@@ -24716,6 +25160,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -24772,6 +25217,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -24826,6 +25272,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -24882,6 +25329,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -24936,6 +25384,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -24990,6 +25439,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U6"
         ],
@@ -25046,6 +25496,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12"
         ],
@@ -25102,6 +25553,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U16"
         ],
@@ -25158,6 +25610,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25212,6 +25665,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25266,6 +25720,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -25320,6 +25775,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -25374,6 +25830,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -25428,6 +25885,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25482,6 +25940,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25536,6 +25995,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U7",
           "U9",
@@ -25596,6 +26056,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25650,6 +26111,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -25704,6 +26166,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -25758,6 +26221,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25810,6 +26274,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -25864,6 +26329,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -25918,6 +26384,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U8"
         ],
@@ -25974,6 +26441,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U10"
         ],
@@ -26030,6 +26498,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U12"
         ],
@@ -26086,6 +26555,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U14"
         ],
@@ -26142,6 +26612,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -26196,6 +26667,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -26250,6 +26722,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U9"
         ],
@@ -26306,6 +26779,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -26362,6 +26836,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -26418,6 +26893,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -26474,6 +26950,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -26528,6 +27005,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -26582,6 +27060,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -26636,6 +27115,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -26690,6 +27170,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -26744,6 +27225,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -26810,7 +27292,8 @@
       "organiser": "DRAGON CHESS ACADEMY",
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -26864,7 +27347,8 @@
       "organiser": "DRAGON CHESS ACADEMY",
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -26921,6 +27405,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -26973,6 +27458,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -27031,6 +27517,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -27087,6 +27574,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27143,6 +27631,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -27199,6 +27688,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27255,6 +27745,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27311,6 +27802,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27380,6 +27872,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27438,6 +27931,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -27494,6 +27988,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27550,6 +28045,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -27606,6 +28102,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U18"
         ],
@@ -27660,6 +28157,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -27716,6 +28214,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27770,6 +28269,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -27824,6 +28324,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -27880,6 +28381,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -27934,6 +28436,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -27988,6 +28491,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -28042,6 +28546,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -28096,6 +28601,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U25"
         ],
@@ -28152,6 +28658,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -28206,6 +28713,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -28262,6 +28770,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -28318,6 +28827,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -28372,6 +28882,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -28426,6 +28937,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U18"
         ],
@@ -28482,6 +28994,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -28537,6 +29050,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U19"
         ],
@@ -28593,6 +29107,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": true,
@@ -28647,6 +29162,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -28703,6 +29219,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -28759,6 +29276,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -28813,6 +29331,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -28867,6 +29386,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U16"
         ],
@@ -28940,6 +29460,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -28994,6 +29515,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -29059,6 +29581,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -29115,6 +29638,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -29171,6 +29695,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29225,6 +29750,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29281,6 +29807,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U18"
         ],
@@ -29337,6 +29864,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -29390,7 +29918,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -29444,7 +29973,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -29501,6 +30031,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29557,6 +30088,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29613,6 +30145,7 @@
           "classical"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -29668,7 +30201,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -29725,6 +30259,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29781,6 +30316,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -29835,6 +30371,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29891,6 +30428,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -29944,7 +30482,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -30001,6 +30540,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -30057,6 +30597,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -30113,6 +30654,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -30169,6 +30711,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -30225,6 +30768,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -30278,7 +30822,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -30333,6 +30878,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U8"
         ],
@@ -30391,6 +30937,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -30447,6 +30994,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -30515,7 +31063,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -30569,7 +31118,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -30626,6 +31176,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -30682,6 +31233,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -30751,6 +31303,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -30807,6 +31360,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -30865,6 +31419,7 @@
           "rapid"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -30934,6 +31489,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -30988,6 +31544,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31044,6 +31601,7 @@
           "blitz"
         ],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -31113,6 +31671,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -31171,6 +31730,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31225,6 +31785,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -31296,6 +31857,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31350,6 +31912,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31419,6 +31982,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31473,6 +32037,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31541,7 +32106,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -31595,7 +32161,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -31665,6 +32232,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31719,6 +32287,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31773,6 +32342,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31832,6 +32402,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -31886,6 +32457,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -31954,7 +32526,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32008,7 +32581,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32077,7 +32651,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32131,7 +32706,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32188,6 +32764,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -32244,6 +32821,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -32312,7 +32890,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32366,7 +32945,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32423,6 +33003,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -32476,7 +33057,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32530,7 +33112,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32584,7 +33167,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32638,7 +33222,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32692,7 +33277,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32746,7 +33332,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32800,7 +33387,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -32854,7 +33442,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -32909,6 +33498,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -32963,6 +33553,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -33034,6 +33625,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -33089,7 +33681,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33144,6 +33737,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -33197,7 +33791,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33251,7 +33846,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33305,7 +33901,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33359,7 +33956,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33413,7 +34011,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33467,7 +34066,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33523,6 +34123,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
@@ -33579,6 +34180,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -33635,6 +34237,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -33688,7 +34291,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -33743,6 +34347,7 @@
       "tags": {
         "formats": [],
         "fide_rated": null,
+        "fide_how": null,
         "age": [],
         "open": true,
         "girls": null,
@@ -33799,6 +34404,7 @@
           "classical"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -33853,6 +34459,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -33909,6 +34516,7 @@
           "rapid"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -33965,6 +34573,7 @@
           "blitz"
         ],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -34019,6 +34628,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -34073,6 +34683,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -34127,6 +34738,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U17"
         ],
@@ -34186,6 +34798,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
