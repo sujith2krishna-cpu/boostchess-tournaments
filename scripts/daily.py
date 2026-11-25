@@ -45,17 +45,21 @@ def summary_markdown(report: dict) -> str:
     meta = report["meta"]
     changes = report.get("changes", {})
     lines = [f"## Tournament data, {report['today']}", "",
-             "| Source | Status | Events | Ongoing | Upcoming | Past | Register links | Requests |",
-             "|---|---|---:|---:|---:|---:|---:|---:|"]
+             "| Source | Status | Fetched this run | Events | Ongoing | Upcoming | Past | Register links | Requests |",
+             "|---|---|---|---:|---:|---:|---:|---:|---:|"]
     for name in SOURCE_ORDER:
         info = report["per_source"].get(name)
         if not info:
             continue
         by = info["by_status"]
-        lines.append(f"| {name} | {info['status']} | {info['found']} | {by.get('ongoing', 0)} | "
+        fetched = "yes" if info.get("due", True) else f"no, next due {(info.get('next_due') or '?')[:16]}"
+        lines.append(f"| {name} | {info['status']} | {fetched} | {info['found']} | {by.get('ongoing', 0)} | "
                      f"{by.get('upcoming', 0)} | {by.get('past', 0)} | "
                      f"{info['with_register_url']} | {info['requests']} |")
     counts = report["status_counts"]
+    if not report.get("fetched_any", True):
+        lines += ["", "**No source was due** (each source is fetched at most once every 12 hours), "
+                  "so nothing was fetched this run."]
     lines += ["", f"**All events:** {meta['total']} "
               f"(ongoing {counts.get('ongoing', 0)}, upcoming {counts.get('upcoming', 0)}, "
               f"past {counts.get('past', 0)}, no usable date {counts.get('unknown', 0)}); "

@@ -164,6 +164,7 @@ def build_event(item: dict, details: dict | None, today: date) -> dict:
         "source": NAME,
         "source_url": item["url"],
         "register_url": _register_url(item["title"], (details or {}).get("links", [])),
+        "results_url": item["url"],  # the tournament page is where the results appear
         "organiser": organiser,
         "tags": tags,
         "flags": {"dates_suspect": suspect},
@@ -196,6 +197,8 @@ def fetch(client, previous: dict, today: date, **_options):
         signature = hashlib.sha1(item["title"].encode("utf-8")).hexdigest()[:12]
         old = old_events.get(event_id)
         if old is not None and old_listing.get(item["url"]) == signature and old.get("start"):
+            old = dict(old)
+            old["results_url"] = old.get("results_url") or item["url"]
             events.append(old)
             listing[item["url"]] = signature
             continue

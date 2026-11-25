@@ -314,16 +314,16 @@ def test_switching_a_source_off_stops_fetching_it_but_keeps_its_events(web, data
     assert len([e for e in load_events(data_dir) if e["source"] == "chessfee"]) == 6
 
 
-def test_a_source_already_fetched_today_is_not_fetched_again(web, data_dir):
+def test_a_source_fetched_less_than_12_hours_ago_is_not_fetched_again(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
     web.calls.clear()
-    report = run_all(data_dir, skip_if_fetched_today=True, now=NOW + timedelta(hours=3))
-    assert web.calls == []
-    assert all(i["status"] == "skipped" for i in report["per_source"].values())
+    report = run_all(data_dir, min_hours_between_fetches=12, now=NOW + timedelta(hours=11, minutes=59))
+    assert web.calls == [] and report["fetched_any"] is False
+    assert all(i["due"] is False and i["status"] == "ok" for i in report["per_source"].values())
     web.calls.clear()
-    run_all(data_dir, skip_if_fetched_today=True, now=NEXT_DAY)
-    assert web.calls  # a new day: fetched again
+    run_all(data_dir, min_hours_between_fetches=12, now=NOW + timedelta(hours=12))
+    assert web.calls  # 12 hours later: due again
 
 
 def test_config_file_is_validated(tmp_path):
@@ -493,7 +493,7 @@ def test_events_json_has_the_new_fields_in_a_fixed_order(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
     doc = load_doc(data_dir)
-    assert doc["schema_version"] == 3
+    assert doc["schema_version"] == 4
     keys = list(be.EVENT_KEYS)
     assert all(list(e) == keys for e in doc["events"])
     for key in ("source_url", "sources", "listed_by", "verified"):
@@ -504,7 +504,7 @@ def test_events_json_has_the_new_fields_in_a_fixed_order(web, data_dir):
     meta = json.loads((data_dir / "meta.json").read_text("utf-8"))
     assert set(meta["sources"]) == set(be.SOURCE_MODULES)
     assert set(meta["sources"]["aicf"]) == {"enabled", "status", "message", "count", "last_success",
-                                            "last_error"}
+                                            "last_error", "next_due"}
 
 
 def test_trust_labels(web, data_dir):

@@ -93,7 +93,7 @@ def test_changes_ignore_last_seen_and_count_newly_gone():
 # ---- the job summary ------------------------------------------------------
 def test_summary_has_counts_per_source_and_the_problems():
     text = daily.summary_markdown(fake_report(chessfee=info("failed", message="Could not fetch: HTTP 500")))
-    assert "| aicf | ok | 10 | 1 | 7 | 2 | 3 | 5 |" in text
+    assert "| aicf | ok | yes | 10 | 1 | 7 | 2 | 3 | 5 |" in text
     assert "| chessfee | failed |" in text
     assert "### Problems" in text and "**chessfee**: Could not fetch: HTTP 500" in text
     assert "ongoing 5, upcoming 30, past 100" in text and "+3 new, 2 changed" in text
@@ -297,7 +297,7 @@ def step_position(marker):
 
 
 def test_workflow_triggers_and_concurrency():
-    assert re.search(r'cron: "40 21 \* \* \*"', WORKFLOW)  # 21:40 UTC = 03:10 IST
+    assert re.search(r'cron: "17 \*/3 \* \* \*"', WORKFLOW)  # every 3 hours at minute 17
     assert "workflow_dispatch:" in WORKFLOW
     assert re.search(r"concurrency:\n  group: \S+\n  cancel-in-progress: false", WORKFLOW)
 
@@ -313,7 +313,7 @@ def test_workflow_commits_only_data_and_only_when_something_really_changed():
     assert "if: steps.build.outputs.real_changes == 'true'" in WORKFLOW
     assert WORKFLOW.count("git add ") == 1 and "git add data\n" in WORKFLOW
     assert "git diff --cached --name-only | grep -qv '^data/'" in WORKFLOW
-    assert "--force" not in WORKFLOW and "-f origin" not in WORKFLOW
+    assert "push --force" not in WORKFLOW and "push -f" not in WORKFLOW and "-f origin" not in WORKFLOW
     assert 'git config user.name "github-actions[bot]"' in WORKFLOW
     assert "--github-output \"$GITHUB_OUTPUT\"" in WORKFLOW and "--summary-file \"$GITHUB_STEP_SUMMARY\"" in WORKFLOW
 

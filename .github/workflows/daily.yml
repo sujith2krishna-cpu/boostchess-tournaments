@@ -1,12 +1,17 @@
 name: Daily tournament data
 
-# Runs every day at 21:40 UTC (03:10 India time) and on the "Run workflow" button.
-# It tests the code, reads the tournament sources politely, commits the data (only when
-# something real changed) and publishes the data/ folder on GitHub Pages.
+# Runs every 3 hours (at minute 17, off the busy full hour) and on the "Run workflow" button.
+# Each source is fetched at most once every 12 hours, so most runs only test, publish and
+# check; they finish quickly. The data is committed only when something real changed.
 on:
   schedule:
-    - cron: "40 21 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Fetch every source now, ignoring the 12-hour rule (a deliberate manual refresh)"
+        type: boolean
+        default: false
 
 # One run at a time; a run that is already going is never cancelled half way.
 concurrency:
@@ -43,7 +48,13 @@ jobs:
 
       - name: Build the data (reads the sources)
         id: build
-        run: python scripts/build_events.py --github-output "$GITHUB_OUTPUT" --summary-file "$GITHUB_STEP_SUMMARY"
+        env:
+          # only a manual run with the box ticked; the schedule never forces
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force == true }}
+        run: |
+          args=(--github-output "$GITHUB_OUTPUT" --summary-file "$GITHUB_STEP_SUMMARY")
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          python scripts/build_events.py "${args[@]}"
 
       # Only data/ is ever committed, and only when something real changed.
       - name: Commit the data
@@ -94,9 +105,10 @@ jobs:
         with:
           path: data
 
-      # Last, so the data is still published when it fails: any source with no
-      # successful fetch for 7 days makes the run fail (and GitHub e-mails you).
-      - name: Heartbeat (is any source silent for 7 days?)
+      # Last, so the data is still published when it fails: the run fails (and GitHub
+      # e-mails you) when the newest fetch of any source is over 30 hours old, or when
+      # one source has had no successful fetch for 7 days.
+      - name: Heartbeat (stale data after 30 hours, silent source after 7 days)
         if: steps.build.outcome == 'success'
         run: python scripts/heartbeat.py --summary-file "$GITHUB_STEP_SUMMARY"
 

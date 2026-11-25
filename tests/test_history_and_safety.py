@@ -1,5 +1,6 @@
 """History (never delete), bad fetches, determinism, retries, command-line behaviour."""
 import json
+import re
 from datetime import datetime, timedelta
 
 import pytest
@@ -124,7 +125,7 @@ def test_same_input_gives_identical_files_except_generated_at(data_dir, tmp_path
     assert first != second  # generated_at moved...
 
     def strip(raw):
-        return raw.decode("utf-8").replace("10:30:00", "XX").replace("18:05:00", "XX")
+        return re.sub(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d", "WHEN", raw.decode("utf-8"))
 
     assert {k: strip(v) for k, v in first.items()} == {k: strip(v) for k, v in second.items()}
     # ...and a fresh folder gives the very same bytes again
@@ -139,13 +140,13 @@ def test_file_format_utf8_two_space_indent_stable_key_order(data_dir):
     raw = (data_dir / "events.json").read_bytes()
     assert not raw.startswith(b"\xef\xbb\xbf") and b"\r" not in raw and raw.endswith(b"}\n")
     text = raw.decode("utf-8")
-    assert text.startswith('{\n  "schema_version": 3,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
+    assert text.startswith('{\n  "schema_version": 4,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
     assert "Café – Open" in text  # real characters, not \u escapes
     event = load_events(data_dir)[0]
     assert list(event) == list(be.EVENT_KEYS)
     assert "status" not in event
     assert list(json.loads((data_dir / "meta.json").read_text("utf-8"))) == [
-        "generated_at", "scraped_count", "manual_count", "total", "suspect_dates_count",
+        "generated_at", "last_run_at", "scraped_count", "manual_count", "total", "suspect_dates_count",
         "missing_state_count", "gone_from_source_count", "sources"]
 
 
