@@ -140,7 +140,7 @@ def test_file_format_utf8_two_space_indent_stable_key_order(data_dir):
     raw = (data_dir / "events.json").read_bytes()
     assert not raw.startswith(b"\xef\xbb\xbf") and b"\r" not in raw and raw.endswith(b"}\n")
     text = raw.decode("utf-8")
-    assert text.startswith('{\n  "schema_version": 5,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
+    assert text.startswith('{\n  "schema_version": 6,\n  "generated_at": "2026-11-24T10:30:00+05:30",\n')
     assert "Café – Open" in text  # real characters, not \u escapes
     event = load_events(data_dir)[0]
     assert list(event) == list(be.EVENT_KEYS)

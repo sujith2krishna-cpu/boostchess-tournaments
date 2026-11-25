@@ -23,7 +23,7 @@ def test_age_is_a_list_in_the_output(data_dir):
 
 def test_schema_version_is_2(data_dir):
     build(data_dir, [row()])
-    assert load_doc(data_dir)["schema_version"] == be.SCHEMA_VERSION == 5
+    assert load_doc(data_dir)["schema_version"] == be.SCHEMA_VERSION == 6
 
 
 @pytest.mark.parametrize("cell, expected", [
@@ -60,7 +60,7 @@ def test_old_schema_data_is_migrated_for_events_that_left_the_page(data_dir):
     assert events["aicf-400001"]["tags"]["age"] == ["U11"]
     assert events["aicf-400002"]["tags"]["age"] == []
     assert {e["country"] for e in events.values()} == {"IN"}
-    assert load_doc(data_dir)["schema_version"] == 5
+    assert load_doc(data_dir)["schema_version"] == 6
 
 
 # ---- country ------------------------------------------------------------

@@ -158,7 +158,8 @@ def test_heartbeat_command_fails_on_stale_data_and_keeps_the_7_day_rule(tmp_path
     assert heartbeat.main(["--data-dir", str(tmp_path)]) == 1
     captured = capsys.readouterr()
     assert "Stale data" in captured.err and "::error title=Stale data::" in captured.out
-    ok = {"sources": {"aicf": {"enabled": True, "last_success": (now - timedelta(hours=29)).isoformat()}}}
+    ok = {"sources": {"aicf": {"enabled": True, "last_success": (now - timedelta(hours=29)).isoformat(),
+                               "last_error": {"at": (now - timedelta(hours=1)).isoformat()}}}}
     (tmp_path / "meta.json").write_text(json.dumps(ok), encoding="utf-8")
     assert heartbeat.main(["--data-dir", str(tmp_path)]) == 0
 
@@ -287,7 +288,7 @@ def test_the_committed_manual_files_have_the_new_headers():
     overrides = (ROOT / "data" / "manual" / "overrides.csv").read_text("utf-8").splitlines()[0]
     assert events == ",".join(be.EVENTS_CSV_COLUMNS) and events.endswith(",results_url")
     assert "country" in events
-    assert overrides == ",".join(be.OVERRIDES_CSV_COLUMNS) and overrides.endswith(",register_url,results_url")
+    assert overrides == ",".join(be.OVERRIDES_CSV_COLUMNS) and overrides.endswith(",register_url,results_url,fide_rated,format,age,registration_deadline")
 
 
 # ---- the workflow file --------------------------------------------------------------

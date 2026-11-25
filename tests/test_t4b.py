@@ -258,7 +258,7 @@ def test_every_event_has_group_fields_and_old_data_migrates():
     keys = list(be.EVENT_KEYS)
     assert keys.index("group_id") == keys.index("verified") + 1
     assert keys[keys.index("group_id"):keys.index("group_id") + 3] == ["group_id", "merged_into", "also_listed_on"]
-    assert be.SCHEMA_VERSION == 5
+    assert be.SCHEMA_VERSION == 6
 
 
 # ---- pairs.csv -----------------------------------------------------------------------

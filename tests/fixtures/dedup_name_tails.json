@@ -1,0 +1,1611 @@
+{
+  "_about": "Real records (2026-11-25 snapshots, facts and links only, no phone numbers) for the Chess-Results name-tail rules: four pairs settled by hand that must now match on their own, a range-date tail (Dragon), and festival sections that must stay apart.",
+  "events": [
+    {
+      "id": "aicf-482202",
+      "codes": [
+        "482202"
+      ],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category A) above 2000 rating players only",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/AKSHAYA-GM-1.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482202",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482207",
+      "codes": [
+        "482207"
+      ],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category B) below 2000 rating players only",
+      "start": "2027-01-11",
+      "end": "2027-01-14",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/AKSHAYA-GM-1.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482207",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482208",
+      "codes": [
+        "482208"
+      ],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category D) Below 1700 rating players only",
+      "start": "2027-01-15",
+      "end": "2027-01-18",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/AKSHAYA-GM-1.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482208",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482298",
+      "codes": [
+        "482298"
+      ],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category C) Blitz",
+      "start": "2027-01-14",
+      "end": "2027-01-14",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/AKSHAYA-GM-1.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482298",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482567",
+      "codes": [
+        "482567"
+      ],
+      "name": "Athens of the East 6 th International Grandmaster Chess Tournaments – (Category – A Above 2100)",
+      "start": "2026-12-22",
+      "end": "2026-12-31",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482567",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482568",
+      "codes": [
+        "482568"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – B Below 2100)",
+      "start": "2026-12-22",
+      "end": "2026-12-25",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482568",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482569",
+      "codes": [
+        "482569"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – D Below 1800)",
+      "start": "2026-12-26",
+      "end": "2026-12-28",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482569",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482570",
+      "codes": [
+        "482570"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – C Blitz",
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482570",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482662",
+      "codes": [
+        "482662"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – E Below 1600)",
+      "start": "2026-12-29",
+      "end": "2026-12-31",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-482662",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-484271",
+      "codes": [
+        "484271"
+      ],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘A’)",
+      "start": "2027-01-21",
+      "end": "2027-01-28",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Venue-Updtaed-Regulations-Delhi-Open-2027.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-484271",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-484272",
+      "codes": [
+        "484272"
+      ],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘B’)",
+      "start": "2027-01-21",
+      "end": "2027-01-24",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Venue-Updtaed-Regulations-Delhi-Open-2027.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-484272",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-484273",
+      "codes": [
+        "484273"
+      ],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘C’)",
+      "start": "2027-01-25",
+      "end": "2027-01-28",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Venue-Updtaed-Regulations-Delhi-Open-2027.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-484273",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-486240",
+      "codes": [
+        "486240"
+      ],
+      "name": "2nd Manchester City International Below 1800 Fide Rated Tournament",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/07/Manchester-final.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-486240",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-503296",
+      "codes": [
+        "503296"
+      ],
+      "name": "DRAGON CHESS ACADEMY 1ST INTERNATIONAL OPEN FIDE CHESS TOURNAMENT 2026",
+      "start": "2026-12-02",
+      "end": "2026-12-06",
+      "place_text": "Kanyakumari, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Kanyakumari",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/DCA-Open-Fide-02-to-05-Dec-prospectus-1.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-503296",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-504554",
+      "codes": [
+        "504554"
+      ],
+      "name": "3rd Pune International Speed Festival 2026 – RAPID Rating Chess Tournament",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "place_text": "Pune, Maharashtra",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/3rd-Speed-Chess-Festival-Main-28-29-nov.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-504554",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-504557",
+      "codes": [
+        "504557"
+      ],
+      "name": "3rd Pune International Speed Festival 2026 – BLITZ Rating Chess Tournament",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Pune, Maharashtra",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/3rd-Speed-Chess-Festival-Main-28-29-nov.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-504557",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-508734",
+      "codes": [
+        "508734"
+      ],
+      "name": "1st Late Sunil Swarup Barse Memorial All India Open Fide Rapid Rating Chess Tournament",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Maharashtra",
+      "state": "Maharashtra",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/CHESS-TOURNAMENT-2026-3.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-508734",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af1",
+      "codes": [],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category A) above 2000 rating players only",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "place_text": "Coimbatore, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af1",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af2",
+      "codes": [],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category B) below 2000 rating players only",
+      "start": "2027-01-11",
+      "end": "2027-01-14",
+      "place_text": "Coimbatore, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af2",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af3",
+      "codes": [],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category C) Blitz",
+      "start": "2027-01-14",
+      "end": "2027-01-14",
+      "place_text": "Coimbatore, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af3",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af4",
+      "codes": [],
+      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category D) Below 1700 rating players only",
+      "start": "2027-01-15",
+      "end": "2027-01-18",
+      "place_text": "Coimbatore, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af4",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af5",
+      "codes": [],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘A’)",
+      "start": "2027-01-21",
+      "end": "2027-01-28",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af5",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af6",
+      "codes": [],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘B’)",
+      "start": "2027-01-21",
+      "end": "2027-01-24",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af6",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessbase_calendar-6aaa7ca270d3171daede9af7",
+      "codes": [],
+      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘C’)",
+      "start": "2027-01-25",
+      "end": "2027-01-28",
+      "place_text": "Delhi",
+      "state": "Delhi",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
+      "source": "chessbase_calendar",
+      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
+      "sources": [
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chessbase",
+      "verified": false,
+      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9af7",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1815",
+      "codes": [],
+      "name": "DRAGON CHESS ACADEMY 1ST INTERNATIONAL OPEN FIDE CHESS TOURNAMENT 2026 – 2 to 6 DEC",
+      "start": "2026-12-02",
+      "end": "2026-12-06",
+      "place_text": "Rohini College of Engineering & Technology, Palkulam, Anjugramam, Kanyakumari, Tamil Nadu - 641006.",
+      "state": "Tamil Nadu",
+      "city": "Kanyakumari",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/2-6%20DEC%20Dragon%20Chess%20FIDE%20TMT%20-%20KANYAKUMARI_compressed.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1815",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1815",
+          "register_url": "https://www.chessfee.com/treg.php?id=1815"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "group_id": "chessfee-1815",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://www.chessfee.com/treg.php?id=1815",
+      "results_url": null,
+      "organiser": "DRAGON CHESS ACADEMY",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE TMT - PRIZE MONEY Rs. 11,00,001/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1522214",
+      "codes": [],
+      "name": "3rd Pune International Speed Festival 2026 - RAPID Rating Chess Tournament Organised by 8x8 Chess Academy Pune",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "place_text": "GGIS Tathwade, Newale Wasti, Tathawade, Pune",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1522214",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+      "organiser": "8x8 Chess Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1522216",
+      "codes": [],
+      "name": "3rd Pune International Speed Festival 2026 - BLITZ Rating Chess Tournament Organised by 8x8 Chess Academy Pune",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "GGIS Tathwade, Newale Wasti, Tathawade, Pune",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1522216",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+      "organiser": "8x8 Chess Academy",
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1538894",
+      "codes": [],
+      "name": "2nd Manchester City Below 1800 International Fide Rated Tournament -> 27 Nov 2026 - 29 Nov 2026 - Coimbatore",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "place_text": "SRI KRISHNA GOUNDAR KALYANA MANDAPAM, GANAPATHY, COIMBATORE",
+      "state": "Tamil Nadu",
+      "city": "COIMBATORE",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538894&Uid=2",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+          "register_url": "https://chessfee.com/tmt_details.php?id=1727"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1538894",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://chessfee.com/tmt_details.php?id=1727",
+      "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+      "organiser": "VEER CHESS ACADEMY",
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1540498",
+      "codes": [],
+      "name": "1st Late Sunil Swarup Barse Memorial All India Open Fide Rapid Rating Chess Tournament, Jalgaon 20th Dec 2026 (Mr. Jatin Barse )",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Hotel Crazy Home, Ganpati Nagar, Akashwani Chowk, Jalgaon",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540498&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=62184"
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1540498",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://circlechess.com/registration?id=62184",
+      "results_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid",
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

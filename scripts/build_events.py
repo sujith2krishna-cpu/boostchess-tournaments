@@ -48,6 +48,7 @@ from sources.polite import PoliteClient  # noqa: E402
 from datetime import timedelta  # noqa: E402
 import daily  # noqa: E402
 import dedup  # noqa: E402
+import quality  # noqa: E402
 
 SOURCE_MODULES = {
     "aicf": aicf,
@@ -108,6 +109,8 @@ def restore_base(event: dict) -> dict:
     for field, original in (event["overridden"] or {}).items():
         if field in OVERRIDABLE_FIELDS:
             event[field] = original
+        elif field.startswith("tags.") and field[5:] in OVERRIDABLE_TAGS:
+            event["tags"][field[5:]] = original
     event["hidden"] = False
     event["cancelled"] = False
     event["note"] = None
@@ -330,12 +333,56 @@ def _yes(value: str, column: str, line: int, rel: str, errors: list[str]) -> boo
     return False
 
 
+NOT_FILLED = "?"  # review.csv's ready-made lines put "?" where a value is still to be filled in
+
+
+def _yes_no(value: str, column: str, line: int, rel: str, errors: list[str]) -> bool | None:
+    """'yes' -> True, 'no' -> False, empty -> None; anything else is a mistake."""
+    value = value.strip().lower()
+    if not value:
+        return None
+    if value in ("yes", "y"):
+        return True
+    if value in ("no", "n"):
+        return False
+    errors.append(f"{rel} line {line}: {column} must be 'yes' or 'no' (or empty), not '{value}'.")
+    return None
+
+
+def _formats_value(value: str, line: int, rel: str, errors: list[str]) -> list[str] | None:
+    wanted = [t for t in re.split(r"[\s|/,;&+]+", value.strip().lower()) if t]
+    unknown = [t for t in wanted if t not in FORMAT_ORDER]
+    if unknown or not wanted:
+        errors.append(f"{rel} line {line}: format '{value}' is not understood. Write classical, "
+                      "rapid or blitz; for several, put | between them (like rapid|blitz).")
+        return None
+    return [f for f in FORMAT_ORDER if f in wanted]
+
+
+def _ages_value(value: str, line: int, rel: str, errors: list[str]) -> list[str] | None:
+    ages = []
+    for part in (p.strip() for p in re.split(r"[|/,;]+", value)):
+        found = ages_from_text(part) if part else []
+        if len(found) != 1:
+            errors.append(f"{rel} line {line}: age '{value}' is not understood. Write it like "
+                          "U-9, or for several groups U-9|U-11.")
+            return None
+        ages.append(found[0])
+    return sorted(set(ages), key=lambda a: int(a[1:]))
+
+
 def load_overrides(data_dir: Path, errors: list[str], warnings: list[str]) -> list[dict]:
     rel = "data/manual/overrides.csv"
     rows = read_csv_file(data_dir / "manual" / "overrides.csv", rel, OVERRIDES_CSV_COLUMNS,
                          ("key",), errors, warnings)
     overrides = []
     for line, row in rows:
+        unfilled = [c for c, v in row.items() if c != "key" and v.strip() == NOT_FILLED]
+        if unfilled:
+            warnings.append(f"{rel} line {line}: {', '.join(unfilled)} still "
+                            f"{'has' if len(unfilled) == 1 else 'have'} '{NOT_FILLED}'; fill in the "
+                            "value or leave it empty. Until then it is ignored.")
+            row = {c: ("" if c in unfilled else v) for c, v in row.items()}
         item = {"line": line, "key": row.get("key", "").strip()}
         if not item["key"]:
             errors.append(f"{rel} line {line}: key is empty. Put the event id or the 6-digit "
@@ -362,32 +409,86 @@ def load_overrides(data_dir: Path, errors: list[str], warnings: list[str]) -> li
                                   "(it must start with http:// or https://).")
                 else:
                     item[column] = url
+        item["fide_rated"] = _yes_no(row.get("fide_rated", ""), "fide_rated", line, rel, errors)
+        item["formats"] = (_formats_value(row["format"], line, rel, errors)
+                           if (row.get("format") or "").strip() else None)
+        item["age"] = _ages_value(row["age"], line, rel, errors) if (row.get("age") or "").strip() else None
+        item["registration_deadline"] = None
+        if (row.get("registration_deadline") or "").strip():
+            deadline = parse_date(row["registration_deadline"], allow_iso=True)
+            if deadline is None:
+                errors.append(f"{rel} line {line}: "
+                              + _date_problem(row["registration_deadline"], "registration_deadline"))
+            else:
+                item["registration_deadline"] = deadline.isoformat()
         overrides.append(item)
     return overrides
 
 
-def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str],
-                    warnings: list[str]) -> None:
-    """Override > manual > scraped. Changes `events` in place."""
-    rel = "data/manual/overrides.csv"
+def _change(event: dict, field: str, value) -> None:
+    """Set a field (or "tags.<name>"), remembering the value it replaced in `overridden`."""
+    if field.startswith("tags."):
+        holder, name = event["tags"], field[5:]
+    else:
+        holder, name = event, field
+    if holder[name] != value:
+        if event["overridden"] is None:
+            event["overridden"] = {}
+        event["overridden"].setdefault(field, copy.deepcopy(holder[name]))
+        holder[name] = copy.deepcopy(value)
+
+
+def _override_targets(events: list[dict]):
+    """(targets(key) -> the events an overrides.csv key names, {id: event})."""
     by_id = {e["id"]: e for e in events}
     by_code = defaultdict(list)
     for event in events:
         for code in event["codes"]:
             by_code[code].append(event)
 
-    def change(event: dict, field: str, value) -> None:
-        if event[field] != value:
-            if event["overridden"] is None:
-                event["overridden"] = {}
-            event["overridden"].setdefault(field, event[field])
-            event[field] = value
+    def targets(key: str) -> list[dict]:
+        found = [by_id[key]] if key in by_id else list(by_code.get(key, []))
+        if len(found) > 1 and any(e["source"] == "aicf" for e in found):
+            found = [e for e in found if e["source"] == "aicf"]  # the code is AICF's own
+        return found
+    return targets, by_id
+
+
+def _apply_manual_values(event: dict, item: dict) -> None:
+    """format / fide_rated / age / registration_deadline from overrides.csv: they win over all."""
+    if item.get("formats") is not None:
+        _change(event, "tags.formats", item["formats"])
+    if item.get("fide_rated") is not None:
+        _change(event, "tags.fide_rated", item["fide_rated"])
+        _change(event, "tags.fide_how", "manual")
+    if item.get("age") is not None:
+        _change(event, "tags.age", item["age"])
+    if item.get("registration_deadline"):
+        _change(event, "registration_deadline", item["registration_deadline"])
+
+
+def reapply_manual_values(events: list[dict], overrides: list[dict]) -> None:
+    """After grouping: put the manual values back (grouping may have joined other records' tags
+    into a primary), on the event the line names and on the primary of its group."""
+    targets, by_id = _override_targets(events)
+    for item in overrides:
+        for event in targets(item["key"]):
+            _apply_manual_values(event, item)
+            primary = by_id.get(event["merged_into"]) if event["merged_into"] else None
+            if primary is not None:
+                _apply_manual_values(primary, item)
+
+
+def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str],
+                    warnings: list[str]) -> None:
+    """Override > manual > scraped. Changes `events` in place."""
+    rel = "data/manual/overrides.csv"
+    targets_for, _ = _override_targets(events)
+    change = _change
 
     for item in overrides:
         key = item["key"]
-        targets = [by_id[key]] if key in by_id else list(by_code.get(key, []))
-        if len(targets) > 1 and any(e["source"] == "aicf" for e in targets):
-            targets = [e for e in targets if e["source"] == "aicf"]  # the code is AICF's own
+        targets = targets_for(key)
         if not targets:
             warnings.append(f"{rel} line {item['line']}: no event has the id or code '{key}'; "
                             "this row was ignored.")
@@ -434,6 +535,7 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
             for field in ("register_url", "results_url"):
                 if item[field]:
                     change(event, field, item[field])
+            _apply_manual_values(event, item)
 
 
 
@@ -531,9 +633,6 @@ def _source_meta(previous: dict | None, now_iso: str) -> dict:
     return {"last_success": previous.get("last_success"), "last_error": previous.get("last_error")}
 
 
-FETCH_INTERVAL_HOURS = 12  # a source is fetched at most once every 12 hours
-
-
 def fetch_due_at(last_success: str | None, hours: float | None) -> datetime | None:
     """When a source may be fetched again (None = right away)."""
     if not hours or not last_success:
@@ -571,6 +670,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     previous_meta = load_json(data_dir / "meta.json") or {}
     previous_events = previous_doc.get("events", [])
     previous_sources = previous_meta.get("sources") or {}
+    previous_quality = load_json(data_dir / "quality.json")
+    previous_review = (data_dir / "review.csv").read_bytes() if (data_dir / "review.csv").exists() else None
 
     # Hand-edited files first: a typo there should stop us before we fetch anything.
     errors: list[str] = []
@@ -659,6 +760,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
     grouping = dedup.group_events(events, pairs, warnings)
+    reapply_manual_values(events, overrides)
     in_groups = Counter(e["group_id"] for e in events)
     joined = Counter(e["source"] for e in events if in_groups[e["group_id"]] > 1)
     duplicates = grouping["possible"]
@@ -679,9 +781,18 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "sources": source_meta,
     }
     document = {"schema_version": SCHEMA_VERSION, "generated_at": now_iso, "events": events}
-    timestamps_only = only_timestamps_changed(previous_doc, previous_meta, document, meta)
+    review_rows = quality.review_rows(events, today)
+    review_bytes = quality.review_csv(review_rows)
+    quality_doc = quality.quality_report(events, today, now_iso, previous_quality,
+                                         quality.review_counts(review_rows))
+    # The review list and the quality numbers count as real changes (a new day can change
+    # them); their times, dates and the comparison with the run before do not.
+    timestamps_only = (only_timestamps_changed(previous_doc, previous_meta, document, meta)
+                       and quality.comparable(previous_quality) == quality.comparable(quality_doc)
+                       and previous_review == review_bytes)
     payloads = {"events.json": dump_json(document), "meta.json": dump_json(meta),
-                "review/dedup_review.csv": review_csv(grouping["review"])}
+                "review/dedup_review.csv": review_csv(grouping["review"]),
+                "quality.json": dump_json(quality_doc), "review.csv": review_bytes}
     for name, snapshot in snapshots.items():
         if snapshot["events"] or (data_dir / "sources" / f"{name}.json").exists():
             payloads[f"sources/{name}.json"] = dump_json({
@@ -726,6 +837,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "fetched_any": any(source_stats[n].get("due") for n in AUTOMATIC_SOURCES),
         "changes": count_changes(previous_events, events),
         "warnings": warnings,
+        "quality": quality_doc,
         "events": events,
     }
 
@@ -754,6 +866,16 @@ def print_summary(report: dict) -> None:
     print("  By status (not hidden): "
           + ", ".join(f"{name} {counts.get(name, 0)}"
                       for name in ("ongoing", "upcoming", "past", "unknown")))
+    q = report.get("quality")
+    if q:
+        m = q["overall"]["next_30_days"]
+        print(f"  Quality, next 30 days : {m['events']} shown events, "
+              f"{'-' if m['fully_known_pct'] is None else m['fully_known_pct']}% fully known "
+              f"(target {q['target']['fully_known_pct']:g}%); review list: "
+              f"{q['review']['missing']} to complete, {q['review']['possible_duplicates']} possible "
+              "duplicates (data/review.csv)")
+        for alert in q["alerts"]:
+            print(f"  QUALITY ALERT: {alert['message']}")
     print("  Changes vs last run   : "
           + ("none, only last_seen/generated_at differ" if report["only_timestamps_changed"]
              else "real changes"))

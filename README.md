@@ -22,7 +22,9 @@ made here shows up in both.
 5. Applies your fixes from `data/manual/overrides.csv`.
 6. **Finds the same tournament on several sites and groups the records** (none is removed;
    see "Duplicates across sites").
-7. Writes `data/events.json`, `data/meta.json` and the check list `data/review/dedup_review.csv`.
+7. Writes `data/events.json`, `data/meta.json`, the check list `data/review/dedup_review.csv`,
+   the quality report `data/quality.json` and your daily to-do list `data/review.csv`
+   (see "Daily review (10 minutes)").
 
 If a source looks broken (it fails, or gives less than half of last time), the tool
 **keeps that source's previous events, notes the problem in `meta.json`, and carries
@@ -106,7 +108,11 @@ How two records from **different sites** are compared, in this order:
    missing state or city never blocks.
 3. Start dates more than 1 day apart: not the same. End dates are not used (sites often get
    them wrong).
-4. Names are cleaned up: lower case, no punctuation, no dates written in the title ("29 NOV"),
+4. Names are cleaned up. First the **tails** that Chess-Results often adds at the end are
+   dropped: "Organised by ...", a bracketed person's name like "(Mr. ...)", a date
+   ("20th Dec 2026", "-> 27 Nov 2026 - 29 Nov 2026", "2 to 6 DEC") and a place that equals the
+   event's own city ("... - Coimbatore"), only at the very end and never the whole name. Then:
+   lower case, no punctuation, no dates written in the title ("29 NOV"),
    no years, no Indian state names, no "CITY - " in front, no filler words (chess, tournament,
    international, open, fide, rated, rating, edition, the, of, level, championship, prize fund,
    ...). The remaining words are compared as a **set**, in any order: shared words divided by
@@ -180,15 +186,29 @@ check, and finish in about a minute. The steps:
 5. **stale-data alarm:** if even the newest successful fetch of any source is more than
    **30 hours** old, the run fails (the robot has stopped bringing in data);
 6. **heartbeat:** if any source has had no successful fetch for 3 days, the run fails and
-   names the source.
+   names the source;
+7. **missed-fetch alarm:** if a switched-on source has been **due for more than 6 hours**
+   (due = 12 hours after its last good fetch) **without any fetch attempt**, the run fails and
+   names the source. The run compares `meta.json` from *before* its own build with the time it
+   started, so the first run after GitHub skipped some scheduled runs fails and tells you.
+   (GitHub can only e-mail you when a run happens: if it stops running the schedule
+   altogether, the next run that does happen raises this alarm.)
 
 Every run has a **job summary** (open the run on GitHub, then *Summary*): per-source
-counts, ongoing / upcoming / past, any problems, and whether something was committed.
+counts, ongoing / upcoming / past, any problems, whether something was committed, and the
+**data quality** table (see "Quality report"). A quality drop shows as a yellow warning on the
+run; it does not fail it.
+
+A change in `data/review.csv` or in the numbers of `data/quality.json` also counts as a real
+change and is committed (a new day moves the 30-day window), so the files you open on GitHub
+are up to date. Their times alone never cause a commit.
 
 ### Published addresses (for the website and the app)
 
 - <https://sujith2krishna-cpu.github.io/boostchess-tournaments/events.json>
 - <https://sujith2krishna-cpu.github.io/boostchess-tournaments/meta.json>
+- <https://sujith2krishna-cpu.github.io/boostchess-tournaments/quality.json>
+- <https://sujith2krishna-cpu.github.io/boostchess-tournaments/review.csv>
 
 Only the `data/` folder is published. GitHub Pages sends
 `Access-Control-Allow-Origin: *`, so a web page can read the file straight from the browser;
@@ -212,6 +232,7 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 | **Run the tests** | The code or a test is broken. Nothing was fetched. | Fix the code (or revert the last change). |
 | **Build the data** | *Every* source failed (or a manual file has a mistake: the message names the file and line). Nothing was written. | Fix the manual row; otherwise wait a day, then see `data/meta.json` → `sources` → `last_error`. |
 | **Heartbeat**, "Stale data" | No source has been fetched for over 30 hours: the schedule has stopped or every source fails (the run still published the old data). | Open the Actions tab: are runs happening every 3 hours? If not, see "Pausing the schedule" (it may be switched off). If they run, read the summary of the last ones. |
+| **Heartbeat**, "Missed fetch" | A source was due for over 6 hours and nothing tried to fetch it. Almost always GitHub skipped scheduled runs (it does this when it is busy); the run that raised the alarm has usually fetched it already. | Open the Actions tab: is there a run every 3 hours? A one-off gap needs nothing. If it keeps happening, tell the developer (the schedule may need more runs). If runs happen but fetch nothing, the 12-hour rule has a bug. |
 | **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 3 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
 | **Check the published files** | The published `events.json` is wrong or not reachable. | Re-run the workflow; if it repeats, check Settings → Pages. |
 
@@ -232,13 +253,15 @@ press **Enable workflow**.
   been read already). Only the tool reads these.
 - `data/manual/events.csv`, `data/manual/overrides.csv`, `data/manual/pairs.csv`: edited by you.
 - `data/review/dedup_review.csv`: the duplicate check list (written by the tool).
+- `data/quality.json`: how complete the data is (written by the tool, published).
+- `data/review.csv`: your daily to-do list (written by the tool, published).
 - `config/sources.json`: which sources are switched on.
 
 ### `data/events.json`
 
 ```json
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "generated_at": "2026-11-24T10:30:00+05:30",
   "events": [ { ...one event... } ]
 }
@@ -246,8 +269,11 @@ press **Enable workflow**.
 
 Events are sorted by start date.
 
-**Schema version 5** (web and Android must read this version). What changed:
+**Schema version 6** (web and Android must read this version). What changed:
 
+- **Version 6:** new field `registration_deadline` (right after `results_url`): the last day to
+  register, `YYYY-MM-DD`, or `null`. For now only set by you in `overrides.csv`.
+  `tags.fide_how` can also be `"manual"`: you set `fide_rated` in `overrides.csv`.
 - **Version 5:** records of the same tournament from different sites are no longer folded into
   one event; **all records stay** and are grouped. New fields `group_id`, `merged_into`,
   `also_listed_on` (right after `verified`) and `dates_from` (after `raw_dates`).
@@ -260,6 +286,7 @@ Events are sorted by start date.
 
 | `fide_how` | When |
 |---|---|
+| `"manual"` | You set it in `overrides.csv` (`fide_rated` = yes / no). It wins over everything else. |
 | `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so, or another site's record of the same tournament says so. |
 | `"inferred"` | The name does not say "FIDE"/"rated", but uses words only FIDE-rated events use: "Grandmaster"/"GM" followed by Open, Tournament, Chess or Category; "IM norm", "GM norm", "norm tournament"; or "International" together with Open, Tournament, Chess or Rating, unless the name contains "school" anywhere (a school's name or a school championship; "FIDE"/"rated" in such a name still counts as stated). Also a section of a festival whose sibling section is rated: siblings share the same brochure link, or the same name once the section part (category letter, rating limit, age group, format) is removed, with the same start date and city. |
 | `null` | `fide_rated` is `null`: nothing says either way. |
@@ -298,8 +325,9 @@ One event looks like this:
 | `also_listed_on` | On the primary: `[{source, source_url, register_url, results_url, brochure_url}]` for each other record in the group; `[]` otherwise. |
 | `register_url` | The organiser's registration link, if a site shows one (or you add one). We only link to it. |
 | `results_url` | Where to see results, e.g. the Chess-Results tournament page; `null` when not known. |
+| `registration_deadline` | Last day to register (`YYYY-MM-DD`), or `null`. Only from `overrides.csv` for now. |
 | `organiser` | Organiser's name when a site shows one. |
-| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `fide_how` (`"stated"`, `"inferred"` or `null`, see "How `fide_rated` is decided"), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
+| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `fide_how` (`"manual"`, `"stated"`, `"inferred"` or `null`, see "How `fide_rated` is decided"), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
 | `raw_dates` | The dates exactly as the source wrote them, kept when they look wrong (and for a KCA range across New Year, whose start year is read from the page's format). |
 | `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |
@@ -324,6 +352,50 @@ run, even one that fetched nothing; proof the robot is alive), `scraped_count`, 
 `disabled`), `message` (why, when not ok), `count` (events currently listed),
 `last_success` (time), `last_error` (`{at, message}`) and `next_due` (the earliest time it
 will be fetched again).
+
+### `data/quality.json` (quality report)
+
+Written by every run. It looks only at the events the website shows (not hidden, not
+cancelled, `merged_into` = `null`), by start date in Indian time, in two windows:
+`next_30_days` (today up to today + 30) and `upcoming` (today or later).
+
+- `overall` and `sources` (one entry per source): for each window `events`, and the count and
+  percentage (`..._pct`) of `unknown_format`, `unknown_fide` (`fide_rated` is `null`),
+  `no_state`, `suspect_dates`, `no_register_link`, `no_brochure`, and `fully_known`.
+- **Fully known** = format, FIDE (yes or no), state and good dates are all known, and there is a
+  register link or a brochure link.
+- `target`: the goal is **95% fully known for the next 30 days**; `now_pct` and `met` say where
+  we are.
+- `alerts`: compared with the previous run, a source whose fully-known % fell by **10 points or
+  more**, or whose number of upcoming events **halved** (only when both runs have at least 5
+  events in that window).
+- `review`: how many lines `data/review.csv` has.
+
+## Daily review (10 minutes)
+
+The tool writes a to-do list for you every run: `data/review.csv`. It lists the shown events
+that **start in the next 30 days and miss something**, soonest first, and after them any
+**possible duplicates** still to settle.
+
+1. On GitHub, open `data/review.csv`. GitHub shows it as a table. The `missing` column says what
+   is not known, for example `format, fide`.
+2. For an event, open its `brochure_url` (or `source_url`, or a link in `also_listed_on`) and find
+   the missing facts.
+3. Copy the `line_to_add` cell. It is a ready line for `data/manual/overrides.csv`: the event id
+   first, and a `?` in every column you need to fill.
+4. Open `data/manual/overrides.csv`, click the pencil, paste the line at the bottom, and replace
+   each `?` with what the brochure says (`fide_rated`: `yes` or `no`; `format`: `rapid`, or
+   `rapid|blitz`; `state`: like `Kerala`; a register link starting with `https://`). Leave a
+   column empty if the brochure does not say. A `?` you forget is only a warning: it is ignored
+   until you fill it in.
+5. Click **Commit changes**. The next run uses your values and the event leaves the list.
+
+For a `possible_duplicate` line: check both events (`id` and `other_id`). If they are the same
+tournament, paste `line_to_add` into `data/manual/pairs.csv` as it is; if not, change `same` to
+`not_same` first.
+
+If a line has a mistake (a date that does not exist, `fide_rated` = `maybe`, ...), the next run
+stops and names the file and the line; nothing is lost. Fix the line and commit again.
 
 ## How to add an event yourself
 
@@ -372,18 +444,27 @@ Tips:
 
 Events from the websites cannot be edited directly because they are re-read
 every day. Instead, add a line to `data/manual/overrides.csv`. Columns:
-`key, start_date, end_date, place, state, hide, cancelled, note, register_url, results_url`
+`key, start_date, end_date, place, state, hide, cancelled, note, register_url, results_url,
+fide_rated, format, age, registration_deadline`
 
 - `key` is the event `id` (like `aicf-472290`) or the 6-digit AICF code (like `472290`).
-- Fill in **only** what you want to change; leave the rest empty.
+- Fill in **only** what you want to change; leave the rest empty. Lines written before the last
+  four columns existed (with fewer commas) still work.
 - Write `yes` in `hide` to hide the event, or in `cancelled` to mark it cancelled.
+- `fide_rated`: `yes` or `no`. `format`: `classical`, `rapid` or `blitz`; several with `|`
+  (`rapid|blitz`). `age`: like `U-9`, several with `|` (`U-9|U-11`). `registration_deadline`:
+  the last day to register, `DD-MM-YYYY` (or `YYYY-MM-DD`). These four win over everything the
+  sites say (also over another site's record of the same tournament); `fide_how` becomes
+  `"manual"`.
+- A cell that is just `?` means "not filled in yet": it is ignored, with a warning.
 
 ```csv
-key,start_date,end_date,place,state,hide,cancelled,note,register_url,results_url
+key,start_date,end_date,place,state,hide,cancelled,note,register_url,results_url,fide_rated,format,age,registration_deadline
 aicf-473594,03-04-2026,29-04-2026,,,,,Dates swapped on AICF page; checked brochure,,
 aicf-111111,,,,,yes,,Duplicate listing,,
 aicf-222222,,,,,,yes,Cancelled by organiser,,
 aicf-333333,,,"Sagar, Madhya Pradesh",,,,,,
+aicf-444444,,,,,,,,,,yes,rapid|blitz,U-9|U-11,05-12-2026
 ```
 
 Order of importance: **override > manual event > AICF > other sites**. Delete the

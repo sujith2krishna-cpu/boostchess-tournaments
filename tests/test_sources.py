@@ -7,6 +7,7 @@ from datetime import timedelta
 import pytest
 
 import build_events as be
+import quality
 from conftest import (ALL_SOURCES_ON, CB, CF, CR, CR_FED, EVENTS_HEADER, KCA, NOW, build, by_id, fx,
                       load_doc, load_events, row, run_all, serve_aicf, serve_chessbase,
                       serve_chessfee, serve_chessresults, serve_kca, write_manual)
@@ -508,15 +509,24 @@ def test_same_input_gives_identical_files(web, data_dir, tmp_path):
 def test_next_day_with_the_same_pages_changes_only_timestamps(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
+    doc, meta = load_doc(data_dir), json.loads((data_dir / "meta.json").read_text("utf-8"))
+    review = (data_dir / "review.csv").read_bytes()
+    numbers = quality.comparable(json.loads((data_dir / "quality.json").read_text("utf-8")))
+    assert run_all(data_dir, now=NOW.replace(hour=22))["only_timestamps_changed"] is True  # same day
     report = run_all(data_dir, now=NEXT_DAY)
-    assert report["only_timestamps_changed"] is True
+    # events.json and meta.json differ only in timestamps...
+    assert be.only_timestamps_changed(doc, meta, load_doc(data_dir),
+                                      json.loads((data_dir / "meta.json").read_text("utf-8")))
+    # ...but the 30-day window moved on, and a changed review list is a real change (committed)
+    assert report["only_timestamps_changed"] is ((data_dir / "review.csv").read_bytes() == review
+                                                 and quality.comparable(report["quality"]) == numbers)
 
 
 def test_events_json_has_the_new_fields_in_a_fixed_order(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
     doc = load_doc(data_dir)
-    assert doc["schema_version"] == 5
+    assert doc["schema_version"] == 6
     keys = list(be.EVENT_KEYS)
     assert all(list(e) == keys for e in doc["events"])
     for key in ("source_url", "sources", "listed_by", "verified"):

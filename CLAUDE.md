@@ -60,8 +60,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   Pages needs them). No `secrets.` anywhere in the workflow.
 - Tests run first; a failing test stops everything. The commit happens only when
   `real_changes == 'true'`. The heartbeat (`scripts/heartbeat.py`) fails the run when a source
-  has had no successful fetch for 3 days, and when the newest fetch of any source is over
-  30 hours old (stale data). The schedule is every 3 hours at minute 17; most runs fetch nothing. `tests/test_daily.py` checks these rules in the
+  has had no successful fetch for 3 days, when the newest fetch of any source is over
+  30 hours old (stale data), and when a source has been due for over 6 hours with no fetch
+  attempt (missed fetch; it reads meta.json from before the build via `--before`/`--started`). The schedule is every 3 hours at minute 17; most runs fetch nothing. `tests/test_daily.py` checks these rules in the
   workflow file; keep them true when you edit it.
 - Pages publishes only `data/`. `scripts/verify_published.py` checks the live files.
 
@@ -69,6 +70,8 @@ shared by the web site and the Android app, so changing its shape affects both.
 
 - `scripts/build_events.py` — the run (`run()`), manual files, meta, CLI.
 - `scripts/dedup.py` — finding the same tournament across sources and grouping it (pure).
+- `scripts/quality.py` — the quality report (`data/quality.json`) and the review list
+  (`data/review.csv`), both pure; a change in either counts as a real change.
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
 - `scripts/sources/` — one module per site (`aicf`, `kca`, `chessfee`, `chessresults_ind`,
@@ -101,10 +104,13 @@ shared by the web site and the Android app, so changing its shape affects both.
   `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
   (grandmaster, norm or "International ... Open" names, or a rated sibling section) / null. Only a
   true is ever shared (sections, groups); a false never is.
-- Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`.
+- Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`
+  (tags as `tags.formats` etc.). `fide_rated` / `format` / `age` / `registration_deadline` from
+  overrides.csv set `fide_how` "manual" and are re-applied after grouping (also on the group's
+  primary), so they win over everything. A cell that is just `?` is "not filled in" (a warning).
 - No `status` is stored. `status(event, today)` computes ongoing/upcoming/past in Indian time
   (fixed UTC+05:30, no DST, so no `tzdata` needed).
-- Schema version is `SCHEMA_VERSION` (now 5). Bump it, update the README and add a migration in
+- Schema version is `SCHEMA_VERSION` (now 6). Bump it, update the README and add a migration in
   `canonical()` whenever the shape of an event changes; stored events are read through `canonical()`.
 - `only_timestamps_changed()` tells a daily job whether anything except `generated_at`/`last_seen`
   /per-source times changed (`--github-output` writes `real_changes=...`).
@@ -117,3 +123,6 @@ shared by the web site and the Android app, so changing its shape affects both.
 ## Not done yet
 
 - ChessBase calendar: only the default month of each year page is readable without its data service.
+- Website / app (data is ready, not built yet): show "not stated" labels for an unknown format,
+  FIDE status or state, show `registration_deadline`, and a review/admin page built from
+  `data/review.csv` and `data/quality.json`. Both must accept schema 6.

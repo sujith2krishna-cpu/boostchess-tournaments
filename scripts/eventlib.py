@@ -21,7 +21,8 @@ USER_AGENT = (
 REQUEST_TIMEOUT_SECONDS = 30
 RETRY_WAIT_SECONDS = 5
 MIN_FRACTION_OF_PREVIOUS = 0.5  # a source returning less than half of last time counts as failed
-SCHEMA_VERSION = 5  # 5: group_id, merged_into, also_listed_on, dates_from; fide_rated may be false
+SCHEMA_VERSION = 6  # 6: registration_deadline; fide_how may be "manual" (overrides.csv)
+#                     5: group_id, merged_into, also_listed_on, dates_from; fide_rated may be false
 #                     4: results_url
 #                     3: sources[], source_url, listed_by, verified, flags.possible_duplicate_of
 #                     2: tags.age is a list; every event has a country
@@ -40,9 +41,12 @@ EVENTS_CSV_COLUMNS = (
 OVERRIDES_CSV_COLUMNS = (
     "key", "start_date", "end_date", "place", "state", "hide", "cancelled", "note",
     "register_url", "results_url",
+    # added later, at the end, so older lines (with fewer columns) keep working
+    "fide_rated", "format", "age", "registration_deadline",
 )
 PAIRS_CSV_COLUMNS = ("id_a", "id_b", "decision", "note")
 FORMAT_ORDER = ("classical", "rapid", "blitz")
+FETCH_INTERVAL_HOURS = 12  # a source is fetched at most once every 12 hours
 
 
 
@@ -424,7 +428,7 @@ EVENT_KEYS = (
     "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
     "brochure_url", "source", "source_url", "sources", "listed_by", "verified",
     "group_id", "merged_into", "also_listed_on",
-    "register_url", "results_url", "organiser", "tags", "flags",
+    "register_url", "results_url", "registration_deadline", "organiser", "tags", "flags",
     "raw_dates", "dates_from", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
@@ -438,9 +442,12 @@ EVENT_DEFAULTS = {
     "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
     "raw_dates": None, "gone_from_source": False, "cancelled": False,
     "hidden": False, "note": None, "overridden": None,
-    "merged_into": None, "also_listed_on": [], "dates_from": None,
+    "merged_into": None, "also_listed_on": [], "dates_from": None, "registration_deadline": None,
 }
-OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url")
+OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url",
+                      "registration_deadline")
+# Tags an override can set; `overridden` remembers them as "tags.formats" and so on.
+OVERRIDABLE_TAGS = ("formats", "fide_rated", "fide_how", "age")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
 # describe the same event. (Override > manual > aicf > kca > the rest.)
