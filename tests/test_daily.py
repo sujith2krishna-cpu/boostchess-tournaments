@@ -8,7 +8,9 @@ import requests
 
 import build_events as be
 import daily
+import eventlib
 import heartbeat
+import quality
 import verify_published as vp
 from conftest import (ALL_SOURCES_ON, NOW, ROOT, build, fx, padding, row, run_all, serve_aicf, serve_chessbase,
                       serve_chessfee, serve_chessresults, serve_kca, web)  # noqa: F401
@@ -237,10 +239,29 @@ def test_partial_failures_move_the_heartbeat_forward_only_for_the_failing_source
 # ---- checking the published files ----------------------------------------
 GOOD_EVENTS = json.dumps({"schema_version": be.SCHEMA_VERSION, "generated_at": "t", "events": [{"id": "x"}]})
 CORS = {"content-type": "application/json; charset=utf-8", "access-control-allow-origin": "*"}
+CSV_CORS = {"content-type": "text/csv; charset=utf-8", "access-control-allow-origin": "*"}
 
 
-def getter(events=(200, CORS, GOOD_EVENTS), meta=(200, CORS, "{}")):
-    answers = {"https://site.test/repo/events.json": events, "https://site.test/repo/meta.json": meta}
+def quality_json(missing=1, duplicates=1, **change):
+    data = {"generated_at": "t", "target": {"fully_known_pct": 95.0, "now_pct": 20.0}, "overall": {},
+            "sources": {}, "review": {"missing": missing, "possible_duplicates": duplicates}, **change}
+    return json.dumps(data)
+
+
+def review_csv(*kinds):
+    lines = [",".join(quality.REVIEW_COLUMNS)]
+    lines += [kind + "," * (len(quality.REVIEW_COLUMNS) - 1) for kind in kinds]
+    return "\n".join(lines) + "\n"
+
+
+GOOD_QUALITY = quality_json()
+GOOD_REVIEW = review_csv("missing", "possible_duplicate")
+
+
+def getter(events=(200, CORS, GOOD_EVENTS), meta=(200, CORS, "{}"), quality_file=(200, CORS, GOOD_QUALITY),
+           review=(200, CSV_CORS, GOOD_REVIEW)):
+    answers = {"https://site.test/repo/events.json": events, "https://site.test/repo/meta.json": meta,
+               "https://site.test/repo/quality.json": quality_file, "https://site.test/repo/review.csv": review}
     return lambda url: answers[url]
 
 
@@ -249,6 +270,47 @@ def test_published_files_that_are_right_pass_and_the_headers_are_shown():
     text = "\n".join(lines)
     assert ok and "access-control-allow-origin: *" in text and "content-type: application/json" in text
     assert f"schema_version {be.SCHEMA_VERSION}, 1 events" in text
+    assert "quality.json: HTTP 200" in text and "20.0% fully known (target 95.0%)" in text
+    assert "review.csv: HTTP 200" in text and "1 to complete, 1 possible duplicates" in text
+    assert "content-type: text/csv" in text
+
+
+@pytest.mark.parametrize("changes, expected", [
+    ({"quality_file": (404, {}, "")}, "quality.json: HTTP 404"),
+    ({"quality_file": (200, CORS, "{ not json")}, "quality.json: not valid JSON"),
+    ({"quality_file": (200, CORS, json.dumps({"target": {}, "overall": {}}))}, "quality.json: has no sources, review"),
+    ({"quality_file": (200, {}, GOOD_QUALITY)}, "quality.json: Access-Control-Allow-Origin is None"),
+    ({"review": (404, {}, "")}, "review.csv: HTTP 404"),
+    ({"review": (200, CSV_CORS, "id,name\nx,y\n")}, "review.csv: the first line is not the review columns"),
+    ({"review": (200, CSV_CORS, "")}, "review.csv: the first line is not the review columns"),
+    ({"review": (200, CSV_CORS, review_csv("missing", "something_else"))}, "review.csv: line 3 is not a review line"),
+    ({"review": (200, CSV_CORS, GOOD_REVIEW + "missing,too,short\n")}, "review.csv: line 4 is not a review line"),
+    ({"review": (200, {"content-type": "text/csv"}, GOOD_REVIEW)}, "review.csv: Access-Control-Allow-Origin is None"),
+    ({"review": (200, CSV_CORS, review_csv("missing", "missing", "possible_duplicate"))},
+     "review.csv has 2 to complete and 1 possible duplicates, but quality.json says 1 and 1"),
+    ({"quality_file": (200, CORS, quality_json(missing=0, duplicates=0))},
+     "review.csv has 1 to complete and 1 possible duplicates, but quality.json says 0 and 0"),
+])
+def test_a_wrong_quality_report_or_review_list_fails_with_a_reason(changes, expected):
+    ok, lines = vp.verify("https://site.test/repo/", getter(**changes), attempts=2, sleep=lambda s: None)
+    assert not ok and expected in "\n".join(lines)
+
+
+def test_an_empty_review_list_with_matching_counts_passes():
+    files = getter(quality_file=(200, CORS, quality_json(missing=0, duplicates=0)), review=(200, CSV_CORS, review_csv()))
+    ok, lines = vp.verify("https://site.test/repo/", files, sleep=lambda s: None)
+    assert ok and "0 to complete, 0 possible duplicates" in "\n".join(lines)
+
+
+def test_the_check_reads_the_review_list_the_build_writes():
+    def event(eid, name):
+        return eventlib.canonical({"id": eid, "name": name, "start": "2026-12-01", "end": "2026-12-01",
+                                   "first_seen": "2026-11-01", "last_seen": "2026-11-25", "source": "aicf"})
+    first, second = event("aicf-1", "Open, with a comma"), event("aicf-2", 'A "quoted" Open')
+    second["flags"]["possible_duplicate_of"] = "aicf-1"
+    rows = quality.review_rows([first, second], date(2026, 11, 25))
+    problems, _, read = vp.check_file("review.csv", 200, CSV_CORS, quality.review_csv(rows).decode("utf-8"))
+    assert problems == [] and read == quality.review_counts(rows) == {"missing": 2, "possible_duplicates": 1}
 
 
 @pytest.mark.parametrize("events, expected", [
@@ -269,7 +331,9 @@ def test_a_fresh_deployment_that_is_not_there_yet_is_retried():
 
     def slow(url):
         calls.append(url)
-        return (404, {}, "") if len(calls) <= 2 else (200, CORS, GOOD_EVENTS if "events" in url else "{}")
+        if len(calls) <= 2:
+            return 404, {}, ""
+        return getter()(url)
 
     ok, _ = vp.verify("https://site.test/repo/", slow, attempts=4, sleep=lambda s: None)
     assert ok
