@@ -1,54 +1,54 @@
 {
-  "generated_at": "2026-11-25T08:43:49+05:30",
-  "last_run_at": "2026-11-25T08:43:49+05:30",
-  "scraped_count": 612,
+  "generated_at": "2026-11-25T16:20:38+05:30",
+  "last_run_at": "2026-11-25T16:20:38+05:30",
+  "scraped_count": 584,
   "manual_count": 0,
-  "total": 613,
+  "total": 671,
   "suspect_dates_count": 9,
-  "missing_state_count": 105,
-  "gone_from_source_count": 1,
-  "groups_count": 586,
-  "merged_count": 27,
-  "possible_duplicates_count": 3,
+  "missing_state_count": 139,
+  "gone_from_source_count": 87,
+  "groups_count": 643,
+  "merged_count": 28,
+  "possible_duplicates_count": 7,
   "sources": {
     "aicf": {
       "enabled": true,
       "status": "ok",
       "message": null,
-      "last_success": "2026-11-25T00:28:06+05:30",
+      "last_success": "2026-11-25T16:20:38+05:30",
       "last_error": null,
-      "count": 442,
-      "next_due": "2026-11-25T12:28:06+05:30"
+      "count": 445,
+      "next_due": "2026-11-26T04:20:38+05:30"
     },
     "chessfee": {
       "enabled": true,
       "status": "ok",
       "message": null,
-      "last_success": "2026-11-25T00:28:06+05:30",
+      "last_success": "2026-11-25T16:20:38+05:30",
       "last_error": null,
       "count": 32,
-      "next_due": "2026-11-25T12:28:06+05:30"
+      "next_due": "2026-11-26T04:20:38+05:30"
     },
     "chessresults_ind": {
       "enabled": true,
       "status": "ok",
       "message": null,
-      "last_success": "2026-11-25T00:28:06+05:30",
+      "last_success": "2026-11-25T16:20:38+05:30",
       "last_error": null,
-      "count": 108,
-      "next_due": "2026-11-25T12:28:06+05:30"
+      "count": 77,
+      "next_due": "2026-11-26T04:20:38+05:30"
     },
     "chessbase_calendar": {
       "enabled": true,
       "status": "ok",
       "message": null,
-      "last_success": "2026-11-25T00:28:06+05:30",
+      "last_success": "2026-11-25T16:20:38+05:30",
       "last_error": {
         "at": "2026-11-24T22:47:21+05:30",
         "message": "ChessBase calendar page has no event list; layout changed?"
       },
       "count": 30,
-      "next_due": "2026-11-25T12:28:06+05:30"
+      "next_due": "2026-11-26T04:20:38+05:30"
     }
   }
 }

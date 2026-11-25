@@ -1,6 +1,6 @@
 {
   "source": "aicf",
-  "found": 443,
+  "found": 446,
   "listing": {},
   "events": [
     {
@@ -1339,8 +1339,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -1565,8 +1565,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -2300,8 +2300,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3084,8 +3084,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -3530,8 +3530,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -4485,8 +4485,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -4597,8 +4597,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -4654,8 +4654,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -4876,8 +4876,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -4931,8 +4931,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -5329,8 +5329,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -5441,8 +5441,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5551,8 +5551,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5829,8 +5829,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -5943,8 +5943,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -6559,8 +6559,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -6781,8 +6781,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -6836,8 +6836,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -7623,8 +7623,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -8012,8 +8012,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -8581,8 +8581,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -9933,8 +9933,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -12296,8 +12296,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -13417,8 +13417,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -14038,8 +14038,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16580,8 +16580,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -16802,8 +16802,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -17199,8 +17199,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17256,8 +17256,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -17304,7 +17304,7 @@
       ],
       "listed_by": "aicf",
       "verified": true,
-      "group_id": "aicf-499113-5b98b8",
+      "group_id": "aicf-499113",
       "merged_into": null,
       "also_listed_on": [],
       "register_url": null,
@@ -17424,7 +17424,9 @@
       "results_url": null,
       "organiser": null,
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -17990,8 +17992,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -18544,7 +18546,7 @@
       ],
       "listed_by": "aicf",
       "verified": true,
-      "group_id": "aicf-507610-201ca3",
+      "group_id": "aicf-507610",
       "merged_into": null,
       "also_listed_on": [],
       "register_url": null,
@@ -19122,8 +19124,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19344,8 +19346,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -19401,8 +19403,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19572,8 +19574,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19743,8 +19745,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19800,8 +19802,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -19965,8 +19967,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -20533,8 +20535,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -20590,8 +20592,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -20647,8 +20649,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [
           "U18"
         ],
@@ -21280,8 +21282,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -21335,8 +21337,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -21563,8 +21565,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -21813,6 +21815,63 @@
       "overridden": null
     },
     {
+      "id": "aicf-512596",
+      "codes": [
+        "512596"
+      ],
+      "name": "1st Vedic Dehradun International Open FIDE Rated Rapid Chess Tournament 2026",
+      "start": "2026-12-26",
+      "end": "2026-12-27",
+      "place_text": "Dehradun, Uttarakhand",
+      "state": "Uttarakhand",
+      "city": "Dehradun",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/255935.png",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-512596",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-482569",
       "codes": [
         "482569"
@@ -21844,8 +21903,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -22184,8 +22243,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -22353,8 +22412,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -22467,8 +22526,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -22864,8 +22923,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22919,8 +22978,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -22976,8 +23035,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -23031,8 +23090,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -23198,8 +23257,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -23253,8 +23312,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -23334,6 +23393,63 @@
       "overridden": null
     },
     {
+      "id": "aicf-511499",
+      "codes": [
+        "511499"
+      ],
+      "name": "The Heritage School Chaturanga Rapid Rating Chess Tournament 2027",
+      "start": "2027-01-23",
+      "end": "2027-01-24",
+      "place_text": "West Bengal",
+      "state": "West Bengal",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Chess-brochure-2.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-511499",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-506782",
       "codes": [
         "506782"
@@ -23391,6 +23507,63 @@
       "overridden": null
     },
     {
+      "id": "aicf-511500",
+      "codes": [
+        "511500"
+      ],
+      "name": "The Heritage School Chaturanga Blitz Rating 2027",
+      "start": "2027-01-24",
+      "end": "2027-01-24",
+      "place_text": "West Bengal",
+      "state": "West Bengal",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Chess-brochure-2.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-511500",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-484273",
       "codes": [
         "484273"
@@ -23422,8 +23595,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -23589,8 +23762,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": true,
         "girls": null,
@@ -23866,8 +24039,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -23921,8 +24094,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -23976,8 +24149,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -24031,8 +24204,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -24086,8 +24259,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -24141,8 +24314,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -24366,8 +24539,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
