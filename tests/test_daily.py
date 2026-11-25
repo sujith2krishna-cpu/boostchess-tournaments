@@ -67,9 +67,9 @@ def test_commit_message_from_a_real_run(web, data_dir):
         for raw in cb_source.parse_events(fx(html)):
             web.add("https://chessbase.in/chess-calendar/event/" + raw["slug"], fx("chessbase_event.html"))
     first = run_all(data_dir)
-    assert first["changes"] == {"new": 19, "changed": 0, "gone": 0}  # 21 entries; 3 share AICF code 473001
+    assert first["changes"] == {"new": 21, "changed": 0, "gone": 0}  # 21 records, all kept (3 grouped)
     assert daily.commit_message(first) == (
-        "data: 2026-11-24 (+19 new, 0 changed; sources ok: aicf, chessfee, chessresults_ind, "
+        "data: 2026-11-24 (+21 new, 0 changed; sources ok: aicf, chessfee, chessresults_ind, "
         "chessbase_calendar)")
     # next day: one AICF event is edited, chessfee fails
     serve_aicf(web, [row("Plain AICF Open", "400001", end="13-12-2026"), row("Another", "400002")])
@@ -145,7 +145,7 @@ def test_main_fails_and_says_why_when_every_source_fails(web, data_dir, tmp_path
     assert not (data_dir / "events.json").exists()
 
 
-# ---- the weekly heartbeat -------------------------------------------------
+# ---- the heartbeat (3 days per source) -------------------------------------------------
 def meta_with(**sources):
     return {"sources": {name: {"enabled": True, "status": "ok", "last_success": stamp}
                         for name, stamp in sources.items()}}
@@ -154,17 +154,20 @@ def meta_with(**sources):
 TODAY = date(2026, 11, 25)
 
 
-def test_a_source_silent_for_seven_days_is_stale_but_six_days_is_fine():
-    meta = meta_with(aicf="2026-11-25T03:10:00+05:30", chessfee="2026-11-19T03:10:00+05:30",
-                     chessresults_ind="2026-11-18T03:10:00+05:30", chessbase_calendar="2026-11-01T03:10:00+05:30")
+def test_a_source_silent_for_three_days_is_stale_but_two_days_is_fine():
+    assert heartbeat.DEFAULT_DAYS == 3
+    meta = meta_with(aicf="2026-11-25T03:10:00+05:30", chessfee="2026-11-23T03:10:00+05:30",
+                     chessresults_ind="2026-11-22T03:10:00+05:30", chessbase_calendar="2026-11-01T03:10:00+05:30")
     stale = heartbeat.stale_sources(meta, TODAY)
-    assert [(s["source"], s["days"]) for s in stale] == [("chessresults_ind", 7), ("chessbase_calendar", 24)]
+    assert [(s["source"], s["days"]) for s in stale] == [("chessresults_ind", 3), ("chessbase_calendar", 24)]
 
 
 def test_days_are_counted_in_indian_dates():
-    # 22:00 UTC on the 17th is already the 18th in India: 7 days before the 25th
-    meta = meta_with(chessfee="2026-11-17T22:00:00+00:00")
-    assert heartbeat.stale_sources(meta, TODAY)[0]["days"] == 7
+    # 22:00 UTC on the 21st is already the 22nd in India: 3 days before the 25th
+    meta = meta_with(chessfee="2026-11-21T22:00:00+00:00")
+    assert heartbeat.stale_sources(meta, TODAY)[0]["days"] == 3
+    # 19:00 UTC on the 22nd is 00:30 on the 23rd in India: only 2 days, still fine
+    assert heartbeat.stale_sources(meta_with(chessfee="2026-11-22T19:00:00+00:00"), TODAY) == []
 
 
 def test_a_source_that_never_worked_is_stale_and_a_switched_off_one_is_ignored():
@@ -184,7 +187,7 @@ def test_message_names_the_source_and_the_days():
 def test_heartbeat_command_exit_codes(tmp_path, capsys):
     from datetime import datetime
     now = datetime.now(be.IST)
-    good = meta_with(aicf=now.isoformat(), chessfee=(now - timedelta(days=3)).isoformat())
+    good = meta_with(aicf=now.isoformat(), chessfee=(now - timedelta(days=2)).isoformat())
     (tmp_path / "meta.json").write_text(json.dumps(good), encoding="utf-8")
     assert heartbeat.main(["--data-dir", str(tmp_path)]) == 0
     assert "Heartbeat ok" in capsys.readouterr().out
@@ -199,20 +202,20 @@ def test_heartbeat_command_exit_codes(tmp_path, capsys):
     assert heartbeat.main(["--data-dir", str(tmp_path / "nowhere")]) == 1
 
 
-def test_meta_from_a_real_run_passes_then_fails_after_a_week_of_failures(web, data_dir):
+def test_meta_from_a_real_run_passes_then_fails_after_three_days_of_failures(web, data_dir):
     serve_aicf(web, [row("Plain AICF Open", "400001")])
     config = {**{n: False for n in be.SOURCE_MODULES}, "aicf": True}
     be.run(data_dir, config=config, now=NOW, min_rows=1)
     meta = json.loads((data_dir / "meta.json").read_text("utf-8"))
     assert heartbeat.stale_sources(meta, NOW.date()) == []
     web.add("https://aicf.in/all-events/", "down", status=500)
-    # six more days of failing: the source keeps its old data but last_success is stuck
-    for day in range(1, 8):
+    # days of failing: the source keeps its old data but last_success is stuck
+    for day in range(1, 4):
         with pytest.raises(be.SourceError):
             be.run(data_dir, config=config, now=NOW + timedelta(days=day), min_rows=1)
     meta = json.loads((data_dir / "meta.json").read_text("utf-8"))
-    assert heartbeat.stale_sources(meta, (NOW + timedelta(days=6)).date()) == []
-    assert heartbeat.stale_sources(meta, (NOW + timedelta(days=7)).date())[0]["source"] == "aicf"
+    assert heartbeat.stale_sources(meta, (NOW + timedelta(days=2)).date()) == []
+    assert heartbeat.stale_sources(meta, (NOW + timedelta(days=3)).date())[0]["source"] == "aicf"
 
 
 def test_partial_failures_move_the_heartbeat_forward_only_for_the_failing_source(web, data_dir):

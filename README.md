@@ -18,10 +18,11 @@ made here shows up in both.
 2. Cleans each entry up (dates, codes, place, state, country).
 3. **Keeps history.** A tournament is never deleted. If a site stops listing one,
    we keep it and mark it `gone_from_source`.
-4. Joins entries from different sites **only** when they share an AICF event code.
-5. Adds your own tournaments from `data/manual/events.csv`.
-6. Applies your fixes from `data/manual/overrides.csv`.
-7. Writes `data/events.json` and `data/meta.json`.
+4. Adds your own tournaments from `data/manual/events.csv`.
+5. Applies your fixes from `data/manual/overrides.csv`.
+6. **Finds the same tournament on several sites and groups the records** (none is removed;
+   see "Duplicates across sites").
+7. Writes `data/events.json`, `data/meta.json` and the check list `data/review/dedup_review.csv`.
 
 If a source looks broken (it fails, or gives less than half of last time), the tool
 **keeps that source's previous events, notes the problem in `meta.json`, and carries
@@ -75,24 +76,60 @@ to `false`, commit):
 
 A switched-off source is not contacted at all. Its old events stay in the file.
 
-### Joining entries and look-alikes
+### Duplicates across sites
 
-- Two entries become **one event** only when they share an AICF event code (many
-  titles on Chess-Results and the other sites say, for example, "AICF Event Code: 502180").
-  The event keeps every site's links in `sources`. For each fact the order of
-  importance is **override > manual > AICF > the other sites**; gaps (for example a
-  missing registration link) are filled from the other sites.
-- Without a shared code we **never join**. If two entries from different sites have
-  the same start date, a very similar name and the same city, both are kept and the
-  later one gets `flags.possible_duplicate_of` set to the other one's `id`.
-- If several AICF events share one code, entries with that code are not joined.
+Many tournaments are listed on two or three sites. **Every site's record stays in
+`events.json`**; records of the same tournament are **grouped**, never removed or hidden.
+
+- Every event has a `group_id`. In a group of several records one is the **primary**: the AICF
+  record if there is one and its dates are not suspect; otherwise manual, then chessfee, then
+  Chess-Results, then ChessBase. The others get `merged_into` = the primary's `id`.
+- **Website and app: show only events with `merged_into` = `null`** (and `hidden` = `false`).
+  The primary lists the other sites in `also_listed_on` and fills its own gaps (registration,
+  results and brochure links, city, state, organiser) from them. It never overwrites a value it
+  already has. If the primary's dates are suspect and another record's are fine, the primary
+  shows those dates and `dates_from` names the record they came from (`raw_dates` still shows
+  what its own site wrote).
+
+How two records from **different sites** are compared, in this order:
+
+1. Different country: not the same.
+2. Different state, or different city: not the same, but only when **both** are known. A
+   missing state or city never blocks.
+3. Start dates more than 1 day apart: not the same. End dates are not used (sites often get
+   them wrong).
+4. Names are cleaned up: lower case, no punctuation, no dates written in the title ("29 NOV"),
+   no years, no Indian state names, no "CITY - " in front, no filler words (chess, tournament,
+   international, open, fide, rated, rating, edition, the, of, level, championship, prize fund,
+   ...). The remaining words are compared as a **set**, in any order: shared words divided by
+   all words. A name with fewer than 2 distinctive words can never prove "same" on its own.
+5. **Section guard:** if the rating limit ("below 1800", "above 2100", "U1600"), the age group
+   (U11, ...), the category letter ("Category B" vs "Category C") or the format (rapid vs
+   blitz, when both say one) differ, they are **not** the same, whatever else matches.
+6. **Strong proof:** the same AICF event code or the same Chess-Results page means the same
+   tournament (this beats rules 2 to 5). The same brochure link beats the name (rule 4) only,
+   because one brochure often covers several sections.
+7. **Score** = 0.85 x name + 0.10 x place (same city 1, same state 0.5) + 0.05 x same end
+   date. **0.80 or more: same group. 0.50 to 0.80: kept apart and flagged** with
+   `flags.possible_duplicate_of` (the better-ranked record's `id`). Below 0.50: different.
+
+Two records from the same site are never grouped automatically, and a group never takes in two
+records that a rule above calls different (so two sections cannot end up together through a
+third record). If several AICF events share one code, that code proves nothing.
+
+**Check list:** `data/review/dedup_review.csv` lists every *same* and *possible* pair, lowest
+score first: both ids, sources, names, dates and places, the score, the decision and why.
+Open it on GitHub to check the grouping.
+
+**You decide:** `data/manual/pairs.csv` forces a pair to be the same or not, and beats all of
+the above (see "How to say two events are (not) the same").
 
 ### Trust labels
 
 - `listed_by` says who listed it: `aicf`, `chessfee`, `chess-results`, `chessbase`
   or `manual`.
-- `verified` is `true` **only for AICF and manual events** (and for an event joined
-  to one of them). The other sites' events are listed, not verified.
+- `verified` is `true` **only for AICF and manual events** (and for the primary of a
+  group that contains one of them). The other sites' events are listed, not verified.
 
 ## Running it
 
@@ -111,7 +148,7 @@ To run the tests: `pip install -r requirements-dev.txt` and then `pytest`.
 
 At the end it prints a short summary per source and overall: events found, how
 many are ongoing, upcoming or past today (Indian time), how many have a register
-link, how many were joined, and possible duplicates.
+link, how many records were grouped as the same tournament, and possible duplicates.
 
 ## The daily run (GitHub Action)
 
@@ -130,7 +167,7 @@ check, and finish in about a minute. The steps:
    checks the published files;
 5. **stale-data alarm:** if even the newest successful fetch of any source is more than
    **30 hours** old, the run fails (the robot has stopped bringing in data);
-6. **heartbeat:** if any source has had no successful fetch for 7 days, the run fails and
+6. **heartbeat:** if any source has had no successful fetch for 3 days, the run fails and
    names the source.
 
 Every run has a **job summary** (open the run on GitHub, then *Summary*): per-source
@@ -163,7 +200,7 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 | **Run the tests** | The code or a test is broken. Nothing was fetched. | Fix the code (or revert the last change). |
 | **Build the data** | *Every* source failed (or a manual file has a mistake: the message names the file and line). Nothing was written. | Fix the manual row; otherwise wait a day, then see `data/meta.json` → `sources` → `last_error`. |
 | **Heartbeat**, "Stale data" | No source has been fetched for over 30 hours: the schedule has stopped or every source fails (the run still published the old data). | Open the Actions tab: are runs happening every 3 hours? If not, see "Pausing the schedule" (it may be switched off). If they run, read the summary of the last ones. |
-| **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 7 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
+| **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 3 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
 | **Check the published files** | The published `events.json` is wrong or not reachable. | Re-run the workflow; if it repeats, check Settings → Pages. |
 
 If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
@@ -181,14 +218,15 @@ press **Enable workflow**.
 - `data/events.json`, `data/meta.json`: the result (what the website and the app read).
 - `data/sources/<name>.json`: what each source last told us (history and what has
   been read already). Only the tool reads these.
-- `data/manual/events.csv`, `data/manual/overrides.csv`: edited by you.
+- `data/manual/events.csv`, `data/manual/overrides.csv`, `data/manual/pairs.csv`: edited by you.
+- `data/review/dedup_review.csv`: the duplicate check list (written by the tool).
 - `config/sources.json`: which sources are switched on.
 
 ### `data/events.json`
 
 ```json
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "generated_at": "2026-11-24T10:30:00+05:30",
   "events": [ { ...one event... } ]
 }
@@ -196,8 +234,14 @@ press **Enable workflow**.
 
 Events are sorted by start date.
 
-**Schema version 4** (web and Android must read this version). What changed:
+**Schema version 5** (web and Android must read this version). What changed:
 
+- **Version 5:** records of the same tournament from different sites are no longer folded into
+  one event; **all records stay** and are grouped. New fields `group_id`, `merged_into`,
+  `also_listed_on` (right after `verified`) and `dates_from` (after `raw_dates`).
+  **Show only events whose `merged_into` is `null`.** `tags.fide_rated` can now also be `false`
+  (the name says non-rated). New counts in `meta.json`: `groups_count`, `merged_count`,
+  `possible_duplicates_count`.
 - **Version 4:** new field `results_url` (right after `register_url`): where the results are.
   For Chess-Results events it is the tournament page; for others it is empty until a link is
   known (you can add one in `overrides.csv`). It stays on the event after the event ends.
@@ -212,7 +256,7 @@ One event looks like this:
 
 | Field | Meaning |
 |---|---|
-| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. A joined event keeps the id of its most important entry. |
+| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. |
 | `codes` | The 6-digit AICF codes (some events have two). |
 | `name` | Name of the tournament. |
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when the source's date is unreadable. |
@@ -220,16 +264,20 @@ One event looks like this:
 | `state`, `city` | Best guess from the place or title, or `null` when we are not sure. |
 | `country` | Two-letter country code (ISO 3166). `IN` for aicf, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
-| `source` | The most important source of this event. |
+| `source` | The site this record comes from. |
 | `source_url` | The event's page on that source. |
-| `sources` | **List** of `{source, source_url, register_url}`, one per site that lists the event (more than one only when joined by an AICF code). |
+| `sources` | **List** of `{source, source_url, register_url}`, one per site that lists the event (more than one only on a group's primary). |
 | `listed_by`, `verified` | Trust labels (see above). |
+| `group_id` | The `id` of the group's primary (its own `id` when no other site lists it). |
+| `merged_into` | `null` for the record to show; otherwise the primary's `id` (this record is the same tournament on another site). |
+| `also_listed_on` | On the primary: `[{source, source_url, register_url, results_url, brochure_url}]` for each other record in the group; `[]` otherwise. |
 | `register_url` | The organiser's registration link, if a site shows one (or you add one). We only link to it. |
 | `results_url` | Where to see results, e.g. the Chess-Results tournament page; `null` when not known. |
 | `organiser` | Organiser's name when a site shows one. |
-| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true` or `null`), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when the source clearly says so; never guessed. |
+| `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
 | `raw_dates` | The dates exactly as the source wrote them, kept when they look wrong. |
+| `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |
 | `first_seen`, `last_seen` | The first and last day we saw it on a source. |
 | `gone_from_source` | `true` if no source lists it any more. |
 | `cancelled`, `hidden` | `cancelled` is set by you in `overrides.csv` or by a source that says so; `hidden` only by you. The website should skip hidden events. |
@@ -246,7 +294,8 @@ is worked out from `start` and `end` and today's date in Indian time
 Counts for a quick health check: `generated_at`, `last_run_at` (the time of the latest
 run, even one that fetched nothing; proof the robot is alive), `scraped_count`, `manual_count`,
 `total`, `suspect_dates_count`, `missing_state_count`, `gone_from_source_count`,
-and `sources`: for each source `enabled`, `status` (`ok`, `failed`, `skipped`,
+`groups_count` (tournaments after grouping), `merged_count` (records with `merged_into` set),
+`possible_duplicates_count`, and `sources`: for each source `enabled`, `status` (`ok`, `failed`, `skipped`,
 `disabled`), `message` (why, when not ok), `count` (events currently listed),
 `last_success` (time), `last_error` (`{at, message}`) and `next_due` (the earliest time it
 will be fetched again).
@@ -337,6 +386,25 @@ aicf-473594,,,,,,,,,https://chess-results.com/tnr1234567.aspx?lan=1
 
 (Both can go on the same line.) Your link wins over a link a site gives. For your own events
 in `events.csv`, put the registration link in `link` and the results link in `results_url`.
+
+## How to say two events are (not) the same (`pairs.csv`)
+
+If the tool grouped two records that are different tournaments, or missed two that are the
+same, add a line to `data/manual/pairs.csv` (on GitHub: open the file, pencil, add the line,
+**Commit changes**). Columns: `id_a, id_b, decision, note`
+
+- `id_a`, `id_b`: the two event ids (see `data/review/dedup_review.csv` or `events.json`).
+- `decision`: `same` or `not_same`.
+- `note`: optional, why.
+
+```csv
+id_a,id_b,decision,note
+aicf-486240,chessfee-1727,same,same brochure
+aicf-482568,chessbase_calendar-6aaa7ca270d3171daede9af6,not_same,different sections
+```
+
+Your line beats the tool. An id that matches nothing is only a warning (the event may come back
+later); a wrong `decision`, or the same id twice, stops the run and names the line.
 
 ## What happens when a row has a mistake
 

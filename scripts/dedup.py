@@ -1,0 +1,462 @@
+"""Finding the same tournament on several sites, and grouping (never removing) them.
+
+Every source record stays in events.json. Records that describe the same tournament
+share a `group_id`; one of them is the group's primary, the others point at it with
+`merged_into`. Nothing here deletes or hides an event.
+
+Matching rules, in this order (see README, "Duplicates across sites"):
+  1. different country                          -> different
+  2. different state / city (both known)        -> different
+  3. start dates more than 1 day apart          -> different (end dates are not used)
+  4. name similarity on distinctive words       -> the score
+  5. section guard (rating limit, age group, category letter, format) differs -> different
+  6. strong proof (shared AICF code, same Chess-Results page) beats rules 2-5;
+     the same brochure link beats rule 4 only (one brochure often covers several sections)
+  7. score >= 0.80 same group; 0.50-0.80 flags.possible_duplicate_of; below: different
+  8. data/manual/pairs.csv forces "same" or "not_same" for a pair of ids, beating all of this.
+
+Everything is pure (no files, no network).
+"""
+from __future__ import annotations
+
+import copy
+import re
+from collections import defaultdict
+from datetime import date, timedelta
+
+from eventlib import (STATES, VERIFIED_SOURCES, _CITY_BY_KEY, _STATE_BY_KEY, _key,
+                      ages_from_text, clean_text, merge_tags, source_rank)
+
+SAME_AT = 0.80
+POSSIBLE_AT = 0.50
+NAME_WEIGHT, PLACE_WEIGHT, END_WEIGHT = 0.85, 0.10, 0.05
+MIN_DISTINCT_WORDS = 2  # fewer distinctive words than this can never prove "same" by name alone
+
+# Primary choice after "AICF with good dates": manual, chessfee, then the rest.
+PRIMARY_ORDER = ("manual", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
+
+FILLER = frozenset("""
+chess tournament tournaments tmt international intl open fide rated rating ratings edition the of
+and for in at a an
+level championship championships player players only
+prize prizes fund money lakh lakhs rs cash early bird till
+""".split())
+_MONTH = (r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|"
+          r"sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)")
+_DAY = r"\d{1,2}(?:st|nd|rd|th)?"
+_DATE_IN_TITLE = re.compile(
+    rf"\b{_DAY}(?:\s*(?:-|to|&|and)\s*{_DAY})?\s*{_MONTH}\b|\b{_MONTH}\s*{_DAY}\b(?!\d)", re.I)
+_MONTH_WORD = re.compile(rf"\b{_MONTH}\b", re.I)
+_YEAR_RANGE = re.compile(r"\b(?:19|20)\d{2}\s*[-/]\s*\d{2,4}\b")
+_YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
+_ORDINAL = re.compile(r"\b(\d+)\s*(?:st|nd|rd|th)\b", re.I)
+_POSSESSIVE = re.compile(r"[’'�`]s\b", re.I)
+_LIMIT = re.compile(r"\b(below|under|upto|up\s+to|less\s+than|above|over|u|b)\s*(\d{4})\b", re.I)
+_CATEGORY = re.compile(r"\b(?:category|cat|group|section)\s+([a-z])\b", re.I)
+_FORMAT_WORDS = {"rapid": "rapid", "rapids": "rapid", "blitz": "blitz", "classical": "classical",
+                 "classic": "classical", "standard": "classical"}
+_AGE_TOKEN = re.compile(r"\b(?:under|u)\s*(\d{1,2})\b", re.I)
+_STATE_WORDS = sorted({k for k in _STATE_BY_KEY} | {s.lower() for s in STATES}, key=len, reverse=True)
+_STATE_PATTERN = re.compile(r"\b(?:" + "|".join(re.escape(s) for s in _STATE_WORDS) + r")\b")
+
+
+def _flat(name: str) -> str:
+    """Lowercase, possessives gone, punctuation as spaces."""
+    text = _POSSESSIVE.sub("", clean_text(name).lower()).replace("&", " and ")
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", text)).strip()
+
+
+_LEAD = re.compile(r"^\s*([A-Za-z][A-Za-z .]{1,30}?)\s*[-–—:|]\s+(?=\S)")
+
+
+def _strip_place_prefix(name: str, city: str | None = None) -> str:
+    """'CHENNAI - Shree Rudhraa ...' -> 'Shree Rudhraa ...' (a known city, a state, or the event's city)."""
+    match = _LEAD.match(name)
+    if match:
+        lead = _key(match.group(1))
+        if lead in _CITY_BY_KEY or lead in _STATE_BY_KEY or (city and lead == _key(city)):
+            return name[match.end():]
+    return name
+
+
+def name_words(name: str, city: str | None = None) -> frozenset[str]:
+    """The distinctive words of a tournament name, as a set (order does not matter).
+
+    Removed: punctuation, dates written in the title, years, Indian state names, filler words,
+    and the section words (rating limits, age groups, category letters, formats), which the
+    section guard compares on their own.
+    """
+    text = _POSSESSIVE.sub("", _strip_place_prefix(clean_text(name), city).lower())
+    text = _LIMIT.sub(" ", text)  # before the years: "below 2000" is a rating, not a year
+    text = _YEAR_RANGE.sub(" ", text)
+    text = _DATE_IN_TITLE.sub(" ", text)
+    text = _YEAR.sub(" ", text)
+    text = _ORDINAL.sub(r" no\1 ", text)  # "6th", "6 th" -> no6; other bare numbers are noise
+    text = _flat(text)
+    text = _LIMIT.sub(" ", text)
+    text = _CATEGORY.sub(" ", text)
+    text = _AGE_TOKEN.sub(" ", text)
+    text = _MONTH_WORD.sub(" ", text)
+    text = _STATE_PATTERN.sub(" ", text)
+    words = set()
+    for word in text.split():
+        if word in FILLER or word in _FORMAT_WORDS or len(word) == 1 or word.isdigit():
+            continue
+        if len(word) > 4 and word.endswith("s"):
+            word = word[:-1]  # championships -> championship
+        words.add(word)
+    return frozenset(words)
+
+
+def sections(name: str) -> dict:
+    """What tells two sections of one festival apart: rating limits, ages, category, format."""
+    flat = _flat(_ORDINAL.sub(r"\1", clean_text(name)))
+    limits = set()
+    for word, number in _LIMIT.findall(flat):
+        limits.add(("above" if word.lower() in ("above", "over") else "below", int(number)))
+    formats = {_FORMAT_WORDS[w] for w in flat.split() if w in _FORMAT_WORDS}
+    return {"limits": frozenset(limits), "ages": frozenset(ages_from_text(clean_text(name))),
+            "categories": frozenset(c.lower() for c in _CATEGORY.findall(flat)),
+            "formats": frozenset(formats)}
+
+
+def section_difference(a: dict, b: dict) -> str | None:
+    for key, label in (("limits", "rating limit"), ("ages", "age group"), ("categories", "category")):
+        if a[key] != b[key]:
+            return label
+    if a["formats"] and b["formats"] and a["formats"] != b["formats"]:
+        return "format"
+    return None
+
+
+def jaccard(a: frozenset, b: frozenset) -> float:
+    return len(a & b) / len(a | b) if a and b else 0.0
+
+
+def _day(text) -> date | None:
+    try:
+        return date.fromisoformat(text) if text else None
+    except ValueError:
+        return None
+
+
+def _same_text(a, b) -> bool | None:
+    if not a or not b:
+        return None
+    return _flat(a) == _flat(b)
+
+
+def _chess_results_page(event: dict) -> str | None:
+    for url in (event.get("source_url"), event.get("results_url")):
+        match = re.search(r"chess-results\.com/(?:\w+\.aspx\?)?tnr(\d+)", url or "", re.I)
+        if match:
+            return match.group(1)
+    return None
+
+
+class Features:
+    """What we compare, worked out once per event."""
+
+    def __init__(self, event: dict):
+        self.event = event
+        self.id = event["id"]
+        self.source = event["source"]
+        self.words = name_words(event["name"] or "", event.get("city"))
+        self.sections = sections(event["name"] or "")
+        self.start = _day(event.get("start"))
+        self.end = _day(event.get("end"))
+        self.codes = frozenset(event.get("codes") or [])
+        self.cr_page = _chess_results_page(event)
+        self.brochure = (event.get("brochure_url") or "").strip().lower() or None
+
+
+def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) -> dict:
+    """{'score', 'decision' ('same'|'possible'|'different'), 'reason', 'hard'}.
+
+    `hard` is True when a rule (not just a low name score) says they are different;
+    a group never takes in two events with a hard difference.
+    """
+    ea, eb = a.event, b.event
+
+    def out(score, decision, reason, hard=False):
+        return {"score": round(score, 3), "decision": decision, "reason": reason, "hard": hard}
+
+    if ea.get("country") and eb.get("country") and ea["country"] != eb["country"]:
+        return out(0, "different", "different country", hard=True)
+    shared = (a.codes & b.codes) - ambiguous_codes
+    if shared:
+        return out(1.0, "same", f"same AICF code {min(shared)}")
+    if a.cr_page and a.cr_page == b.cr_page:
+        return out(1.0, "same", "same Chess-Results page")
+    if _same_text(ea.get("state"), eb.get("state")) is False:
+        return out(0, "different", "different state", hard=True)
+    if _same_text(ea.get("city"), eb.get("city")) is False:
+        return out(0, "different", "different city", hard=True)
+    if a.start is None or b.start is None:
+        return out(0, "different", "start date unknown")
+    if abs((a.start - b.start).days) > 1:
+        return out(0, "different", "start dates more than 1 day apart", hard=True)
+    section = section_difference(a.sections, b.sections)
+    if section:
+        return out(0, "different", f"different {section}", hard=True)
+    words_a, words_b = a.words, b.words
+    name = jaccard(words_a, words_b)
+    reason = f"names {name:.2f}"
+    if min(len(words_a), len(words_b)) < MIN_DISTINCT_WORDS:
+        name = min(name, 0.6)
+        reason += " (too few distinctive words)"
+    if a.brochure and a.brochure == b.brochure:
+        name, reason = 1.0, "same brochure link"
+    city = _same_text(ea.get("city"), eb.get("city"))
+    state = _same_text(ea.get("state"), eb.get("state"))
+    place = 1.0 if city else 0.5 if state else 0.0
+    end = 1.0 if a.end and a.end == b.end else 0.0
+    score = NAME_WEIGHT * name + PLACE_WEIGHT * place + END_WEIGHT * end
+    if score >= SAME_AT:
+        return out(score, "same", reason)
+    if score >= POSSIBLE_AT:
+        return out(score, "possible", reason)
+    return out(score, "different", reason)
+
+
+# --------------------------------------------------------------------------
+# Grouping
+# --------------------------------------------------------------------------
+def _candidates(features: list[Features]):
+    """Pairs worth comparing: from different sources, starting within a day, or sharing proof."""
+    by_day = defaultdict(list)
+    by_key = defaultdict(list)
+    for index, f in enumerate(features):
+        if f.start:
+            by_day[f.start].append(index)
+        for code in f.codes:
+            by_key[("code", code)].append(index)
+        if f.cr_page:
+            by_key[("cr", f.cr_page)].append(index)
+    pairs = set()
+    for day, indexes in by_day.items():
+        for other_day in (day, day + timedelta(days=1)):
+            for i in indexes:
+                for j in by_day.get(other_day, ()):
+                    if i != j:
+                        pairs.add((min(i, j), max(i, j)))
+    for indexes in by_key.values():
+        for i in indexes:
+            for j in indexes:
+                if i < j:
+                    pairs.add((i, j))
+    return sorted((i, j) for i, j in pairs if features[i].source != features[j].source)
+
+
+def _primary_key(event: dict):
+    suspect = bool(event["flags"]["dates_suspect"])
+    good_aicf = event["source"] == "aicf" and not suspect
+    rank = PRIMARY_ORDER.index(event["source"]) if event["source"] in PRIMARY_ORDER else len(PRIMARY_ORDER)
+    return (bool(event["hidden"]), not good_aicf, rank, event["id"])
+
+
+def _link(event: dict) -> dict:
+    return {"source": event["source"], "source_url": event["source_url"],
+            "register_url": event["register_url"], "results_url": event["results_url"],
+            "brochure_url": event["brochure_url"]}
+
+
+def _inherit_tags(members: list[dict]) -> None:
+    """A format or FIDE flag one member knows is given to the others, if no member disagrees."""
+    formats = {tuple(m["tags"]["formats"]) for m in members if m["tags"]["formats"]}
+    if len(formats) == 1:
+        known = list(next(iter(formats)))
+        for m in members:
+            if not m["tags"]["formats"]:
+                m["tags"]["formats"] = known
+    rated = {m["tags"]["fide_rated"] for m in members if m["tags"]["fide_rated"] is not None}
+    if len(rated) == 1:
+        value = next(iter(rated))
+        for m in members:
+            if m["tags"]["fide_rated"] is None:
+                m["tags"]["fide_rated"] = value
+
+
+def _finish_group(members: list[dict]) -> None:
+    members.sort(key=_primary_key)
+    primary = members[0]
+    _inherit_tags(members)
+    for m in members:
+        m["group_id"] = primary["id"]
+        m["merged_into"] = None if m is primary else primary["id"]
+        m["also_listed_on"] = []
+    if len(members) == 1:
+        return
+    others = sorted(members[1:], key=lambda e: (source_rank(e["source"]), e["id"]))
+    primary["also_listed_on"] = [_link(m) for m in others]
+    links = [{"source": m["source"], "source_url": m["source_url"], "register_url": m["register_url"]}
+             for m in [primary] + others]
+    primary["sources"] = [l for i, l in enumerate(links) if l not in links[:i]]
+    known = (primary["tags"]["formats"], primary["tags"]["fide_rated"])  # settled by _inherit_tags
+    for other in others:
+        for field in ("register_url", "results_url", "brochure_url", "city", "state", "place_text",
+                      "organiser"):
+            if primary[field] is None and other[field] is not None:
+                primary[field] = other[field]
+        primary["tags"] = merge_tags(primary["tags"], other["tags"])
+        primary["codes"] = primary["codes"] + [c for c in other["codes"] if c not in primary["codes"]]
+        seen = [x for x in (primary["first_seen"], other["first_seen"]) if x]
+        primary["first_seen"] = min(seen) if seen else None
+    primary["tags"]["formats"], primary["tags"]["fide_rated"] = known
+    primary["gone_from_source"] = all(m["gone_from_source"] for m in members)
+    primary["verified"] = any(m["source"] in VERIFIED_SOURCES for m in members)
+    if primary["flags"]["dates_suspect"]:
+        good = next((m for m in others if not m["flags"]["dates_suspect"] and m["start"]), None)
+        if good is not None:
+            primary["start"], primary["end"] = good["start"], good["end"]
+            primary["dates_from"] = good["id"]
+            primary["flags"]["dates_suspect"] = False  # raw_dates still holds what the source said
+
+
+def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> dict:
+    """Give every event group_id / merged_into / also_listed_on; flag possible duplicates.
+
+    `pairs` are the rows of data/manual/pairs.csv: {"line", "a", "b", "decision", "note"}.
+    Changes `events` in place, never removes one. Returns {"review": [...rows], "groups": n,
+    "merged": n, "possible": n}.
+    """
+    for e in events:
+        e["group_id"], e["merged_into"], e["also_listed_on"], e["dates_from"] = e["id"], None, [], None
+        e["flags"]["possible_duplicate_of"] = None
+    features = [Features(e) for e in events]
+    index_of = {f.id: i for i, f in enumerate(features)}
+    aicf_by_code = defaultdict(list)
+    for f in features:
+        if f.source == "aicf":
+            for code in f.codes:
+                aicf_by_code[code].append(f.id)
+    ambiguous = frozenset(c for c, ids in aicf_by_code.items() if len(ids) > 1)
+    for code in sorted(ambiguous):
+        if any(code in f.codes and f.source != "aicf" for f in features):
+            warnings.append(f"Several AICF events share one code ({', '.join(aicf_by_code[code])}); "
+                            "entries with that code were not grouped by the code.")
+
+    forced: dict[tuple[int, int], dict] = {}
+    for row in pairs:
+        missing = [x for x in (row["a"], row["b"]) if x not in index_of]
+        if missing:
+            warnings.append(f"data/manual/pairs.csv line {row['line']}: no event has the id "
+                            f"{' or '.join(repr(m) for m in missing)}; this row was ignored.")
+            continue
+        i, j = sorted((index_of[row["a"]], index_of[row["b"]]))
+        forced[(i, j)] = row
+
+    results = {}
+    for i, j in _candidates(features):
+        results[(i, j)] = compare(features[i], features[j], ambiguous)
+    for key, row in forced.items():
+        base = results.get(key) or compare(features[key[0]], features[key[1]], ambiguous)
+        results[key] = {**base, "decision": row["decision"], "reason": "pairs.csv"
+                        + (f": {row['note']}" if row.get("note") else ""), "forced": True}
+
+    # Union-find; a merge is refused when it would put a hard difference inside one group.
+    parent = list(range(len(events)))
+    members = {i: [i] for i in range(len(events))}
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    def blocked(ri, rj) -> str | None:
+        for x in members[ri]:
+            for y in members[rj]:
+                key = (min(x, y), max(x, y))
+                result = results.get(key)
+                if result and result.get("forced"):
+                    if result["decision"] == "not_same":
+                        return f"pairs.csv says {features[x].id} and {features[y].id} are not the same"
+                    continue
+                if features[x].source == features[y].source:
+                    return f"{features[x].id} and {features[y].id} come from the same source"
+                result = result or compare(features[x], features[y], ambiguous)
+                if result["hard"]:
+                    return f"{features[x].id} vs {features[y].id}: {result['reason']}"
+        return None
+
+    def union(i, j) -> str | None:
+        ri, rj = find(i), find(j)
+        if ri == rj:
+            return None
+        why = blocked(ri, rj)
+        if why:
+            return why
+        parent[rj] = ri
+        members[ri].extend(members.pop(rj))
+        return None
+
+    order = sorted(results.items(), key=lambda kv: (not kv[1].get("forced"), -kv[1]["score"], kv[0]))
+    for (i, j), result in order:
+        if result["decision"] == "same":
+            if result.get("forced"):
+                ri, rj = find(i), find(j)
+                why = None
+                if ri != rj:
+                    # a forced pair only yields to a forced "not_same"
+                    for x in members[ri]:
+                        for y in members[rj]:
+                            r = results.get((min(x, y), max(x, y)))
+                            if r and r.get("forced") and r["decision"] == "not_same":
+                                why = f"pairs.csv also says {features[x].id} and {features[y].id} are not the same"
+                    if why is None:
+                        parent[rj] = ri
+                        members[ri].extend(members.pop(rj))
+                if why:
+                    warnings.append(f"data/manual/pairs.csv: {features[i].id} and {features[j].id} were "
+                                    f"not grouped because {why}.")
+                    result["decision"], result["reason"] = "possible", result["reason"] + f" (blocked: {why})"
+            else:
+                why = union(i, j)
+                if why:
+                    result["decision"] = "possible"
+                    result["reason"] += f" (not grouped: {why})"
+
+    groups = defaultdict(list)
+    for i in range(len(events)):
+        groups[find(i)].append(events[i])
+    for group in groups.values():
+        _finish_group(group)
+
+    # Possible duplicates: point the lower-ranked event at the better one (best score first).
+    # When both already sit in a group with other records, they have found their twins: no flag.
+    for (i, j), result in order:
+        if result["decision"] != "possible" or find(i) == find(j):
+            continue
+        if len(members[find(i)]) > 1 and len(members[find(j)]) > 1:
+            result["reason"] += " (both already grouped with others; not flagged)"
+            continue
+        a, b = sorted((events[i], events[j]), key=lambda e: (source_rank(e["source"]), e["id"]))
+        if b["flags"]["possible_duplicate_of"] is None:
+            b["flags"]["possible_duplicate_of"] = a["id"]
+
+    review = []
+    for (i, j), result in sorted(results.items(), key=lambda kv: (kv[1]["score"], kv[0])):
+        if result["decision"] == "different" and not result.get("forced"):
+            continue
+        a, b = sorted((events[i], events[j]), key=lambda e: (source_rank(e["source"]), e["id"]))
+        decision = result["decision"]
+        if decision == "same" and find(i) != find(j):
+            decision = "possible"
+        review.append({"score": f"{result['score']:.3f}", "decision": decision,
+                       "reason": result["reason"],
+                       **{f"{k}_{s}": v for s, e in (("a", a), ("b", b)) for k, v in (
+                           ("id", e["id"]), ("source", e["source"]), ("name", e["name"]),
+                           ("start", e["start"] or ""), ("end", e["end"] or ""),
+                           ("place", ", ".join(x for x in (e["city"], e["state"]) if x)
+                            or (e["place_text"] or "")))},
+                       "group_id": events[i]["group_id"] if find(i) == find(j) else ""})
+    review.sort(key=lambda r: (float(r["score"]), r["id_a"], r["id_b"]))  # lowest score first
+    multi = [g for g in groups.values() if len(g) > 1]
+    return {"review": review, "groups": len(groups), "multi_groups": len(multi),
+            "merged": sum(len(g) - 1 for g in multi),
+            "possible": sum(1 for e in events if e["flags"]["possible_duplicate_of"])}
+
+
+REVIEW_COLUMNS = ("score", "decision", "reason", "id_a", "source_a", "name_a", "start_a", "end_a",
+                  "place_a", "id_b", "source_b", "name_b", "start_b", "end_b", "place_b", "group_id")

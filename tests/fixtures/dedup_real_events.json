@@ -1,0 +1,617 @@
+{
+  "_about": "Real records copied from data/sources/*.json on 2026-11-25 (phone-free), for the T4b duplicate tests: three must-pass SAME pairs and the Athens of the East sections.",
+  "events": [
+    {
+      "id": "aicf-502180",
+      "codes": [
+        "502180"
+      ],
+      "name": "ChessInd Academy’s 2nd International FIDE Rated Open Rapid Chess Tournament",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Kerala",
+      "state": "Kerala",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/Chessind-acdemys-2nd-Fide-Rapid-Chess-Tournament-compressed.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1800",
+      "codes": [],
+      "name": "KERALA - ChessInd Academy’s 2nd International Open FIDE Rated Rapid Chess Tournament – 29 NOV",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Naipunya Public School, Seaport - Airport Rd, Judgemukku, Thrikkakara, Edappally, Kochi, Kerala",
+      "state": "Kerala",
+      "city": "Kochi",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV%20-%20FIDE%20RAPID%20-%20Chessind%20Acdemy%202nd%20Fide%20Rapid%20Chess%20Tournament.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1800",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1800",
+          "register_url": "https://www.chessfee.com/treg.php?id=1800"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1800",
+      "results_url": null,
+      "organiser": "ChessInd Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 4,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1532678",
+      "codes": [
+        "502180"
+      ],
+      "name": "Chessind Academy's 2nd FIDE Rated Open Rapid Chess Tournament AICF Event Code:502180/KL(R)/2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Naipunya Public School, Kakkanad",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
+      "organiser": "ChessInd Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-486240",
+      "codes": [
+        "486240"
+      ],
+      "name": "2nd Manchester City International Below 1800 Fide Rated Tournament",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "place_text": "Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/07/Manchester-final.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1727",
+      "codes": [],
+      "name": "2nd Manchester City Below 1800 International Fide Rated Tournament – 27 NOV",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "place_text": "Sri Krishna Goundar Kalyana Mandapam, Ganapathy, Coimbatore",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Manchester-FIDE%20TMT%20BELOW%201800%20-27-29%20NOV.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1727",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1727",
+          "register_url": "https://www.chessfee.com/treg.php?id=1727"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1727",
+      "results_url": null,
+      "organiser": "Veer Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE BELOW 1800 - PRIZE MONEY Rs. 11,50,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-510448",
+      "codes": [
+        "510448"
+      ],
+      "name": "ICC – CHESSFEE International FIDE RAPID Rating OPEN Chess Tournament 2027 – 6th Edition",
+      "start": "2027-01-31",
+      "end": "2027-07-31",
+      "place_text": "Coimbatore, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1872",
+      "codes": [],
+      "name": "ICC – CHESSFEE International FIDE Rapid Rating Chess Tournament 2027 – 6th Edition - 31 JAN",
+      "start": "2027-01-31",
+      "end": "2027-01-31",
+      "place_text": "Sri Krishna Gounder Kalayana Mandapam, Maniyakarampalayam Road, Ganapathy, Coimbatore, Tamil Nadu – 641006",
+      "state": "Tamil Nadu",
+      "city": "Coimbatore",
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/ICC%20Rapid%20RATING%20TMT%202027%20CHESSFEE.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1872",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1872",
+          "register_url": "https://www.chessfee.com/treg.php?id=1872"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "register_url": "https://www.chessfee.com/treg.php?id=1872",
+      "results_url": null,
+      "organiser": "Indian Chess Consortium (ICC)",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 3,00,000/-"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482567",
+      "codes": [
+        "482567"
+      ],
+      "name": "Athens of the East 6 th International Grandmaster Chess Tournaments – (Category – A Above 2100)",
+      "start": "2026-12-22",
+      "end": "2026-12-31",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482568",
+      "codes": [
+        "482568"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – B Below 2100)",
+      "start": "2026-12-22",
+      "end": "2026-12-25",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482569",
+      "codes": [
+        "482569"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – D Below 1800)",
+      "start": "2026-12-26",
+      "end": "2026-12-28",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482570",
+      "codes": [
+        "482570"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – C Blitz",
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-482662",
+      "codes": [
+        "482662"
+      ],
+      "name": "Athens of the East 6th International Grandmaster Open Chess Tournament (Category – E Below 1600)",
+      "start": "2026-12-29",
+      "end": "2026-12-31",
+      "place_text": "Madurai",
+      "state": "Tamil Nadu",
+      "city": "Madurai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/Athens-of-the-east-6th-GM.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "register_url": null,
+      "results_url": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

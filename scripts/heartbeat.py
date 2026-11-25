@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Weekly heartbeat: fail loudly when a source has not been fetched successfully for 7 days.
+"""Heartbeat: fail loudly when a source has not been fetched successfully for 3 days.
 
-    python scripts/heartbeat.py [--data-dir data] [--days 7]
+    python scripts/heartbeat.py [--data-dir data] [--days 3]
 
 Reads data/meta.json (written by build_events.py). Sources switched off in
 config/sources.json are not checked. Exit code 0 = fine, 1 = a source has gone quiet.
@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from eventlib import DATA_DIR, IST  # noqa: E402
 
-DEFAULT_DAYS = 7
+DEFAULT_DAYS = 3  # was 7; a healthy source is fetched every 12 hours
 STALE_DATA_HOURS = 30
 
 

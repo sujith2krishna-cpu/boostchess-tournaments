@@ -172,7 +172,7 @@ def test_other_tags_are_true_or_null():
     assert tags == {"formats": [], "fide_rated": None, "age": [], "open": None, "girls": True,
                     "categories": []}
     assert be.derive_tags("FIDE Open Rapid Rating Chess")["fide_rated"] is True
-    assert be.derive_tags("Unrated Open")["fide_rated"] is None
+    assert be.derive_tags("Unrated Open")["fide_rated"] is False  # schema 5: said non-rated
     assert be.derive_tags("FIDE Master Memorial Cup")["fide_rated"] is None
 
 

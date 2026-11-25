@@ -13,7 +13,6 @@ import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
-from urllib.parse import urljoin, urlparse
 
 SOURCE_URL = "https://aicf.in/all-events/"
 USER_AGENT = (
@@ -22,7 +21,8 @@ USER_AGENT = (
 REQUEST_TIMEOUT_SECONDS = 30
 RETRY_WAIT_SECONDS = 5
 MIN_FRACTION_OF_PREVIOUS = 0.5  # a source returning less than half of last time counts as failed
-SCHEMA_VERSION = 4  # 4: results_url
+SCHEMA_VERSION = 5  # 5: group_id, merged_into, also_listed_on, dates_from; fide_rated may be false
+#                     4: results_url
 #                     3: sources[], source_url, listed_by, verified, flags.possible_duplicate_of
 #                     2: tags.age is a list; every event has a country
 
@@ -41,6 +41,7 @@ OVERRIDES_CSV_COLUMNS = (
     "key", "start_date", "end_date", "place", "state", "hide", "cancelled", "note",
     "register_url", "results_url",
 )
+PAIRS_CSV_COLUMNS = ("id_a", "id_b", "decision", "note")
 FORMAT_ORDER = ("classical", "rapid", "blitz")
 
 
@@ -316,15 +317,40 @@ def ages_from_text(text: str) -> list[str]:
     return [f"U{v}" for v in sorted(found)]
 
 
+# Formats: the words a name uses for each one. "Standard" is FIDE's word for classical.
+_FORMAT_WORDS = {
+    "classical": r"classical|standard",
+    "rapid": r"rapid|rapids|rapidplay|rapid[\s-]play",
+    "blitz": r"blitz",
+}
+_NON_RATED = re.compile(r"(?i)\b(?:non|un)[\s-]?(?:fide[\s-]?)?rated\b|\bnon[\s-]?fide\b|\bunrated\b"
+                        r"|\bnot\s+(?:fide\s+)?rated\b")
+_RATED = re.compile(r"(?i)\b(?:rated|rating|ratings)\b")
+_FIDE_WITH = re.compile(r"(?i)\bfide\b[\s-]*(?:rapid|blitz|standard|classical|below|above|under\b|u[\s-]*\d)"
+                        r"|\b(?:rapid|blitz|standard|classical)[\s-]+fide\b")
+
+
+def formats_in(text: str) -> list[str]:
+    """Formats a piece of text names, in FORMAT_ORDER ([] when it names none)."""
+    return [f for f in FORMAT_ORDER if re.search(rf"(?i)\b(?:{_FORMAT_WORDS[f]})\b", text or "")]
+
+
+def fide_rated_in(text: str) -> bool | None:
+    """True when the text says rated ("FIDE Rated", "Rapid Rating", "FIDE RAPID"),
+    False when it says non-rated / unrated, None when it says nothing."""
+    text = text or ""
+    if _NON_RATED.search(text):
+        return False
+    if _RATED.search(text) or _FIDE_WITH.search(text):
+        return True
+    return None
+
+
 def derive_tags(name: str) -> dict:
     """Conservative tags from the name. Anything unsure stays empty."""
-    formats = [f for f in FORMAT_ORDER if re.search(rf"\b{f}\b", name, re.I)]
-    fide = bool(re.search(r"\bfide\b", name, re.I)) and bool(
-        re.search(r"\b(?:rated|rating|ratings)\b", name, re.I)
-    ) and not re.search(r"\b(?:un|non)[\s-]?rated\b", name, re.I)
     return {
-        "formats": formats,
-        "fide_rated": True if fide else None,
+        "formats": formats_in(name),
+        "fide_rated": fide_rated_in(name),
         "age": ages_from_text(name),
         "open": True if re.search(r"\bopen\b", name, re.I) else None,
         "girls": True if re.search(r"\bgirls?\b", name, re.I) else None,
@@ -338,8 +364,9 @@ def derive_tags(name: str) -> dict:
 EVENT_KEYS = (
     "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
     "brochure_url", "source", "source_url", "sources", "listed_by", "verified",
+    "group_id", "merged_into", "also_listed_on",
     "register_url", "results_url", "organiser", "tags", "flags",
-    "raw_dates", "first_seen", "last_seen", "gone_from_source", "cancelled",
+    "raw_dates", "dates_from", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
 TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
@@ -352,6 +379,7 @@ EVENT_DEFAULTS = {
     "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
     "raw_dates": None, "gone_from_source": False, "cancelled": False,
     "hidden": False, "note": None, "overridden": None,
+    "merged_into": None, "also_listed_on": [], "dates_from": None,
 }
 OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url")
 
@@ -417,6 +445,8 @@ def canonical(event: dict) -> dict:
         elif key == "verified":
             out[key] = bool(event["verified"]) if event.get("verified") is not None \
                 else event.get("source") in VERIFIED_SOURCES
+        elif key == "group_id":  # schema 4 and older: every event was its own group
+            out[key] = event.get("group_id") or event.get("id")
         elif key == "sources":
             out[key] = copy.deepcopy(event["sources"]) if event.get("sources") else [
                 {"source": event.get("source"), "source_url": event.get("source_url"),
@@ -673,8 +703,10 @@ def merge_tags(primary: dict, other: dict) -> dict:
     out["formats"] = [f for f in FORMAT_ORDER if f in out["formats"]]
     out["age"] = sorted(set(out.get("age") or []) | set(other.get("age") or []),
                         key=lambda a: int(a[1:]))
-    for key in ("fide_rated", "open", "girls"):
+    for key in ("open", "girls"):
         out[key] = out.get(key) or other.get(key) or None
+    if out.get("fide_rated") is None:  # True / False from the primary win; a gap is filled
+        out["fide_rated"] = other.get("fide_rated")
     return out
 
 

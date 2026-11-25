@@ -199,7 +199,7 @@ def test_joined_event_takes_the_results_link_from_chess_results(web, data_dir):
 # ---- schema 4 -----------------------------------------------------------------------
 def test_schema_4_and_results_url_sits_after_register_url():
     keys = list(be.EVENT_KEYS)
-    assert be.SCHEMA_VERSION == 4 and keys.index("results_url") == keys.index("register_url") + 1
+    assert be.SCHEMA_VERSION >= 4 and keys.index("results_url") == keys.index("register_url") + 1
 
 
 def test_schema_3_data_is_migrated(web, data_dir):
@@ -217,7 +217,7 @@ def test_schema_3_data_is_migrated(web, data_dir):
                      now=NOW + timedelta(hours=1))  # not due: only the stored data is used
     assert report["fetched_any"] is False
     doc = load_doc(data_dir)
-    assert doc["schema_version"] == 4
+    assert doc["schema_version"] == be.SCHEMA_VERSION
     assert all(e["results_url"] == e["source_url"] for e in doc["events"])
     assert report["only_timestamps_changed"] is False  # the upgrade is a real change to commit
 
