@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-25T15:31:23+05:30",
-  "last_run_at": "2026-11-25T15:31:23+05:30",
+  "generated_at": "2026-11-25T15:51:47+05:30",
+  "last_run_at": "2026-11-25T15:51:47+05:30",
   "scraped_count": 607,
   "manual_count": 0,
   "total": 693,
   "suspect_dates_count": 9,
   "missing_state_count": 140,
   "gone_from_source_count": 86,
-  "groups_count": 661,
-  "merged_count": 32,
+  "groups_count": 660,
+  "merged_count": 33,
   "possible_duplicates_count": 6,
   "sources": {
     "aicf": {

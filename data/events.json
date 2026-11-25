@@ -1,6 +1,6 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-25T15:31:23+05:30",
+  "generated_at": "2026-11-25T15:51:47+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -20077,14 +20077,15 @@
     {
       "id": "aicf-503692",
       "codes": [
-        "503692"
+        "503692",
+        "739/CAK/2026"
       ],
       "name": "Deva 3 iInternational open fide rated rapid chess, 2026",
       "start": "2026-11-22",
       "end": "2026-11-22",
       "place_text": "Kerala",
       "state": "Kerala",
-      "city": null,
+      "city": "Kozhikode",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/Deva-Chess-Rapid-Poster-under-2mb-1.pdf",
       "source": "aicf",
@@ -20094,13 +20095,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/739",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-503692",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "kca",
+          "source_url": "https://www.keralachessassociation.com/events/739",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://www.keralachessassociation.com/storage/tournaments/maI5KS4Ch3V0WejJ5vO0umshLfguOKJA9aOwn7dr.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "organiser": null,
@@ -20326,8 +20340,8 @@
       ],
       "listed_by": "kca",
       "verified": true,
-      "group_id": "kca-739-CAK-2026",
-      "merged_into": null,
+      "group_id": "aicf-503692",
+      "merged_into": "aicf-503692",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
