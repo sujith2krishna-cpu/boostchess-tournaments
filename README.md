@@ -56,9 +56,10 @@ Things to know:
 
 - Chess-Results shows at most 50 tournaments per list, so a very busy day can hide some;
   they appear later.
-- The KCA events page writes the year once, after the end date. A tournament that runs
-  across New Year ("Dec 29 - Jan 02, 2026") therefore reads as ending before it starts; it is
-  kept with `dates_suspect` = `true` and the text in `raw_dates`, not "fixed".
+- The KCA events page writes the year once, after the end date, and it is the end date's
+  year. So when the start month comes later than the end month ("Dec 29 - Jan 02, 2026"),
+  the tournament started in the year before: 29 Dec 2025 to 2 Jan 2026. Such an event is not
+  flagged as suspect, and the page's own text stays in `raw_dates` so it can be checked.
 - KCA gives a **district**, not a town, as the place (stored as `city`). When records are
   compared, a district matches the towns inside it (Ernakulam matches Kochi or Aluva), two
   different districts never match, and a town we do not know is "unknown", never "different".
@@ -300,7 +301,7 @@ One event looks like this:
 | `organiser` | Organiser's name when a site shows one. |
 | `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `fide_how` (`"stated"`, `"inferred"` or `null`, see "How `fide_rated` is decided"), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
-| `raw_dates` | The dates exactly as the source wrote them, kept when they look wrong. |
+| `raw_dates` | The dates exactly as the source wrote them, kept when they look wrong (and for a KCA range across New Year, whose start year is read from the page's format). |
 | `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |
 | `first_seen`, `last_seen` | The first and last day we saw it on a source. |
 | `gone_from_source` | `true` if no source lists it any more. |

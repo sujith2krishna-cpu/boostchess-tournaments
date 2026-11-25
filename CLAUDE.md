@@ -109,6 +109,9 @@ shared by the web site and the Android app, so changing its shape affects both.
 - `only_timestamps_changed()` tells a daily job whether anything except `generated_at`/`last_seen`
   /per-source times changed (`--github-output` writes `real_changes=...`).
 - Output is deterministic: UTF-8, LF, 2-space indent, fixed key order.
+- KCA writes the year once (the end's): a start month later than the end month means the
+  start is in the year before. Dates set, not suspect, the text kept in `raw_dates` (reading the
+  page's format, not guessing; any other end-before-start is still flagged).
 - Do not hit live sites while developing. Use `--html tests/fixtures/...` or the test suite.
 
 ## Not done yet

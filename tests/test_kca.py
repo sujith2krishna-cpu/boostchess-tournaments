@@ -41,11 +41,15 @@ def test_dates_use_the_year_written_once_at_the_end():
     assert kca.parse_dates("soon") == (None, None)
 
 
-def test_a_range_across_new_year_is_flagged_not_fixed():
+def test_a_range_across_new_year_starts_in_the_year_before():
     entry = entries()["669/CAK/2025"]  # the site writes "Dec 29 - Jan 02, 2026"
+    assert kca.parse_dates("Dec 29 - Jan 02, 2026") == (date(2025, 12, 29), date(2026, 1, 2))
     event = kca.build_event(entry, None, TODAY)
-    assert event["flags"]["dates_suspect"] is True
+    assert (event["start"], event["end"]) == ("2025-12-29", "2026-01-02")
+    assert event["flags"]["dates_suspect"] is False
     assert event["raw_dates"] == {"start": "Dec 29 - Jan 02, 2026", "end": "Dec 29 - Jan 02, 2026"}
+    same_year = kca.build_event(entries()["736/CAK/2026"], None, TODAY)
+    assert same_year["raw_dates"] is None  # only a crossing range keeps the page's text
     assert event["city"] is None  # the district column says "-"
     assert not kca._recent(entry, TODAY)  # it ended in January 2026
 
