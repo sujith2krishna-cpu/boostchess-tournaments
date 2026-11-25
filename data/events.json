@@ -19809,8 +19809,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U7"
         ],
@@ -19866,8 +19866,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U7"
         ],
@@ -19923,8 +19923,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U9"
         ],
@@ -19980,8 +19980,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U9"
         ],
@@ -20037,8 +20037,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -20094,8 +20094,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U11"
         ],
@@ -20151,8 +20151,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -20208,8 +20208,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U13"
         ],
@@ -20265,8 +20265,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -20322,8 +20322,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U15"
         ],
@@ -20379,8 +20379,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
@@ -20436,8 +20436,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": null,
+        "fide_how": null,
         "age": [
           "U17"
         ],
