@@ -22,7 +22,8 @@ USER_AGENT = (
 REQUEST_TIMEOUT_SECONDS = 30
 RETRY_WAIT_SECONDS = 5
 MIN_FRACTION_OF_PREVIOUS = 0.5  # a source returning less than half of last time counts as failed
-SCHEMA_VERSION = 3  # 3: sources[], source_url, listed_by, verified, flags.possible_duplicate_of
+SCHEMA_VERSION = 4  # 4: results_url
+#                     3: sources[], source_url, listed_by, verified, flags.possible_duplicate_of
 #                     2: tags.age is a list; every event has a country
 
 # India has no daylight saving, so a fixed offset is exactly Asia/Kolkata and
@@ -34,10 +35,11 @@ DATA_DIR = ROOT / "data"
 
 EVENTS_CSV_COLUMNS = (
     "id", "name", "start_date", "end_date", "place", "state", "country", "link",
-    "brochure_url", "format", "age", "note",
+    "brochure_url", "format", "age", "note", "results_url",
 )
 OVERRIDES_CSV_COLUMNS = (
     "key", "start_date", "end_date", "place", "state", "hide", "cancelled", "note",
+    "register_url", "results_url",
 )
 FORMAT_ORDER = ("classical", "rapid", "blitz")
 
@@ -336,7 +338,7 @@ def derive_tags(name: str) -> dict:
 EVENT_KEYS = (
     "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
     "brochure_url", "source", "source_url", "sources", "listed_by", "verified",
-    "register_url", "organiser", "tags", "flags",
+    "register_url", "results_url", "organiser", "tags", "flags",
     "raw_dates", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
@@ -345,13 +347,13 @@ TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
 FLAG_DEFAULTS = (("dates_suspect", False), ("code_expanded", False),
                  ("code_unclear", False))
 EVENT_DEFAULTS = {
-    "source_url": None, "sources": None, "listed_by": None, "verified": None,
+    "source_url": None, "sources": None, "listed_by": None, "verified": None, "results_url": None,
     "codes": [], "start": None, "end": None, "place_text": None, "state": None,
     "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
     "raw_dates": None, "gone_from_source": False, "cancelled": False,
     "hidden": False, "note": None, "overridden": None,
 }
-OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city")
+OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
 # describe the same event. (Override > manual > aicf > the rest.)
@@ -406,6 +408,10 @@ def canonical(event: dict) -> dict:
         elif key == "flags":
             out[key] = {k: bool(flags_in.get(k, d)) for k, d in FLAG_DEFAULTS}
             out[key]["possible_duplicate_of"] = flags_in.get("possible_duplicate_of")
+        elif key == "results_url":
+            # schema 3 and older had no results_url: a Chess-Results page is the results page
+            out[key] = event["results_url"] if "results_url" in event else (
+                event.get("source_url") if event.get("source") == "chessresults_ind" else None)
         elif key == "listed_by":
             out[key] = event["listed_by"] if event.get("listed_by") else LISTED_BY.get(event.get("source"))
         elif key == "verified":
@@ -426,11 +432,11 @@ def _comparable(doc: dict, meta: dict) -> tuple:
     """Everything in the output except the timestamps (generated_at, every last_seen)."""
     events = [{k: v for k, v in canonical(e).items() if k != "last_seen"}
               for e in (doc or {}).get("events", [])]
-    stable = {k: v for k, v in (meta or {}).items() if k != "generated_at"}
+    stable = {k: v for k, v in (meta or {}).items() if k not in ("generated_at", "last_run_at")}
     if isinstance(stable.get("sources"), dict):  # per-source times are timestamps too
         stable["sources"] = {
             name: {k: ({a: b for a, b in v.items() if a != "at"} if k == "last_error" and isinstance(v, dict)
-                       else v) for k, v in info.items() if k != "last_success"}
+                       else v) for k, v in info.items() if k not in ("last_success", "next_due")}
             for name, info in stable["sources"].items()}
     return (doc or {}).get("schema_version"), events, stable
 

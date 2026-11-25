@@ -1,6 +1,6 @@
 {
-  "schema_version": 3,
-  "generated_at": "2026-11-25T10:04:55+05:30",
+  "schema_version": 4,
+  "generated_at": "2026-11-25T08:43:49+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -27,6 +27,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -76,6 +77,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -127,6 +129,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -178,6 +181,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -229,6 +233,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -280,6 +285,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -329,6 +335,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -381,6 +388,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -432,6 +440,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -483,6 +492,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -533,6 +543,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -585,6 +596,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -636,6 +648,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -687,6 +700,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -738,6 +752,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -789,6 +804,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -840,6 +856,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -891,6 +908,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -942,6 +960,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -991,6 +1010,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1042,6 +1062,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1091,6 +1112,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1140,6 +1162,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1191,6 +1214,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1242,6 +1266,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1293,6 +1318,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1342,6 +1368,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1393,6 +1420,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1444,6 +1472,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1495,6 +1524,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1546,6 +1576,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -1597,6 +1628,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1648,6 +1680,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1700,6 +1733,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1749,6 +1783,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1798,6 +1833,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1849,6 +1885,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1898,6 +1935,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1947,6 +1985,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -1996,6 +2035,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2050,6 +2090,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2101,6 +2142,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2150,6 +2192,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2201,6 +2244,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2252,6 +2296,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2303,6 +2348,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2352,6 +2398,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2403,6 +2450,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2452,6 +2500,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2503,6 +2552,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2552,6 +2602,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2601,6 +2652,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2650,6 +2702,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2701,6 +2754,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -2750,6 +2804,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2801,6 +2856,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2852,6 +2908,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2903,6 +2960,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -2954,6 +3012,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3005,6 +3064,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3054,6 +3114,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3101,6 +3162,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3150,6 +3212,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3199,6 +3262,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3248,6 +3312,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3297,6 +3362,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3346,6 +3412,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3397,6 +3464,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3448,6 +3516,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3499,6 +3568,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3550,6 +3620,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3599,6 +3670,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3648,6 +3720,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3699,6 +3772,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3750,6 +3824,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -3799,6 +3874,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3850,6 +3926,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3901,6 +3978,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -3952,6 +4030,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4003,6 +4082,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4052,6 +4132,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4103,6 +4184,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4152,6 +4234,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4203,6 +4286,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4254,6 +4338,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4303,6 +4388,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4352,6 +4438,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4401,6 +4488,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4450,6 +4538,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4499,6 +4588,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4551,6 +4641,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4602,6 +4693,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4653,6 +4745,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4704,6 +4797,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4755,6 +4849,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4806,6 +4901,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -4857,6 +4953,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4906,6 +5003,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -4955,6 +5053,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5004,6 +5103,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5053,6 +5153,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5102,6 +5203,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5152,6 +5254,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5203,6 +5306,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5252,6 +5356,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5303,6 +5408,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5354,6 +5460,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5403,6 +5510,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5452,6 +5560,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5501,6 +5610,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5550,6 +5660,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5599,6 +5710,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5648,6 +5760,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5699,6 +5812,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5750,6 +5864,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5801,6 +5916,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5853,6 +5969,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -5904,6 +6021,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -5953,6 +6071,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6002,6 +6121,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6053,6 +6173,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6102,6 +6223,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6151,6 +6273,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6202,6 +6325,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6253,6 +6377,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6304,6 +6429,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6355,6 +6481,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6404,6 +6531,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6453,6 +6581,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6502,6 +6631,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6551,6 +6681,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6600,6 +6731,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6651,6 +6783,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6702,6 +6835,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -6754,6 +6888,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6805,6 +6940,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6854,6 +6990,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6903,6 +7040,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -6952,6 +7090,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7003,6 +7142,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7054,6 +7194,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7103,6 +7244,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7152,6 +7294,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7201,6 +7344,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7252,6 +7396,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7303,6 +7448,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7354,6 +7500,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7405,6 +7552,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7456,6 +7604,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7507,6 +7656,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7558,6 +7708,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7608,6 +7759,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7659,6 +7811,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7710,6 +7863,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7759,6 +7913,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7808,6 +7963,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7859,6 +8015,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -7908,6 +8065,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -7959,6 +8117,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8010,6 +8169,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8059,6 +8219,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8108,6 +8269,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8159,6 +8321,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8210,6 +8373,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8262,6 +8426,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8313,6 +8478,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8362,6 +8528,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8413,6 +8580,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8462,6 +8630,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8513,6 +8682,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8564,6 +8734,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8616,6 +8787,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8667,6 +8839,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8716,6 +8889,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -8765,6 +8939,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8816,6 +8991,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8867,6 +9043,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8918,6 +9095,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -8969,6 +9147,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9020,6 +9199,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9071,6 +9251,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9122,6 +9303,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9173,6 +9355,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9224,6 +9407,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9273,6 +9457,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9322,6 +9507,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9371,6 +9557,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9420,6 +9607,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9469,6 +9657,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9520,6 +9709,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9571,6 +9761,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9622,6 +9813,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9671,6 +9863,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9720,6 +9913,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -9772,6 +9966,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9823,6 +10018,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9874,6 +10070,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9925,6 +10122,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -9976,6 +10174,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10025,6 +10224,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10074,6 +10274,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10123,6 +10324,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10174,6 +10376,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10225,6 +10428,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10276,6 +10480,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10327,6 +10532,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10378,6 +10584,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10427,6 +10634,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10478,6 +10686,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10529,6 +10738,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10580,6 +10790,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10631,6 +10842,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10680,6 +10892,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10729,6 +10942,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10778,6 +10992,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10827,6 +11042,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -10876,6 +11092,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10927,6 +11144,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -10978,6 +11196,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -11029,6 +11248,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11079,6 +11299,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11131,6 +11352,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11180,6 +11402,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11231,6 +11454,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11282,6 +11506,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11331,6 +11556,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11380,6 +11606,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11429,6 +11656,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11478,6 +11706,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -11529,6 +11758,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -11580,6 +11810,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -11631,6 +11862,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11680,6 +11912,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11729,6 +11962,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11778,6 +12012,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11827,6 +12062,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11876,6 +12112,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -11928,6 +12165,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -11979,6 +12217,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12030,6 +12269,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12079,6 +12319,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12130,6 +12371,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12181,6 +12423,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12232,6 +12475,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12281,6 +12525,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12330,6 +12575,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12381,6 +12627,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12432,6 +12679,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12483,6 +12731,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12534,6 +12783,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12585,6 +12835,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12634,6 +12885,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12684,6 +12936,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12735,6 +12988,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12786,6 +13040,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12837,6 +13092,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -12888,6 +13144,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12937,6 +13194,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -12986,6 +13244,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13037,6 +13296,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13086,6 +13346,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13137,6 +13398,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13188,6 +13450,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13237,6 +13500,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13286,6 +13550,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13337,6 +13602,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13388,6 +13654,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13439,6 +13706,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13493,6 +13761,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13544,6 +13813,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13593,6 +13863,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13642,6 +13913,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13693,6 +13965,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13744,6 +14017,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13795,6 +14069,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13846,6 +14121,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -13898,6 +14174,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13949,6 +14226,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -13998,6 +14276,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14049,6 +14328,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -14098,6 +14378,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14149,6 +14430,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14200,6 +14482,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -14249,6 +14532,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14300,6 +14584,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -14349,6 +14634,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14400,6 +14686,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14451,6 +14738,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14502,6 +14790,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14553,6 +14842,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14604,6 +14894,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14655,6 +14946,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14706,6 +14998,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14757,6 +15050,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -14806,6 +15100,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14857,6 +15152,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -14906,6 +15202,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -14955,6 +15252,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15006,6 +15304,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15053,6 +15352,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15104,6 +15404,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15153,6 +15454,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15204,6 +15506,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15255,6 +15558,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15302,6 +15606,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15359,6 +15664,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15410,6 +15716,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15461,6 +15768,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15512,6 +15820,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15563,6 +15872,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15612,6 +15922,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15664,6 +15975,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15716,6 +16028,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15765,6 +16078,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15814,6 +16128,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -15863,6 +16178,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15914,6 +16230,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -15968,6 +16285,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16017,6 +16335,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16066,6 +16385,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16115,6 +16435,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16169,6 +16490,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16218,6 +16540,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16265,6 +16588,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16316,6 +16640,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16367,6 +16692,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16418,6 +16744,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16469,6 +16796,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16520,6 +16848,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16571,6 +16900,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16622,6 +16952,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16671,6 +17002,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16720,6 +17052,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16771,6 +17104,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16822,6 +17156,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -16871,6 +17206,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16922,6 +17258,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -16973,6 +17310,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17024,6 +17362,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17075,6 +17414,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17126,6 +17466,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -17175,6 +17516,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17224,6 +17566,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17273,6 +17616,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17322,6 +17666,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17376,6 +17721,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17427,6 +17773,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17478,6 +17825,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17529,6 +17877,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17580,6 +17929,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -17629,6 +17979,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539912.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17680,6 +18031,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539933.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17731,6 +18083,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539939.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17782,6 +18135,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539942.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17833,6 +18187,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539972.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17884,6 +18239,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539979.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17935,6 +18291,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539984.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -17986,6 +18343,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539989.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -18037,6 +18395,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539994.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -18088,6 +18447,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539999.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -18139,6 +18499,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1540001.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -18190,6 +18551,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1540004.aspx?lan=1",
       "organiser": "MUZAFFARPUR DISTRICT CHESS ASSOCIATION",
       "tags": {
         "formats": [
@@ -18241,6 +18603,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1547459.aspx?lan=1",
       "organiser": "GENIUS CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -18290,6 +18653,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1543823.aspx?lan=1",
       "organiser": "Maestro Chess Academy",
       "tags": {
         "formats": [
@@ -18339,6 +18703,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538066.aspx?lan=1",
       "organiser": "Viral Trivedi 46621318",
       "tags": {
         "formats": [
@@ -18388,6 +18753,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538678.aspx?lan=1",
       "organiser": "A2H",
       "tags": {
         "formats": [
@@ -18437,6 +18803,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1540462.aspx?lan=1",
       "organiser": "A2H",
       "tags": {
         "formats": [
@@ -18486,6 +18853,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1542669.aspx?lan=1",
       "organiser": "Shatranj Academy",
       "tags": {
         "formats": [
@@ -18535,6 +18903,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544459.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -18586,6 +18955,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544461.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -18637,6 +19007,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544463.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -18688,6 +19059,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544464.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -18739,6 +19111,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544472.aspx?lan=1",
       "organiser": "MUNGELI JILA SHATRANJ SANGH",
       "tags": {
         "formats": [
@@ -18790,6 +19163,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1545241.aspx?lan=1",
       "organiser": "CITY CHESS FORUM",
       "tags": {
         "formats": [
@@ -18839,6 +19213,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1545399.aspx?lan=1",
       "organiser": "Matrix Chess Academy",
       "tags": {
         "formats": [
@@ -18890,6 +19265,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1545418.aspx?lan=1",
       "organiser": "Matrix Chess Academy",
       "tags": {
         "formats": [
@@ -18939,6 +19315,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1547250.aspx?lan=1",
       "organiser": "Achiever Chess Academy",
       "tags": {
         "formats": [
@@ -18990,6 +19367,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549418.aspx?lan=1",
       "organiser": "DAKSHIN DINAJPUR ZILLA DABA SANGSTHA",
       "tags": {
         "formats": [
@@ -19039,6 +19417,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549496.aspx?lan=1",
       "organiser": "Anu's Chess Academy",
       "tags": {
         "formats": [
@@ -19088,6 +19467,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549700.aspx?lan=1",
       "organiser": "Anu's Chess Academy",
       "tags": {
         "formats": [
@@ -19139,6 +19519,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549705.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19188,6 +19569,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549708.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19237,6 +19619,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549711.aspx?lan=1",
       "organiser": "Anu's Chess Academy",
       "tags": {
         "formats": [
@@ -19288,6 +19671,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549712.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19337,6 +19721,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549714.aspx?lan=1",
       "organiser": "Anu's Chess Academy",
       "tags": {
         "formats": [
@@ -19388,6 +19773,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549717.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19437,6 +19823,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549718.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19486,6 +19873,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549721.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19535,6 +19923,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549723.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19584,6 +19973,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549729.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19631,6 +20021,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549732.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19678,6 +20069,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549735.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19725,6 +20117,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549736.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -19772,6 +20165,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549873.aspx?lan=1",
       "organiser": "BS Chess Academy",
       "tags": {
         "formats": [
@@ -19821,6 +20215,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549904.aspx?lan=1",
       "organiser": "RAKESH K , DILEEP KUMAR K, ABDULLAH NAZEER",
       "tags": {
         "formats": [
@@ -19870,6 +20265,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
       "organiser": "Amity University Gurugram",
       "tags": {
         "formats": [
@@ -19919,6 +20315,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549170.aspx?lan=1",
       "organiser": "APEX University, Jaipur",
       "tags": {
         "formats": [
@@ -19968,6 +20365,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
       "organiser": "Winmore Academy",
       "tags": {
         "formats": [
@@ -20019,6 +20417,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
       "organiser": "Winmore Academy",
       "tags": {
         "formats": [
@@ -20070,6 +20469,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
       "organiser": "Winmore Academy",
       "tags": {
         "formats": [
@@ -20121,6 +20521,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
       "organiser": "Winmore Academy",
       "tags": {
         "formats": [
@@ -20172,6 +20573,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -20223,6 +20625,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550113.aspx?lan=1",
       "organiser": "COGNIZANCE ACADEMY",
       "tags": {
         "formats": [
@@ -20274,6 +20677,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -20321,6 +20725,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -20370,6 +20775,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1860",
+      "results_url": null,
       "organiser": "Jagannath Adapa",
       "tags": {
         "formats": [
@@ -20423,6 +20829,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -20470,6 +20877,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -20521,6 +20929,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -20568,6 +20977,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1727",
+      "results_url": null,
       "organiser": "Veer Chess Academy",
       "tags": {
         "formats": [],
@@ -20619,6 +21029,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -20668,6 +21079,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1857",
+      "results_url": null,
       "organiser": "Namma Chess Academy",
       "tags": {
         "formats": [],
@@ -20717,6 +21129,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://circlechess.com/registration?id=61557",
+      "results_url": "https://chess-results.com/tnr1528935.aspx?lan=1",
       "organiser": "Sajjan Academy",
       "tags": {
         "formats": [
@@ -20766,6 +21179,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538660.aspx?lan=1",
       "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -20817,6 +21231,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538666.aspx?lan=1",
       "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -20868,6 +21283,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539020.aspx?lan=1",
       "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -20919,6 +21335,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539869.aspx?lan=1",
       "organiser": "LITTLE CHAMPIONS CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -20970,6 +21387,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544771.aspx?lan=1",
       "organiser": "Next Step Chess Academy",
       "tags": {
         "formats": [
@@ -21019,6 +21437,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1547750.aspx?lan=1",
       "organiser": "Namma Chess Academy",
       "tags": {
         "formats": [
@@ -21068,6 +21487,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550089.aspx?lan=1",
       "organiser": "COGNIZANCE ACADEMY",
       "tags": {
         "formats": [
@@ -21117,6 +21537,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550100.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -21166,6 +21587,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550104.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -21215,6 +21637,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550108.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -21266,6 +21689,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21317,6 +21741,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21368,6 +21793,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21419,6 +21845,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21475,6 +21902,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
       "organiser": "ChessInd Academy",
       "tags": {
         "formats": [
@@ -21526,6 +21954,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21577,6 +22006,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21628,6 +22058,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -21677,6 +22108,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1800",
+      "results_url": null,
       "organiser": "ChessInd Academy",
       "tags": {
         "formats": [
@@ -21728,6 +22160,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1817",
+      "results_url": null,
       "organiser": "G. MASILAMANI",
       "tags": {
         "formats": [],
@@ -21777,6 +22210,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1824",
+      "results_url": null,
       "organiser": "SHREE RUDHRAA CULTURAL AND EDUCATIONAL TRUST",
       "tags": {
         "formats": [],
@@ -21826,6 +22260,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1835",
+      "results_url": null,
       "organiser": "SRI RAGHAVENDRA CHESS ACADEMY",
       "tags": {
         "formats": [],
@@ -21875,6 +22310,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1837",
+      "results_url": null,
       "organiser": "Masters Chess Club",
       "tags": {
         "formats": [],
@@ -21924,6 +22360,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1847",
+      "results_url": null,
       "organiser": "VIVEKANANDA CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -21975,6 +22412,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1853",
+      "results_url": null,
       "organiser": "Enpassant Chess School",
       "tags": {
         "formats": [],
@@ -22024,6 +22462,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1864",
+      "results_url": null,
       "organiser": "Mr. Siva",
       "tags": {
         "formats": [],
@@ -22073,6 +22512,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1865",
+      "results_url": null,
       "organiser": "GLOBAL SPORTS FOUNDATION",
       "tags": {
         "formats": [],
@@ -22122,6 +22562,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1866",
+      "results_url": null,
       "organiser": "Mr.Senthil Kumaran Palanivelu",
       "tags": {
         "formats": [],
@@ -22171,6 +22612,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1869",
+      "results_url": null,
       "organiser": "Mr. P. Ramar",
       "tags": {
         "formats": [],
@@ -22220,6 +22662,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://circlechess.com/registration?id=54993",
+      "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -22269,6 +22712,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1519390.aspx?lan=1",
       "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
       "tags": {
         "formats": [
@@ -22320,6 +22764,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1519392.aspx?lan=1",
       "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
       "tags": {
         "formats": [
@@ -22371,6 +22816,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1519396.aspx?lan=1",
       "organiser": "KING,S MAZE CHESS ACADEMY SAGARA.",
       "tags": {
         "formats": [
@@ -22420,6 +22866,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1526947.aspx?lan=1",
       "organiser": "Winning Move Academy",
       "tags": {
         "formats": [
@@ -22469,6 +22916,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
       "organiser": "GM Chess Academy",
       "tags": {
         "formats": [
@@ -22518,6 +22966,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535011.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22569,6 +23018,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535026.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22620,6 +23070,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535032.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22671,6 +23122,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535035.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22720,6 +23172,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535038.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22769,6 +23222,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535043.aspx?lan=1",
       "organiser": "OGCA @ BRAIN GYM",
       "tags": {
         "formats": [
@@ -22818,6 +23272,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1535743.aspx?lan=1",
       "organiser": "DSP Club",
       "tags": {
         "formats": [
@@ -22867,6 +23322,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://ticket360.co.in/events/3rd-open-freestyle-chess-tournament",
+      "results_url": "https://chess-results.com/tnr1538510.aspx?lan=1",
       "organiser": "64 Squares Chess Academy",
       "tags": {
         "formats": [
@@ -22916,6 +23372,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538695.aspx?lan=1",
       "organiser": "Shree Rudhraa Academy",
       "tags": {
         "formats": [
@@ -22965,6 +23422,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
       "organiser": "SRI RAGHAVENDRA CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -23014,6 +23472,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
       "organiser": "Magnum Professional Chess Academy",
       "tags": {
         "formats": [
@@ -23069,6 +23528,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
       "organiser": "Ahilya Chess Club",
       "tags": {
         "formats": [
@@ -23118,6 +23578,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
       "organiser": "Mr. Vasanthakumar M",
       "tags": {
         "formats": [
@@ -23167,6 +23628,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSdtRtGaaNNHJjCUzx2C3DfoStjbNdltyNBNBxqN6qS_qxI72Q/viewform?usp=publish-editor",
+      "results_url": "https://chess-results.com/tnr1544675.aspx?lan=1",
       "organiser": "SGCA, MR SRI RAM DWIVEDI (Org. Secretary)",
       "tags": {
         "formats": [
@@ -23216,6 +23678,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
       "organiser": "Enpassant Chess School",
       "tags": {
         "formats": [
@@ -23265,6 +23728,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549077.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [],
@@ -23312,6 +23776,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549184.aspx?lan=1",
       "organiser": "LOKMAT BHANDARA",
       "tags": {
         "formats": [
@@ -23361,6 +23826,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549781.aspx?lan=1",
       "organiser": "Castle & Crown Chess Academy",
       "tags": {
         "formats": [
@@ -23412,6 +23878,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549784.aspx?lan=1",
       "organiser": "Castle & Crown Chess Academy",
       "tags": {
         "formats": [
@@ -23463,6 +23930,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549789.aspx?lan=1",
       "organiser": "Castle & Crown Chess Academy",
       "tags": {
         "formats": [
@@ -23514,6 +23982,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549791.aspx?lan=1",
       "organiser": "Castle & Crown Chess Academy",
       "tags": {
         "formats": [
@@ -23565,6 +24034,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549794.aspx?lan=1",
       "organiser": "Castle & Crown Chess Academy",
       "tags": {
         "formats": [
@@ -23614,6 +24084,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550009.aspx?lan=1",
       "organiser": "Rotary Club of Nashik North",
       "tags": {
         "formats": [
@@ -23663,6 +24134,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550022.aspx?lan=1",
       "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
       "tags": {
         "formats": [
@@ -23714,6 +24186,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550023.aspx?lan=1",
       "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
       "tags": {
         "formats": [
@@ -23765,6 +24238,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550026.aspx?lan=1",
       "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
       "tags": {
         "formats": [
@@ -23816,6 +24290,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550028.aspx?lan=1",
       "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
       "tags": {
         "formats": [
@@ -23867,6 +24342,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550030.aspx?lan=1",
       "organiser": "GUN & SHELL FACTORY KARMACHARI UNION",
       "tags": {
         "formats": [
@@ -23916,6 +24392,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550102.aspx?lan=1",
       "organiser": "Rising Star Chess Academy",
       "tags": {
         "formats": [
@@ -23965,6 +24442,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550114.aspx?lan=1",
       "organiser": "SILVER LEAF MONTESSORI SCHOOL",
       "tags": {
         "formats": [
@@ -24014,6 +24492,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
       "organiser": "Masters chess club",
       "tags": {
         "formats": [
@@ -24065,6 +24544,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -24114,6 +24594,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -24163,6 +24644,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -24210,6 +24692,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1815",
+      "results_url": null,
       "organiser": "DRAGON CHESS ACADEMY",
       "tags": {
         "formats": [],
@@ -24261,6 +24744,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -24308,6 +24792,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1848",
+      "results_url": null,
       "organiser": "Mr. D Anand",
       "tags": {
         "formats": [],
@@ -24359,6 +24844,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24410,6 +24896,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24461,6 +24948,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24512,6 +25000,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24563,6 +25052,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24614,6 +25104,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24665,6 +25156,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24716,6 +25208,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24767,6 +25260,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24818,6 +25312,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24869,6 +25364,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -24920,6 +25416,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1842",
+      "results_url": null,
       "organiser": "SATHYAN K",
       "tags": {
         "formats": [],
@@ -24969,6 +25466,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1846",
+      "results_url": null,
       "organiser": "Mr. Shiraj",
       "tags": {
         "formats": [
@@ -25020,6 +25518,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1850",
+      "results_url": null,
       "organiser": "Vetri Chess Academy",
       "tags": {
         "formats": [],
@@ -25069,6 +25568,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1856",
+      "results_url": null,
       "organiser": "Mr.BALAKUMARAN GURUSAMY",
       "tags": {
         "formats": [],
@@ -25118,6 +25618,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1858",
+      "results_url": null,
       "organiser": "FA B Jayaprakash",
       "tags": {
         "formats": [
@@ -25169,6 +25670,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1859",
+      "results_url": null,
       "organiser": "ANANDHAN CHESS ACADEMY",
       "tags": {
         "formats": [],
@@ -25218,6 +25720,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1863",
+      "results_url": null,
       "organiser": "Mariammal V",
       "tags": {
         "formats": [],
@@ -25267,6 +25770,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1867",
+      "results_url": null,
       "organiser": "M. Vinoth",
       "tags": {
         "formats": [],
@@ -25316,6 +25820,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1868",
+      "results_url": null,
       "organiser": "Mr. RAJKUMAR",
       "tags": {
         "formats": [],
@@ -25367,6 +25872,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1870",
+      "results_url": null,
       "organiser": "Harshana Chess Academy",
       "tags": {
         "formats": [],
@@ -25416,6 +25922,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1871",
+      "results_url": null,
       "organiser": "Dr. K Nehru",
       "tags": {
         "formats": [],
@@ -25465,6 +25972,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1873",
+      "results_url": null,
       "organiser": "Soundarya",
       "tags": {
         "formats": [
@@ -25516,6 +26024,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1533242.aspx?lan=1",
       "organiser": "KANCHI CHESS ACADEMY",
       "tags": {
         "formats": [
@@ -25565,6 +26074,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
+      "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
       "organiser": "Anandhan Chess Academy",
       "tags": {
         "formats": [
@@ -25614,6 +26124,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
       "organiser": "GIRISTUTI CHECKMATE SCHOOL OF CHESS PRESENTS",
       "tags": {
         "formats": [
@@ -25667,6 +26178,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -25717,6 +26229,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -25766,6 +26279,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1548779.aspx?lan=1",
       "organiser": "Sara Bangla Daba Sanghtha",
       "tags": {
         "formats": [
@@ -25815,6 +26329,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1548787.aspx?lan=1",
       "organiser": "Sara Bangla Daba Sanghtha",
       "tags": {
         "formats": [
@@ -25866,6 +26381,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -25917,6 +26433,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -25966,6 +26483,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1836",
+      "results_url": null,
       "organiser": "Mr. Hariprasad",
       "tags": {
         "formats": [
@@ -26017,6 +26535,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1862",
+      "results_url": null,
       "organiser": "NATHAN CHESS ACADEMY",
       "tags": {
         "formats": [],
@@ -26070,6 +26589,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26117,6 +26637,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
       "organiser": "Nagaland Chess Association",
       "tags": {
         "formats": [
@@ -26179,6 +26700,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26228,6 +26750,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26279,6 +26802,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26328,6 +26852,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": null,
+      "results_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -26379,6 +26904,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26432,6 +26958,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26481,6 +27008,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26530,6 +27058,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26579,6 +27108,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26630,6 +27160,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26681,6 +27212,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26732,6 +27264,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26783,6 +27316,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26834,6 +27368,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26885,6 +27420,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -26934,6 +27470,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -26985,6 +27522,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -27034,6 +27572,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27085,6 +27624,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27136,6 +27676,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27187,6 +27728,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27238,6 +27780,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27289,6 +27832,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -27336,6 +27880,7 @@
       "listed_by": "chess-results",
       "verified": false,
       "register_url": "https://ticket360.co.in/events/1st-all-india-open-under-8-rapid-chess-festival",
+      "results_url": "https://chess-results.com/tnr1538096.aspx?lan=1",
       "organiser": "JP Anand Chess Academy (Reg. No: UDYAM-TN-) Tiruchengode",
       "tags": {
         "formats": [
@@ -27389,6 +27934,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27440,6 +27986,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27491,6 +28038,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -27538,6 +28086,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27589,6 +28138,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27640,6 +28190,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27691,6 +28242,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27740,6 +28292,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27793,6 +28346,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27844,6 +28398,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27893,6 +28448,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27944,6 +28500,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -27995,6 +28552,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28046,6 +28604,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28095,6 +28654,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1832",
+      "results_url": null,
       "organiser": "Ms. Sivaranjani S",
       "tags": {
         "formats": [
@@ -28148,6 +28708,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28195,6 +28756,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28246,6 +28808,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28293,6 +28856,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28344,6 +28908,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28393,6 +28958,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28444,6 +29010,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28491,6 +29058,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28540,6 +29108,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28594,6 +29163,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28645,6 +29215,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28694,6 +29265,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28741,6 +29313,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28792,6 +29365,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -28839,6 +29413,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28890,6 +29465,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28941,6 +29517,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -28992,6 +29569,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29039,6 +29617,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29090,6 +29669,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29141,6 +29721,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29188,6 +29769,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29237,6 +29819,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29286,6 +29869,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29335,6 +29919,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29384,6 +29969,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29433,6 +30019,7 @@
       "listed_by": "chessbase",
       "verified": false,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29484,6 +30071,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29533,6 +30121,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29580,6 +30169,7 @@
       "listed_by": "chessfee",
       "verified": false,
       "register_url": "https://www.chessfee.com/treg.php?id=1872",
+      "results_url": null,
       "organiser": "Indian Chess Consortium (ICC)",
       "tags": {
         "formats": [
@@ -29633,6 +30223,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -29684,6 +30275,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29733,6 +30325,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29782,6 +30375,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29831,6 +30425,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29880,6 +30475,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29929,6 +30525,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -29978,6 +30575,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30027,6 +30625,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30077,6 +30676,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30126,6 +30726,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -30177,6 +30778,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -30228,6 +30830,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30277,6 +30880,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30326,6 +30930,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -30377,6 +30982,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30426,6 +31032,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -30477,6 +31084,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [
@@ -30528,6 +31136,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30577,6 +31186,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30626,6 +31236,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],
@@ -30680,6 +31291,7 @@
       "listed_by": "aicf",
       "verified": true,
       "register_url": null,
+      "results_url": null,
       "organiser": null,
       "tags": {
         "formats": [],

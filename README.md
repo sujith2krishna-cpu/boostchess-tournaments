@@ -42,7 +42,7 @@ Rules every source follows:
 - We **check `robots.txt` at the start of every run**. If it does not allow a page,
   that source is skipped and the reason is written to `meta.json`.
 - One clear name: `BoostchessBot (+https://github.com/sujith2krishna-cpu/boostchess-tournaments)`.
-- At most **one run per day**, at least **3 seconds between requests** to the same
+- Each source is fetched **at most once every 12 hours**, with at least **3 seconds between requests** to the same
   site, a time-out, **one retry**, and at most **60 requests per site per run**.
 - We store **facts and links only**. We never copy descriptions, posters, brochure
   files or phone numbers. A brochure is just a link to the organiser's file.
@@ -103,7 +103,7 @@ pip install -r requirements.txt
 python scripts/build_events.py
 ```
 
-A source that was already fetched today is skipped (add `--force` to override).
+A source fetched less than 12 hours ago is skipped (add `--force` for a deliberate refresh).
 `--summary-file` and `--github-output` are for the daily Action.
 `--html some-saved-aicf-page.html` runs offline with a saved AICF page only.
 
@@ -115,7 +115,10 @@ link, how many were joined, and possible duplicates.
 
 ## The daily run (GitHub Action)
 
-Every day at **21:40 UTC (03:10 India time)** GitHub runs `.github/workflows/daily.yml`:
+Every **3 hours, at minute 17** (`17 */3 * * *`, a quiet minute, because GitHub drops busy-hour
+schedules), GitHub runs `.github/workflows/daily.yml`. Each source is fetched only when its
+last good fetch is **12 or more hours old**, so most runs fetch nothing: they test, publish and
+check, and finish in about a minute. The steps:
 
 1. runs the tests first (if one fails, nothing is fetched or committed);
 2. runs `scripts/build_events.py` (all politeness rules above apply);
@@ -125,7 +128,9 @@ Every day at **21:40 UTC (03:10 India time)** GitHub runs `.github/workflows/dai
    Only the `data/` folder is ever committed;
 4. publishes the `data/` folder on GitHub Pages (whether or not anything was committed) and
    checks the published files;
-5. **heartbeat:** if any source has had no successful fetch for 7 days, the run fails and
+5. **stale-data alarm:** if even the newest successful fetch of any source is more than
+   **30 hours** old, the run fails (the robot has stopped bringing in data);
+6. **heartbeat:** if any source has had no successful fetch for 7 days, the run fails and
    names the source.
 
 Every run has a **job summary** (open the run on GitHub, then *Summary*): per-source
@@ -144,8 +149,10 @@ code writes.
 ### Run it by hand
 
 On GitHub: **Actions** tab, **Daily tournament data** on the left, **Run workflow** button
-(branch `main`), **Run workflow**. A source that was already fetched on the same Indian day is
-skipped (one run per site per day), so a second press the same day does nothing new.
+(branch `main`), **Run workflow**. Without ticking anything, it fetches only the sources that
+are due (12 hours since their last good fetch); otherwise it just republishes. Tick
+**force** for a deliberate refresh of every source now (the schedule never does this; please
+use it rarely, the sites are small).
 
 ### What a failure e-mail means
 
@@ -155,7 +162,8 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 |---|---|---|
 | **Run the tests** | The code or a test is broken. Nothing was fetched. | Fix the code (or revert the last change). |
 | **Build the data** | *Every* source failed (or a manual file has a mistake: the message names the file and line). Nothing was written. | Fix the manual row; otherwise wait a day, then see `data/meta.json` → `sources` → `last_error`. |
-| **Heartbeat** | One source has had no good fetch for 7 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
+| **Heartbeat**, "Stale data" | No source has been fetched for over 30 hours: the schedule has stopped or every source fails (the run still published the old data). | Open the Actions tab: are runs happening every 3 hours? If not, see "Pausing the schedule" (it may be switched off). If they run, read the summary of the last ones. |
+| **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 7 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
 | **Check the published files** | The published `events.json` is wrong or not reachable. | Re-run the workflow; if it repeats, check Settings → Pages. |
 
 If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
@@ -180,7 +188,7 @@ press **Enable workflow**.
 
 ```json
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "generated_at": "2026-11-24T10:30:00+05:30",
   "events": [ { ...one event... } ]
 }
@@ -188,7 +196,11 @@ press **Enable workflow**.
 
 Events are sorted by start date.
 
-**Schema version 3** (web and Android must read this version). What changed:
+**Schema version 4** (web and Android must read this version). What changed:
+
+- **Version 4:** new field `results_url` (right after `register_url`): where the results are.
+  For Chess-Results events it is the tournament page; for others it is empty until a link is
+  known (you can add one in `overrides.csv`). It stays on the event after the event ends.
 
 - **Version 3:** new fields `source_url`, `sources` (a list), `listed_by`,
   `verified`, `flags.possible_duplicate_of`, and `tags.categories`. `source`
@@ -212,7 +224,8 @@ One event looks like this:
 | `source_url` | The event's page on that source. |
 | `sources` | **List** of `{source, source_url, register_url}`, one per site that lists the event (more than one only when joined by an AICF code). |
 | `listed_by`, `verified` | Trust labels (see above). |
-| `register_url` | The organiser's registration link, if a site shows one. We only link to it. |
+| `register_url` | The organiser's registration link, if a site shows one (or you add one). We only link to it. |
+| `results_url` | Where to see results, e.g. the Chess-Results tournament page; `null` when not known. |
 | `organiser` | Organiser's name when a site shows one. |
 | `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true` or `null`), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when the source clearly says so; never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
@@ -230,11 +243,13 @@ is worked out from `start` and `end` and today's date in Indian time
 
 ### `data/meta.json`
 
-Counts for a quick health check: `generated_at`, `scraped_count`, `manual_count`,
+Counts for a quick health check: `generated_at`, `last_run_at` (the time of the latest
+run, even one that fetched nothing; proof the robot is alive), `scraped_count`, `manual_count`,
 `total`, `suspect_dates_count`, `missing_state_count`, `gone_from_source_count`,
 and `sources`: for each source `enabled`, `status` (`ok`, `failed`, `skipped`,
 `disabled`), `message` (why, when not ok), `count` (events currently listed),
-`last_success` (time) and `last_error` (`{at, message}`).
+`last_success` (time), `last_error` (`{at, message}`) and `next_due` (the earliest time it
+will be fetched again).
 
 ## How to add an event yourself
 
@@ -249,14 +264,14 @@ You do not need to install anything. Do it on the GitHub website:
 The next time the tool runs, your tournament appears in `events.json`.
 
 Columns (in this order):
-`id, name, start_date, end_date, place, state, country, link, brochure_url, format, age, note`
+`id, name, start_date, end_date, place, state, country, link, brochure_url, format, age, note, results_url`
 
 Only **name** and **start_date** are required. Example row:
 
 ```csv
-id,name,start_date,end_date,place,state,country,link,brochure_url,format,age,note
-pune-club-rapid-2027,Pune Club Rapid Under-11,05-01-2027,06-01-2027,"Pune, Maharashtra",,,https://example.org/register,,rapid,U11,Entry at the door
-us-masters-2027,US Masters,25-11-2027,29-11-2027,"Charlotte, North Carolina",,US,,,,,
+id,name,start_date,end_date,place,state,country,link,brochure_url,format,age,note,results_url
+pune-club-rapid-2027,Pune Club Rapid Under-11,05-01-2027,06-01-2027,"Pune, Maharashtra",,,https://example.org/register,,rapid,U11,Entry at the door,
+us-masters-2027,US Masters,25-11-2027,29-11-2027,"Charlotte, North Carolina",,US,,,,,,
 ```
 
 Tips:
@@ -283,23 +298,45 @@ Tips:
 
 Events from the websites cannot be edited directly because they are re-read
 every day. Instead, add a line to `data/manual/overrides.csv`. Columns:
-`key, start_date, end_date, place, state, hide, cancelled, note`
+`key, start_date, end_date, place, state, hide, cancelled, note, register_url, results_url`
 
 - `key` is the event `id` (like `aicf-472290`) or the 6-digit AICF code (like `472290`).
 - Fill in **only** what you want to change; leave the rest empty.
 - Write `yes` in `hide` to hide the event, or in `cancelled` to mark it cancelled.
 
 ```csv
-key,start_date,end_date,place,state,hide,cancelled,note
-aicf-473594,03-04-2026,29-04-2026,,,,,Dates swapped on AICF page; checked brochure
-aicf-111111,,,,,yes,,Duplicate listing
-aicf-222222,,,,,,yes,Cancelled by organiser
-aicf-333333,,,"Sagar, Madhya Pradesh",,,,
+key,start_date,end_date,place,state,hide,cancelled,note,register_url,results_url
+aicf-473594,03-04-2026,29-04-2026,,,,,Dates swapped on AICF page; checked brochure,,
+aicf-111111,,,,,yes,,Duplicate listing,,
+aicf-222222,,,,,,yes,Cancelled by organiser,,
+aicf-333333,,,"Sagar, Madhya Pradesh",,,,,,
 ```
 
 Order of importance: **override > manual event > AICF > other sites**. Delete the
 line and the event goes back to what the sites say. A key that matches nothing is
 only a warning.
+
+## How to add a link yourself
+
+Found the registration page or the results page for an event? Add a line to
+`data/manual/overrides.csv` (on GitHub: open the file, pencil, add the line, **Commit changes**).
+Leave every other column empty. The address must start with `https://` (or `http://`); if it
+does not, the run stops and names the line.
+
+Registration link:
+
+```csv
+aicf-473594,,,,,,,,https://example.org/register-for-kpk-open,
+```
+
+Results link:
+
+```csv
+aicf-473594,,,,,,,,,https://chess-results.com/tnr1234567.aspx?lan=1
+```
+
+(Both can go on the same line.) Your link wins over a link a site gives. For your own events
+in `events.csv`, put the registration link in `link` and the results link in `results_url`.
 
 ## What happens when a row has a mistake
 

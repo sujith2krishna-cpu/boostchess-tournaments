@@ -65,7 +65,7 @@ def test_manual_id_is_stable_between_runs(data_dir):
     (",Cup,03-02-2027,,Goa,,,,,,eleven,", "line 2: age 'eleven' is not understood"),
     ("aicf-123456,Cup,03-02-2027,,Goa,,,,,,,", "reserved for AICF events"),
     ("bad id,Cup,03-02-2027,,Goa,,,,,,,", "may only use letters"),
-    (",Cup,03-02-2027,,Goa,,,,,,,extra,more", "more values than the header has columns"),
+    (",Cup,03-02-2027,,Goa,,,,,,,extra,more,again", "more values than the header has columns"),
 ])
 def test_manual_row_error_stops_with_plain_message_and_writes_nothing(data_dir, line, expected):
     build(data_dir, [row("Existing", "400001")])

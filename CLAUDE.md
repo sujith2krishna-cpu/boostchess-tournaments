@@ -31,7 +31,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   and log it. Never work around it (for example: ChessBase's `/api/` and the data
   service its calendar page calls are off limits).
 - User-Agent `BoostchessBot (+https://github.com/sujith2krishna-cpu/boostchess-tournaments)`.
-- At most one run per day per source, >= 3 seconds between requests to one site, a timeout,
+- Each source at most once every 12 hours (`FETCH_INTERVAL_HOURS`, from its last success in
+  meta.json; `--force` / the workflow's force box only for a deliberate manual refresh, never
+  the schedule), >= 3 seconds between requests to one site, a timeout,
   one retry, at most 60 requests per site per run. All of this lives in `sources/polite.py`;
   use `PoliteClient` for every request, never `requests` directly.
 - Fetch listing pages; fetch an event's details page only when the event is new or its listing
@@ -57,7 +59,8 @@ shared by the web site and the Android app, so changing its shape affects both.
   Pages needs them). No `secrets.` anywhere in the workflow.
 - Tests run first; a failing test stops everything. The commit happens only when
   `real_changes == 'true'`. The heartbeat (`scripts/heartbeat.py`) fails the run when a source
-  has had no successful fetch for 7 days. `tests/test_daily.py` checks these rules in the
+  has had no successful fetch for 7 days, and when the newest fetch of any source is over
+  30 hours old (stale data). The schedule is every 3 hours at minute 17; most runs fetch nothing. `tests/test_daily.py` checks these rules in the
   workflow file; keep them true when you edit it.
 - Pages publishes only `data/`. `scripts/verify_published.py` checks the live files.
 
@@ -88,7 +91,7 @@ shared by the web site and the Android app, so changing its shape affects both.
 - Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`.
 - No `status` is stored. `status(event, today)` computes ongoing/upcoming/past in Indian time
   (fixed UTC+05:30, no DST, so no `tzdata` needed).
-- Schema version is `SCHEMA_VERSION` (now 3). Bump it, update the README and add a migration in
+- Schema version is `SCHEMA_VERSION` (now 4). Bump it, update the README and add a migration in
   `canonical()` whenever the shape of an event changes; stored events are read through `canonical()`.
 - `only_timestamps_changed()` tells a daily job whether anything except `generated_at`/`last_seen`
   /per-source times changed (`--github-output` writes `real_changes=...`).

@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from eventlib import DATA_DIR, IST  # noqa: E402
 
 DEFAULT_DAYS = 7
+STALE_DATA_HOURS = 30
 
 
 def stale_sources(meta: dict, today: date, days: int = DEFAULT_DAYS) -> list[dict]:
@@ -46,6 +47,28 @@ def stale_sources(meta: dict, today: date, days: int = DEFAULT_DAYS) -> list[dic
     return stale
 
 
+def stale_data(meta: dict, now: datetime, hours: float = STALE_DATA_HOURS) -> str | None:
+    """A message when even the newest successful fetch of any switched-on source is older than
+    `hours` (the whole robot has stopped bringing in data); None when data is fresh."""
+    newest = None
+    for info in (meta.get("sources") or {}).values():
+        if not info.get("enabled", True) or info.get("status") == "disabled" or not info.get("last_success"):
+            continue
+        try:
+            when = datetime.fromisoformat(info["last_success"])
+        except ValueError:
+            continue
+        newest = when if newest is None or when > newest else newest
+    if newest is None:
+        return "Stale data: no switched-on source has ever been fetched successfully."
+    age = (now - newest).total_seconds() / 3600
+    if age > hours:
+        return (f"Stale data: the newest successful fetch of any source was {age:.1f} hours ago "
+                f"({newest.isoformat()}), more than {hours:g} hours. The scheduled runs may have "
+                "stopped, or every source is failing; see data/meta.json and the Actions tab.")
+    return None
+
+
 def message(stale: list[dict]) -> str:
     lines = []
     for item in stale:
@@ -64,6 +87,7 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data-dir", default=str(DATA_DIR))
     parser.add_argument("--days", type=int, default=DEFAULT_DAYS)
+    parser.add_argument("--stale-hours", type=float, default=STALE_DATA_HOURS)
     parser.add_argument("--summary-file", metavar="FILE", help="append the result to the job summary")
     args = parser.parse_args(argv)
     path = Path(args.data_dir) / "meta.json"
@@ -71,12 +95,17 @@ def main(argv=None) -> int:
         print(f"ERROR: {path} not found; nothing to check.", file=sys.stderr)
         return 1
     meta = json.loads(path.read_text(encoding="utf-8"))
-    stale = stale_sources(meta, datetime.now(IST).date(), args.days)
-    if not stale:
-        print(f"Heartbeat ok: every source has a successful fetch within the last {args.days} days.")
+    now = datetime.now(IST)
+    stale = stale_sources(meta, now.date(), args.days)
+    old_data = stale_data(meta, now, args.stale_hours)
+    if not stale and not old_data:
+        print(f"Heartbeat ok: every source has a successful fetch within the last {args.days} days, "
+              f"and the newest fetch is less than {args.stale_hours:g} hours old.")
         return 0
-    text = message(stale)
+    text = chr(10).join(t for t in (old_data, message(stale) if stale else "") if t)
     print(text, file=sys.stderr)
+    if old_data:
+        print(f"::error title=Stale data::{old_data}")
     for item in stale:
         print(f"::error title=Source gone quiet::{item['source']}: no successful fetch for "
               f"{args.days}+ days")

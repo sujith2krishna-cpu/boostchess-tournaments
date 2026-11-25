@@ -45,6 +45,7 @@ from sources import aicf, chessbase_calendar, chessfee, chessresults_ind  # noqa
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
+from datetime import timedelta  # noqa: E402
 import daily  # noqa: E402
 
 SOURCE_MODULES = {
@@ -265,7 +266,8 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
         else:
             tags["age"] = ages
     urls = {}
-    for column, field in (("link", "register_url"), ("brochure_url", "brochure_url")):
+    for column, field in (("link", "register_url"), ("brochure_url", "brochure_url"),
+                          ("results_url", "results_url")):
         if row.get(column):
             url = valid_url(row[column])
             if url is None or not re.match(r"https?://", row[column].strip(), re.I):
@@ -289,6 +291,7 @@ def event_from_manual_row(line: int, row: dict, rel: str, today: date,
         "brochure_url": urls.get("brochure_url"),
         "source": "manual",
         "register_url": urls.get("register_url"),
+        "results_url": urls.get("results_url"),
         "tags": tags,
         "first_seen": today.isoformat(),
         "last_seen": today.isoformat(),
@@ -347,6 +350,16 @@ def load_overrides(data_dir: Path, errors: list[str], warnings: list[str]) -> li
         item["hide"] = _yes(row.get("hide", ""), "hide", line, rel, errors)
         item["cancelled"] = _yes(row.get("cancelled", ""), "cancelled", line, rel, errors)
         item["note"] = row.get("note") or None
+        for column in ("register_url", "results_url"):
+            item[column] = None
+            value = (row.get(column) or "").strip()
+            if value:
+                url = valid_url(value)
+                if url is None or not re.match(r"https?://", value, re.I):
+                    errors.append(f"{rel} line {line}: {column} '{value}' is not a full web address "
+                                  "(it must start with http:// or https://).")
+                else:
+                    item[column] = url
         overrides.append(item)
     return overrides
 
@@ -414,6 +427,9 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
                 event["cancelled"] = True
             if item["note"]:
                 event["note"] = item["note"]
+            for field in ("register_url", "results_url"):
+                if item[field]:
+                    change(event, field, item[field])
 
 
 
@@ -463,7 +479,8 @@ def _join(members: list[dict]) -> dict:
         if link not in links:
             links.append(link)
     for other in members[1:]:
-        for field in ("brochure_url", "register_url", "organiser", "city", "state", "place_text"):
+        for field in ("brochure_url", "register_url", "results_url", "organiser", "city", "state",
+                      "place_text"):
             if event[field] is None:
                 event[field] = other[field]
         event["tags"] = merge_tags(event["tags"], other["tags"])
@@ -542,16 +559,31 @@ def _source_meta(previous: dict | None, now_iso: str) -> dict:
     return {"last_success": previous.get("last_success"), "last_error": previous.get("last_error")}
 
 
+FETCH_INTERVAL_HOURS = 12  # a source is fetched at most once every 12 hours
+
+
+def fetch_due_at(last_success: str | None, hours: float | None) -> datetime | None:
+    """When a source may be fetched again (None = right away)."""
+    if not hours or not last_success:
+        return None
+    try:
+        return datetime.fromisoformat(last_success).astimezone(IST) + timedelta(hours=hours)
+    except ValueError:
+        return None
+
+
 def _count(snapshot: dict) -> int:
     return sum(1 for e in snapshot["events"] if not e["gone_from_source"])
 
 
 def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = None,
         min_rows: int = MIN_ROWS, config: dict | None = None,
-        skip_if_fetched_today: bool = False) -> dict:
+        min_hours_between_fetches: float | None = None) -> dict:
     """Do a full build. Returns a report; raises BuildError (and writes nothing) on trouble.
 
     `html` is a saved AICF page (offline use); with it, only AICF is read unless `config` says more.
+    `min_hours_between_fetches` (12 for the command line) skips a source fetched more recently
+    than that; None fetches every switched-on source.
     """
     data_dir = Path(data_dir)
     now = (now or datetime.now(IST)).astimezone(IST).replace(microsecond=0)
@@ -587,12 +619,17 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
             before = {"last_success": previous_meta["generated_at"]}  # data from before sources[]
         meta = {"enabled": bool(config.get(name, False)), "status": "ok", "message": None,
                 **_source_meta(before, now_iso)}
-        stats = {"requests": 0}
+        stats = {"requests": 0, "due": True}
+        due_at = fetch_due_at(meta["last_success"], min_hours_between_fetches)
         if not meta["enabled"]:
             meta.update(status="disabled", message=("not read in offline mode (--html)" if offline
                                                     else "switched off in config/sources.json"))
-        elif skip_if_fetched_today and (meta["last_success"] or "")[:10] == today.isoformat():
-            meta.update(status="skipped", message="already fetched today (at most one run per day)")
+            stats["due"] = False
+        elif due_at is not None and due_at > now:
+            # Not due yet: nothing is fetched and what meta.json says about it stays as it was.
+            before = before or {}
+            meta.update(status=before.get("status", "ok"), message=before.get("message"))
+            stats["due"] = False
             succeeded += 1
         else:
             attempted += 1
@@ -624,6 +661,9 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
                 problems.append(f"{name}: {text}")
             stats["requests"] = client.requests_made
         meta["count"] = _count(snapshot)
+        next_due = fetch_due_at(meta["last_success"], min_hours_between_fetches or FETCH_INTERVAL_HOURS)
+        meta["next_due"] = (None if not meta["enabled"]
+                            else (max(next_due, now) if next_due else now).isoformat())
         snapshots[name], source_meta[name], source_stats[name] = snapshot, meta, stats
 
     if attempted and succeeded == 0:
@@ -647,6 +687,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     events = sorted((canonical(e) for e in events), key=sort_key)
     meta = {
         "generated_at": now_iso,
+        "last_run_at": now_iso,
         "scraped_count": sum(1 for e in events if e["source"] != "manual" and not e["gone_from_source"]),
         "manual_count": sum(1 for e in events if e["source"] == "manual"),
         "total": len(events),
@@ -671,7 +712,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         live = [e for e in snapshots[name]["events"] if not e["gone_from_source"]]
         per_source[name] = {
             "status": source_meta[name]["status"], "message": source_meta[name]["message"],
-            "blocked": name in blocked,
+            "blocked": name in blocked, "due": source_stats[name].get("due", True),
+            "next_due": source_meta[name]["next_due"],
             "requests": source_stats[name].get("requests", 0), "found": len(live),
             "by_status": dict(Counter(status(e, today) for e in live)),
             "with_register_url": sum(1 for e in live if e["register_url"]),
@@ -695,6 +737,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "possible_duplicates": duplicates,
         "per_source": per_source,
         "only_timestamps_changed": timestamps_only,
+        "fetched_any": any(source_stats[n].get("due") for n in AUTOMATIC_SOURCES),
         "changes": count_changes(previous_events, events),
         "warnings": warnings,
         "events": events,
@@ -740,7 +783,8 @@ def main(argv=None) -> int:
                                        "only AICF is read)")
     parser.add_argument("--data-dir", default=str(DATA_DIR), help="where data/ lives")
     parser.add_argument("--force", action="store_true",
-                        help="fetch a source even if it was already fetched today")
+                        help=f"fetch every source now, even if it was fetched less than "
+                             f"{FETCH_INTERVAL_HOURS} hours ago (a deliberate manual refresh)")
     parser.add_argument("--github-output", metavar="FILE",
                         help="append 'real_changes=true|false' and 'commit_message=...' to FILE "
                              "(for a GitHub Action)")
@@ -749,7 +793,8 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     try:
         html = Path(args.html).read_text(encoding="utf-8") if args.html else None
-        report = run(args.data_dir, html=html, skip_if_fetched_today=not args.force and html is None)
+        interval = None if args.force or html is not None else FETCH_INTERVAL_HOURS
+        report = run(args.data_dir, html=html, min_hours_between_fetches=interval)
     except BuildError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         daily.write_summary(args.summary_file, daily.failure_markdown(str(exc)))
