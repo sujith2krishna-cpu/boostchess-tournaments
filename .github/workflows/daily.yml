@@ -107,8 +107,8 @@ jobs:
 
       # Last, so the data is still published when it fails: the run fails (and GitHub
       # e-mails you) when the newest fetch of any source is over 30 hours old, or when
-      # one source has had no successful fetch for 7 days.
-      - name: Heartbeat (stale data after 30 hours, silent source after 7 days)
+      # one source has had no successful fetch for 3 days.
+      - name: Heartbeat (stale data after 30 hours, silent source after 3 days)
         if: steps.build.outcome == 'success'
         run: python scripts/heartbeat.py --summary-file "$GITHUB_STEP_SUMMARY"
 

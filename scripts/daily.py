@@ -64,7 +64,9 @@ def summary_markdown(report: dict) -> str:
               f"(ongoing {counts.get('ongoing', 0)}, upcoming {counts.get('upcoming', 0)}, "
               f"past {counts.get('past', 0)}, no usable date {counts.get('unknown', 0)}); "
               f"suspect dates {meta['suspect_dates_count']}, missing state {meta['missing_state_count']}, "
-              f"possible duplicates {report.get('possible_duplicates', 0)}.",
+              f"records grouped under another site's record {report.get('merged', 0)}, "
+              f"possible duplicates {report.get('possible_duplicates', 0)} "
+              "(see data/review/dedup_review.csv).",
               f"**Since the last run:** +{changes.get('new', 0)} new, {changes.get('changed', 0)} changed, "
               f"{changes.get('gone', 0)} no longer listed."]
     bad = problems(report)

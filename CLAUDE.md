@@ -59,14 +59,15 @@ shared by the web site and the Android app, so changing its shape affects both.
   Pages needs them). No `secrets.` anywhere in the workflow.
 - Tests run first; a failing test stops everything. The commit happens only when
   `real_changes == 'true'`. The heartbeat (`scripts/heartbeat.py`) fails the run when a source
-  has had no successful fetch for 7 days, and when the newest fetch of any source is over
+  has had no successful fetch for 3 days, and when the newest fetch of any source is over
   30 hours old (stale data). The schedule is every 3 hours at minute 17; most runs fetch nothing. `tests/test_daily.py` checks these rules in the
   workflow file; keep them true when you edit it.
 - Pages publishes only `data/`. `scripts/verify_published.py` checks the live files.
 
 ## Layout
 
-- `scripts/build_events.py` — the run (`run()`), manual files, joining, meta, CLI.
+- `scripts/build_events.py` — the run (`run()`), manual files, meta, CLI.
+- `scripts/dedup.py` — finding the same tournament across sources and grouping it (pure).
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
 - `scripts/sources/` — one module per site (`aicf`, `chessfee`, `chessresults_ind`,
@@ -84,14 +85,23 @@ shared by the web site and the Android app, so changing its shape affects both.
 - Event id: `aicf-<first code>`; no code gives `aicf-<hash of name + start>`; two different events
   sharing a code get a name-hash suffix. Other sources: `<source>-<their id>`. Manual ids never
   start with `aicf-`.
-- Joining: only entries that share an AICF code (found in titles next to the word AICF, or in the
-  AICF list itself). Never join otherwise; flag look-alikes from different sources with
-  `flags.possible_duplicate_of`. Priority: override > manual > aicf > chessfee > chessresults_ind >
-  chessbase_calendar. If two AICF events share a code, join nothing for that code.
+- Duplicates (`scripts/dedup.py`): records are **grouped, never removed or hidden**. Every event
+  has `group_id`; non-primary members get `merged_into`; the primary gets `also_listed_on` and fills
+  only its gaps. Rules in order: country, state/city (only when both known), start within ±1 day,
+  name word-set score, section guard (rating limit / age / category letter / format), strong proof
+  (shared AICF code or Chess-Results page beats 2–5; same brochure beats the name only), score
+  ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
+  algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
+  dates, else manual > chessfee > chessresults_ind > chessbase_calendar. If two AICF events share a
+  code, that code proves nothing. Every same/possible pair goes to `data/review/dedup_review.csv`.
+- Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
+  `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
+  (grandmaster, norm or "International ... Open" names, or a rated sibling section) / null. Only a
+  true is ever shared (sections, groups); a false never is.
 - Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`.
 - No `status` is stored. `status(event, today)` computes ongoing/upcoming/past in Indian time
   (fixed UTC+05:30, no DST, so no `tzdata` needed).
-- Schema version is `SCHEMA_VERSION` (now 4). Bump it, update the README and add a migration in
+- Schema version is `SCHEMA_VERSION` (now 5). Bump it, update the README and add a migration in
   `canonical()` whenever the shape of an event changes; stored events are read through `canonical()`.
 - `only_timestamps_changed()` tells a daily job whether anything except `generated_at`/`last_seen`
   /per-source times changed (`--github-output` writes `real_changes=...`).

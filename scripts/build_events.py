@@ -47,6 +47,7 @@ from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa:
 from sources.polite import PoliteClient  # noqa: E402
 from datetime import timedelta  # noqa: E402
 import daily  # noqa: E402
+import dedup  # noqa: E402
 
 SOURCE_MODULES = {
     "aicf": aicf,
@@ -384,6 +385,8 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
     for item in overrides:
         key = item["key"]
         targets = [by_id[key]] if key in by_id else list(by_code.get(key, []))
+        if len(targets) > 1 and any(e["source"] == "aicf" for e in targets):
+            targets = [e for e in targets if e["source"] == "aicf"]  # the code is AICF's own
         if not targets:
             warnings.append(f"{rel} line {item['line']}: no event has the id or code '{key}'; "
                             "this row was ignored.")
@@ -462,93 +465,60 @@ def write_files(data_dir: Path, payloads: dict[str, bytes]) -> None:
 
 
 # --------------------------------------------------------------------------
-# Joining sources
+# Duplicates across sources: pairs.csv, tags, the review file
 # --------------------------------------------------------------------------
-def _link(event: dict) -> dict:
-    return {"source": event["source"], "source_url": event["source_url"],
-            "register_url": event["register_url"]}
+_PAIR_DECISIONS = {"same": "same", "not_same": "not_same", "not same": "not_same",
+                   "notsame": "not_same", "different": "not_same"}
 
 
-def _join(members: list[dict]) -> dict:
-    """One event from several entries. Priority: manual > aicf > the other sources."""
-    members = sorted(members, key=lambda e: (source_rank(e["source"]), e["id"]))
-    event = copy.deepcopy(members[0])
-    links = []
-    for member in members:
-        link = _link(member)
-        if link not in links:
-            links.append(link)
-    for other in members[1:]:
-        for field in ("brochure_url", "register_url", "results_url", "organiser", "city", "state",
-                      "place_text"):
-            if event[field] is None:
-                event[field] = other[field]
-        event["tags"] = merge_tags(event["tags"], other["tags"])
-        event["codes"] = event["codes"] + [c for c in other["codes"] if c not in event["codes"]]
-        event["cancelled"] = event["cancelled"] or other["cancelled"]
-        event["first_seen"] = min(event["first_seen"], other["first_seen"])
-        event["last_seen"] = max(event["last_seen"], other["last_seen"])
-    event["gone_from_source"] = all(m["gone_from_source"] for m in members)
-    event["sources"] = links
-    event["verified"] = any(m["source"] in VERIFIED_SOURCES for m in members)
-    return event
+def load_pairs(data_dir: Path, errors: list[str], warnings: list[str]) -> list[dict]:
+    """data/manual/pairs.csv: force two event ids to be the same tournament, or not. Optional."""
+    rel = "data/manual/pairs.csv"
+    path = data_dir / "manual" / "pairs.csv"
+    if not path.exists():
+        return []
+    rows = read_csv_file(path, rel, PAIRS_CSV_COLUMNS, ("id_a", "id_b", "decision"), errors, warnings)
+    pairs, seen = [], {}
+    for line, row in rows:
+        a, b = row.get("id_a", "").strip(), row.get("id_b", "").strip()
+        decision = _PAIR_DECISIONS.get(re.sub(r"\s+", " ", row.get("decision", "").strip().lower()))
+        problems = []
+        if not a or not b:
+            problems.append("id_a and id_b both need an event id (like aicf-502180 and chessfee-1800).")
+        elif a == b:
+            problems.append(f"id_a and id_b are the same id ('{a}'); a pair needs two different events.")
+        if decision is None:
+            problems.append(f"decision '{row.get('decision', '')}' is not understood. Write 'same' "
+                            "or 'not_same'.")
+        if problems:
+            errors.extend(f"{rel} line {line}: {p}" for p in problems)
+            continue
+        key = tuple(sorted((a, b)))
+        if key in seen:
+            errors.append(f"{rel} line {line}: the pair {a} / {b} is already on line {seen[key]}. "
+                          "Keep one line per pair.")
+            continue
+        seen[key] = line
+        pairs.append({"line": line, "a": a, "b": b, "decision": decision,
+                      "note": (row.get("note") or "").strip() or None})
+    return pairs
 
 
-def join_by_aicf_code(entries: list[dict], warnings: list[str]) -> tuple[list[dict], Counter]:
-    """Join entries ONLY when they share an AICF event code. Returns (events, joined per source)."""
-    parent = list(range(len(entries)))
-
-    def find(i):
-        while parent[i] != i:
-            parent[i] = parent[parent[i]]
-            i = parent[i]
-        return i
-
-    first_with_code: dict[str, int] = {}
-    for index, entry in enumerate(entries):
-        for code in entry["codes"]:
-            if code in first_with_code:
-                parent[find(index)] = find(first_with_code[code])
-            else:
-                first_with_code[code] = index
-    groups: dict[int, list[int]] = defaultdict(list)
-    for index in range(len(entries)):
-        groups[find(index)].append(index)
-    events, joined = [], Counter()
-    for members in groups.values():
-        group = [entries[i] for i in members]
-        if len(group) == 1:
-            events.append(group[0])
-        elif sum(1 for e in group if e["source"] == "aicf") > 1:
-            if any(e["source"] != "aicf" for e in group):
-                warnings.append("Several AICF events share one code (" + ", ".join(
-                    e["id"] for e in group if e["source"] == "aicf") + "); entries with that "
-                    "code were not joined.")
-            events.extend(group)
-        else:
-            events.append(_join(group))
-            joined.update(e["source"] for e in group)
-    return events, joined
+def fill_tags(event: dict) -> None:
+    """Fill format / FIDE gaps from the name and the source's category labels (evidence only)."""
+    text = " ".join([event["name"] or ""] + list(event["tags"]["categories"] or []))
+    if not event["tags"]["formats"]:
+        event["tags"]["formats"] = formats_in(text)
+    if event["tags"]["fide_rated"] is None:
+        event["tags"]["fide_rated"], event["tags"]["fide_how"] = fide_evidence(text)
 
 
-def flag_possible_duplicates(events: list[dict]) -> int:
-    """Same start date + very similar name + same city, from different sources: keep both, flag."""
-    by_start: dict[str, list[dict]] = defaultdict(list)
-    for event in events:
-        if event["start"] and event["city"]:
-            by_start[event["start"]].append(event)
-    flagged = 0
-    for group in by_start.values():
-        group.sort(key=lambda e: (source_rank(e["source"]), e["id"]))
-        for index, event in enumerate(group):
-            for better in group[:index]:
-                if (better["source"] != event["source"]
-                        and better["city"].casefold() == event["city"].casefold()
-                        and similar_names(better["name"], event["name"])):
-                    event["flags"]["possible_duplicate_of"] = better["id"]
-                    flagged += 1
-                    break
-    return flagged
+def review_csv(rows: list[dict]) -> bytes:
+    buffer = io.StringIO(newline="")
+    writer = csv.DictWriter(buffer, fieldnames=dedup.REVIEW_COLUMNS, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(rows)
+    return buffer.getvalue().encode("utf-8")
 
 
 # --------------------------------------------------------------------------
@@ -604,6 +574,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     errors: list[str] = []
     manual_events = load_manual_events(data_dir, today, errors, warnings)
     overrides = load_overrides(data_dir, errors, warnings)
+    pairs = load_pairs(data_dir, errors, warnings)
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
 
@@ -670,7 +641,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         raise SourceError("No source could be read, so nothing was written. "
                           + " | ".join(problems))
 
-    # ---- join, flag, override -------------------------------------------------------
+    # ---- tags, overrides, then grouping ---------------------------------------------
     entries = [e for name in AUTOMATIC_SOURCES for e in snapshots[name]["events"]]
     entries.extend(manual_events)
     previous_manual = {e["id"]: e for e in previous_events if e.get("source") == "manual"}
@@ -678,11 +649,17 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         old = previous_manual.get(event["id"])
         if old and old.get("first_seen"):
             event["first_seen"] = old["first_seen"]
-    events, joined = join_by_aicf_code([canonical(e) for e in entries], warnings)
-    duplicates = flag_possible_duplicates(events)
+    # Every record stays; the records of one tournament are grouped, never removed.
+    events = [canonical({**e, "sources": None}) for e in entries]
+    for event in events:
+        fill_tags(event)
     apply_overrides(events, overrides, errors, warnings)
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
+    grouping = dedup.group_events(events, pairs, warnings)
+    in_groups = Counter(e["group_id"] for e in events)
+    joined = Counter(e["source"] for e in events if in_groups[e["group_id"]] > 1)
+    duplicates = grouping["possible"]
 
     events = sorted((canonical(e) for e in events), key=sort_key)
     meta = {
@@ -694,11 +671,15 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "suspect_dates_count": sum(1 for e in events if e["flags"]["dates_suspect"]),
         "missing_state_count": sum(1 for e in events if e["state"] is None),
         "gone_from_source_count": sum(1 for e in events if e["gone_from_source"]),
+        "groups_count": grouping["groups"],
+        "merged_count": grouping["merged"],
+        "possible_duplicates_count": duplicates,
         "sources": source_meta,
     }
     document = {"schema_version": SCHEMA_VERSION, "generated_at": now_iso, "events": events}
     timestamps_only = only_timestamps_changed(previous_doc, previous_meta, document, meta)
-    payloads = {"events.json": dump_json(document), "meta.json": dump_json(meta)}
+    payloads = {"events.json": dump_json(document), "meta.json": dump_json(meta),
+                "review/dedup_review.csv": review_csv(grouping["review"])}
     for name, snapshot in snapshots.items():
         if snapshot["events"] or (data_dir / "sources" / f"{name}.json").exists():
             payloads[f"sources/{name}.json"] = dump_json({
@@ -735,6 +716,9 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         "cancelled_count": sum(1 for e in events if e["cancelled"]),
         "missing_brochure_count": sum(1 for e in events if e["brochure_url"] is None),
         "possible_duplicates": duplicates,
+        "groups": grouping["groups"],
+        "multi_groups": grouping["multi_groups"],
+        "merged": grouping["merged"],
         "per_source": per_source,
         "only_timestamps_changed": timestamps_only,
         "fetched_any": any(source_stats[n].get("due") for n in AUTOMATIC_SOURCES),
@@ -758,8 +742,9 @@ def print_summary(report: dict) -> None:
     print(f"  Total events          : {meta['total']} "
           f"(automatic {meta['scraped_count']}, manual {meta['manual_count']}, "
           f"gone from source {meta['gone_from_source_count']})")
-    print(f"  Joined (shared code)  : {sum(i['joined'] for i in report['per_source'].values())} "
-          f"entries; possible duplicates flagged: {report['possible_duplicates']}")
+    print(f"  Same tournament       : {report['multi_groups']} groups of 2 or more, "
+          f"{report['merged']} records merged into another (all kept); "
+          f"possible duplicates flagged: {report['possible_duplicates']}")
     print(f"  Suspect dates         : {meta['suspect_dates_count']}")
     print(f"  Missing state         : {meta['missing_state_count']}")
     print(f"  Missing brochure      : {report['missing_brochure_count']}")

@@ -341,55 +341,76 @@ def test_config_file_is_validated(tmp_path):
     assert set(real) == set(be.SOURCE_MODULES) and all(real.values())
 
 
-# ---- merging ------------------------------------------------------------
-def test_entries_sharing_an_aicf_code_become_one_event(web, data_dir):
+# ---- grouping (schema 5: every record stays, the same tournament shares a group) -----
+def test_entries_sharing_an_aicf_code_are_grouped_and_all_kept(web, data_dir):
     serve_aicf(web, [row("AICF Rapid Cup 2026", "473001", start="30-11-2026", end="01-12-2026",
                          place="Kochi, Kerala", brochure='<a href="https://aicf.in/b.pdf">Download</a>')])
     serve_chessfee(web)
     serve_chessresults(web)
     report = run_all(data_dir, config=ONLY("aicf", "chessfee", "chessresults_ind"))
     events = by_id(data_dir)
-    merged = events["aicf-473001"]
-    assert [s["source"] for s in merged["sources"]] == ["aicf", "chessfee", "chessresults_ind"]
-    assert merged["sources"][1] == {"source": "chessfee", "source_url": CF + "tmt_details.php?id=1860",
-                                    "register_url": CF + "treg.php?id=1860"}
-    assert merged["sources"][2]["source_url"] == CR + "tnr1550001.aspx?lan=1"
+    primary = events["aicf-473001"]
+    # nothing is removed: the other sites' records are still there, pointing at the primary
+    assert events["chessfee-1860"]["merged_into"] == "aicf-473001"
+    assert events["chessresults_ind-1550001"]["merged_into"] == "aicf-473001"
+    assert {e["group_id"] for e in (primary, events["chessfee-1860"], events["chessresults_ind-1550001"])}         == {"aicf-473001"}
+    assert primary["merged_into"] is None
+    assert [s["source"] for s in primary["sources"]] == ["aicf", "chessfee", "chessresults_ind"]
+    assert [x["source"] for x in primary["also_listed_on"]] == ["chessfee", "chessresults_ind"]
+    assert primary["also_listed_on"][0] == {
+        "source": "chessfee", "source_url": CF + "tmt_details.php?id=1860",
+        "register_url": CF + "treg.php?id=1860", "results_url": None,
+        "brochure_url": events["chessfee-1860"]["brochure_url"]}
+    assert primary["also_listed_on"][1]["results_url"] == CR + "tnr1550001.aspx?lan=1"
     # AICF wins for the facts it has; the gaps are filled from the others
-    assert merged["name"] == "AICF Rapid Cup 2026" and merged["start"] == "2026-11-30"
-    assert merged["brochure_url"] == "https://aicf.in/b.pdf"
-    assert merged["register_url"] == CF + "treg.php?id=1860"
-    assert merged["organiser"] == "Indian Chess Consortium (ICC)"
-    assert merged["source"] == "aicf" and merged["listed_by"] == "aicf" and merged["verified"] is True
-    assert "chessfee-1860" not in events and "chessresults_ind-1550001" not in events
+    assert primary["name"] == "AICF Rapid Cup 2026" and primary["start"] == "2026-11-30"
+    assert primary["brochure_url"] == "https://aicf.in/b.pdf"
+    assert primary["register_url"] == CF + "treg.php?id=1860"
+    assert primary["organiser"] == "Indian Chess Consortium (ICC)"
+    assert primary["source"] == "aicf" and primary["listed_by"] == "aicf" and primary["verified"] is True
     assert report["per_source"]["chessfee"]["joined"] == 1
     assert report["per_source"]["chessresults_ind"]["joined"] == 1 and report["per_source"]["aicf"]["joined"] == 1
+    assert report["merged"] == 2
 
 
-def test_entries_sharing_a_code_join_even_without_an_aicf_listing(web, data_dir):
+def test_entries_sharing_a_code_group_even_without_an_aicf_listing(web, data_dir):
     serve_chessfee(web)
     serve_chessresults(web)
     run_all(data_dir, config=ONLY("chessfee", "chessresults_ind"))
-    events = load_events(data_dir)
-    joined = [e for e in events if len(e["sources"]) == 2]
-    assert len(joined) == 1 and joined[0]["id"] == "chessfee-1860"  # chessfee outranks chess-results
-    assert joined[0]["verified"] is False and joined[0]["listed_by"] == "chessfee"
+    events = by_id(data_dir)
+    assert events["chessresults_ind-1550001"]["merged_into"] == "chessfee-1860"  # chessfee outranks
+    primary = events["chessfee-1860"]
+    assert len(primary["sources"]) == 2 and primary["verified"] is False and primary["listed_by"] == "chessfee"
 
 
-def test_no_code_means_no_merge_but_look_alikes_are_flagged(web, data_dir):
-    similar = "5th Sajjan Academy Open Blitz Chess Tournament 2026 PRIZE FUND - 50,000/- Early Bird Rs 500/- till 10th Nov 2026"
-    serve_aicf(web, [row(similar, "400001", start="28-11-2026",
-                         end="28-11-2026", place="Bengaluru"),
+SAJJAN = "5th Sajjan Academy Open Blitz Chess Tournament 2026 PRIZE FUND - 50,000/- Early Bird Rs 500/- till 10th Nov 2026"
+
+
+def test_same_name_date_and_city_without_a_code_are_grouped(web, data_dir):
+    serve_aicf(web, [row(SAJJAN, "400001", start="28-11-2026", end="28-11-2026", place="Bengaluru"),
                      row("Totally Different Cup", "400002", start="28-11-2026", end="28-11-2026",
                          place="Bengaluru")])
     serve_chessresults(web)  # 5th Sajjan Academy Open Blitz Chess Tournament 2026 ... starts 2026-11-28
     web.add(CR + "tnr1528935.aspx?lan=1&turdet=YES", fx("chessresults_tnr1528935.html").replace(
         "Sri Sai Palace Convention Centre, NICE Road, Junction, SH17, Kengeri, BNG-60", "Bengaluru, Karnataka"))
+    run_all(data_dir, config=ONLY("aicf", "chessresults_ind"))
+    events = by_id(data_dir)
+    assert events["chessresults_ind-1528935"]["merged_into"] == "aicf-400001"
+    assert events["aicf-400002"]["group_id"] == "aicf-400002" and events["aicf-400002"]["merged_into"] is None
+
+
+def test_half_similar_names_are_flagged_not_grouped(web, data_dir):
+    serve_aicf(web, [row("5th Sajjan Academy Kengeri Knights Open Blitz Chess Tournament 2026", "400001",
+                         start="28-11-2026", end="28-11-2026", place="Bengaluru"),
+                     row("Totally Different Cup", "400002", start="28-11-2026", end="28-11-2026",
+                         place="Bengaluru")])
+    serve_chessresults(web)
+    web.add(CR + "tnr1528935.aspx?lan=1&turdet=YES", fx("chessresults_tnr1528935.html").replace(
+        "Sri Sai Palace Convention Centre, NICE Road, Junction, SH17, Kengeri, BNG-60", "Bengaluru, Karnataka"))
     report = run_all(data_dir, config=ONLY("aicf", "chessresults_ind"))
     events = by_id(data_dir)
-    assert "aicf-400001" in events and "chessresults_ind-1528935" in events  # both kept
-    assert len(events["aicf-400001"]["sources"]) == 1
     twin = events["chessresults_ind-1528935"]
-    assert twin["flags"]["possible_duplicate_of"] == "aicf-400001"
+    assert twin["merged_into"] is None and twin["flags"]["possible_duplicate_of"] == "aicf-400001"
     assert events["aicf-400001"]["flags"]["possible_duplicate_of"] is None  # AICF outranks
     assert events["aicf-400002"]["flags"]["possible_duplicate_of"] is None
     assert report["possible_duplicates"] == 1
@@ -413,8 +434,9 @@ def test_two_aicf_events_with_one_code_are_never_joined_to_a_third_entry(web, da
                      row("Cup B", "473001", start="05-12-2026", end="06-12-2026")])
     serve_chessfee(web)
     report = run_all(data_dir, config=ONLY("aicf", "chessfee"))
-    ids = {e["id"] for e in load_events(data_dir)}
-    assert "chessfee-1860" in ids and len(ids) == 8
+    events = by_id(data_dir)
+    assert "chessfee-1860" in events and len(events) == 8
+    assert all(e["merged_into"] is None for e in events.values())  # the shared code proves nothing
     assert any("share one code" in w for w in report["warnings"])
 
 
@@ -493,7 +515,7 @@ def test_events_json_has_the_new_fields_in_a_fixed_order(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
     doc = load_doc(data_dir)
-    assert doc["schema_version"] == 4
+    assert doc["schema_version"] == 5
     keys = list(be.EVENT_KEYS)
     assert all(list(e) == keys for e in doc["events"])
     for key in ("source_url", "sources", "listed_by", "verified"):

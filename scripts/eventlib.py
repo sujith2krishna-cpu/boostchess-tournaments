@@ -13,7 +13,6 @@ import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
-from urllib.parse import urljoin, urlparse
 
 SOURCE_URL = "https://aicf.in/all-events/"
 USER_AGENT = (
@@ -22,7 +21,8 @@ USER_AGENT = (
 REQUEST_TIMEOUT_SECONDS = 30
 RETRY_WAIT_SECONDS = 5
 MIN_FRACTION_OF_PREVIOUS = 0.5  # a source returning less than half of last time counts as failed
-SCHEMA_VERSION = 4  # 4: results_url
+SCHEMA_VERSION = 5  # 5: group_id, merged_into, also_listed_on, dates_from; fide_rated may be false
+#                     4: results_url
 #                     3: sources[], source_url, listed_by, verified, flags.possible_duplicate_of
 #                     2: tags.age is a list; every event has a country
 
@@ -41,6 +41,7 @@ OVERRIDES_CSV_COLUMNS = (
     "key", "start_date", "end_date", "place", "state", "hide", "cancelled", "note",
     "register_url", "results_url",
 )
+PAIRS_CSV_COLUMNS = ("id_a", "id_b", "decision", "note")
 FORMAT_ORDER = ("classical", "rapid", "blitz")
 
 
@@ -316,15 +317,68 @@ def ages_from_text(text: str) -> list[str]:
     return [f"U{v}" for v in sorted(found)]
 
 
+# Formats: the words a name uses for each one. "Standard" is FIDE's word for classical.
+_FORMAT_WORDS = {
+    "classical": r"classical|standard",
+    "rapid": r"rapid|rapids|rapidplay|rapid[\s-]play",
+    "blitz": r"blitz",
+}
+_NON_RATED = re.compile(r"(?i)\b(?:non|un)[\s-]?(?:fide[\s-]?)?rated\b|\bnon[\s-]?fide\b|\bunrated\b"
+                        r"|\bnot\s+(?:fide\s+)?rated\b")
+_RATED = re.compile(r"(?i)\b(?:rated|rating|ratings)\b")
+_FIDE_WITH = re.compile(r"(?i)\bfide\b[\s-]*(?:rapid|blitz|standard|classical|below|above|under\b|u[\s-]*\d)"
+                        r"|\b(?:rapid|blitz|standard|classical)[\s-]+fide\b")
+
+
+def formats_in(text: str) -> list[str]:
+    """Formats a piece of text names, in FORMAT_ORDER ([] when it names none)."""
+    return [f for f in FORMAT_ORDER if re.search(rf"(?i)\b(?:{_FORMAT_WORDS[f]})\b", text or "")]
+
+
+# Words that do not say "FIDE rated" but only occur on FIDE-rated events: a grandmaster event,
+# a norm event, an "International" open / tournament (the AICF lists these only when rated).
+_INFERRED_RATED = (
+    re.compile(r"(?i)\b(?:grand[\s-]*masters?|gm)\b[\s\-–—:('‘]*"
+               r"(?:open|tournaments?|chess|category)\b"),
+    re.compile(r"(?i)\b(?:im|gm)[\s-]*norms?\b|\bnorms?[\s-]+tournaments?\b"),
+)
+_INTERNATIONAL = re.compile(r"(?i)\binternational\b")
+_SCHOOL = re.compile(r"(?i)\bschools?\b")  # "St. Xavier International ... School": a school's name
+_INTERNATIONAL_WITH = re.compile(r"(?i)\b(?:open|tournaments?|chess|rating)\b")
+
+
+def fide_evidence(text: str) -> tuple[bool | None, str | None]:
+    """(fide_rated, fide_how) from a piece of text.
+
+    (False, "stated") when it says non-rated / unrated / not rated;
+    (True, "stated") when it says FIDE rated ("FIDE Rated", "Rapid Rating", "FIDE RAPID");
+    (True, "inferred") for grandmaster / norm / "International ... Open|Tournament|Chess" names;
+    (None, None) when it says nothing.
+    """
+    text = clean_text(text)
+    if _NON_RATED.search(text):
+        return False, "stated"
+    if _RATED.search(text) or _FIDE_WITH.search(text):
+        return True, "stated"
+    if any(p.search(text) for p in _INFERRED_RATED) or (
+            _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text) and not _SCHOOL.search(text)):
+        return True, "inferred"
+    return None, None
+
+
+def fide_rated_in(text: str) -> bool | None:
+    """Only the "stated" part of fide_evidence(): True / False when the text says so, else None."""
+    value, how = fide_evidence(text)
+    return value if how == "stated" else None
+
+
 def derive_tags(name: str) -> dict:
     """Conservative tags from the name. Anything unsure stays empty."""
-    formats = [f for f in FORMAT_ORDER if re.search(rf"\b{f}\b", name, re.I)]
-    fide = bool(re.search(r"\bfide\b", name, re.I)) and bool(
-        re.search(r"\b(?:rated|rating|ratings)\b", name, re.I)
-    ) and not re.search(r"\b(?:un|non)[\s-]?rated\b", name, re.I)
+    fide_rated, fide_how = fide_evidence(name)
     return {
-        "formats": formats,
-        "fide_rated": True if fide else None,
+        "formats": formats_in(name),
+        "fide_rated": fide_rated,
+        "fide_how": fide_how,
         "age": ages_from_text(name),
         "open": True if re.search(r"\bopen\b", name, re.I) else None,
         "girls": True if re.search(r"\bgirls?\b", name, re.I) else None,
@@ -338,11 +392,12 @@ def derive_tags(name: str) -> dict:
 EVENT_KEYS = (
     "id", "codes", "name", "start", "end", "place_text", "state", "city", "country",
     "brochure_url", "source", "source_url", "sources", "listed_by", "verified",
+    "group_id", "merged_into", "also_listed_on",
     "register_url", "results_url", "organiser", "tags", "flags",
-    "raw_dates", "first_seen", "last_seen", "gone_from_source", "cancelled",
+    "raw_dates", "dates_from", "first_seen", "last_seen", "gone_from_source", "cancelled",
     "hidden", "note", "overridden",
 )
-TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("age", []),
+TAG_DEFAULTS = (("formats", []), ("fide_rated", None), ("fide_how", None), ("age", []),
                 ("open", None), ("girls", None), ("categories", []))
 FLAG_DEFAULTS = (("dates_suspect", False), ("code_expanded", False),
                  ("code_unclear", False))
@@ -352,6 +407,7 @@ EVENT_DEFAULTS = {
     "city": None, "country": None, "brochure_url": None, "register_url": None, "organiser": None,
     "raw_dates": None, "gone_from_source": False, "cancelled": False,
     "hidden": False, "note": None, "overridden": None,
+    "merged_into": None, "also_listed_on": [], "dates_from": None,
 }
 OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_url", "results_url")
 
@@ -403,6 +459,8 @@ def canonical(event: dict) -> dict:
             out[key] = {k: copy.deepcopy(tags_in.get(k, d)) for k, d in TAG_DEFAULTS}
             age = out[key]["age"]  # schema 1 stored one string (or null); schema 2 a list
             out[key]["age"] = [] if age is None else [age] if isinstance(age, str) else age
+            if "fide_how" not in tags_in:  # before fide_how, only what a name or site said was stored
+                out[key]["fide_how"] = "stated" if out[key]["fide_rated"] is not None else None
         elif key == "country":
             out[key] = event["country"] if "country" in event else country_for(event.get("source"))
         elif key == "flags":
@@ -417,6 +475,8 @@ def canonical(event: dict) -> dict:
         elif key == "verified":
             out[key] = bool(event["verified"]) if event.get("verified") is not None \
                 else event.get("source") in VERIFIED_SOURCES
+        elif key == "group_id":  # schema 4 and older: every event was its own group
+            out[key] = event.get("group_id") or event.get("id")
         elif key == "sources":
             out[key] = copy.deepcopy(event["sources"]) if event.get("sources") else [
                 {"source": event.get("source"), "source_url": event.get("source_url"),
@@ -673,8 +733,17 @@ def merge_tags(primary: dict, other: dict) -> dict:
     out["formats"] = [f for f in FORMAT_ORDER if f in out["formats"]]
     out["age"] = sorted(set(out.get("age") or []) | set(other.get("age") or []),
                         key=lambda a: int(a[1:]))
-    for key in ("fide_rated", "open", "girls"):
+    for key in ("open", "girls"):
         out[key] = out.get(key) or other.get(key) or None
+    if out.get("fide_rated") is None and other.get("fide_rated") is not None:
+        # True / False from the primary win; a gap is filled (a site's own flag counts as stated)
+        out["fide_rated"] = other["fide_rated"]
+        out["fide_how"] = other.get("fide_how") or "stated"
+    elif out.get("fide_rated") is True and other.get("fide_rated") is True \
+            and out.get("fide_how") == "inferred" and (other.get("fide_how") or "stated") == "stated":
+        out["fide_how"] = "stated"  # a site saying so beats our inference
+    if out.get("fide_rated") is None:
+        out["fide_how"] = None
     return out
 
 
