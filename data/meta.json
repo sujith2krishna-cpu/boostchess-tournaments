@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-25T16:43:47+05:30",
-  "last_run_at": "2026-11-25T16:43:47+05:30",
+  "generated_at": "2026-11-25T16:49:35+05:30",
+  "last_run_at": "2026-11-25T16:49:35+05:30",
   "scraped_count": 606,
   "manual_count": 0,
   "total": 693,
   "suspect_dates_count": 9,
   "missing_state_count": 139,
   "gone_from_source_count": 87,
-  "groups_count": 662,
-  "merged_count": 31,
-  "possible_duplicates_count": 7,
+  "groups_count": 656,
+  "merged_count": 37,
+  "possible_duplicates_count": 1,
   "sources": {
     "aicf": {
       "enabled": true,

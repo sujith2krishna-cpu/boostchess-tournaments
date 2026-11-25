@@ -1,6 +1,6 @@
 {
   "schema_version": 5,
-  "generated_at": "2026-11-25T16:43:47+05:30",
+  "generated_at": "2026-11-25T16:49:35+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -25068,6 +25068,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1727",
           "register_url": "https://www.chessfee.com/treg.php?id=1727"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+          "register_url": "https://chessfee.com/tmt_details.php?id=1727"
         }
       ],
       "listed_by": "aicf",
@@ -25081,13 +25086,22 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1727",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/Manchester-FIDE%20TMT%20BELOW%201800%20-27-29%20NOV.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+          "register_url": "https://chessfee.com/tmt_details.php?id=1727",
+          "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538894&Uid=2"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1727",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
       "organiser": "Veer Chess Academy",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -25142,7 +25156,9 @@
       "results_url": null,
       "organiser": "Veer Chess Academy",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -25190,8 +25206,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1538894",
-      "merged_into": null,
+      "group_id": "aicf-486240",
+      "merged_into": "aicf-486240",
       "also_listed_on": [],
       "register_url": "https://chessfee.com/tmt_details.php?id=1727",
       "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
@@ -25211,7 +25227,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-486240"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -26154,16 +26170,29 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-504554",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
-      "organiser": null,
+      "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
+      "organiser": "8x8 Chess Academy",
       "tags": {
         "formats": [
           "rapid"
@@ -26213,8 +26242,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1522214",
-      "merged_into": null,
+      "group_id": "aicf-504554",
+      "merged_into": "aicf-504554",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
@@ -26234,7 +26263,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-504554"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -26826,16 +26855,29 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-504557",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
-      "organiser": null,
+      "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
+      "organiser": "8x8 Chess Academy",
       "tags": {
         "formats": [
           "blitz"
@@ -27175,18 +27217,33 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1837",
           "register_url": "https://www.chessfee.com/treg.php?id=1837"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
       "group_id": "chessfee-1837",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": "https://www.chessfee.com/treg.php?id=1837",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
       "organiser": "Masters Chess Club",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -27915,8 +27972,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1522216",
-      "merged_into": null,
+      "group_id": "aicf-504557",
+      "merged_into": "aicf-504557",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
@@ -27936,7 +27993,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-504557"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -30377,8 +30434,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1550116",
-      "merged_into": null,
+      "group_id": "chessfee-1837",
+      "merged_into": "chessfee-1837",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1550116.aspx?lan=1",
@@ -30398,7 +30455,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "chessfee-1837"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -31019,16 +31076,29 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
+          "register_url": "https://www.chessfee.com/treg.php?id=1848"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-494155",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
+          "register_url": "https://www.chessfee.com/treg.php?id=1848",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/4-6%20BELOW%201800%20Tirupattur_Prospectus%20NEW.pdf"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1848",
       "results_url": null,
-      "organiser": null,
+      "organiser": "Mr. D Anand",
       "tags": {
         "formats": [],
         "fide_rated": true,
@@ -31036,7 +31106,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "FIDE TMT - BELOW 1700 -PRIZE MONEY Rs.6,00,000/-"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -31076,8 +31148,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1848",
-      "merged_into": null,
+      "group_id": "aicf-494155",
+      "merged_into": "aicf-494155",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1848",
       "results_url": null,
@@ -31097,7 +31169,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-494155"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -33535,15 +33607,28 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=62184"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-508734",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=62184",
+          "results_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540498&Uid=1"
+        }
+      ],
+      "register_url": "https://circlechess.com/registration?id=62184",
+      "results_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
       "organiser": null,
       "tags": {
         "formats": [
@@ -33594,8 +33679,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1540498",
-      "merged_into": null,
+      "group_id": "aicf-508734",
+      "merged_into": "aicf-508734",
       "also_listed_on": [],
       "register_url": "https://circlechess.com/registration?id=62184",
       "results_url": "https://chess-results.com/tnr1540498.aspx?lan=1",
@@ -33616,7 +33701,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-508734"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
