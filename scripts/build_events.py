@@ -571,7 +571,9 @@ def write_files(data_dir: Path, payloads: dict[str, bytes]) -> None:
 # Duplicates across sources: pairs.csv, tags, the review file
 # --------------------------------------------------------------------------
 _PAIR_DECISIONS = {"same": "same", "not_same": "not_same", "not same": "not_same",
-                   "notsame": "not_same", "different": "not_same"}
+                   "notsame": "not_same", "different": "not_same",
+                   # a pair someone still has to check: kept in the file, changes nothing
+                   "undecided": "undecided"}
 
 
 def load_pairs(data_dir: Path, errors: list[str], warnings: list[str]) -> list[dict]:
@@ -591,8 +593,8 @@ def load_pairs(data_dir: Path, errors: list[str], warnings: list[str]) -> list[d
         elif a == b:
             problems.append(f"id_a and id_b are the same id ('{a}'); a pair needs two different events.")
         if decision is None:
-            problems.append(f"decision '{row.get('decision', '')}' is not understood. Write 'same' "
-                            "or 'not_same'.")
+            problems.append(f"decision '{row.get('decision', '')}' is not understood. Write 'same', "
+                            "'not_same' or 'undecided'.")
         if problems:
             errors.extend(f"{rel} line {line}: {p}" for p in problems)
             continue
