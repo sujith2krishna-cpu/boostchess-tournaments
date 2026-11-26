@@ -13,7 +13,7 @@ import heartbeat
 import quality
 import verify_published as vp
 from conftest import (ALL_SOURCES_ON, NOW, ROOT, build, fx, padding, row, run_all, serve_aicf, serve_chessbase,
-                      serve_chessfee, serve_chessresults, serve_kca, web)  # noqa: F401
+                      serve_chessfee, serve_chessresults, serve_kca, serve_tnsca, web)  # noqa: F401
 from sources import chessbase_calendar as cb_source
 
 NEXT_DAY = NOW + timedelta(days=1)
@@ -37,14 +37,14 @@ def fake_report(**overrides):
 # ---- the commit message --------------------------------------------------
 def test_commit_message_all_sources_ok():
     assert daily.commit_message(fake_report()) == (
-        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, chessfee, chessresults_ind, "
+        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, chessfee, chessresults_ind, "
         "chessbase_calendar)")
 
 
 def test_commit_message_names_failed_sources():
     report = fake_report(chessfee=info("failed", message="HTTP 500"))
     assert daily.commit_message(report) == (
-        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, chessresults_ind, "
+        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, chessresults_ind, "
         "chessbase_calendar; failed: chessfee)")
 
 
@@ -52,7 +52,7 @@ def test_commit_message_counts_a_blocked_source_as_failed_but_not_one_already_fe
     report = fake_report(aicf=info("skipped", message="already fetched today"),
                          chessbase_calendar=info("skipped", blocked=True, message="robots.txt"))
     message = daily.commit_message(report)
-    assert "sources ok: aicf, kca, chessfee, chessresults_ind;" in message and "failed: chessbase_calendar" in message
+    assert "sources ok: aicf, kca, tnsca, chessfee, chessresults_ind;" in message and "failed: chessbase_calendar" in message
 
 
 def test_commit_message_is_one_short_line():
@@ -63,6 +63,7 @@ def test_commit_message_is_one_short_line():
 def test_commit_message_from_a_real_run(web, data_dir):
     serve_aicf(web, [row("Plain AICF Open", "400001")])
     serve_kca(web)
+    serve_tnsca(web)
     serve_chessfee(web)
     serve_chessresults(web)
     serve_chessbase(web)
@@ -70,9 +71,9 @@ def test_commit_message_from_a_real_run(web, data_dir):
         for raw in cb_source.parse_events(fx(html)):
             web.add("https://chessbase.in/chess-calendar/event/" + raw["slug"], fx("chessbase_event.html"))
     first = run_all(data_dir)
-    assert first["changes"] == {"new": 43, "changed": 0, "gone": 0}  # 21 + 22 KCA records, all kept
+    assert first["changes"] == {"new": 194, "changed": 0, "gone": 0}  # 21 + 22 KCA + 151 TNSCA records, all kept
     assert daily.commit_message(first) == (
-        "data: 2026-11-24 (+43 new, 0 changed; sources ok: aicf, kca, chessfee, chessresults_ind, "
+        "data: 2026-11-24 (+194 new, 0 changed; sources ok: aicf, kca, tnsca, chessfee, chessresults_ind, "
         "chessbase_calendar)")
     # next day: one AICF event is edited, chessfee fails
     serve_aicf(web, [row("Plain AICF Open", "400001", end="13-12-2026"), row("Another", "400002")])
@@ -80,7 +81,7 @@ def test_commit_message_from_a_real_run(web, data_dir):
     second = run_all(data_dir, now=NEXT_DAY)
     assert second["changes"] == {"new": 1, "changed": 1, "gone": 0}
     assert daily.commit_message(second) == (
-        "data: 2026-11-25 (+1 new, 1 changed; sources ok: aicf, kca, chessresults_ind, "
+        "data: 2026-11-25 (+1 new, 1 changed; sources ok: aicf, kca, tnsca, chessresults_ind, "
         "chessbase_calendar; failed: chessfee)")
 
 

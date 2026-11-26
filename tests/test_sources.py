@@ -8,9 +8,9 @@ import pytest
 
 import build_events as be
 import quality
-from conftest import (ALL_SOURCES_ON, CB, CF, CR, CR_FED, EVENTS_HEADER, KCA, NOW, build, by_id, fx,
+from conftest import (ALL_SOURCES_ON, CB, CF, CR, CR_FED, EVENTS_HEADER, KCA, NOW, TNSCA, build, by_id, fx,
                       load_doc, load_events, row, run_all, serve_aicf, serve_chessbase,
-                      serve_chessfee, serve_chessresults, serve_kca, write_manual)
+                      serve_chessfee, serve_chessresults, serve_kca, serve_tnsca, write_manual)
 from sources import chessbase_calendar as cb_source
 from sources import chessfee as cf_source
 
@@ -195,6 +195,7 @@ def test_chessbase_year_page_without_events_is_empty_but_the_main_page_must_have
 def serve_everything(web, aicf_rows=None):
     serve_aicf(web, aicf_rows or [row("Plain AICF Open", "400001", place="Pune")])
     serve_kca(web)
+    serve_tnsca(web)
     serve_chessfee(web)
     serve_chessresults(web)
     serve_chessbase_with_events(web)
@@ -244,10 +245,10 @@ def test_one_failing_source_does_not_stop_the_others(web, data_dir):
     report = run_all(data_dir)
     assert report["per_source"]["chessfee"]["status"] == "failed"
     assert "HTTP 500" in report["per_source"]["chessfee"]["message"]
-    for good in ("aicf", "kca", "chessresults_ind", "chessbase_calendar"):
+    for good in ("aicf", "kca", "tnsca", "chessresults_ind", "chessbase_calendar"):
         assert report["per_source"][good]["status"] == "ok"
     sources = {e["source"] for e in load_events(data_dir)}
-    assert sources == {"aicf", "kca", "chessresults_ind", "chessbase_calendar"}
+    assert sources == {"aicf", "kca", "tnsca", "chessresults_ind", "chessbase_calendar"}
     meta = json.loads((data_dir / "meta.json").read_text("utf-8"))
     assert meta["sources"]["chessfee"]["last_error"]["message"].startswith("Could not fetch")
     assert meta["sources"]["chessfee"]["last_success"] is None
@@ -297,7 +298,8 @@ def test_all_sources_failing_writes_nothing(web, data_dir):
     serve_everything(web)
     run_all(data_dir)
     snapshot = {p.name: p.read_bytes() for p in data_dir.iterdir() if p.is_file()}
-    for host in ("https://aicf.in/all-events/", KCA + "events", CF + "tournament_ongoing.php",
+    for host in ("https://aicf.in/all-events/", KCA + "events", TNSCA + "tournament-registration/?y=2026",
+                 CF + "tournament_ongoing.php",
                  CR_FED, CB + "chess-calendar"):
         web.add(host, "down", status=500)
     with pytest.raises(be.SourceError, match="No source could be read"):
@@ -545,7 +547,7 @@ def test_trust_labels(web, data_dir):
     write_manual(data_dir, EVENTS_HEADER + "mine,My Cup,10-01-2027,,Goa,,,,,,,\n")
     run_all(data_dir)
     for e in load_events(data_dir):
-        if e["source"] in ("aicf", "kca", "manual"):
+        if e["source"] in ("aicf", "kca", "tnsca", "manual"):
             assert e["verified"] is True and e["listed_by"] == e["source"]
         else:
             assert e["verified"] is False and e["listed_by"] != "aicf"
