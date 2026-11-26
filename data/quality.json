@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T07:16:17+05:30",
+  "generated_at": "2026-11-26T15:23:16+05:30",
   "today": "2026-11-26",
   "windows": {
     "next_30_days": {
@@ -14,43 +14,43 @@
   "target": {
     "window": "next_30_days",
     "fully_known_pct": 95.0,
-    "now_pct": 17.6,
+    "now_pct": 16.1,
     "met": false
   },
   "overall": {
     "next_30_days": {
-      "events": 204,
+      "events": 223,
       "fully_known": 36,
-      "fully_known_pct": 17.6,
-      "unknown_format": 36,
-      "unknown_format_pct": 17.6,
-      "unknown_fide": 143,
-      "unknown_fide_pct": 70.1,
-      "no_state": 97,
-      "no_state_pct": 47.5,
+      "fully_known_pct": 16.1,
+      "unknown_format": 52,
+      "unknown_format_pct": 23.3,
+      "unknown_fide": 158,
+      "unknown_fide_pct": 70.9,
+      "no_state": 94,
+      "no_state_pct": 42.2,
       "suspect_dates": 0,
       "suspect_dates_pct": 0.0,
-      "no_register_link": 148,
-      "no_register_link_pct": 72.5,
-      "no_brochure": 110,
-      "no_brochure_pct": 53.9
+      "no_register_link": 167,
+      "no_register_link_pct": 74.9,
+      "no_brochure": 129,
+      "no_brochure_pct": 57.8
     },
     "upcoming": {
-      "events": 276,
+      "events": 306,
       "fully_known": 70,
-      "fully_known_pct": 25.4,
-      "unknown_format": 61,
-      "unknown_format_pct": 22.1,
-      "unknown_fide": 155,
-      "unknown_fide_pct": 56.2,
-      "no_state": 103,
-      "no_state_pct": 37.3,
+      "fully_known_pct": 22.9,
+      "unknown_format": 87,
+      "unknown_format_pct": 28.4,
+      "unknown_fide": 179,
+      "unknown_fide_pct": 58.5,
+      "no_state": 100,
+      "no_state_pct": 32.7,
       "suspect_dates": 1,
-      "suspect_dates_pct": 0.4,
-      "no_register_link": 215,
-      "no_register_link_pct": 77.9,
-      "no_brochure": 129,
-      "no_brochure_pct": 46.7
+      "suspect_dates_pct": 0.3,
+      "no_register_link": 245,
+      "no_register_link_pct": 80.1,
+      "no_brochure": 159,
+      "no_brochure_pct": 52.0
     }
   },
   "sources": {
@@ -162,40 +162,76 @@
         "no_brochure_pct": 27.3
       }
     },
-    "chessfee": {
+    "tnsca": {
       "next_30_days": {
-        "events": 27,
-        "fully_known": 1,
-        "fully_known_pct": 3.7,
-        "unknown_format": 16,
-        "unknown_format_pct": 59.3,
-        "unknown_fide": 25,
-        "unknown_fide_pct": 92.6,
-        "no_state": 12,
-        "no_state_pct": 44.4,
+        "events": 30,
+        "fully_known": 0,
+        "fully_known_pct": 0.0,
+        "unknown_format": 23,
+        "unknown_format_pct": 76.7,
+        "unknown_fide": 26,
+        "unknown_fide_pct": 86.7,
+        "no_state": 0,
+        "no_state_pct": 0.0,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
-        "no_register_link": 0,
-        "no_register_link_pct": 0.0,
-        "no_brochure": 1,
-        "no_brochure_pct": 3.7
+        "no_register_link": 19,
+        "no_register_link_pct": 63.3,
+        "no_brochure": 19,
+        "no_brochure_pct": 63.3
       },
       "upcoming": {
-        "events": 28,
+        "events": 47,
+        "fully_known": 6,
+        "fully_known_pct": 12.8,
+        "unknown_format": 33,
+        "unknown_format_pct": 70.2,
+        "unknown_fide": 35,
+        "unknown_fide_pct": 74.5,
+        "no_state": 0,
+        "no_state_pct": 0.0,
+        "suspect_dates": 0,
+        "suspect_dates_pct": 0.0,
+        "no_register_link": 36,
+        "no_register_link_pct": 76.6,
+        "no_brochure": 30,
+        "no_brochure_pct": 63.8
+      }
+    },
+    "chessfee": {
+      "next_30_days": {
+        "events": 16,
         "fully_known": 1,
-        "fully_known_pct": 3.6,
-        "unknown_format": 16,
-        "unknown_format_pct": 57.1,
-        "unknown_fide": 25,
-        "unknown_fide_pct": 89.3,
-        "no_state": 13,
-        "no_state_pct": 46.4,
+        "fully_known_pct": 6.2,
+        "unknown_format": 9,
+        "unknown_format_pct": 56.2,
+        "unknown_fide": 14,
+        "unknown_fide_pct": 87.5,
+        "no_state": 9,
+        "no_state_pct": 56.2,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
         "no_register_link": 0,
         "no_register_link_pct": 0.0,
         "no_brochure": 1,
-        "no_brochure_pct": 3.6
+        "no_brochure_pct": 6.2
+      },
+      "upcoming": {
+        "events": 17,
+        "fully_known": 1,
+        "fully_known_pct": 5.9,
+        "unknown_format": 9,
+        "unknown_format_pct": 52.9,
+        "unknown_fide": 14,
+        "unknown_fide_pct": 82.4,
+        "no_state": 10,
+        "no_state_pct": 58.8,
+        "suspect_dates": 0,
+        "suspect_dates_pct": 0.0,
+        "no_register_link": 0,
+        "no_register_link_pct": 0.0,
+        "no_brochure": 1,
+        "no_brochure_pct": 5.9
       }
     },
     "chessresults_ind": {
@@ -253,27 +289,34 @@
         "no_brochure_pct": 50.0
       },
       "upcoming": {
-        "events": 9,
-        "fully_known": 7,
-        "fully_known_pct": 77.8,
+        "events": 3,
+        "fully_known": 1,
+        "fully_known_pct": 33.3,
         "unknown_format": 0,
         "unknown_format_pct": 0.0,
         "unknown_fide": 0,
         "unknown_fide_pct": 0.0,
         "no_state": 1,
-        "no_state_pct": 11.1,
+        "no_state_pct": 33.3,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
-        "no_register_link": 9,
+        "no_register_link": 3,
         "no_register_link_pct": 100.0,
         "no_brochure": 1,
-        "no_brochure_pct": 11.1
+        "no_brochure_pct": 33.3
       }
     }
   },
-  "alerts": [],
+  "alerts": [
+    {
+      "source": "chessbase_calendar",
+      "window": "upcoming",
+      "what": "count_halved",
+      "message": "chessbase_calendar: upcoming events fell from 9 to 3 (half or fewer)"
+    }
+  ],
   "review": {
-    "missing": 168,
-    "possible_duplicates": 5
+    "missing": 187,
+    "possible_duplicates": 20
   }
 }
