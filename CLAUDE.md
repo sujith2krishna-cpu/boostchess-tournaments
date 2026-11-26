@@ -102,7 +102,8 @@ shared by the web site and the Android app, so changing its shape affects both.
   code, that code proves nothing. Every same/possible pair goes to `data/review/dedup_review.csv`.
 - Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
   `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
-  (grandmaster, norm or "International ... Open" names, or a rated sibling section) / null. Only a
+  (grandmaster, norm or "International ... Open" names, an AICF-listed National / State / Asian /
+  Zonal championship, or a rated sibling section) / null. Only a
   true is ever shared (sections, groups); a false never is.
 - Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`
   (tags as `tags.formats` etc.). `fide_rated` / `format` / `age` / `registration_deadline` from

@@ -380,6 +380,18 @@ _INFERRED_RATED = (
 _INTERNATIONAL = re.compile(r"(?i)\binternational\b")
 _SCHOOL = re.compile(r"(?i)\bschools?\b")  # "St. Xavier International ... School": a school's name
 _INTERNATIONAL_WITH = re.compile(r"(?i)\b(?:open|tournaments?|chess|rating)\b")
+# A National / State / Asian / Zonal championship. Only used for AICF's own list: on other sites
+# the same words also name school, civil-service and KCA state-rated championships.
+_CHAMPIONSHIP = re.compile(r"(?i)\b(?:national|state|asian|zonal)\b.*\bchampionships?\b")
+
+
+def aicf_championship_rated(name: str) -> bool:
+    """True for a National / State / Asian / Zonal championship name that does not say non-rated.
+
+    Call it only for events on AICF's list (fide_rated then becomes True, "inferred").
+    """
+    text = clean_text(name)
+    return bool(_CHAMPIONSHIP.search(text)) and not _NON_RATED.search(text)
 
 
 def fide_evidence(text: str) -> tuple[bool | None, str | None]:
