@@ -34,8 +34,8 @@ POSSIBLE_AT = 0.50
 NAME_WEIGHT, PLACE_WEIGHT, END_WEIGHT = 0.85, 0.10, 0.05
 MIN_DISTINCT_WORDS = 2  # fewer distinctive words than this can never prove "same" by name alone
 
-# Primary choice after "AICF with good dates": manual, kca, tnsca, chessfee, then the rest.
-PRIMARY_ORDER = ("manual", "kca", "tnsca", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
+# Primary choice after "AICF with good dates": manual, kca, tnsca, ksca, chessfee, then the rest.
+PRIMARY_ORDER = ("manual", "kca", "tnsca", "ksca", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
 # Sources whose "city" is a district (a town inside that district is not a different place).
 DISTRICT_SOURCES = frozenset({"kca"})
 
@@ -183,17 +183,41 @@ def _same_text(a, b) -> bool | None:
     return _flat(a) == _flat(b)
 
 
+# Renamed towns: the old and the new name are one place ("Bangalore" on AICF, "Bengaluru" on
+# KSCA). Only official renames, so two different towns can never be made the same.
+TOWN_RENAMES = {
+    "bangalore": "bengaluru", "mysore": "mysuru", "mangalore": "mangaluru",
+    "belgaum": "belagavi", "hubli": "hubballi", "gulbarga": "kalaburagi", "bellary": "ballari",
+    "bijapur": "vijayapura", "shimoga": "shivamogga", "tumkur": "tumakuru",
+    "bombay": "mumbai", "poona": "pune", "madras": "chennai", "trichy": "tiruchirappalli",
+    "calcutta": "kolkata", "baroda": "vadodara", "gurgaon": "gurugram",
+    "pondicherry": "puducherry", "trivandrum": "thiruvananthapuram", "cochin": "kochi",
+    "calicut": "kozhikode",
+}
+
+
+def _town(name: str) -> str:
+    flat = _flat(name)
+    return TOWN_RENAMES.get(flat, flat)
+
+
+def _same_town(a, b) -> bool | None:
+    if not a or not b:
+        return None
+    return _town(a) == _town(b)
+
+
 def _same_city(ea: dict, eb: dict) -> bool | None:
-    """Like _same_text for cities, but a KCA district matches the towns inside it.
+    """Same town (renamed towns count as one), and a KCA district matches the towns inside it.
 
     Both places known Kerala districts or towns: same district or not. A district against a
     town we do not know: unknown (None), never "different".
     """
     if ea.get("source") not in DISTRICT_SOURCES and eb.get("source") not in DISTRICT_SOURCES:
-        return _same_text(ea.get("city"), eb.get("city"))
+        return _same_town(ea.get("city"), eb.get("city"))
     if not ea.get("city") or not eb.get("city"):
         return None
-    if _flat(ea["city"]) == _flat(eb["city"]):
+    if _town(ea["city"]) == _town(eb["city"]):
         return True
     da, db = kerala_district(ea["city"]), kerala_district(eb["city"])
     if da and db:

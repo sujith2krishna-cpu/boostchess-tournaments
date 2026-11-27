@@ -10,7 +10,7 @@ from pathlib import Path
 
 import quality
 
-SOURCE_ORDER = ("aicf", "kca", "tnsca", "chessfee", "chessresults_ind", "chessbase_calendar")
+SOURCE_ORDER = ("aicf", "kca", "tnsca", "ksca", "chessfee", "chessresults_ind", "chessbase_calendar")
 
 
 def _names(report: dict, wanted: tuple[str, ...]) -> list[str]:
