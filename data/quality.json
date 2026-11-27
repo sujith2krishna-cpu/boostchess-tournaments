@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T21:45:51+05:30",
+  "generated_at": "2026-11-27T21:47:26+05:30",
   "today": "2026-11-27",
   "windows": {
     "next_30_days": {
@@ -198,6 +198,42 @@
         "no_brochure_pct": 63.0
       }
     },
+    "ksca": {
+      "next_30_days": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      },
+      "upcoming": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      }
+    },
     "chessfee": {
       "next_30_days": {
         "events": 16,
@@ -307,14 +343,7 @@
       }
     }
   },
-  "alerts": [
-    {
-      "source": "chessbase_calendar",
-      "window": "upcoming",
-      "what": "count_halved",
-      "message": "chessbase_calendar: upcoming events fell from 8 to 1 (half or fewer)"
-    }
-  ],
+  "alerts": [],
   "review": {
     "missing": 212,
     "possible_duplicates": 18
