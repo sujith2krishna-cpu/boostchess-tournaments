@@ -1,6 +1,7 @@
 {
   "aicf": {"enabled": true},
   "kca": {"enabled": true},
+  "tnsca": {"enabled": true},
   "chessfee": {"enabled": true},
   "chessresults_ind": {"enabled": true},
   "chessbase_calendar": {"enabled": true}

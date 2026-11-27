@@ -34,8 +34,8 @@ POSSIBLE_AT = 0.50
 NAME_WEIGHT, PLACE_WEIGHT, END_WEIGHT = 0.85, 0.10, 0.05
 MIN_DISTINCT_WORDS = 2  # fewer distinctive words than this can never prove "same" by name alone
 
-# Primary choice after "AICF with good dates": manual, kca, chessfee, then the rest.
-PRIMARY_ORDER = ("manual", "kca", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
+# Primary choice after "AICF with good dates": manual, kca, tnsca, chessfee, then the rest.
+PRIMARY_ORDER = ("manual", "kca", "tnsca", "chessfee", "chessresults_ind", "chessbase_calendar", "aicf")
 # Sources whose "city" is a district (a town inside that district is not a different place).
 DISTRICT_SOURCES = frozenset({"kca"})
 

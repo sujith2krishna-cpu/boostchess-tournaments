@@ -124,7 +124,7 @@ def web(monkeypatch):
     monkeypatch.setattr(be.requests, "get", fake.get)
     monkeypatch.setattr(be.requests, "post", fake.post)
     monkeypatch.setattr(be.time, "sleep", lambda seconds: fake.sleeps.append(seconds))
-    for host in ("aicf.in", "www.keralachessassociation.com", "www.chessfee.com",
+    for host in ("aicf.in", "www.keralachessassociation.com", "tamilchess.com", "www.chessfee.com",
                  "chess-results.com", "chessbase.in"):
         fake.add(f"https://{host}/robots.txt", "User-agent: *\nAllow: /\n")
     return fake
@@ -134,6 +134,7 @@ CF = "https://www.chessfee.com/"
 CR = "https://chess-results.com/"
 CB = "https://chessbase.in/"
 KCA = "https://www.keralachessassociation.com/"
+TNSCA = "https://tamilchess.com/"
 CR_FED = CR + "fed.aspx?lan=1&fed=IND"
 
 
@@ -167,6 +168,12 @@ def serve_kca(web, details=("736",)):
     web.add(KCA + "events", fx("kca_events_2026-11-25.html"))
     for number in details:
         web.add(KCA + f"events/{number}", fx(f"kca_event_{number}.html"))
+
+
+def serve_tnsca(web, years=(2026, 2027)):
+    """The saved calendar pages (26 Nov 2026): this year (from 10 Sep) and next year."""
+    for year in years:
+        web.add(TNSCA + f"tournament-registration/?y={year}", fx(f"tnsca_calendar_{year}.html"))
 
 
 def serve_aicf(web, rows):

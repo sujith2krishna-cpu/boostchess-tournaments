@@ -450,17 +450,18 @@ OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_u
 OVERRIDABLE_TAGS = ("formats", "fide_rated", "fide_how", "age")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
-# describe the same event. (Override > manual > aicf > kca > the rest.)
-SOURCE_PRIORITY = ("manual", "aicf", "kca", "chessfee", "chessresults_ind", "chessbase_calendar")
+# describe the same event. (Override > manual > aicf > kca > tnsca > the rest.)
+SOURCE_PRIORITY = ("manual", "aicf", "kca", "tnsca", "chessfee", "chessresults_ind", "chessbase_calendar")
 AUTOMATIC_SOURCES = SOURCE_PRIORITY[1:]
-LISTED_BY = {"manual": "manual", "aicf": "aicf", "kca": "kca", "chessfee": "chessfee",
+LISTED_BY = {"manual": "manual", "aicf": "aicf", "kca": "kca", "tnsca": "tnsca", "chessfee": "chessfee",
              "chessresults_ind": "chess-results", "chessbase_calendar": "chessbase"}
 # What a person should read for each source (the website keeps its own copy: FEED_BY).
 SOURCE_LABELS = {"manual": "Added by hand", "aicf": "All India Chess Federation",
-                 "kca": "Kerala Chess Association", "chessfee": "chessfee",
+                 "kca": "Kerala Chess Association",
+                 "tnsca": "Tamil Nadu State Chess Association", "chessfee": "chessfee",
                  "chessresults_ind": "Chess-Results", "chessbase_calendar": "ChessBase India"}
-# The national federation, and a state association affiliated to it.
-VERIFIED_SOURCES = frozenset({"aicf", "kca", "manual"})
+# The national federation, and the state associations affiliated to it.
+VERIFIED_SOURCES = frozenset({"aicf", "kca", "tnsca", "manual"})
 
 
 def source_rank(source: str | None) -> int:
@@ -469,7 +470,7 @@ def source_rank(source: str | None) -> int:
 
 # Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
 # calendar that lists events from many countries must supply its own code per event.
-COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "kca": "IN", "chessfee": "IN",
+COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "kca": "IN", "tnsca": "IN", "chessfee": "IN",
                      "chessresults_ind": "IN"}
 ISO_COUNTRIES = frozenset("""
 AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS
