@@ -8,12 +8,14 @@ Matching rules, in this order (see README, "Duplicates across sites"):
   1. different country                          -> different
   2. different state / city (both known)        -> different
   3. start dates more than 1 day apart          -> different (end dates are not used)
-  4. name similarity on distinctive words       -> the score
+  4. name similarity on distinctive words       -> the score (a name with no distinctive
+     words counts only when the whole name is the same word for word, in the same place)
   5. section guard (rating limit, age group, category letter, format) differs -> different
   6. strong proof (shared AICF code, same Chess-Results page) beats rules 2-5;
      the same brochure link beats rule 4 only (one brochure often covers several sections)
   7. score >= 0.80 same group; 0.50-0.80 flags.possible_duplicate_of; below: different
-  8. data/manual/pairs.csv forces "same" or "not_same" for a pair of ids, beating all of this.
+  8. data/manual/pairs.csv forces "same" or "not_same" for a pair of ids, beating all of this
+     ("undecided" lines change nothing).
 
 Everything is pure (no files, no network).
 """
@@ -215,6 +217,8 @@ class Features:
         self.id = event["id"]
         self.source = event["source"]
         self.words = name_words(event["name"] or "", event.get("city"))
+        # the whole name, only lower-cased and without punctuation or tails ("Organised by ...")
+        self.full = _flat(strip_name_tails(event["name"] or "", event.get("city"))) or None
         self.sections = sections(strip_name_tails(event["name"] or "", event.get("city")))
         self.start = _day(event.get("start"))
         self.end = _day(event.get("end"))
@@ -249,6 +253,8 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
         return out(0, "different", "start date unknown")
     if abs((a.start - b.start).days) > 1:
         return out(0, "different", "start dates more than 1 day apart", hard=True)
+    city = _same_city(ea, eb)
+    state = _same_text(ea.get("state"), eb.get("state"))
     section = section_difference(a.sections, b.sections)
     if section:
         return out(0, "different", f"different {section}", hard=True)
@@ -256,12 +262,15 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
     name = jaccard(words_a, words_b)
     reason = f"names {name:.2f}"
     if min(len(words_a), len(words_b)) < MIN_DISTINCT_WORDS:
-        name = min(name, 0.6)
-        reason += " (too few distinctive words)"
+        if a.full and a.full == b.full and (city or state):
+            # "International FIDE Rated Above 1800 Open Chess Tournament 2026" on both sites, same
+            # state: no distinctive words, but the whole name is the same word for word.
+            name, reason = 1.0, "identical names (no distinctive words, same place)"
+        else:
+            name = min(name, 0.6)
+            reason += " (too few distinctive words)"
     if a.brochure and a.brochure == b.brochure:
         name, reason = 1.0, "same brochure link"
-    city = _same_city(ea, eb)
-    state = _same_text(ea.get("state"), eb.get("state"))
     place = 1.0 if city else 0.5 if state else 0.0
     end = 1.0 if a.end and a.end == b.end else 0.0
     score = NAME_WEIGHT * name + PLACE_WEIGHT * place + END_WEIGHT * end
@@ -445,6 +454,8 @@ def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> 
             warnings.append(f"data/manual/pairs.csv line {row['line']}: no event has the id "
                             f"{' or '.join(repr(m) for m in missing)}; this row was ignored.")
             continue
+        if row["decision"] == "undecided":
+            continue  # still to be checked by a person: the rules below decide for now
         i, j = sorted((index_of[row["a"]], index_of[row["b"]]))
         forced[(i, j)] = row
 

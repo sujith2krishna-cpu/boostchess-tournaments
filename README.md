@@ -116,7 +116,10 @@ How two records from **different sites** are compared, in this order:
    no years, no Indian state names, no "CITY - " in front, no filler words (chess, tournament,
    international, open, fide, rated, rating, edition, the, of, level, championship, prize fund,
    ...). The remaining words are compared as a **set**, in any order: shared words divided by
-   all words. A name with fewer than 2 distinctive words can never prove "same" on its own.
+   all words. A name with fewer than 2 distinctive words can never prove "same" on its own,
+   with one exception: when the **whole name is the same word for word** on both sites (like
+   "International FIDE Rated Above 1800 Open Chess Tournament 2026") and the state or city is
+   known and the same, the name counts as a full match.
 5. **Section guard:** if the rating limit ("below 1800", "above 2100", "U1600"), the age group
    (U11, ...), the category letter ("Category B" vs "Category C") or the format (rapid vs
    blitz, when both say one) differ, they are **not** the same, whatever else matches.
@@ -500,7 +503,8 @@ same, add a line to `data/manual/pairs.csv` (on GitHub: open the file, pencil, a
 **Commit changes**). Columns: `id_a, id_b, decision, note`
 
 - `id_a`, `id_b`: the two event ids (see `data/review/dedup_review.csv` or `events.json`).
-- `decision`: `same` or `not_same`.
+- `decision`: `same`, `not_same`, or `undecided` (someone still has to check the pair; the line
+  is kept but changes nothing, so the tool decides as usual until you change it).
 - `note`: optional, why.
 
 ```csv
