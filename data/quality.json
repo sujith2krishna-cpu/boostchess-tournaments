@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T21:47:26+05:30",
+  "generated_at": "2026-11-27T21:48:37+05:30",
   "today": "2026-11-27",
   "windows": {
     "next_30_days": {
@@ -14,18 +14,18 @@
   "target": {
     "window": "next_30_days",
     "fully_known_pct": 95.0,
-    "now_pct": 15.2,
+    "now_pct": 15.6,
     "met": false
   },
   "overall": {
     "next_30_days": {
       "events": 250,
-      "fully_known": 38,
-      "fully_known_pct": 15.2,
+      "fully_known": 39,
+      "fully_known_pct": 15.6,
       "unknown_format": 54,
       "unknown_format_pct": 21.6,
-      "unknown_fide": 185,
-      "unknown_fide_pct": 74.0,
+      "unknown_fide": 181,
+      "unknown_fide_pct": 72.4,
       "no_state": 124,
       "no_state_pct": 49.6,
       "suspect_dates": 0,
@@ -37,12 +37,12 @@
     },
     "upcoming": {
       "events": 329,
-      "fully_known": 70,
-      "fully_known_pct": 21.3,
+      "fully_known": 71,
+      "fully_known_pct": 21.6,
       "unknown_format": 88,
       "unknown_format_pct": 26.7,
-      "unknown_fide": 204,
-      "unknown_fide_pct": 62.0,
+      "unknown_fide": 199,
+      "unknown_fide_pct": 60.5,
       "no_state": 130,
       "no_state_pct": 39.5,
       "suspect_dates": 1,
@@ -93,12 +93,12 @@
     "aicf": {
       "next_30_days": {
         "events": 51,
-        "fully_known": 35,
-        "fully_known_pct": 68.6,
+        "fully_known": 36,
+        "fully_known_pct": 70.6,
         "unknown_format": 11,
         "unknown_format_pct": 21.6,
-        "unknown_fide": 6,
-        "unknown_fide_pct": 11.8,
+        "unknown_fide": 2,
+        "unknown_fide_pct": 3.9,
         "no_state": 1,
         "no_state_pct": 2.0,
         "suspect_dates": 0,
@@ -110,12 +110,12 @@
       },
       "upcoming": {
         "events": 103,
-        "fully_known": 59,
-        "fully_known_pct": 57.3,
+        "fully_known": 60,
+        "fully_known_pct": 58.3,
         "unknown_format": 31,
         "unknown_format_pct": 30.1,
-        "unknown_fide": 11,
-        "unknown_fide_pct": 10.7,
+        "unknown_fide": 6,
+        "unknown_fide_pct": 5.8,
         "no_state": 3,
         "no_state_pct": 2.9,
         "suspect_dates": 1,
@@ -345,7 +345,7 @@
   },
   "alerts": [],
   "review": {
-    "missing": 212,
+    "missing": 211,
     "possible_duplicates": 18
   }
 }

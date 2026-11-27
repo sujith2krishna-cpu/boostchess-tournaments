@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-27T21:47:26+05:30",
+  "generated_at": "2026-11-27T21:48:37+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -611,8 +611,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U17"
         ],
@@ -1132,8 +1132,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U17"
         ],
@@ -1822,8 +1822,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U19"
         ],
@@ -2051,8 +2051,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U11"
         ],
@@ -2109,8 +2109,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -2682,8 +2682,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U13"
         ],
@@ -3022,8 +3022,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U15"
         ],
@@ -5074,8 +5074,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -7700,8 +7700,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U7"
         ],
@@ -9821,8 +9821,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U11"
         ],
@@ -10051,8 +10051,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -10225,8 +10225,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -11426,8 +11426,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -11482,8 +11482,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": true,
@@ -11540,8 +11540,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -11598,8 +11598,8 @@
         "formats": [
           "blitz"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": true,
@@ -11656,8 +11656,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -11714,8 +11714,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": true,
@@ -12742,8 +12742,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U13"
         ],
@@ -12800,8 +12800,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U13"
         ],
@@ -14992,8 +14992,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U17"
         ],
@@ -19202,8 +19202,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -22283,8 +22283,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U12",
           "U18"
@@ -40636,8 +40636,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -40694,8 +40694,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -40750,8 +40750,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -44964,8 +44964,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [
           "U19"
         ],
@@ -45799,8 +45799,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
@@ -52794,8 +52794,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "inferred",
         "age": [],
         "open": null,
         "girls": null,
