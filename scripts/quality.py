@@ -16,9 +16,10 @@ from __future__ import annotations
 
 import csv
 import io
+from collections import defaultdict
 from datetime import date, timedelta
 
-from eventlib import OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY
+from eventlib import OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY, source_rank, status
 
 WINDOW_DAYS = 30
 TARGET_PCT = 95.0  # fully known, for the next 30 days
@@ -128,7 +129,7 @@ def quality_report(events: list[dict], today: date, generated_at: str,
         "overall": overall,
         "sources": sources,
         "alerts": _alerts(sources, previous),
-        "review": review_counts or {"missing": 0, "possible_duplicates": 0},
+        "review": review_counts or {"missing": 0, "dates_disagree": 0, "possible_duplicates": 0},
     }
 
 
@@ -165,8 +166,40 @@ def _row(event: dict, kind: str, **extra) -> dict:
             "add_to_file": "", "line_to_add": "", **extra}
 
 
+DATES_APART_DAYS = 1  # grouped records whose start dates are further apart than this disagree
+
+
+def dates_disagree(events: list[dict], today: date) -> list[tuple[dict, list[dict]]]:
+    """[(primary, members)] for each group of records (not past, not hidden) whose start dates
+    are more than a day apart: the sites disagree about when the tournament starts."""
+    groups = defaultdict(list)
+    for event in events:
+        if not event["hidden"]:
+            groups[event["group_id"]].append(event)
+    found = []
+    for members in groups.values():
+        primary = next((m for m in members if m["merged_into"] is None), None)
+        starts = [date.fromisoformat(m["start"]) for m in members if m["start"]]
+        if primary is None or len(starts) < 2 or not is_shown(primary)                 or status(primary, today) == "past":
+            continue
+        if (max(starts) - min(starts)).days > DATES_APART_DAYS:
+            found.append((primary, sorted(members, key=lambda m: (source_rank(m["source"]), m["id"]))))
+    return sorted(found, key=lambda pm: (pm[0]["start"] or "9999", pm[0]["id"]))
+
+
+def _dates_text(members: list[dict]) -> str:
+    """'aicf 2027-02-08 to 2027-02-13 (aicf-1); tnsca, chessbase_calendar 2027-01-30 to ...'"""
+    by_dates: dict[str, list[dict]] = {}
+    for m in members:
+        when = (m["start"] or "no date") + (f" to {m['end']}" if m["end"] and m["end"] != m["start"] else "")
+        by_dates.setdefault(when, []).append(m)
+    return "; ".join(f"{', '.join(dict.fromkeys(m['source'] for m in ms))} {when} "
+                     f"({', '.join(m['id'] for m in ms)})" for when, ms in by_dates.items())
+
+
 def review_rows(events: list[dict], today: date) -> list[dict]:
     """Shown events starting in the next 30 days that miss anything (by start date), then
+    grouped records whose start dates disagree by more than a day (not past events), then
     every remaining possible duplicate (with both ids and a ready pairs.csv line)."""
     rows = []
     for event in sorted((e for e in events if is_shown(e) and in_window(e, "next_30_days", today)),
@@ -176,6 +209,13 @@ def review_rows(events: list[dict], today: date) -> list[dict]:
             rows.append(_row(event, "missing", missing=", ".join(missing),
                              add_to_file="data/manual/overrides.csv",
                              line_to_add=override_line(event, missing)))
+    for primary, members in dates_disagree(events, today):
+        others = [m["id"] for m in members if m is not primary and m["start"] != primary["start"]]
+        rows.append(_row(primary, "dates_disagree", other_id=" ".join(others),
+                         missing="start dates disagree: " + _dates_text(members)
+                                 + "; check the organiser's page, then set the right dates here",
+                         add_to_file="data/manual/overrides.csv",
+                         line_to_add=override_line(primary, ["dates"])))
     by_id = {e["id"]: e for e in events}
     dups = [e for e in events if e["flags"]["possible_duplicate_of"] and not e["hidden"]]
     for event in sorted(dups, key=lambda e: (e["start"] or "9999", e["id"])):
@@ -192,6 +232,7 @@ def review_rows(events: list[dict], today: date) -> list[dict]:
 
 def review_counts(rows: list[dict]) -> dict:
     return {"missing": sum(1 for r in rows if r["kind"] == "missing"),
+            "dates_disagree": sum(1 for r in rows if r["kind"] == "dates_disagree"),
             "possible_duplicates": sum(1 for r in rows if r["kind"] == "possible_duplicate")}
 
 
@@ -232,6 +273,7 @@ def summary_markdown(quality: dict) -> str:
               f"{'–' if up['fully_known_pct'] is None else format(up['fully_known_pct'], 'g') + '%'} fully known."]
     review = quality["review"]
     lines.append(f"**Review list** (`data/review.csv`): {review['missing']} events to complete, "
+                 f"{review.get('dates_disagree', 0)} with dates that disagree, "
                  f"{review['possible_duplicates']} possible duplicates.")
     if quality["alerts"]:
         lines += ["", "**Quality alerts** (compared with the previous run):"]

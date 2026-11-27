@@ -129,12 +129,13 @@ def test_pairs_csv_wrong_decision_names_all_three_choices(data_dir):
             "'not_same' or 'undecided'.") in str(info.value)
 
 
-def test_committed_undecided_pairs_are_aicf_and_chessbase_lines_with_a_note():
+def test_committed_t5_pairs_were_decided_as_same_with_a_note():
+    # T5 added these 7 lines as "undecided"; T11 decided them (all "same", see test_t11.py).
     errors, warnings = [], []
     rows = be.load_pairs(be.DATA_DIR, errors, warnings)
     assert errors == []
-    undecided = [r for r in rows if r["decision"] == "undecided"]
-    assert len(undecided) == 7
-    for row in undecided:
+    t5 = [r for r in rows if r["note"] and "T5 check" in r["note"]]
+    assert len(t5) == 7 and not [r for r in rows if r["decision"] == "undecided"]
+    for row in t5:
         assert row["a"].startswith("aicf-") and row["b"].startswith("chessbase_calendar-")
-        assert row["note"] and row["note"].startswith("T5 check")
+        assert row["decision"] == "same"

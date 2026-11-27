@@ -210,29 +210,57 @@ _STATE_BY_KEY.update({
 _CITY_TO_STATE = {
     "Tamil Nadu": "chennai, coimbatore, madurai, tiruchirappalli, trichy, salem, "
                   "tirunelveli, vellore, erode, tiruppur, tirupur, thanjavur, nagercoil, "
-                  "kanyakumari, cuddalore, chengalpattu, thiruvarur",
-    "Maharashtra": "mumbai, navi mumbai, pune, nagpur, nashik, thane",
-    "Karnataka": "bengaluru, bangalore, mysuru, mysore, mangalore, mangaluru, belagavi",
-    "Telangana": "hyderabad, secunderabad",
-    "West Bengal": "kolkata, siliguri",
+                  "kanyakumari, cuddalore, chengalpattu, thiruvarur, krishnagiri, dindigul, "
+                  "kanchipuram, namakkal, kovilpatti, aruppukottai, sirkali, ranipet, "
+                  "pallikaranai, pudukkottai, pudukottai, tirupattur",
+    "Maharashtra": "mumbai, navi mumbai, pune, nagpur, nashik, thane, kalyan, sangli, "
+                   "nandurbar, bhandara",
+    "Karnataka": "bengaluru, bangalore, mysuru, mysore, mangalore, mangaluru, belagavi, belgaum, "
+                 "tumakuru, tumkur, davangere, davanagere, haveri, koppal, sullia",
+    "Telangana": "hyderabad, secunderabad, kukatpally, nizampet, pragathi nagar",
+    "West Bengal": "kolkata, siliguri, rishra",
     "Gujarat": "ahmedabad, surat, vadodara",
-    "Madhya Pradesh": "bhopal, indore, jabalpur, burhanpur",
+    "Madhya Pradesh": "bhopal, indore, jabalpur, burhanpur, ujjain",
     "Chhattisgarh": "raipur",
     "Andhra Pradesh": "visakhapatnam, vijayawada",
     "Uttarakhand": "dehradun",
-    "Uttar Pradesh": "lucknow",
+    "Uttar Pradesh": "lucknow, ghaziabad, kanpur, prayagraj, budaun",
     "Rajasthan": "jaipur",
     "Bihar": "patna",
-    "Kerala": "kochi, thiruvananthapuram",
-    "Odisha": "bhubaneswar",
+    "Kerala": "kochi, thiruvananthapuram, edappally, karavaloor",
+    "Odisha": "bhubaneswar, puri",
     "Jharkhand": "ranchi",
-    "Assam": "guwahati",
+    "Assam": "guwahati, udharbond",
 }
 _CITY_BY_KEY = {
     _key(city): state
     for state, cities in _CITY_TO_STATE.items()
     for city in cities.split(",")
 }
+# Two spellings of one town, or a part of a city, count as that one town when we look for
+# "exactly one known town" in a venue text (town_state_in()).
+_ONE_TOWN = {
+    "bangalore": "bengaluru", "mysore": "mysuru", "mangalore": "mangaluru", "belgaum": "belagavi",
+    "tumkur": "tumakuru", "davanagere": "davangere", "trichy": "tiruchirappalli",
+    "tirupur": "tiruppur", "pudukottai": "pudukkottai", "pallikaranai": "chennai",
+    "edappally": "kochi", "kukatpally": "hyderabad", "nizampet": "hyderabad",
+    "pragathi nagar": "hyderabad", "secunderabad": "hyderabad",
+}
+# A town name followed by one of these words is a street or a part of another place
+# ("Hangal Road, Haveri", "Kalyan Nagar, Bengaluru"), not where the event is.
+_TOWN_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in sorted(_CITY_BY_KEY, key=len, reverse=True)) + r")\b"
+    r"(?!\s+(?:road|rd|highway|bypass|street|nagar|colony|layout|cross)\b)")
+
+
+def town_state_in(text) -> str | None:
+    """The state of the one known town written anywhere in a venue text, else None.
+
+    "Jilla Valmiki Bhavan, Hangal Road, Haveri" -> Karnataka. Two different known towns
+    ("SILIGURI INDORE STADIUM": Siliguri and Indore) or none: None (best effort, never a guess).
+    """
+    towns = {_ONE_TOWN.get(m.group(1), m.group(1)) for m in _TOWN_PATTERN.finditer(_key(text or ""))}
+    return _CITY_BY_KEY[next(iter(towns))] if len(towns) == 1 else None
 
 
 # Kerala's 14 districts, with old spellings and the main towns in each. The Kerala Chess
@@ -409,8 +437,21 @@ def fide_evidence(text: str) -> tuple[bool | None, str | None]:
         return True, "stated"
     if any(p.search(text) for p in _INFERRED_RATED) or (
             _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text) and not _SCHOOL.search(text)):
-        return True, "inferred"
+        return True, ("stated" if fide_named(text) else "inferred")
     return None, None
+
+
+# "FIDE Open", "FIDE Chess", "FIDE Tournament", "FIDE TMT", "Open FIDE", "International FIDE".
+# Rule 2 of docs/FIDE_CHECK.md, used as a label only: it turns an "inferred" true into a
+# "stated" true and never turns a not-stated event into a yes (or a yes into a no).
+_FIDE_NAMED = re.compile(r"(?i)\bfide\b[\s-]+(?:open|chess|tournaments?|tmt)\b"
+                         r"|\b(?:open|international)[\s-]+fide\b")
+
+
+def fide_named(text) -> bool:
+    """True when the name puts the word FIDE next to Open / Chess / Tournament / TMT."""
+    text = clean_text(text)
+    return bool(_FIDE_NAMED.search(text)) and not _NON_RATED.search(text)
 
 
 def fide_rated_in(text: str) -> bool | None:
@@ -637,16 +678,37 @@ def strip_phones(text) -> str:
 # AICF codes inside other sources' titles, similar names
 # --------------------------------------------------------------------------
 _AICF_CODE = re.compile(r"(?i)\bAICF\b[^0-9]{0,25}?(\d{6}(?:\s*/\s*\d{2,6}(?![\d/a-z]))*)")
+# AICF's own full form, also without the word AICF: 6 digits / 2-letter state code, "(R)" for
+# rated or nothing / year ("499268/KA(R)/2026"). Strict, so phone numbers and prize money never match.
+_AICF_FULL_CODE = re.compile(r"(?<![\d/])(\d{6})\s*/\s*([A-Za-z]{2})\s*(?:\(\s*[Rr]\s*\))?\s*/\s*"
+                             r"((?:19|20)\d{2})(?![\d/])")
+
+
+def _full_codes(text) -> list[tuple[str, str]]:
+    """[(code, state)] for every full-form AICF code whose 2 letters are an Indian state code."""
+    return [(m.group(1), IN_STATE_CODES[m.group(2).upper()])
+            for m in _AICF_FULL_CODE.finditer(text or "") if m.group(2).upper() in IN_STATE_CODES]
 
 
 def aicf_codes_in(text) -> list[str]:
-    """6-digit AICF codes written next to the word AICF ("AICF Event Code: 502180/KL")."""
+    """6-digit AICF codes written next to the word AICF ("AICF Event Code: 502180/KL"), or in
+    AICF's full form anywhere ("499268/KA(R)/2026")."""
     found: list[str] = []
     for match in _AICF_CODE.finditer(text or ""):
         for code in parse_codes(match.group(1))[0]:
             if code not in found:
                 found.append(code)
+    for code, _ in _full_codes(text):
+        if code not in found:
+            found.append(code)
     return found
+
+
+def aicf_code_state_in(text) -> str | None:
+    """The state the full-form AICF codes in a text name (KA -> Karnataka); None when there are
+    none or they name different states."""
+    states = {state for _, state in _full_codes(text)}
+    return next(iter(states)) if len(states) == 1 else None
 
 
 def similar_names(a: str, b: str, threshold: float = 0.85) -> bool:

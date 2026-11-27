@@ -29,7 +29,8 @@ from quality import REVIEW_COLUMNS  # noqa: E402
 
 FILES = ("events.json", "meta.json", "quality.json", "review.csv")
 QUALITY_PARTS = ("target", "overall", "sources", "review")
-REVIEW_KINDS = {"missing": "missing", "possible_duplicate": "possible_duplicates"}
+REVIEW_KINDS = {"missing": "missing", "dates_disagree": "dates_disagree",
+                "possible_duplicate": "possible_duplicates"}
 SHOWN_HEADERS = ("content-type", "access-control-allow-origin", "cache-control", "last-modified", "etag")
 
 
@@ -88,7 +89,8 @@ def check_file(name: str, status: int, headers: dict, body: str) -> tuple[list[s
                     break
                 counts[REVIEW_KINDS[kind]] += 1
             data = counts
-            shown.append(f"  {counts['missing']} to complete, {counts['possible_duplicates']} possible duplicates")
+            shown.append(f"  {counts['missing']} to complete, {counts['dates_disagree']} dates disagree, "
+                         f"{counts['possible_duplicates']} possible duplicates")
     return problems, shown, data
 
 
@@ -98,11 +100,14 @@ def check_together(read: dict) -> list[str]:
     quality, review = read.get("quality.json"), read.get("review.csv")
     if not quality or not review:
         return []
-    said = {k: quality["review"].get(k) for k in review}
+    said = {k: quality["review"].get(k, 0 if k == "dates_disagree" else None) for k in review}
     if said != review:
-        return [f"review.csv has {review['missing']} to complete and {review['possible_duplicates']} "
-                f"possible duplicates, but quality.json says {said['missing']} and "
-                f"{said['possible_duplicates']}"]
+        dates = (f", {review['dates_disagree']} dates disagree"
+                 if review["dates_disagree"] or said["dates_disagree"] else "")
+        said_dates = f", {said['dates_disagree']}" if dates else ""
+        return [f"review.csv has {review['missing']} to complete{dates} and "
+                f"{review['possible_duplicates']} possible duplicates, but quality.json says "
+                f"{said['missing']}{said_dates} and {said['possible_duplicates']}"]
     return []
 
 
