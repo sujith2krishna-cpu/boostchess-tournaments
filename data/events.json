@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-27T05:18:49+05:30",
+  "generated_at": "2026-11-27T13:52:10+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -40966,8 +40966,8 @@
         },
         {
           "source": "chessfee",
-          "source_url": "https://www.chessfee.com/tmt_details.php?id=1876",
-          "register_url": "https://www.chessfee.com/treg.php?id=1876"
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
+          "register_url": "https://www.chessfee.com/treg.php?id=1832"
         }
       ],
       "listed_by": "aicf",
@@ -40977,13 +40977,13 @@
       "also_listed_on": [
         {
           "source": "chessfee",
-          "source_url": "https://www.chessfee.com/tmt_details.php?id=1876",
-          "register_url": "https://www.chessfee.com/treg.php?id=1876",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
+          "register_url": "https://www.chessfee.com/treg.php?id=1832",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/ECA_Rapid%20-%2010%20JAN%202027.pdf"
         }
       ],
-      "register_url": "https://www.chessfee.com/treg.php?id=1876",
+      "register_url": "https://www.chessfee.com/treg.php?id=1832",
       "results_url": null,
       "registration_deadline": null,
       "organiser": "Ms. Sivaranjani S",
@@ -41096,8 +41096,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1832",
-      "merged_into": null,
+      "group_id": "aicf-486710",
+      "merged_into": "aicf-486710",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1832",
       "results_url": null,
@@ -41120,7 +41120,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-486710"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -41154,8 +41154,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "aicf-486710",
-      "merged_into": "aicf-486710",
+      "group_id": "chessfee-1876",
+      "merged_into": null,
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1876",
       "results_url": null,
@@ -41178,7 +41178,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": null
+        "possible_duplicate_of": "aicf-486710"
       },
       "raw_dates": null,
       "dates_from": null,
