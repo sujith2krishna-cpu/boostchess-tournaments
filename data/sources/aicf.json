@@ -1,6 +1,6 @@
 {
   "source": "aicf",
-  "found": 446,
+  "found": 448,
   "listing": {},
   "events": [
     {
@@ -3594,7 +3594,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8156,7 +8156,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9050,7 +9050,7 @@
       "start": "2026-07-19",
       "end": "2026-07-19",
       "place_text": "Tirupattur",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": "Tirupattur",
       "country": "IN",
       "brochure_url": null,
@@ -20120,6 +20120,64 @@
       "overridden": null
     },
     {
+      "id": "aicf-504583",
+      "codes": [
+        "504583"
+      ],
+      "name": "1st RIMS International FIDE Rapid Rating Open chess tournament-2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/504583R2026.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-504583",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-510558",
       "codes": [
         "510558"
@@ -20323,7 +20381,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -23077,7 +23135,7 @@
       "state": "Madhya Pradesh",
       "city": "Jabalpur",
       "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/08/4TH-JABALPUR-INTERNATIONAL-OPEN-FIDE-RAPID-RATING-CHESS-TOURNAMENT-2027_.pdf",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/UPDATED-4TH-JABALPUR-INTERNATIONAL-OPEN-FIDE-RAPID-RATING-CHESS-TOURNAMENT-JANUARY_2027-1.pdf",
       "source": "aicf",
       "source_url": "https://aicf.in/all-events/",
       "sources": [
@@ -23858,6 +23916,64 @@
       "raw_dates": null,
       "dates_from": null,
       "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aicf-506124",
+      "codes": [
+        "506124"
+      ],
+      "name": "3rd DNC Memorial FIDE Rapid Rating Open chess tournament Dharmapuri 2027",
+      "start": "2027-01-24",
+      "end": "2027-01-24",
+      "place_text": "Tamil Nadu",
+      "state": "Tamil Nadu",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-506124",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
       "last_seen": "2026-11-27",
       "gone_from_source": false,
       "cancelled": false,
@@ -24782,7 +24898,7 @@
       "state": "Haryana",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/NT.pdf",
       "source": "aicf",
       "source_url": "https://aicf.in/all-events/",
       "sources": [
@@ -24976,7 +25092,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,

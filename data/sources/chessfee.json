@@ -2,8 +2,6 @@
   "source": "chessfee",
   "found": 31,
   "listing": {
-    "https://www.chessfee.com/tmt_details.php?id=1857": "979b028c5545",
-    "https://www.chessfee.com/tmt_details.php?id=1800": "ef7d605e4acf",
     "https://www.chessfee.com/tmt_details.php?id=1817": "33f290ad33c3",
     "https://www.chessfee.com/tmt_details.php?id=1824": "eaf446a94d58",
     "https://www.chessfee.com/tmt_details.php?id=1835": "238c4144c327",
@@ -28,10 +26,12 @@
     "https://www.chessfee.com/tmt_details.php?id=1870": "98296f6a3c07",
     "https://www.chessfee.com/tmt_details.php?id=1871": "a57cfc073b3b",
     "https://www.chessfee.com/tmt_details.php?id=1873": "9113dcf44e67",
+    "https://www.chessfee.com/tmt_details.php?id=1879": "18e1bdeebec5",
     "https://www.chessfee.com/tmt_details.php?id=1836": "7f1ffeaa37ae",
     "https://www.chessfee.com/tmt_details.php?id=1862": "85540f32319c",
     "https://www.chessfee.com/tmt_details.php?id=1874": "b2ddea9c7156",
     "https://www.chessfee.com/tmt_details.php?id=1876": "2d67432c8d40",
+    "https://www.chessfee.com/tmt_details.php?id=1878": "11e63dc32125",
     "https://www.chessfee.com/tmt_details.php?id=1872": "f8ff8a304e84"
   },
   "events": [
@@ -199,7 +199,7 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
-      "gone_from_source": false,
+      "gone_from_source": true,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -257,7 +257,7 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
-      "gone_from_source": false,
+      "gone_from_source": true,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -1674,6 +1674,62 @@
       "overridden": null
     },
     {
+      "id": "chessfee-1879",
+      "codes": [],
+      "name": "KOVILPATTI - Unique Chess Academy 1st Tamilnadu State Level Children & Open Chess Tournament 2026 – 6 DEC",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "St. Paul Matric. Higher Secondary School, Kovilpatti",
+      "state": "Tamil Nadu",
+      "city": "Kovilpatti",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1879",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1879",
+          "register_url": "https://www.chessfee.com/treg.php?id=1879"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "group_id": "chessfee-1879",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://www.chessfee.com/treg.php?id=1879",
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Ms. Mariammal V",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessfee-1836",
       "codes": [],
       "name": "ROTARY CLUB SULLIA & SULLIA CHESS ASSOCIATION 3rd SCA OPEN RAPID TOURNAMENT – 13 DEC",
@@ -1954,6 +2010,62 @@
       "raw_dates": null,
       "dates_from": null,
       "first_seen": "2026-11-26",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessfee-1878",
+      "codes": [],
+      "name": "DHARMAPURI - 2ND TN STATE LEVEL OPEN CHESS TOURNAMENT 2027 – 10 JAN",
+      "start": "2027-01-10",
+      "end": "2027-01-10",
+      "place_text": "KONGU VELLALA GOUNDERGAL THIRUMANA MANDABAM, HARUR-636903, DHARMAPURI Dt.",
+      "state": null,
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/10%20JAN%20TN%20STATE%20CHESS-%20DHARMAPURI.pdf",
+      "source": "chessfee",
+      "source_url": "https://www.chessfee.com/tmt_details.php?id=1878",
+      "sources": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1878",
+          "register_url": "https://www.chessfee.com/treg.php?id=1878"
+        }
+      ],
+      "listed_by": "chessfee",
+      "verified": false,
+      "group_id": "chessfee-1878",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": "https://www.chessfee.com/treg.php?id=1878",
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Sakthi Chess Academy",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
       "last_seen": "2026-11-27",
       "gone_from_source": false,
       "cancelled": false,

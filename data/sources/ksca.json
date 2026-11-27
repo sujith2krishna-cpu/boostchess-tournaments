@@ -1,0 +1,1707 @@
+{
+  "source": "ksca",
+  "found": 29,
+  "listing": {
+    "ksca-7128": "1e8a7092d636",
+    "ksca-7183": "d52b291dbb40",
+    "ksca-7356": "ef3942d877ce",
+    "ksca-6894": "3d9225c8183e",
+    "ksca-6939": "73e4e7f929d6",
+    "ksca-6967": "be35a55b3a1a",
+    "ksca-7226": "5f31148a5fbd",
+    "ksca-7258": "132d2d71540b",
+    "ksca-7309": "bead95058f7f",
+    "ksca-7328": "a07ffc0427cc",
+    "ksca-7333": "bb2cfbac7393",
+    "ksca-7099": "98d540e2516c",
+    "ksca-7206": "e2f5be43a944",
+    "ksca-7294": "a2afd33eb1a5",
+    "ksca-7314": "30ef51b68bd0",
+    "ksca-7163": "5da52b4c23c3",
+    "ksca-7345": "f6763adebb14",
+    "ksca-7199": "173cc58de23a",
+    "ksca-7237": "bf52a7937035",
+    "ksca-7302": "29dc925d2701",
+    "ksca-6769": "d3621fcb89f6",
+    "ksca-6995": "78ea68c50beb",
+    "ksca-6773": "440a4892301b",
+    "ksca-7043": "68810692073a",
+    "ksca-6884": "6bddecb99a84",
+    "ksca-7137": "fcae5c575f54",
+    "ksca-7322": "71ca6f71a57c",
+    "ksca-6973": "d9892ab0b8ba",
+    "ksca-7144": "56529c13d6e1"
+  },
+  "events": [
+    {
+      "id": "ksca-7128",
+      "codes": [],
+      "name": "South Open FIDE Rapid Chess Tournament 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Sri Sai Palace, Near Vishwa Vokkaligara Maha Samsthana, NICE Road, Junction, SH17, Kengeri, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/south-open-fide-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/south-open-fide-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7128",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7183",
+      "codes": [],
+      "name": "5th Sajjan Academy Open Blitz Chess Tournament 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Sri Sai Palace, Near Vishwa Vokkaligara Maha Samsthana, NICE Road, Junction, SH17, Kengeri, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/5th-sajjan-academy-open-blitz-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/5th-sajjan-academy-open-blitz-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7183",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7356",
+      "codes": [],
+      "name": "Inter School Chess Competition 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur - CBSE School, Survey No. 37/1, 98, off Jakkur - Yelahanka Road, Basaveshwara Nagar Yelahanka, Nehru Nagar, Shivannahalli, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/inter-school-chess-competition-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/inter-school-chess-competition-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7356",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6894",
+      "codes": [],
+      "name": "Sarji Renuka All India FIDE Rapid Rating Chess Tournament 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Jilla Valmiki Bhavan, Hangal Road, Haveri, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Haveri",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/sarji-renuka-all-india-fide-rapid-rating-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sarji-renuka-all-india-fide-rapid-rating-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6894",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6939",
+      "codes": [],
+      "name": "KHANNUR FIDE RAPID RATING CHESS TOURNAMENT 2026",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "place_text": "Lotus Convention Centre, Ramamurthy Nagar, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6939",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6967",
+      "codes": [],
+      "name": "INVENTIVE 2.0 All India FIDE-Rated Rapid Chess Tournament 2026",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "place_text": "EuroSchool Chimney Hills, Hesarghatta Rd, Chikkasandra, Chikkabanavara, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/inventive-2-0-all-india-fide-rated-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/inventive-2-0-all-india-fide-rated-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6967",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7226",
+      "codes": [],
+      "name": "DDCA – SCMA Chess Festival 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Divekar Bhavan, Shanti Colony, Hubli, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Hubli",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7226",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7258",
+      "codes": [],
+      "name": "DDCA – SCMA Chess Festival 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Divekar Bhavan, Shanti Colony, Hubli, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Hubli",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026-2/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026-2/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7258",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7309",
+      "codes": [],
+      "name": "CHADURANGOTSAVA ALL INDIA OPEN FIDE RATED RAPID CHESS TOURNAMENT 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Dr. Ambedkar Institute of Technology, Nagarbhavi, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/chadurangotsava-all-india-open-fide-rated-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/chadurangotsava-all-india-open-fide-rated-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7309",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7328",
+      "codes": [],
+      "name": "MagicSquare Winter Open & U-15 Rapid Chess Tournament 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "MG Stadium, Tumkur, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Tumkur",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/magicsquare-winter-open-u-15-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/magicsquare-winter-open-u-15-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7328",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U15"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7333",
+      "codes": [],
+      "name": "Under-18 Children’s Day FIDE Rapid Rating Chess Tournament 2026",
+      "start": "2026-12-06",
+      "end": "2026-12-06",
+      "place_text": "Gujarat Bhavan, Shastri Nagar, Belgaum, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Belgaum",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/under-18-childrens-day-fide-rapid-rating-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/under-18-childrens-day-fide-rapid-rating-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7333",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [
+          "U18"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7099",
+      "codes": [],
+      "name": "4th Universal Age Category Chess Tournament",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "place_text": "UNIVERSAL Campus Kolur, Lakkayanapalya, Tavarekere Hobli, Ramanahalli Post, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/4th-universal-age-category-chess-tournament/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/4th-universal-age-category-chess-tournament/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7099",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7206",
+      "codes": [],
+      "name": "PHF Nagaprakash Memorial Chess Tournament – Edition 5 2026",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Dwaraka Auditorium, RUAS (Ramaiah University of Applied Sciences), M S Ramaiah Nagar, Mathikere, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/phf-nagaprakash-memorial-chess-tournament-edition-5-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/phf-nagaprakash-memorial-chess-tournament-edition-5-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7206",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7294",
+      "codes": [],
+      "name": "Chess Orbit Rapid Age Category Chess Tournament 2026",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Wisdom Montfort International School, Thirumenahalli, Jakkur, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/chess-orbit-rapid-age-category-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/chess-orbit-rapid-age-category-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7294",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7314",
+      "codes": [],
+      "name": "Rotary Sahakarnagar – Devin Open & Age Category Rapid Chess Tournament 2026",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Dev-In Academy for Learning, Sahakarnagar, Bangalore, India",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/rotary-sahakarnagar-devin-open-age-category-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/rotary-sahakarnagar-devin-open-age-category-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7314",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7163",
+      "codes": [],
+      "name": "7th BKCC Open & Age Category Rapid Tournament 2026",
+      "start": "2026-12-19",
+      "end": "2026-12-19",
+      "place_text": "10X International School, Near Dommasandra Circle, Sarjapur Varthur Road, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7163",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7345",
+      "codes": [],
+      "name": "7th BKCC Open & Age Category Rapid Tournament 2026",
+      "start": "2026-12-19",
+      "end": "2026-12-19",
+      "place_text": "10X International School Bangalore, Near Dommasandra Circle, Sarjapur–Varthur Road, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026-2/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026-2/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7345",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7199",
+      "codes": [],
+      "name": "Sushruta Reddy – Ascend Chess Tournament 2026",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Nexus Koramangala, Nexus Mall, Koramangala, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-ascend-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-ascend-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7199",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7237",
+      "codes": [],
+      "name": "ChessFusion Legacy Rapid Chess Championship 2026 (6th Edition)",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Silicon City Academy of Secondary Education, KUMAR NURSERY, Off, Kanakapura Rd, New Bank Colony, 8th Phase, Konanakunte, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/chessfusion-legacy-rapid-chess-championship-2026-6th-edition/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/chessfusion-legacy-rapid-chess-championship-2026-6th-edition/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7237",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7302",
+      "codes": [],
+      "name": "Puneeth Rajkumar Cup – Season 5, All India FIDE Rating Open Rapid Chess Tournament 2026",
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "place_text": "Guru Bhavan, AVK College Road, Davangere, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Davangere",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/puneeth-rajkumar-cup-season-5-all-india-fide-rating-open-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/puneeth-rajkumar-cup-season-5-all-india-fide-rating-open-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7302",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6769",
+      "codes": [],
+      "name": "3rd Rotaract RUAS – Children Chess Academy All India Open FIDE Rated Classical Chess Tournament 2026",
+      "start": "2026-12-23",
+      "end": "2026-12-27",
+      "place_text": "Dwaraka Auditorium, RUAS (Ramaiah University of Applied Sciences), M S Ramaiah Nagar, Mathikere, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/3rd-rotaract-ruas-children-chess-academy-all-india-open-fide-rated-classical-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/3rd-rotaract-ruas-children-chess-academy-all-india-open-fide-rated-classical-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6769",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6995",
+      "codes": [],
+      "name": "5th Late Shri Shankar Shet Memorial 1st Open FIDE Rated Rapid Chess Tournament 2026",
+      "start": "2026-12-27",
+      "end": "2026-12-27",
+      "place_text": "Raghavendra Kalyana Mantappa, Siddapur, Uttara Kannada District, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Uttara Kannada District",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/5th-late-shri-shankar-shet-memorial-1st-open-fide-rated-rapid-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/5th-late-shri-shankar-shet-memorial-1st-open-fide-rated-rapid-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6995",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6773",
+      "codes": [],
+      "name": "4th Rotaract RUAS – Children Chess Academy Below 1800 All India FIDE Rated Classical Chess Tournament 2026",
+      "start": "2026-12-28",
+      "end": "2026-12-30",
+      "place_text": "Dwaraka Auditorium, RUAS (Ramaiah University of Applied Sciences), M S Ramaiah Nagar, Mathikere, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/4th-rotaract-ruas-children-chess-academy-below-1800-all-india-fide-rated-classical-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/4th-rotaract-ruas-children-chess-academy-below-1800-all-india-fide-rated-classical-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6773",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7043",
+      "codes": [],
+      "name": "Open Rapid Chess Tournament Sirsi – 2027",
+      "start": "2027-01-10",
+      "end": "2027-01-10",
+      "place_text": "Kadave Shripad Hedge Kalyana Mantapa, Court Road, Sirsi, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Sirsi",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/open-rapid-chess-tournament-sirsi-2027/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/open-rapid-chess-tournament-sirsi-2027/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7043",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6884",
+      "codes": [],
+      "name": "DIGISIGNS International FIDE Rated Open Chess Tournament 2027",
+      "start": "2027-01-17",
+      "end": "2027-01-17",
+      "place_text": "Nexus Koramangala, Nexus Mall, Koramangala, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/digisigns-international-fide-rated-open-chess-tournament-2027/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/digisigns-international-fide-rated-open-chess-tournament-2027/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6884",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7137",
+      "codes": [],
+      "name": "1st PIXEL All India Open FIDE Rated Rapid Chess Tournament 2027",
+      "start": "2027-01-24",
+      "end": "2027-01-24",
+      "place_text": "Manasa Gangothri Indoor Stadium, Kukkarahalli Campus Rd, Mysuru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Mysuru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/1st-pixel-all-india-open-fide-rated-rapid-chess-tournament-2027/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/1st-pixel-all-india-open-fide-rated-rapid-chess-tournament-2027/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7137",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7322",
+      "codes": [],
+      "name": "Sushruta Reddy – Zenith FIDE Rapid Rating Chess Tournament 2027",
+      "start": "2027-01-30",
+      "end": "2027-01-30",
+      "place_text": "Nexus Koramangala, Nexus Mall, Koramangala, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-zenith-fide-rapid-rating-chess-tournament-2027/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-zenith-fide-rapid-rating-chess-tournament-2027/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7322",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "Monthly Tournaments"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-6973",
+      "codes": [],
+      "name": "SportsCentric FIDE Rated Chess Tournament 2027",
+      "start": "2027-01-31",
+      "end": "2027-01-31",
+      "place_text": "S.E.A. Group of Institutions, K.R. Puram, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/sportscentric-fide-rated-chess-tournament-2026/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sportscentric-fide-rated-chess-tournament-2026/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-6973",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "ksca-7144",
+      "codes": [],
+      "name": "1st ChessBinder.com Open FIDE Rated Rapid Tournament 2027",
+      "start": "2027-02-13",
+      "end": "2027-02-13",
+      "place_text": "Nexus Whitefield Mall, Bengaluru, Karnataka, India",
+      "state": "Karnataka",
+      "city": "Bengaluru",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "ksca",
+      "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
+      "sources": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "ksca",
+      "verified": true,
+      "group_id": "ksca-7144",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "FIDE Rating Events"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}
