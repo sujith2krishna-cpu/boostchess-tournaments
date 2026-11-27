@@ -619,6 +619,10 @@ def fill_tags(event: dict) -> None:
     # A KCA "STATE" event is rated by the state association; its name alone says nothing more.
     if event["tags"]["fide_rated"] is None and kca.STATE_CATEGORY not in event["tags"]["categories"]:
         event["tags"]["fide_rated"], event["tags"]["fide_how"] = fide_evidence(text)
+    # AICF's national / state / Asian championships are rated, though their names never say so.
+    if event["tags"]["fide_rated"] is None and event["source"] == "aicf" \
+            and aicf_championship_rated(event["name"] or ""):
+        event["tags"]["fide_rated"], event["tags"]["fide_how"] = True, "inferred"
 
 
 def review_csv(rows: list[dict]) -> bytes:

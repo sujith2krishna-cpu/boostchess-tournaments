@@ -7,7 +7,7 @@ import pytest
 
 import build_events as be
 import dedup
-from conftest import NOW, ROOT, by_id, load_doc, load_events, write_manual
+from conftest import FIXTURE, NOW, ROOT, by_id, load_doc, load_events, write_manual
 
 REAL = {e["id"]: e for e in json.loads(
     (ROOT / "tests" / "fixtures" / "dedup_real_events.json").read_text("utf-8"))["events"]}
@@ -461,3 +461,65 @@ def test_old_stored_tags_get_fide_how():
                           "last_seen": "2026-11-02", "tags": {}})
     assert blank["tags"]["fide_how"] is None
     assert list(stored["tags"])[:3] == ["formats", "fide_rated", "fide_how"]
+
+
+# ---- AICF national / state / Asian championships are rated (docs/FIDE_CHECK.md, rule 1) ----
+@pytest.mark.parametrize("name, rated", [
+    ("63rd National Chess Championship – 2026", True),
+    ("52nd NATIONAL WOMEN CHESS CHAMPIONSHIP 2026", True),
+    ("National U19 (Junior )Chess Championship 2026", True),
+    ("Asian Junior Girls Blitz Chess Championship 2026", True),
+    ("TAMILNADU STATE U-17 OPEN/Girls CHESS CHAMPIONSHIP 2026", True),
+    ("North Zonal Chess Championships 2027", True),
+    ("National Under 15", False),                        # no "Championship"
+    ("Pune Grand Slam Chess Festival – CLASSICAL", False),
+    ("Championship of the State Bank Staff", False),     # "State" must come before "Championship"
+    ("Statesman Open Chess Championship", False),        # a whole word only
+    ("National Chess Championship (non-rated section)", False),
+])
+def test_aicf_championship_name(name, rated):
+    assert be.aicf_championship_rated(name) is rated
+
+
+def test_championship_rule_is_for_aicf_only():
+    name = "63rd National Chess Championship – 2026"
+    aicf = ev("aicf-485283", name, "2026-11-29")
+    other = ev("chessresults_ind-1", name, "2026-11-29")
+    school = ev("chessresults_ind-2", "ST. XAVIER INTERNATIONAL BIHAR STATE SCHOOL CHESS CHAMPIONSHIP-2026-27 (U-07 B)",
+                "2026-11-29")
+    kca_state = ev("kca-743-CAK-2026", "CAK - CiS State Inter School Team Chess Exposure Championship – 2026",
+                   "2026-12-06", tags={"categories": ["KCA state rated"]})
+    unrated = ev("aicf-2", "National Chess Championship Unrated Section", "2026-11-29")
+    stated = ev("aicf-3", "National Rapid Rated Chess Championship", "2026-11-29")
+    for x in (aicf, other, school, kca_state, unrated, stated):
+        be.fill_tags(x)
+    assert (aicf["tags"]["fide_rated"], aicf["tags"]["fide_how"]) == (True, "inferred")
+    for x in (other, school, kca_state):
+        assert (x["tags"]["fide_rated"], x["tags"]["fide_how"]) == (None, None), x["id"]
+    assert (unrated["tags"]["fide_rated"], unrated["tags"]["fide_how"]) == (False, "stated")
+    assert (stated["tags"]["fide_rated"], stated["tags"]["fide_how"]) == (True, "stated")
+
+
+def test_championship_flag_is_shared_with_the_group():
+    aicf = ev("aicf-485283", "63rd National Chess Championship – 2026", "2026-11-29", "2026-12-08",
+              codes=["485283"], city="Varanasi", state="Uttar Pradesh")
+    copy = ev("chessresults_ind-1543329", "63rd National Chess Championship 2026 AICF code 485283/UP/2026",
+              "2026-11-29", "2026-12-08", codes=["485283"], city="Varanasi", state="Uttar Pradesh")
+    for x in (aicf, copy):
+        be.fill_tags(x)
+    events, _, _ = group(aicf, copy)
+    assert events["chessresults_ind-1543329"]["merged_into"] == "aicf-485283"
+    for x in events.values():
+        assert (x["tags"]["fide_rated"], x["tags"]["fide_how"]) == (True, "inferred"), x["id"]
+
+
+def test_real_page_rates_aicf_championships(data_dir):
+    be.run(data_dir, html=FIXTURE.read_text(encoding="utf-8"), now=NOW)
+    events = by_id(data_dir)
+    for event_id in ("aicf-485283", "aicf-496730", "aicf-494716", "aicf-486699", "aicf-472175"):
+        assert (events[event_id]["tags"]["fide_rated"], events[event_id]["tags"]["fide_how"]) == \
+            (True, "inferred"), event_id
+    # festivals and leagues whose names say nothing stay "not stated"
+    for event_id, event in events.items():
+        if event["name"].startswith(("Pune Grand Slam", "Tech Mahindra Global Chess League")):
+            assert event["tags"]["fide_rated"] is None, event_id
