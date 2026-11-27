@@ -98,12 +98,23 @@ shared by the web site and the Android app, so changing its shape affects both.
   ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
   algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
   dates, else manual > kca > tnsca > ksca > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
-  district: it matches the towns inside it (`kerala_district()`), unknown towns never block. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames only). If two AICF events share a
-  code, that code proves nothing. Every same/possible pair goes to `data/review/dedup_review.csv`.
+  district: it matches the towns inside it (`kerala_district()`), unknown towns never block. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames and two TNSCA spellings,
+  Pudukottai, Tirupattur DT; never a district as its town). If two AICF events share a
+  code, that code proves nothing. A pairs.csv "same" across a date gap lets the other copies with
+  either date join (`dates_vouched()`). Equal scores: lower ids first (`id_order()`), so rebuilds
+  never flip. Every same/possible pair goes to `data/review/dedup_review.csv`.
+- AICF codes in other sites' names: next to "AICF", or AICF's full form `499268/KA(R)/2026` anywhere
+  (`aicf_codes_in()`). `fill_codes_and_state()` (each run, also for stored events) adds them to
+  chessfee / Chess-Results / ChessBase `codes` and fills an empty Indian state from: chessfee's
+  "TAMILNADU STATE LEVEL" label, the code's state letters, or exactly one known town in the venue
+  (`town_state_in()`; two towns or none: null).
+- review.csv kinds: `missing`, `dates_disagree` (a not-past group whose start dates are >1 day apart),
+  `possible_duplicate`; `quality.json` `review` counts all three and `verify_published.py` checks them.
 - Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
   `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
   (grandmaster, norm or "International ... Open" names, an AICF-listed National / State / Asian /
-  Zonal championship, or a rated sibling section) / null. Only a
+  Zonal championship, or a rated sibling section) / null. "FIDE" next to Open / Chess / Tournament /
+  TMT turns an inferred true into "stated" (`fide_named()`); it never creates or flips a value. Only a
   true is ever shared (sections, groups); a false never is.
 - Overrides are re-applied from scratch each run; replaced values are remembered in `overridden`
   (tags as `tags.formats` etc.). `fide_rated` / `format` / `age` / `registration_deadline` from

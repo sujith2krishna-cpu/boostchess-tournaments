@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-27T21:48:37+05:30",
+  "generated_at": "2026-11-27T22:07:10+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -3593,7 +3593,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -8155,7 +8155,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -9049,7 +9049,7 @@
       "start": "2026-07-19",
       "end": "2026-07-19",
       "place_text": "Tirupattur",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": "Tirupattur",
       "country": "IN",
       "brochure_url": null,
@@ -9209,6 +9209,69 @@
       "hidden": false,
       "note": null,
       "overridden": null
+    },
+    {
+      "id": "aicf-471361",
+      "codes": [
+        "471361"
+      ],
+      "name": "WB State Under 17 Open FIDE Rated Chess Championship 2026",
+      "start": "2026-07-23",
+      "end": "2026-07-26",
+      "place_text": "Jalpaiguri, West Bengal",
+      "state": "West Bengal",
+      "city": "Jalpaiguri",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-471361",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [
+          "U17"
+        ],
+        "open": true,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "23-07-2027",
+        "end": "26-07-2026"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "AICF lists the start as 23-07-2027 (after its end 26-07-2026); start year from AICF's own listing of the same championship's Girls section aicf-471362 (23-07-2026 to 26-07-2026). Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-07-23"
+      }
     },
     {
       "id": "aicf-471362",
@@ -15707,15 +15770,28 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=54993"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-494719",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=54993",
+          "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
+      "register_url": "https://circlechess.com/registration?id=54993",
+      "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
       "registration_deadline": null,
       "organiser": null,
       "tags": {
@@ -20512,7 +20588,8 @@
     {
       "id": "aicf-494154",
       "codes": [
-        "494154"
+        "494154",
+        "RO-28/TPT/26-27"
       ],
       "name": "Chessinfo & Golden Knights Chess Academy – 1st International FIDE Rating Open Chess Tournament 2026",
       "start": "2026-10-28",
@@ -20529,13 +20606,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-open-chess-tournament-2026/",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-494154",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-open-chess-tournament-2026/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -20589,8 +20679,8 @@
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-RO-28-TPT-26-27",
-      "merged_into": null,
+      "group_id": "aicf-494154",
+      "merged_into": "aicf-494154",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -20751,7 +20841,8 @@
     {
       "id": "aicf-490387",
       "codes": [
-        "490387"
+        "490387",
+        "RR-25/PDU/26-27"
       ],
       "name": "7TH SSS INTERNATIONAL BELOW 1800 FIDE RATED CHESS TOURNAMENT",
       "start": "2026-10-30",
@@ -20770,6 +20861,11 @@
           "register_url": null
         },
         {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/7th-sss-international-below-1800-fide-rated-chess-tournament/",
+          "register_url": null
+        },
+        {
           "source": "chessbase_calendar",
           "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
           "register_url": null
@@ -20780,6 +20876,13 @@
       "group_id": "aicf-490387",
       "merged_into": null,
       "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/7th-sss-international-below-1800-fide-rated-chess-tournament/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
         {
           "source": "chessbase_calendar",
           "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
@@ -20899,15 +21002,17 @@
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-RR-25-PDU-26-27",
-      "merged_into": null,
+      "group_id": "aicf-490387",
+      "merged_into": "aicf-490387",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -25011,8 +25116,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9adc",
-      "merged_into": null,
+      "group_id": "aicf-486240",
+      "merged_into": "aicf-486240",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -26729,7 +26834,7 @@
       "start": "2026-11-24",
       "end": "2026-11-24",
       "place_text": "Smart Kennedy School - Kukatpally",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -26785,7 +26890,7 @@
       "start": "2026-11-24",
       "end": "2026-11-24",
       "place_text": "Smart Kennedy School - Kukatpally",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -28421,7 +28526,7 @@
       "start": "2026-11-24",
       "end": "2026-11-25",
       "place_text": "Innovative World School,Moshi,Chikhali,Pune https://maps.app.goo.gl/7aYRPxziJm",
-      "state": null,
+      "state": "Maharashtra",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -28477,7 +28582,7 @@
       "start": "2026-11-24",
       "end": "2026-11-25",
       "place_text": "Innovative World School,Moshi,Chikhali,Pune. https://maps.app.goo.gl/7aYRPxziJmh",
-      "state": null,
+      "state": "Maharashtra",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -29822,7 +29927,7 @@
       "start": "2026-11-26",
       "end": "2026-11-26",
       "place_text": "COGNIZANCE ACADEMY EDAPPALLY",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -29867,8 +29972,8 @@
       "last_seen": "2026-11-26",
       "gone_from_source": true,
       "cancelled": false,
-      "hidden": false,
-      "note": null,
+      "hidden": true,
+      "note": "Academy training session (Cognizance Academy) not a tournament",
       "overridden": null
     },
     {
@@ -30362,15 +30467,28 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1860",
           "register_url": "https://www.chessfee.com/treg.php?id=1860"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550815.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
       "group_id": "chessfee-1860",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1550815.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1550815.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": "https://www.chessfee.com/treg.php?id=1860",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1550815.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Jagannath Adapa",
       "tags": {
@@ -30396,7 +30514,7 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-26",
-      "gone_from_source": true,
+      "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -30914,8 +31032,8 @@
       "last_seen": "2026-11-25",
       "gone_from_source": true,
       "cancelled": false,
-      "hidden": false,
-      "note": null,
+      "hidden": true,
+      "note": "Test entry on Chess-Results (nonsense name and organiser)",
       "overridden": null
     },
     {
@@ -30996,8 +31114,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1550815",
-      "merged_into": null,
+      "group_id": "chessfee-1860",
+      "merged_into": "chessfee-1860",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1550815.aspx?lan=1",
@@ -31018,7 +31136,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "chessfee-1860"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -31037,7 +31155,7 @@
       "start": "2026-11-27",
       "end": "2026-11-27",
       "place_text": "KENDRIYA VIDYALAYA KAMLA NEHRU NAGAR GHAZIABAD",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -32617,6 +32735,11 @@
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
           "register_url": "https://chessfee.com/tmt_details.php?id=1727"
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -32644,6 +32767,13 @@
           "register_url": "https://chessfee.com/tmt_details.php?id=1727",
           "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
           "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538894&Uid=2"
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1727",
@@ -33430,7 +33560,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Next Step Chess Academy Udharbond",
-      "state": null,
+      "state": "Assam",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33486,7 +33616,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33544,7 +33674,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33716,7 +33846,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "COGNIZANCE ACADEMY EDAPPALLY",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33761,8 +33891,8 @@
       "last_seen": "2026-11-25",
       "gone_from_source": true,
       "cancelled": false,
-      "hidden": false,
-      "note": null,
+      "hidden": true,
+      "note": "Academy training session (Cognizance Academy) not a tournament",
       "overridden": null
     },
     {
@@ -33772,7 +33902,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33828,7 +33958,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -33884,7 +34014,7 @@
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -34425,8 +34555,8 @@
       "last_seen": "2026-11-25",
       "gone_from_source": true,
       "cancelled": false,
-      "hidden": false,
-      "note": null,
+      "hidden": true,
+      "note": "Test entry on Chess-Results (nonsense name and organiser)",
       "overridden": null
     },
     {
@@ -34449,17 +34579,30 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502060.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-499268",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502060.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1502060.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1502060.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Haveri Zilla Chess Association",
       "tags": {
         "formats": [
           "rapid"
@@ -34734,17 +34877,30 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-504058",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "IA Gourav, Kumar Ray 25708651",
       "tags": {
         "formats": [
           "rapid"
@@ -34863,17 +35019,30 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545661.aspx?lan=1",
+          "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOrBYYUZIcf3vJyjGhsK4biBY9dCdIpura5vU_pOFFfZuTvg/viewform"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-510558",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545661.aspx?lan=1",
+          "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOrBYYUZIcf3vJyjGhsK4biBY9dCdIpura5vU_pOFFfZuTvg/viewform",
+          "results_url": "https://chess-results.com/tnr1545661.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1545661&Uid=1"
+        }
+      ],
+      "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOrBYYUZIcf3vJyjGhsK4biBY9dCdIpura5vU_pOFFfZuTvg/viewform",
+      "results_url": "https://chess-results.com/tnr1545661.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Chess at School, Chhatrapati Sambhajinagar",
       "tags": {
         "formats": [
           "rapid"
@@ -34977,19 +35146,34 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
           "register_url": "https://www.chessfee.com/treg.php?id=1817"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
       "group_id": "chessfee-1817",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": "https://www.chessfee.com/treg.php?id=1817",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "G. MASILAMANI",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -35091,19 +35275,34 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1835",
           "register_url": "https://www.chessfee.com/treg.php?id=1835"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
       "group_id": "chessfee-1835",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": "https://www.chessfee.com/treg.php?id=1835",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "SRI RAGHAVENDRA CHESS ACADEMY",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -35194,7 +35393,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "RIMS VIDYASHRAM SCHOOL, Kuppam Road, Kathinayanapalli, Krishnagiri - 635120.",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-FIDE%20RAPID-RIMS-KRISHNAGIRI.pdf",
@@ -35209,8 +35408,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1847",
-      "merged_into": null,
+      "group_id": "tnsca-RFR-22-KGI-26-27",
+      "merged_into": "tnsca-RFR-22-KGI-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1847",
       "results_url": null,
@@ -35233,7 +35432,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-RFR-22-KGI-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -35323,7 +35522,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Pannai Public School, Arokiasami Nagar, Trichy Road, Dindigul",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-200.DGL_.26-27.pdf",
@@ -35338,8 +35537,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1864",
-      "merged_into": null,
+      "group_id": "tnsca-CO-200-DGL-26-27",
+      "merged_into": "tnsca-CO-200-DGL-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1864",
       "results_url": null,
@@ -35360,7 +35559,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-200-DGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -35458,7 +35657,9 @@
       "registration_deadline": null,
       "organiser": "Mr.Senthil Kumaran Palanivelu",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -35491,7 +35692,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "APTSMPS MATRICULATION SCHOOL, ARUPPUKOTTAI.",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE-%20ARUPPUKOTTAI.pdf",
@@ -35557,12 +35758,14 @@
     },
     {
       "id": "chessresults_ind-1502060",
-      "codes": [],
+      "codes": [
+        "499268"
+      ],
       "name": "Sarji Renuka All India Open FIDE Rapid Rating Chess Tournament 2026 499268/KA(R)/2026, KSCA/GO104/2627/A",
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Jilla Valmiki Bhavan, Hangal Road, Haveri",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -35577,8 +35780,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1502060",
-      "merged_into": null,
+      "group_id": "aicf-499268",
+      "merged_into": "aicf-499268",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1502060.aspx?lan=1",
@@ -35613,7 +35816,9 @@
     },
     {
       "id": "chessresults_ind-1502344",
-      "codes": [],
+      "codes": [
+        "494719"
+      ],
       "name": "Khannur Fide Rapid Rating Chess Tournament 2026 494719/KA(R)/2026 November 29th 2026, 3 lakh cash Prize,",
       "start": "2026-11-29",
       "end": "2026-11-29",
@@ -35633,8 +35838,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1502344",
-      "merged_into": null,
+      "group_id": "aicf-494719",
+      "merged_into": "aicf-494719",
       "also_listed_on": [],
       "register_url": "https://circlechess.com/registration?id=54993",
       "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
@@ -35674,7 +35879,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Metro Junction Mall , Netivali Road , Kalyan East",
-      "state": null,
+      "state": "Maharashtra",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -35689,8 +35894,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1514745",
-      "merged_into": null,
+      "group_id": "aicf-504058",
+      "merged_into": "aicf-504058",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
@@ -35958,7 +36163,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "DISTRICT STADIUM KOPPAL",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36070,7 +36275,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36128,7 +36333,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Naipunya Public School, Kakkanad",
-      "state": null,
+      "state": "Kerala",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36184,7 +36389,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36242,7 +36447,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36315,8 +36520,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1534051",
-      "merged_into": null,
+      "group_id": "chessfee-1817",
+      "merged_into": "chessfee-1817",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
@@ -36356,7 +36561,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36472,7 +36677,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36530,7 +36735,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36588,7 +36793,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36646,7 +36851,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36704,7 +36909,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36762,7 +36967,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36820,7 +37025,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36878,7 +37083,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36934,7 +37139,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -36990,7 +37195,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Multi-Purpose Function Hall, Municipal Corporation Office, Pragathi Nagar, Hyd",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -37046,7 +37251,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Gyan Banquet Hall, Ujhani, Budaun",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -37289,8 +37494,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1538873",
-      "merged_into": null,
+      "group_id": "chessfee-1835",
+      "merged_into": "chessfee-1835",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1538873.aspx?lan=1",
@@ -37345,8 +37550,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1539360",
-      "merged_into": null,
+      "group_id": "tnsca-CO-206-TNJ-26-27",
+      "merged_into": "tnsca-CO-206-TNJ-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
@@ -37392,7 +37597,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "RIMS Vidyashram School, Kuppam Road, Kathinayanapalli, Krishnagiri – 635120",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539417&Uid=1",
@@ -37407,8 +37612,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1539417",
-      "merged_into": null,
+      "group_id": "tnsca-RFR-22-KGI-26-27",
+      "merged_into": "tnsca-RFR-22-KGI-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1539417.aspx?lan=1",
@@ -37448,7 +37653,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "SGSITS Indore",
-      "state": null,
+      "state": "Madhya Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -37560,7 +37765,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "OXFORD SCHOOL DEHRADUN",
-      "state": null,
+      "state": "Uttarakhand",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -37743,8 +37948,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1545661",
-      "merged_into": null,
+      "group_id": "aicf-510558",
+      "merged_into": "aicf-510558",
       "also_listed_on": [],
       "register_url": "https://docs.google.com/forms/d/e/1FAIpQLSfOrBYYUZIcf3vJyjGhsK4biBY9dCdIpura5vU_pOFFfZuTvg/viewform",
       "results_url": "https://chess-results.com/tnr1545661.aspx?lan=1",
@@ -38072,7 +38277,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38130,7 +38335,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38335,7 +38540,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "chessfee-1817"
+        "possible_duplicate_of": "tnsca-CO-210-CHE-26-27"
       },
       "raw_dates": null,
       "dates_from": null,
@@ -38410,7 +38615,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "APTSMPS Matriculation School Aruppukottai",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38520,7 +38725,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "School of Scholars Bhandara ( https://maps.app.goo.gl/L7jFZimn6iu2zzZG8 )",
-      "state": null,
+      "state": "Maharashtra",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38632,7 +38837,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "SAN ACADEMY Radial Road Pallikaranai",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38688,7 +38893,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
-      "state": null,
+      "state": "West Bengal",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38746,7 +38951,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
-      "state": null,
+      "state": "West Bengal",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38804,7 +39009,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
-      "state": null,
+      "state": "West Bengal",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38862,7 +39067,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
-      "state": null,
+      "state": "West Bengal",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -38920,7 +39125,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Rishra Sewak Sangh,30A/37 Dr. P.T Laha Street Rishra, Hoogly",
-      "state": null,
+      "state": "West Bengal",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -39488,7 +39693,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Neo Geetanjali School, Nizampet X Road",
-      "state": null,
+      "state": "Telangana",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -39605,7 +39810,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Venue : Bholanath Vidyapith, Puri",
-      "state": null,
+      "state": "Odisha",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -39661,7 +39866,7 @@
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Orizon Banquet AC Hall 2nd floor, SMITH Hospital, Bhanudhan Plaza Nandurbar",
-      "state": null,
+      "state": "Maharashtra",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -40232,7 +40437,7 @@
       "state": "Tamil Nadu",
       "city": "Dindigul",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-200.DGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/bvr-marimuthu-memorial-2nd-state-level-open-children-chess-tournament/",
       "sources": [
@@ -40240,17 +40445,30 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/bvr-marimuthu-memorial-2nd-state-level-open-children-chess-tournament/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1864",
+          "register_url": "https://www.chessfee.com/treg.php?id=1864"
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-200-DGL-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1864",
+          "register_url": "https://www.chessfee.com/treg.php?id=1864",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-200.DGL_.26-27.pdf"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1864",
       "results_url": null,
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Mr. Siva",
       "tags": {
         "formats": [],
         "fide_rated": null,
@@ -40258,7 +40476,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -40268,7 +40488,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -40372,6 +40592,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1866",
           "register_url": "https://www.chessfee.com/treg.php?id=1866"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
@@ -40385,17 +40610,32 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1866",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/29NOV-TN%20STATE%20LVL%20TMT-THANJAVUR.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
+          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1866",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1539360.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr.Senthil Kumaran Palanivelu",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
-        "age": [],
+        "age": [
+          "U7",
+          "U9",
+          "U11",
+          "U13",
+          "U17"
+        ],
         "open": null,
         "girls": null,
         "categories": [
@@ -40542,7 +40782,7 @@
       "state": "Tamil Nadu",
       "city": "Krishnagiri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-FIDE%20RAPID-RIMS-KRISHNAGIRI.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-rims-international-fide-rapid-rating-open-chess-tournament-2026/",
       "sources": [
@@ -40550,17 +40790,42 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/1st-rims-international-fide-rapid-rating-open-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1847",
+          "register_url": "https://www.chessfee.com/treg.php?id=1847"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539417.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-RFR-22-KGI-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1847",
+          "register_url": "https://www.chessfee.com/treg.php?id=1847",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-FIDE%20RAPID-RIMS-KRISHNAGIRI.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539417.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1539417.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539417&Uid=1"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1847",
+      "results_url": "https://chess-results.com/tnr1539417.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "VIVEKANANDA CHESS ACADEMY",
       "tags": {
         "formats": [
           "rapid"
@@ -40570,7 +40835,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "FIDE RAPID TMT - PRIZE MONEY Rs. 2,00,000/-"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -40580,7 +40847,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -40668,7 +40935,7 @@
       "start": "2026-11-29",
       "end": "2026-12-09",
       "place_text": "Seth M R Jaipuria School, Babatpur Campus, Varanasi",
-      "state": null,
+      "state": "Uttar Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -40999,7 +41266,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -41055,7 +41322,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -41113,7 +41380,7 @@
           "classical"
         ],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -41194,7 +41461,8 @@
     {
       "id": "aicf-494155",
       "codes": [
-        "494155"
+        "494155",
+        "RR-26/TPT/26-27"
       ],
       "name": "Chessinfo & Golden Knights Chess Academy – 1st International FIDE Rating 2nd Below 1700 Chess Tournament 2026",
       "start": "2026-12-04",
@@ -41213,6 +41481,11 @@
           "register_url": null
         },
         {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-2nd-below-1700-chess-tournament-2026/",
+          "register_url": null
+        },
+        {
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
           "register_url": "https://www.chessfee.com/treg.php?id=1848"
@@ -41223,6 +41496,13 @@
       "group_id": "aicf-494155",
       "merged_into": null,
       "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-2nd-below-1700-chess-tournament-2026/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
         {
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
@@ -41269,7 +41549,7 @@
       "start": "2026-12-04",
       "end": "2026-12-06",
       "place_text": "Papa Seth Mahal, Railway Station Road, Tirupattur",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/4-6%20BELOW%201800%20Tirupattur_Prospectus%20NEW.pdf",
@@ -41306,7 +41586,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-RR-26-TPT-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -41325,7 +41605,7 @@
       "start": "2026-12-04",
       "end": "2026-12-06",
       "place_text": "Papa Seth Mahal, Railway Station Road,Tirupattur-635601",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532524&Uid=1",
@@ -41398,8 +41678,8 @@
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-RR-26-TPT-26-27",
-      "merged_into": null,
+      "group_id": "aicf-494155",
+      "merged_into": "aicf-494155",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -42076,6 +42356,11 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/3rd-battle-field-international-fide-rapid-rating-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
+          "register_url": "https://www.easypaychess.com/tmt.asp?i=2586"
         }
       ],
       "listed_by": "aicf",
@@ -42089,12 +42374,19 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
+          "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
+          "results_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
+          "brochure_url": null
         }
       ],
-      "register_url": null,
-      "results_url": null,
+      "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
+      "results_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Battel Field Chess Academy, Salem",
       "tags": {
         "formats": [
           "rapid"
@@ -42102,7 +42394,7 @@
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
         "categories": []
       },
@@ -42330,19 +42622,34 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1842",
           "register_url": "https://www.chessfee.com/treg.php?id=1842"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1541897.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
       "group_id": "chessfee-1842",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1541897.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1541897.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": "https://www.chessfee.com/treg.php?id=1842",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1541897.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "SATHYAN K",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -42489,7 +42796,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "LOTUS INTERNATIONAL SCHOOL, PENNADAM, CUDDALORE DISTRICT",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20-%20CUDDALORE%20-%20TN%20STATE%20LVL%20TMT.pdf",
@@ -42526,7 +42833,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": null
+        "possible_duplicate_of": "tnsca-CO-205-CGL-26-27"
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42626,7 +42933,9 @@
       "registration_deadline": null,
       "organiser": "ANANDHAN CHESS ACADEMY",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -42659,7 +42968,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "St. Paul Matric. Higher Secondary School, Kovilpatti",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf",
@@ -42674,8 +42983,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1863",
-      "merged_into": null,
+      "group_id": "tnsca-CO-208-TUT-26-27",
+      "merged_into": "tnsca-CO-208-TUT-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1863",
       "results_url": null,
@@ -42696,7 +43005,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-208-TUT-26-27"
+        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42715,7 +43024,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "S.K. Mahal (A/C), Muthukadai, (Ammoor Road), Ranipet District.",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-218.RAN_.26-27.pdf",
@@ -42829,7 +43138,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "San Academy, Radial Road, Pallikaranai",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC-5TH%20HARSHANA-TN%20STATE%20LVL%20TMT.pdf",
@@ -42866,7 +43175,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": null
+        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42999,7 +43308,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Rajashwari Hall Cultural Centre, Vilakkadi Koil Street, Kanchipuram",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -43530,8 +43839,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1538330",
-      "merged_into": null,
+      "group_id": "aicf-510562",
+      "merged_into": "aicf-510562",
       "also_listed_on": [],
       "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
       "results_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
@@ -43571,7 +43880,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "St. Thomas School, Ujjain",
-      "state": null,
+      "state": "Madhya Pradesh",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -43644,8 +43953,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1539367",
-      "merged_into": null,
+      "group_id": "tnsca-CO-198-CGL-26-27",
+      "merged_into": "tnsca-CO-198-CGL-26-27",
       "also_listed_on": [],
       "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
       "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
@@ -43700,8 +44009,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1541897",
-      "merged_into": null,
+      "group_id": "chessfee-1842",
+      "merged_into": "chessfee-1842",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1541897.aspx?lan=1",
@@ -43722,7 +44031,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "chessfee-1842"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -43741,7 +44050,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Mahathma Gandhi Stadium, Tumakuru",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -43799,7 +44108,7 @@
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Belgaum",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -44288,6 +44597,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1859",
           "register_url": "https://www.chessfee.com/treg.php?id=1859"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
+          "register_url": "https://www.easypaychess.com/tmt.asp?i=2592"
         }
       ],
       "listed_by": "tnsca",
@@ -44301,14 +44615,23 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1859",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/ACA-12th%20TN%20State%20-%206%20DEC.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
+          "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
+          "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
+          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1859",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "ANANDHAN CHESS ACADEMY",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -44402,7 +44725,7 @@
       "state": "Tamil Nadu",
       "city": "Tuticorin",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/unique-chess-academy-1st-tamil-nadu-state-level-children-open-chess-tournament-2026/",
       "sources": [
@@ -44410,17 +44733,30 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/unique-chess-academy-1st-tamil-nadu-state-level-children-open-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1863",
+          "register_url": "https://www.chessfee.com/treg.php?id=1863"
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-208-TUT-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1863",
+          "register_url": "https://www.chessfee.com/treg.php?id=1863",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1863",
       "results_url": null,
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Mariammal V",
       "tags": {
         "formats": [],
         "fide_rated": null,
@@ -44428,7 +44764,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -44438,7 +44776,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -45224,7 +45562,7 @@
       "start": "2026-12-13",
       "end": "2026-12-13",
       "place_text": "Rotary Community Hall, Rotary Primary School, Sullia",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/3RD%20DEC-%20SCA%20OPEN%20RAPID%20REVISED.pdf",
@@ -45282,7 +45620,7 @@
       "start": "2026-12-13",
       "end": "2026-12-13",
       "place_text": "Kandaswami Kandar Matriculation Hr. Sec. School, 113-1, N. Thiruchengode, Namakkal Dt. – 638182",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -45340,7 +45678,7 @@
       "start": "2026-12-13",
       "end": "2026-12-13",
       "place_text": "GOOD SAMARITAN PUBLIC SCHOOL, SIRKALI",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": "https://www.chessfee.com/admin/Brochure/13%20DEC-%20TN%20STATE%20LVL%20TMT%20-%20SIRKALI.pdf",
@@ -46010,12 +46348,14 @@
     },
     {
       "id": "chessresults_ind-1544300",
-      "codes": [],
+      "codes": [
+        "511685"
+      ],
       "name": "Puneeth Rajkumar Cup All India Fide Rating Open Chess Tournament 2026 511685/KA(R)/2026 December 20th 2026",
       "start": "2026-12-20",
       "end": "2026-12-20",
       "place_text": "Guru Bhavan, AVK College Road, Davangere",
-      "state": null,
+      "state": "Karnataka",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -47689,7 +48029,7 @@
       "start": "2027-01-01",
       "end": "2027-01-01",
       "place_text": "Sengunthar Kalyana Mandapam, Periya Pavadi Street, Tiruchengode, Namakkal Dt",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -48633,6 +48973,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
           "register_url": "https://www.chessfee.com/treg.php?id=1832"
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1876",
+          "register_url": "https://www.chessfee.com/treg.php?id=1876"
         }
       ],
       "listed_by": "aicf",
@@ -48651,6 +48996,13 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1832",
           "register_url": "https://www.chessfee.com/treg.php?id=1832",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/ECA_Rapid%20-%2010%20JAN%202027.pdf"
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1876",
+          "register_url": "https://www.chessfee.com/treg.php?id=1876",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/ECA_Rapid%20-%2010%20JAN%202027.pdf"
         }
@@ -48826,8 +49178,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1876",
-      "merged_into": null,
+      "group_id": "aicf-486710",
+      "merged_into": "aicf-486710",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1876",
       "results_url": null,
@@ -48850,7 +49202,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-486710"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -50847,7 +51199,7 @@
       "start": "2027-01-26",
       "end": "2027-01-26",
       "place_text": "Rotary Club Hall, Komarapalayam, Namakkal Dt",
-      "state": null,
+      "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
       "brochure_url": null,
@@ -51067,6 +51419,528 @@
       "overridden": null
     },
     {
+      "id": "aicf-488283",
+      "codes": [
+        "488283",
+        "IM-45/TN/26-27"
+      ],
+      "name": "45th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488283",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "45th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
+      "id": "aicf-488284",
+      "codes": [
+        "488284",
+        "IM-46/TN/26-27"
+      ],
+      "name": "46th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488284",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "46th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
+      "id": "aicf-488285",
+      "codes": [
+        "488285",
+        "IM-47/TN/26-28"
+      ],
+      "name": "47th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488285",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "47th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
+      "id": "aicf-488286",
+      "codes": [
+        "488286",
+        "IM-48/TN/26-28"
+      ],
+      "name": "48th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488286",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "48th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
+      "id": "aicf-488287",
+      "codes": [
+        "488287",
+        "IM-49/TN/26-29"
+      ],
+      "name": "49th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488287",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "49th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
+      "id": "aicf-488288",
+      "codes": [
+        "488288",
+        "IM-50/TN/26-29"
+      ],
+      "name": "50th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
+      "start": "2027-01-30",
+      "end": "2027-02-04",
+      "place_text": "Chennai",
+      "state": "Tamil Nadu",
+      "city": "Chennai",
+      "country": "IN",
+      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
+      "source": "aicf",
+      "source_url": "https://aicf.in/all-events/",
+      "sources": [
+        {
+          "source": "aicf",
+          "source_url": "https://aicf.in/all-events/",
+          "register_url": null
+        },
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aicf",
+      "verified": true,
+      "group_id": "aicf-488288",
+      "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "tnsca",
+          "source_url": "https://tamilchess.com/events/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
+        {
+          "source": "chessbase_calendar",
+          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "inferred",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "50th Tamil Nadu IM Norm: dates from TNSCA (the organiser) and ChessBase India (30 Jan to 4 Feb 2027); AICF lists 8 to 13 Feb 2027. Set 27 Nov 2026",
+      "overridden": {
+        "start": "2027-02-08",
+        "end": "2027-02-13"
+      }
+    },
+    {
       "id": "chessbase_calendar-6aaa7ca270d3171daede9af8",
       "codes": [],
       "name": "45th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
@@ -51088,8 +51962,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-45-TN-26-27",
-      "merged_into": "tnsca-IM-45-TN-26-27",
+      "group_id": "aicf-488283",
+      "merged_into": "aicf-488283",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51144,8 +52018,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-46-TN-26-27",
-      "merged_into": "tnsca-IM-46-TN-26-27",
+      "group_id": "aicf-488284",
+      "merged_into": "aicf-488284",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51200,8 +52074,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-47-TN-26-28",
-      "merged_into": "tnsca-IM-47-TN-26-28",
+      "group_id": "aicf-488285",
+      "merged_into": "aicf-488285",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51256,8 +52130,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-48-TN-26-28",
-      "merged_into": "tnsca-IM-48-TN-26-28",
+      "group_id": "aicf-488286",
+      "merged_into": "aicf-488286",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51312,8 +52186,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-49-TN-26-29",
-      "merged_into": "tnsca-IM-49-TN-26-29",
+      "group_id": "aicf-488287",
+      "merged_into": "aicf-488287",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51368,8 +52242,8 @@
       ],
       "listed_by": "chessbase",
       "verified": false,
-      "group_id": "tnsca-IM-50-TN-26-29",
-      "merged_into": "tnsca-IM-50-TN-26-29",
+      "group_id": "aicf-488288",
+      "merged_into": "aicf-488288",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -51414,7 +52288,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51422,26 +52296,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-45-TN-26-27",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488283",
+      "merged_into": "aicf-488283",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51465,7 +52326,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -51485,7 +52346,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51493,26 +52354,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-46-TN-26-27",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488284",
+      "merged_into": "aicf-488284",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51536,7 +52384,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -51556,7 +52404,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51564,26 +52412,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-47-TN-26-28",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488285",
+      "merged_into": "aicf-488285",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51607,7 +52442,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -51627,7 +52462,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51635,26 +52470,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-48-TN-26-28",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488286",
+      "merged_into": "aicf-488286",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51678,7 +52500,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -51698,7 +52520,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51706,26 +52528,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-49-TN-26-29",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488287",
+      "merged_into": "aicf-488287",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51749,7 +52558,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -51769,7 +52578,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
+      "brochure_url": null,
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
       "sources": [
@@ -51777,26 +52586,13 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
-      "group_id": "tnsca-IM-50-TN-26-29",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
-        }
-      ],
+      "group_id": "aicf-488288",
+      "merged_into": "aicf-488288",
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -51820,7 +52616,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-26",
       "last_seen": "2026-11-26",
       "gone_from_source": false,
       "cancelled": false,
@@ -52425,342 +53221,6 @@
       "overridden": null
     },
     {
-      "id": "aicf-488283",
-      "codes": [
-        "488283"
-      ],
-      "name": "45th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488283",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-488284",
-      "codes": [
-        "488284"
-      ],
-      "name": "46th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488284",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-488285",
-      "codes": [
-        "488285"
-      ],
-      "name": "47th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488285",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-488286",
-      "codes": [
-        "488286"
-      ],
-      "name": "48th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488286",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-488287",
-      "codes": [
-        "488287"
-      ],
-      "name": "49th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488287",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-488288",
-      "codes": [
-        "488288"
-      ],
-      "name": "50th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-02-08",
-      "end": "2027-02-13",
-      "place_text": "Chennai",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/45_50_TMT_Tamil-Nadu-IM-Norm-Closed-Circuit-Chess-Tournament.pdf",
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-488288",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
       "id": "aicf-504954",
       "codes": [
         "504954",
@@ -53209,7 +53669,7 @@
       "tags": {
         "formats": [],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -53790,67 +54250,6 @@
         "possible_duplicate_of": null
       },
       "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "aicf-471361",
-      "codes": [
-        "471361"
-      ],
-      "name": "WB State Under 17 Open FIDE Rated Chess Championship 2026",
-      "start": "2027-07-23",
-      "end": "2026-07-26",
-      "place_text": "Jalpaiguri, West Bengal",
-      "state": "West Bengal",
-      "city": "Jalpaiguri",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "aicf",
-      "source_url": "https://aicf.in/all-events/",
-      "sources": [
-        {
-          "source": "aicf",
-          "source_url": "https://aicf.in/all-events/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "aicf",
-      "verified": true,
-      "group_id": "aicf-471361",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [
-          "U17"
-        ],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": true,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": {
-        "start": "23-07-2027",
-        "end": "26-07-2026"
-      },
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",

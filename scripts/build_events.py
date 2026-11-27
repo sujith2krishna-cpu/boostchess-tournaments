@@ -623,6 +623,35 @@ def fill_tags(event: dict) -> None:
     if event["tags"]["fide_rated"] is None and event["source"] == "aicf" \
             and aicf_championship_rated(event["name"] or ""):
         event["tags"]["fide_rated"], event["tags"]["fide_how"] = True, "inferred"
+    # "FIDE Open / Chess / Tournament" in the name: an inferred yes is a stated yes (label only).
+    if event["tags"]["fide_rated"] is True and event["tags"]["fide_how"] == "inferred" \
+            and fide_named(event["name"] or ""):
+        event["tags"]["fide_how"] = "stated"
+
+
+# Sources whose `codes` are AICF codes read from their own titles (the state associations keep
+# their own codes there).
+CODES_FROM_NAME_SOURCES = frozenset({"chessfee", "chessresults_ind", "chessbase_calendar"})
+_TN_STATE_LEVEL = re.compile(r"(?i)\btamil\s*nadu\s+state\s+level\b")  # chessfee's category label
+
+
+def fill_codes_and_state(event: dict) -> None:
+    """AICF codes in the name, and a missing Indian state from what the pages say (evidence only).
+
+    The state is filled only when it is empty, in this order: chessfee's category
+    "TAMILNADU STATE LEVEL ..." (the site says so); the state letters of a full-form AICF code
+    in the name ("499268/KA(R)/2026"); exactly one known town in the venue text.
+    """
+    if event["source"] in CODES_FROM_NAME_SOURCES:
+        codes = list(event["codes"] or [])
+        event["codes"] = codes + [c for c in aicf_codes_in(event["name"]) if c not in codes]
+    if event["state"] is not None or event["country"] != "IN":
+        return
+    if event["source"] == "chessfee" and any(_TN_STATE_LEVEL.search(c or "")
+                                             for c in event["tags"]["categories"]):
+        event["state"] = "Tamil Nadu"
+        return
+    event["state"] = aicf_code_state_in(event["name"]) or town_state_in(event["place_text"])
 
 
 def review_csv(rows: list[dict]) -> bytes:
@@ -764,6 +793,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     events = [canonical({**e, "sources": None}) for e in entries]
     for event in events:
         fill_tags(event)
+        fill_codes_and_state(event)
     apply_overrides(events, overrides, errors, warnings)
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
@@ -880,8 +910,8 @@ def print_summary(report: dict) -> None:
         print(f"  Quality, next 30 days : {m['events']} shown events, "
               f"{'-' if m['fully_known_pct'] is None else m['fully_known_pct']}% fully known "
               f"(target {q['target']['fully_known_pct']:g}%); review list: "
-              f"{q['review']['missing']} to complete, {q['review']['possible_duplicates']} possible "
-              "duplicates (data/review.csv)")
+              f"{q['review']['missing']} to complete, {q['review'].get('dates_disagree', 0)} dates "
+              f"disagree, {q['review']['possible_duplicates']} possible duplicates (data/review.csv)")
         for alert in q["alerts"]:
             print(f"  QUALITY ALERT: {alert['message']}")
     print("  Changes vs last run   : "

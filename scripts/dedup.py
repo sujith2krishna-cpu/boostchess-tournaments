@@ -29,6 +29,8 @@ from datetime import date, timedelta
 from eventlib import (STATES, VERIFIED_SOURCES, _CITY_BY_KEY, _STATE_BY_KEY, _key,
                       ages_from_text, clean_text, kerala_district, merge_tags, source_rank)
 
+DATE_GAP_DAYS = 1  # start dates further apart than this: different tournaments
+DATES_APART = "start dates more than 1 day apart"
 SAME_AT = 0.80
 POSSIBLE_AT = 0.50
 NAME_WEIGHT, PLACE_WEIGHT, END_WEIGHT = 0.85, 0.10, 0.05
@@ -193,7 +195,16 @@ TOWN_RENAMES = {
     "calcutta": "kolkata", "baroda": "vadodara", "gurgaon": "gurugram",
     "pondicherry": "puducherry", "trivandrum": "thiruvananthapuram", "cochin": "kochi",
     "calicut": "kozhikode",
+    # spellings of one town (not renames): TNSCA writes "Pudukottai", "Tirupattur DT"
+    "pudukottai": "pudukkottai", "tirupattur dt": "tirupattur",
 }
+# Never add a district as one of its towns here (Chengalpattu district is not Chennai):
+# a different town must stay a different town.
+
+
+def id_order(event_id: str):
+    """Sort key for ids, numbers compared as numbers: chessfee-999 before chessfee-1832."""
+    return [int(p) if p.isdigit() else p for p in re.split(r"(\d+)", event_id or "")]
 
 
 def _town(name: str) -> str:
@@ -275,8 +286,8 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
         return out(0, "different", "different city", hard=True)
     if a.start is None or b.start is None:
         return out(0, "different", "start date unknown")
-    if abs((a.start - b.start).days) > 1:
-        return out(0, "different", "start dates more than 1 day apart", hard=True)
+    if abs((a.start - b.start).days) > DATE_GAP_DAYS:
+        return out(0, "different", DATES_APART, hard=True)
     city = _same_city(ea, eb)
     state = _same_text(ea.get("state"), eb.get("state"))
     section = section_difference(a.sections, b.sections)
@@ -501,7 +512,27 @@ def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> 
             i = parent[i]
         return i
 
+    # pairs.csv "same" partners: a person has said these records are one tournament, also when
+    # their start dates are days apart (ChessBase 21 Nov, AICF 27 Nov).
+    vouched = defaultdict(set)
+    for (i, j), row in forced.items():
+        if row["decision"] == "same":
+            vouched[i].add(j)
+            vouched[j].add(i)
+
+    def dates_vouched(x, y, together) -> bool:
+        """x and y start days apart, but a pairs.csv "same" partner of one of them (in the same
+        group) starts within a day of the other: the person already said both dates are this
+        tournament, so the gap is not a reason to keep y out."""
+        for a, b in ((x, y), (y, x)):
+            for w in vouched[a]:
+                if w in together and features[w].start and features[b].start \
+                        and abs((features[w].start - features[b].start).days) <= DATE_GAP_DAYS:
+                    return True
+        return False
+
     def blocked(ri, rj) -> str | None:
+        together = set(members[ri]) | set(members[rj])
         for x in members[ri]:
             for y in members[rj]:
                 key = (min(x, y), max(x, y))
@@ -514,6 +545,8 @@ def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> 
                     return f"{features[x].id} and {features[y].id} come from the same source"
                 result = result or compare(features[x], features[y], ambiguous)
                 if result["hard"]:
+                    if result["reason"] == DATES_APART and dates_vouched(x, y, together):
+                        continue
                     return f"{features[x].id} vs {features[y].id}: {result['reason']}"
         return None
 
@@ -528,7 +561,11 @@ def group_events(events: list[dict], pairs: list[dict], warnings: list[str]) -> 
         members[ri].extend(members.pop(rj))
         return None
 
-    order = sorted(results.items(), key=lambda kv: (not kv[1].get("forced"), -kv[1]["score"], kv[0]))
+    # Best score first; on a tie the pair with the lower ids goes first, so the result never
+    # depends on the order the records were read in (chessfee lists Eight Square twice).
+    order = sorted(results.items(), key=lambda kv: (
+        not kv[1].get("forced"), -kv[1]["score"],
+        sorted((id_order(features[kv[0][0]].id), id_order(features[kv[0][1]].id)))))
     for (i, j), result in order:
         if result["decision"] == "same":
             if result.get("forced"):

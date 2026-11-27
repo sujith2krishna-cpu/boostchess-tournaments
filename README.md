@@ -78,7 +78,9 @@ Things to know:
   list once they are over, so a finished KSCA event is kept with `gone_from_source` = `true`.
 - Renamed towns count as one place when records are compared (`Bangalore` / `Bengaluru`,
   `Belgaum` / `Belagavi`, `Hubli` / `Hubballi`, `Bombay` / `Mumbai`, ...: `TOWN_RENAMES` in
-  `scripts/dedup.py`, official renames only). A short AICF name can still be too vague to prove a
+  `scripts/dedup.py`, official renames only, plus two spellings TNSCA uses: `Pudukottai` /
+  `Pudukkottai` and `Tirupattur DT` / `Tirupattur`). A district is never made the same as a town
+  (TNSCA's `Chengalpattu` is not `Chennai`). A short AICF name can still be too vague to prove a
   match (`INVENTIVE 2.0 FIDE-rated Rapid Chess Tournament` has one distinctive word); use
   `pairs.csv` for those.
 - The ChessBase calendar page only contains the month that is open by default (the
@@ -123,7 +125,10 @@ How two records from **different sites** are compared, in this order:
 2. Different state, or different city: not the same, but only when **both** are known. A
    missing state or city never blocks.
 3. Start dates more than 1 day apart: not the same. End dates are not used (sites often get
-   them wrong).
+   them wrong). Exception: when you have said in `pairs.csv` that two such records are the same
+   (ChessBase 21 Nov, AICF 27 Nov), the other copies with either of those dates may join the group
+   too; a third date still keeps a record out. The group then gets a **dates_disagree** line in
+   `data/review.csv` (see "Daily review").
 4. Names are cleaned up. First the **tails** that Chess-Results often adds at the end are
    dropped: "Organised by ...", a bracketed person's name like "(Mr. ...)", a date
    ("20th Dec 2026", "-> 27 Nov 2026 - 29 Nov 2026", "2 to 6 DEC") and a place that equals the
@@ -140,7 +145,9 @@ How two records from **different sites** are compared, in this order:
    (U11, ...), the category letter ("Category B" vs "Category C") or the format (rapid vs
    blitz, when both say one) differ, they are **not** the same, whatever else matches.
 6. **Strong proof:** the same AICF event code or the same Chess-Results page means the same
-   tournament (this beats rules 2 to 5). The same brochure link beats the name (rule 4) only,
+   tournament (this beats rules 2 to 5). An AICF code is read from another site's name next to
+   the word "AICF" ("AICF Event Code: 502180/KL"), or in AICF's own full form anywhere
+   (`499268/KA(R)/2026`: 6 digits, a state code, `(R)` or nothing, the year). The same brochure link beats the name (rule 4) only,
    because one brochure often covers several sections.
 7. **Score** = 0.85 x name + 0.10 x place (same city 1, same state 0.5) + 0.05 x same end
    date. **0.80 or more: same group. 0.50 to 0.80: kept apart and flagged** with
@@ -148,7 +155,9 @@ How two records from **different sites** are compared, in this order:
 
 Two records from the same site are never grouped automatically, and a group never takes in two
 records that a rule above calls different (so two sections cannot end up together through a
-third record). If several AICF events share one code, that code proves nothing.
+third record). If several AICF events share one code, that code proves nothing. When two pairs
+have the same score, the one with the lower ids is decided first (`chessfee-1832` before
+`chessfee-1876`), so the groups do not depend on the order the records were read in.
 
 **Check list:** `data/review/dedup_review.csv` lists every *same* and *possible* pair, lowest
 score first: both ids, sources, names, dates and places, the score, the decision and why.
@@ -306,7 +315,7 @@ Events are sorted by start date.
 | `fide_how` | When |
 |---|---|
 | `"manual"` | You set it in `overrides.csv` (`fide_rated` = yes / no). It wins over everything else. |
-| `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so, or another site's record of the same tournament says so. |
+| `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so, or another site's record of the same tournament says so. Also an event that counts as rated by the inferred rules below and whose name puts "FIDE" next to Open, Chess, Tournament or TMT ("International Open FIDE Chess Tournament", "International FIDE Open"): this only changes the label from "inferred" to "stated", never a yes or no. |
 | `"inferred"` | The name does not say "FIDE"/"rated", but uses words only FIDE-rated events use: "Grandmaster"/"GM" followed by Open, Tournament, Chess or Category; "IM norm", "GM norm", "norm tournament"; or "International" together with Open, Tournament, Chess or Rating, unless the name contains "school" anywhere (a school's name or a school championship; "FIDE"/"rated" in such a name still counts as stated). On AICF's list only: a "National", "State", "Asian" or "Zonal" championship (one of those words, later "Championship"), since AICF's championships are rated though their names never say so; on other sites the same words also name school and state-rated events, so there they count for nothing. Also a section of a festival whose sibling section is rated: siblings share the same brochure link, or the same name once the section part (category letter, rating limit, age group, format) is removed, with the same start date and city. |
 | `null` | `fide_rated` is `null`: nothing says either way. |
 
@@ -332,7 +341,7 @@ One event looks like this:
 | `name` | Name of the tournament. |
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when the source's date is unreadable. |
 | `place_text` | Place as a person would read it, e.g. `Banka, Bihar`. |
-| `state`, `city` | Best guess from the place or title, or `null` when we are not sure. |
+| `state`, `city` | Best guess from the place or title, or `null` when we are not sure. A missing Indian state is filled from: chessfee's label "TAMILNADU STATE LEVEL" (Tamil Nadu); the state letters of an AICF code in the name (`KA` in `499268/KA(R)/2026`); or the venue text when it names **exactly one** town we know ("Hangal Road, Haveri": Karnataka; "SILIGURI INDORE STADIUM" names two, so it stays `null`). |
 | `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
 | `source` | The site this record comes from. |
@@ -388,13 +397,15 @@ cancelled, `merged_into` = `null`), by start date in Indian time, in two windows
 - `alerts`: compared with the previous run, a source whose fully-known % fell by **10 points or
   more**, or whose number of upcoming events **halved** (only when both runs have at least 5
   events in that window).
-- `review`: how many lines `data/review.csv` has.
+- `review`: how many lines `data/review.csv` has, by kind: `missing`, `dates_disagree`,
+  `possible_duplicates`.
 
 ## Daily review (10 minutes)
 
 The tool writes a to-do list for you every run: `data/review.csv`. It lists the shown events
-that **start in the next 30 days and miss something**, soonest first, and after them any
-**possible duplicates** still to settle.
+that **start in the next 30 days and miss something**, soonest first; then the tournaments (not
+yet over) whose grouped records **disagree about the start date by more than a day**
+(`dates_disagree`); and after them any **possible duplicates** still to settle.
 
 1. On GitHub, open `data/review.csv`. GitHub shows it as a table. The `missing` column says what
    is not known, for example `format, fide`.
@@ -408,6 +419,11 @@ that **start in the next 30 days and miss something**, soonest first, and after 
    column empty if the brochure does not say. A `?` you forget is only a warning: it is ignored
    until you fill it in.
 5. Click **Commit changes**. The next run uses your values and the event leaves the list.
+
+For a `dates_disagree` line: the `missing` column says which sites give which dates (and the
+ids, also in `other_id`). Check the organiser's page or brochure, then paste `line_to_add` into
+`overrides.csv` with the right `start_date` and `end_date` and a note saying where they come
+from. Once the shown dates agree with the others, the line goes.
 
 For a `possible_duplicate` line: check both events (`id` and `other_id`). If they are the same
 tournament, paste `line_to_add` into `data/manual/pairs.csv` as it is; if not, change `same` to

@@ -199,7 +199,7 @@ def test_quality_json_is_written_every_run_and_shown_in_the_summary(data_dir):
     assert written == report["quality"] and written["today"] == "2026-11-24"
     assert written["overall"]["next_30_days"]["events"] == 2
     assert set(written["sources"]) == set(be.SOURCE_PRIORITY)
-    assert written["review"] == {"missing": 2, "possible_duplicates": 0}
+    assert written["review"] == {"missing": 2, "dates_disagree": 0, "possible_duplicates": 0}
     text = daily.summary_markdown(report)
     assert "### Data quality (shown events starting in the next 30 days)" in text
     assert "**Target:** 95% fully known" in text and "| aicf | 2 |" in text

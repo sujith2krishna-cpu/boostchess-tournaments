@@ -312,7 +312,7 @@ def test_the_check_reads_the_review_list_the_build_writes():
     second["flags"]["possible_duplicate_of"] = "aicf-1"
     rows = quality.review_rows([first, second], date(2026, 11, 25))
     problems, _, read = vp.check_file("review.csv", 200, CSV_CORS, quality.review_csv(rows).decode("utf-8"))
-    assert problems == [] and read == quality.review_counts(rows) == {"missing": 2, "possible_duplicates": 1}
+    assert problems == [] and read == quality.review_counts(rows) == {"missing": 2, "dates_disagree": 0, "possible_duplicates": 1}
 
 
 @pytest.mark.parametrize("events, expected", [

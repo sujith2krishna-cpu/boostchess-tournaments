@@ -6,10 +6,27 @@ aicf-504557,chessresults_ind-1522216,same,3rd Pune International Speed Festival 
 chessfee-1837,chessresults_ind-1550116,same,1st Masters Cup State Level Tirunelveli 29 Nov
 aicf-494155,chessfee-1848,same,Chessinfo & Golden Knights 1st International FIDE Rating Below 1700 4-6 Dec
 aicf-508734,chessresults_ind-1540498,same,1st Late Sunil Swarup Barse Memorial FIDE Rapid Jalgaon 20 Dec
-aicf-486240,chessbase_calendar-6aaa7ca270d3171daede9adc,undecided,T5 check (added 2026-11-26): same name and city (2nd Manchester City Below 1800 Coimbatore) but ChessBase starts 21 Nov and AICF/chessfee/Chess-Results 27 Nov; change to same or not_same
-aicf-488283,chessbase_calendar-6aaa7ca270d3171daede9af8,undecided,T5 check (added 2026-11-26): 45th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
-aicf-488284,chessbase_calendar-6aaa7ca270d3171daede9af9,undecided,T5 check (added 2026-11-26): 46th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
-aicf-488285,chessbase_calendar-6aaa7ca270d3171daede9afa,undecided,T5 check (added 2026-11-26): 47th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
-aicf-488286,chessbase_calendar-6aaa7ca270d3171daede9afb,undecided,T5 check (added 2026-11-26): 48th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
-aicf-488287,chessbase_calendar-6aaa7ca270d3171daede9afc,undecided,T5 check (added 2026-11-26): 49th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
-aicf-488288,chessbase_calendar-6aaa7ca270d3171daede9afd,undecided,T5 check (added 2026-11-26): 50th Tamil Nadu IM Norm Closed Circuit Chennai; same name and city but ChessBase starts 30 Jan and AICF 8 Feb; change to same or not_same
+aicf-486240,chessbase_calendar-6aaa7ca270d3171daede9adc,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase starts 21 Nov and AICF/chessfee/Chess-Results 27 Nov; see review.csv dates_disagree
+aicf-488283,chessbase_calendar-6aaa7ca270d3171daede9af8,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+aicf-488284,chessbase_calendar-6aaa7ca270d3171daede9af9,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+aicf-488285,chessbase_calendar-6aaa7ca270d3171daede9afa,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+aicf-488286,chessbase_calendar-6aaa7ca270d3171daede9afb,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+aicf-488287,chessbase_calendar-6aaa7ca270d3171daede9afc,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+aicf-488288,chessbase_calendar-6aaa7ca270d3171daede9afd,same,same tournament (decided 27 Nov 2026 after the T5 check): same name and city; ChessBase and TNSCA (the organiser) say 30 Jan to 4 Feb 2027 and AICF 8 Feb; dates set in overrides.csv
+chessfee-1817,chessresults_ind-1547773,not_same,Prince (Gowrivakkam college; G. Masilamani) and Enpassant (Kodungaiyur school; Enpassant Chess School): different venues and organisers; Enpassant is chessfee-1853
+chessfee-1835,chessresults_ind-1549060,not_same,Siruseri Chennai (Sri Raghavendra Chess Academy) vs Aruppukottai (Genius Chess Academy): different venues and organisers; 1549060 is chessfee-1869
+chessfee-1842,chessresults_ind-1541897,same,Mohamed Sathak College of Arts and Science 13 Medavakkam Main Road Sholinganallur 6 Dec (same address and contact Sathyan K)
+chessfee-1860,chessresults_ind-1550815,same,Vidvath Chess Trophy Inter-District Rapid at Vidvath PU College Guruvayankere 27 Nov
+aicf-486710,chessfee-1876,same,Eight Square 4th International Rapid 10 Jan Chennai; same organiser Ms. Sivaranjani S (chessfee lists it twice: 1832 and 1876)
+aicf-487790,chessbase_calendar-6aaa7ca270d3171daede9adf,same,Goa Below 1800 27-28 Nov: same name dates and state
+aicf-487788,chessbase_calendar-6aaa7ca270d3171daede9ade,same,Goa Above 1800 26 Nov-1 Dec: same name dates and state
+aicf-504058,chessresults_ind-1514745,same,1st Raydiance International Open FIDE Rapid Rating 29 Nov; Kalyan East Maharashtra (Chess-Results writes Internationa)
+aicf-510558,chessresults_ind-1545661,same,3S Institute Rapid Rating Fiesta by Chess at School 29 Nov Chhatrapati Sambhajinagar Maharashtra
+aicf-510562,chessresults_ind-1538330,same,3rd Battle Field International FIDE Rapid 6 Dec Salem (Battel Field Chess Academy Salem on Chess-Results)
+chessfee-1847,chessresults_ind-1539417,same,1st RIMS International FIDE Rapid 29 Nov at RIMS Vidyashram School Krishnagiri; same organiser Vivekananda Chess Academy
+chessfee-1866,chessresults_ind-1539360,same,K.R. Palanivelu Memorial 2nd Gold Coin State Level 29 Nov at Karanthai Tamil Sangam Thanjavur
+chessfee-1817,chessresults_ind-1534051,same,Prince Shri Venkateshwara Arts and Science College Gowrivakkam Chennai 29 Nov (same venue and day)
+chessfee-1835,chessresults_ind-1538873,same,4th TN State Level at Mohamed Sathak AJ College of Engineering Siruseri 29 Nov; same organiser Sri Raghavendra Chess Academy
+chessfee-1859,chessresults_ind-1539367,same,Anandhan 12th TN State Level 6 Dec at Sri Sankara Global Academy Pammal; same organiser Anandhan Chess Academy
+aicf-486710,chessfee-1832,same,Eight Square 4th International Rapid 10 Jan Chennai: chessfee's first copy of the same event (see chessfee-1876)
+tnsca-CO-206-TNJ-26-27,chessresults_ind-1539360,same,K.R. Palanivelu Memorial 2nd Gold Coin State Level Children's 29 Nov Thanjavur (TNSCA's listing; Chess-Results lists the age groups in the name)
