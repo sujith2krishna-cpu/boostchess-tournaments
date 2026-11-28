@@ -6,7 +6,8 @@ Run from the repository root:
     python scripts/build_events.py
 
 Sources (each its own module in scripts/sources/, switched on or off in
-config/sources.json): aicf, kca, tnsca, ksca, upcsa, chessfee, chessresults_ind, chessbase_calendar. Plus your
+config/sources.json): aicf, kca, tnsca, ksca, upcsa, aoca, abca, chessfee, chessresults_ind,
+chessbase_calendar. Plus your
 own events in data/manual/events.csv and fixes in data/manual/overrides.csv.
 
 What a run does, in short:
@@ -41,8 +42,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from eventlib import *  # noqa: E402,F401,F403
 from eventlib import _from_iso, _iso, _key  # noqa: E402,F401
-from sources import (aicf, chessbase_calendar, chessfee, chessresults_ind, kca, ksca,  # noqa: E402
-                     tnsca, upcsa)
+from sources import (abca, aicf, aoca, chessbase_calendar, chessfee, chessresults_ind,  # noqa: E402
+                     kca, ksca, tnsca, upcsa)
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
@@ -57,6 +58,8 @@ SOURCE_MODULES = {
     "tnsca": tnsca,
     "ksca": ksca,
     "upcsa": upcsa,
+    "aoca": aoca,
+    "abca": abca,
     "chessfee": chessfee,
     "chessresults_ind": chessresults_ind,
     "chessbase_calendar": chessbase_calendar,
@@ -487,6 +490,15 @@ def _apply_manual_values(event: dict, item: dict) -> None:
         _change(event, "registration_deadline", item["registration_deadline"])
 
 
+def hide_undated(events: list[dict], today: date) -> None:
+    """An event that is not over and has no start date is never shown to players: it stays in
+    the data and on review.csv, with `hidden` = true, until a date is known (a source gives one,
+    or `start_date` in overrides.csv). Run after grouping, which may give a primary its dates."""
+    for event in events:
+        if undated(event, today):
+            event["hidden"] = True
+
+
 def reapply_manual_values(events: list[dict], overrides: list[dict]) -> None:
     """After grouping: put the manual values back (grouping may have joined other records' tags
     into a primary), on the event the line names and on the primary of its group."""
@@ -547,7 +559,7 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
             elif state_value:
                 change(event, "state", state_value)
             if item["hide"]:
-                event["hidden"] = True
+                change(event, "hidden", True)
             if item["cancelled"]:
                 event["cancelled"] = True
             if item["note"]:
@@ -860,6 +872,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
     grouping = dedup.group_events(events, pairs, warnings)
     reapply_manual_values(events, overrides)
+    hide_undated(events, today)
     in_groups = Counter(e["group_id"] for e in events)
     joined = Counter(e["source"] for e in events if in_groups[e["group_id"]] > 1)
     duplicates = grouping["possible"]

@@ -6,7 +6,8 @@ network, no files.
 "Shown" events are the ones the website and the app show: not hidden, not cancelled, and not
 merged into another site's record of the same tournament (`merged_into` is null). Two windows,
 both by start date in Indian time: the next 30 days (today up to today + 30) and all upcoming
-(today or later). An event without a usable start date is in neither.
+(today or later). An event without a usable start date is in neither: unless it is over, the
+build hides it from players and review.csv lists it until a person adds its dates.
 
 An event is **fully known** when all of these are known: its format, whether it is FIDE rated
 (true or false, not null), its state, good dates (not suspect), and a register link or a
@@ -23,7 +24,8 @@ import io
 from collections import defaultdict
 from datetime import date, timedelta
 
-from eventlib import OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY, STATES, source_rank, status
+from eventlib import (OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY, STATES, hidden_by_hand, source_rank, status,
+                      undated)
 
 WINDOW_DAYS = 30
 TARGET_PCT = 95.0  # fully known, for the next 30 days
@@ -218,8 +220,8 @@ def _dates_text(members: list[dict]) -> str:
 
 
 def review_rows(events: list[dict], today: date) -> list[dict]:
-    """Shown events starting in the next 30 days that miss anything (by start date), then
-    grouped records whose start dates disagree by more than a day (not past events), then
+    """Shown events starting in the next 30 days that miss anything (by start date), then shown
+    events with no start date that are not past (by id), then grouped records whose start dates disagree by more than a day (not past events), then
     every remaining possible duplicate (with both ids and a ready pairs.csv line)."""
     rows = []
     for event in sorted((e for e in events if is_shown(e) and in_window(e, "next_30_days", today)),
@@ -229,6 +231,21 @@ def review_rows(events: list[dict], today: date) -> list[dict]:
             rows.append(_row(event, "missing", missing=", ".join(missing),
                              add_to_file="data/manual/overrides.csv",
                              line_to_add=override_line(event, missing)))
+    # Events with no start date that are not over (a page that gives "12-13 December" and no
+    # year): the build hides them from players, so they are listed here until a person adds the
+    # dates. Not the ones a person hid (overrides.csv), cancelled, merged or gone.
+    for event in sorted((e for e in events if undated(e, today) and not hidden_by_hand(e)
+                         and not e["cancelled"] and e["merged_into"] is None
+                         and not e["gone_from_source"]), key=lambda e: e["id"]):
+        missing = missing_parts(event)
+        said = (event["raw_dates"] or {}).get("start") or ""
+        rows.append(_row(event, "missing",
+                         missing=", ".join(missing) + "; no start date: the page says "
+                                 + (f"'{said}'" if said else "nothing")
+                                 + ", so it is hidden from players; check the event's own circular "
+                                 "or brochure",
+                         add_to_file="data/manual/overrides.csv",
+                         line_to_add=override_line(event, missing)))
     for primary, members in dates_disagree(events, today):
         others = [m["id"] for m in members if m is not primary and m["start"] != primary["start"]]
         rows.append(_row(primary, "dates_disagree", other_id=" ".join(others),

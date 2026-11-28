@@ -1,0 +1,186 @@
+{
+  "source": "abca",
+  "found": 35,
+  "listing": {
+    "abca-d1fd24b5": "099f6d3346da",
+    "abca-19fb180e": "54b6d3e60dc8",
+    "abca-a2881c6a": "1e8ecfe4af38"
+  },
+  "events": [
+    {
+      "id": "abca-19fb180e",
+      "codes": [],
+      "name": "Bihar State Blitz Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-19fb180e",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "13 December",
+        "end": "13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "abca-a2881c6a",
+      "codes": [],
+      "name": "Bihar State Amateur Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Motihari, Bihar",
+      "state": "Bihar",
+      "city": "Motihari",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-a2881c6a",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "",
+        "end": ""
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "abca-d1fd24b5",
+      "codes": [],
+      "name": "Bihar State Rapid Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-d1fd24b5",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "12-13 December",
+        "end": "12-13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

@@ -33,6 +33,11 @@ source fails does the run stop, writing nothing.
 
 ## The sources
 
+**Adding a new source:** first read only the site's `robots.txt` and its terms / terms of use /
+disclaimer pages (found with a web search, not by opening the site's other pages). No other page of
+that site is fetched until both allow automated reading (a site with no terms page at all: say so). If either forbids it, or the pages need a login, the site is not
+added, and the reason is written down (see `docs/STATE_SOURCES_T13.md`).
+
 | Source | What we read | What we store |
 |---|---|---|
 | `aicf` | <https://aicf.in/all-events/> (the whole list, one request) | name, codes, dates, place, brochure link |
@@ -40,6 +45,8 @@ source fails does the run stop, writing nothing.
 | `tnsca` | the Tamil Nadu State Chess Association calendar, <https://tamilchess.com/tournament-registration/>: this year's page (`?y=2026`, from the page's own year menu), next year's page when the menu offers it, and last year's page only in January and February; one request per page, no event pages. Upcoming events and those that ended in the last 60 days are kept | name, TNSCA event code (in `codes`, e.g. `RR-24/CBE/26-27`), dates, place (as `city`), state `Tamil Nadu`, the event page link (`source_url`). A row that is also in the page's *Fide Rated Events* table gives `fide_rated` = `true` ("stated"). No registration or brochure links (those are on the event pages, which we do not read) |
 | `ksca` | the Karnataka State Chess Association tournaments list, <https://karnatakachess.com/tournaments/>: page 1 and the next pages through the page's own *Next Events* link (at most 8 pages, about 12 events each); upcoming and ongoing events only, no event pages | name, dates (the start from the page's machine-readable date, the end from its text), venue and address (as `place_text`), town (as `city`) and state from the address, the event page link (`source_url`), the category in `tags.categories` (*FIDE Rating Events*, *National Events*, *State Selection Tournaments*, *Monthly Tournaments*). An event filed under **FIDE Rating Events** gives `fide_rated` = `true` ("stated"). No registration or brochure links (those are on the event pages, which we do not read) |
 | `upcsa` | the UP Chess Sports Association tournaments page, <https://upchess.org/tournament.php> (one request, no event pages) | name, dates, district or town (as `city`; often a district such as "Kanpur Nagar"), state `Uttar Pradesh`, the level (`State Level`, `National Level`; and the type when it is not "For All", e.g. `For Schools`) in `tags.categories`, the last day of the normal entry dates as `registration_deadline` (the late-fee dates are not used), the brochure link and a result link when the page has one. `cancelled` when the status says so. Nothing on the page says FIDE rated, so only the name can |
+| `aoca` | the All Odisha Chess Association calendar, <https://odishachess.com/calendar/> (one request, no event pages): one table per season; only the left-hand, state-event columns (the right-hand columns are AICF's national championships in other states, which AICF's list already has). Upcoming events and those that ended in the last 60 days are kept; a row with only a section name and no organiser, dates or place (not scheduled yet) is not an event yet | name (a section alone, such as "Under 19 (Junior)", becomes "Odisha State Under 19 (Junior) Chess Championship"), the AICF event code(s) written as `505919/505920/OD(S)/2026` (in `codes`, which groups the record with AICF's; the first code gives the id `aoca-505919`), dates (`12-Nov-26`: a two-digit year is 20YY), the venue (as `place_text`), its town (as `city`) only when the venue line ends in one (`BBSR` is Bhubaneswar; a district such as "Kalahandi" never blocks a match), state `Odisha`, the organiser, the circular link (`brochure_url`) |
+| `abca` | the All Bihar Chess Association calendars, <https://biharchess.org/>: the home page for its *Tournament Calendars* menu, then the newest two season pages it links to (`/calendar-2026-27/`, `/calendar-2025-26/`); no event pages, no circular files, never the player registration lists | name, dates, the *City* column (as `city`; a district town, so it never blocks a match), state `Bihar`, the circular link (`brochure_url`), the *Results & Standing* link (`results_url`, a Chess-Results page: it groups the record with the same Chess-Results record). **The 2026-27 page writes dates without a year** ("12-13 December"), and a season is not a year, so a year is taken only from the event itself: a year in the date cell, one year in the event's name ("..., 2026"; a season like "2026-27" is not one), or a full date in its circular's file name that is its first or last day (`...-03-05-2026.pdf`). They must agree. Otherwise the record has no dates, `dates_suspect` is set, the page's text stays in `raw_dates`, and `data/review.csv` asks you to read the circular. Kept: events with dates that are upcoming or ended in the last 60 days, and, from the newest season page, events without dates that have no results link yet (a results link means it has been played) |
 | `chessfee` | the *Ongoing* and *Upcoming* pages of <https://www.chessfee.com/>; a tournament's details page only when it is new or its listing card changed | name, dates, venue, organiser, the tournament page link (`source_url`), the **Register Now** link (`register_url`), the category label (in `tags.categories`) |
 | `chessresults_ind` | the Chess-Results list for India (`fed=IND`), using the page's own menu: *running (up to 3 weeks)*, *starting in the next 7 days* and *starting later*; a tournament page only when new or changed | name, dates, venue, organiser, tournament page link, a registration link if the page has a clearly labelled one. The **Rating calculation** row: "Rating international" (also with "Rating national") gives `fide_rated` = `true` ("stated"); "Rating national" alone or "not rated" gives `false` ("stated"); "-" (most pages) says nothing; if it disagrees with the name, the name's value stays. The brochure link: a file in *Download Files* named brochure / prospectus / circular / invitation, otherwise the only PDF there unless its name looks like results, pairings, starting rank, players, ranking, prizes, rules, minutes or a meeting (several PDFs and none named like a brochure: none). *Number of rounds* is not kept (no place for it in the schema). The *FIDE-Event-ID* row: FIDE uses AICF's event code for Indian events, so a 6-digit number there becomes one of the record's AICF `codes` when exactly one AICF event has that code and no other one (an AICF row with two codes is two sections listed together, so it is not used); the shared code then groups the two records. The number itself is kept in the snapshot (`data/sources/chessresults_ind.json`, `listing.fide_event_ids`) |
 | `chessbase_calendar` | **switched off and not published since 28 Nov 2026**: ChessBase India's Terms of Use ask not to scrape the site in bulk without written permission (a request is drafted in `docs/PERMISSION_EMAILS.md`). The code stays; its last snapshot is kept in `archive/` (see `archive/README.md`). When on: the ChessBase India calendar, <https://chessbase.in/chess-calendar>: India and abroad, not online-only | name, dates, place, country, the event page link under `/chess-calendar/event/`, a brochure link |
@@ -69,7 +76,8 @@ Things to know:
   compared, a district matches the towns inside it (Ernakulam matches Kochi or Aluva), two
   different districts never match, and a town we do not know is "unknown", never "different".
   UPCSA's *District/City* is often a district too ("Lakhimpur Kheri" for Gola Gokaran Nath), so it
-  is treated the same way: it never blocks a match with a different town name.
+  is treated the same way: it never blocks a match with a different town name. The same goes for
+  AOCA's venue towns ("Kalahandi") and ABCA's *City* column ("Banka").
 - Chess-Results tournament pages are read only when a tournament is new or its line in the list
   changed. After a change in how those pages are read, the stored ones can be refreshed once, by
   hand: `python scripts/refresh_chessresults.py fetch <folder outside the repo>` (polite, stops
@@ -125,7 +133,7 @@ Many tournaments are listed on two or three sites. **Every site's record stays i
 `events.json`**; records of the same tournament are **grouped**, never removed or hidden.
 
 - Every event has a `group_id`. In a group of several records one is the **primary**: the AICF
-  record if there is one and its dates are not suspect; otherwise manual, then KCA, then TNSCA, then KSCA, then UPCSA, then chessfee,
+  record if there is one and its dates are not suspect; otherwise manual, then KCA, then TNSCA, then KSCA, then UPCSA, then AOCA, then ABCA, then chessfee,
   then Chess-Results, then ChessBase. The others get `merged_into` = the primary's `id`.
 - **Website and app: show only events with `merged_into` = `null`** (and `hidden` = `false`).
   The primary lists the other sites in `also_listed_on` and fills its own gaps (registration,
@@ -183,14 +191,15 @@ the above (see "How to say two events are (not) the same").
 
 ### Trust labels
 
-- `listed_by` says who listed it: `aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `chessfee`, `chess-results`, `chessbase`
+- `listed_by` says who listed it: `aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `aoca`, `abca`, `chessfee`, `chess-results`,
+  `chessbase`
   or `manual`. Names for people: `aicf` All India Chess Federation, `kca` Kerala Chess
-  Association, `tnsca` Tamil Nadu State Chess Association, `ksca` Karnataka State Chess Association, `upcsa` UP Chess Sports Association, `chessfee` chessfee, `chess-results` Chess-Results, `chessbase` ChessBase India
+  Association, `tnsca` Tamil Nadu State Chess Association, `ksca` Karnataka State Chess Association, `upcsa` UP Chess Sports Association, `aoca` All Odisha Chess Association, `abca` All Bihar Chess Association, `chessfee` chessfee, `chess-results` Chess-Results, `chessbase` ChessBase India
   (`SOURCE_LABELS` in `scripts/eventlib.py`; the website keeps its own copy).
-- `verified` is `true` **only for AICF, KCA, TNSCA, KSCA and UPCSA (the state associations, affiliated to AICF)
+- `verified` is `true` **only for AICF, KCA, TNSCA, KSCA, UPCSA, AOCA and ABCA (the state associations, affiliated to AICF)
   and manual events** (and for the primary of a group that contains one of them). The other
   sites' events are listed, not verified.
-- Importance when values differ: override > manual > AICF > KCA > TNSCA > KSCA > UPCSA > the other sites.
+- Importance when values differ: override > manual > AICF > KCA > TNSCA > KSCA > UPCSA > AOCA > ABCA > the other sites.
 
 ## Running it
 
@@ -352,13 +361,13 @@ One event looks like this:
 
 | Field | Meaning |
 |---|---|
-| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `kca-<KCA code with / as ->` (e.g. `kca-736-CAK-2026`), `tnsca-<TNSCA code with / as ->` (e.g. `tnsca-RR-24-CBE-26-27`; two rows sharing a code get a short name hash added), `ksca-<WordPress post number>` (e.g. `ksca-7128`), `upcsa-<row number on the page>` (e.g. `upcsa-96`), `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. |
+| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `kca-<KCA code with / as ->` (e.g. `kca-736-CAK-2026`), `tnsca-<TNSCA code with / as ->` (e.g. `tnsca-RR-24-CBE-26-27`; two rows sharing a code get a short name hash added), `ksca-<WordPress post number>` (e.g. `ksca-7128`), `upcsa-<row number on the page>` (e.g. `upcsa-96`), `aoca-<first AICF code>` (e.g. `aoca-505919`; a short name hash when the row has no code), `abca-<short hash of season + name>` (e.g. `abca-d1fd24b5`), `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. |
 | `codes` | The 6-digit AICF codes (some events have two); for a `kca` record its KCA code, like `736/CAK/2026`; for a `tnsca` record its TNSCA code, like `RR-24/CBE/26-27`. |
 | `name` | Name of the tournament. |
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when the source's date is unreadable. |
 | `place_text` | Place as a person would read it, e.g. `Banka, Bihar`. |
 | `state`, `city` | Best guess from the place or title, or `null` when we are not sure. A missing Indian state is filled from: chessfee's label "TAMILNADU STATE LEVEL" (Tamil Nadu); the state letters of an AICF code in the name (`KA` in `499268/KA(R)/2026`); or the venue text when it names **exactly one** town we know ("Hangal Road, Haveri": Karnataka; "SILIGURI INDORE STADIUM" names two, so it stays `null`). |
-| `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, upcsa, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
+| `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, upcsa, aoca, abca, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
 | `source` | The site this record comes from. |
 | `source_url` | The event's page on that source. |
@@ -377,9 +386,9 @@ One event looks like this:
 | `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |
 | `first_seen`, `last_seen` | The first and last day we saw it on a source. |
 | `gone_from_source` | `true` if no source lists it any more. |
-| `cancelled`, `hidden` | `cancelled` is set by you in `overrides.csv` or by a source that says so; `hidden` only by you. The website should skip hidden events. |
+| `cancelled`, `hidden` | `cancelled` is set by you in `overrides.csv` or by a source that says so; `hidden` by you (`hide`), or by the tool for an event that is not over and has **no start date** (it stays in the data and on `data/review.csv` until a date is known). The website should skip hidden events. |
 | `note` | A free note from you. |
-| `overridden` | Bookkeeping: the values that an override replaced. Ignore it. |
+| `overridden` | Bookkeeping: the values that an override replaced (`"hidden": false` when you hid the event with `hide`). Ignore it. |
 
 There is **no status field**. Whether an event is *ongoing*, *upcoming* or *past*
 is worked out from `start` and `end` and today's date in Indian time
@@ -423,7 +432,11 @@ cancelled, `merged_into` = `null`), by start date in Indian time, in two windows
 ## Daily review (10 minutes)
 
 The tool writes a to-do list for you every run: `data/review.csv`. It lists the shown events
-that **start in the next 30 days and miss something**, soonest first; then the tournaments (not
+that **start in the next 30 days and miss something**, soonest first; then the shown events that
+**have no start date at all** and are not over (for example a Bihar calendar line "12-13 December"
+with no year: the `missing` column quotes the page. Such an event is **hidden from players** until
+it has a date. Read the circular and fill in `start_date` and
+`end_date`); then the tournaments (not
 yet over) whose grouped records **disagree about the start date by more than a day**
 (`dates_disagree`); and after them any **possible duplicates** still to settle.
 
