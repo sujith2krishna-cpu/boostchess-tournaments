@@ -13,7 +13,8 @@ import heartbeat
 import quality
 import verify_published as vp
 from conftest import (ALL_SOURCES_ON, NOW, ROOT, build, fx, padding, row, run_all, serve_aicf, serve_chessbase,
-                      serve_chessfee, serve_chessresults, serve_kca, serve_ksca, serve_tnsca, web)  # noqa: F401
+                      serve_chessfee, serve_chessresults, serve_kca, serve_ksca, serve_tnsca, serve_upcsa,
+                      web)  # noqa: F401
 from sources import chessbase_calendar as cb_source
 
 NEXT_DAY = NOW + timedelta(days=1)
@@ -37,14 +38,14 @@ def fake_report(**overrides):
 # ---- the commit message --------------------------------------------------
 def test_commit_message_all_sources_ok():
     assert daily.commit_message(fake_report()) == (
-        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, ksca, chessfee, "
+        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, ksca, upcsa, chessfee, "
         "chessresults_ind, chessbase_calendar)")
 
 
 def test_commit_message_names_failed_sources():
     report = fake_report(chessfee=info("failed", message="HTTP 500"))
     assert daily.commit_message(report) == (
-        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, ksca, chessresults_ind, "
+        "data: 2026-11-25 (+3 new, 2 changed; sources ok: aicf, kca, tnsca, ksca, upcsa, chessresults_ind, "
         "chessbase_calendar; failed: chessfee)")
 
 
@@ -52,7 +53,7 @@ def test_commit_message_counts_a_blocked_source_as_failed_but_not_one_already_fe
     report = fake_report(aicf=info("skipped", message="already fetched today"),
                          chessbase_calendar=info("skipped", blocked=True, message="robots.txt"))
     message = daily.commit_message(report)
-    assert "sources ok: aicf, kca, tnsca, ksca, chessfee, chessresults_ind;" in message and "failed: chessbase_calendar" in message
+    assert "sources ok: aicf, kca, tnsca, ksca, upcsa, chessfee, chessresults_ind;" in message and "failed: chessbase_calendar" in message
 
 
 def test_commit_message_is_one_short_line():
@@ -65,6 +66,7 @@ def test_commit_message_from_a_real_run(web, data_dir):
     serve_kca(web)
     serve_tnsca(web)
     serve_ksca(web)
+    serve_upcsa(web)
     serve_chessfee(web)
     serve_chessresults(web)
     serve_chessbase(web)
@@ -72,9 +74,9 @@ def test_commit_message_from_a_real_run(web, data_dir):
         for raw in cb_source.parse_events(fx(html)):
             web.add("https://chessbase.in/chess-calendar/event/" + raw["slug"], fx("chessbase_event.html"))
     first = run_all(data_dir)
-    assert first["changes"] == {"new": 211, "changed": 0, "gone": 0}  # 21 + 22 KCA + 151 TNSCA + 17 KSCA records
+    assert first["changes"] == {"new": 219, "changed": 0, "gone": 0}  # 21 + 22 KCA + 151 TNSCA + 17 KSCA + 8 UPCSA records
     assert daily.commit_message(first) == (
-        "data: 2026-11-24 (+211 new, 0 changed; sources ok: aicf, kca, tnsca, ksca, chessfee, "
+        "data: 2026-11-24 (+219 new, 0 changed; sources ok: aicf, kca, tnsca, ksca, upcsa, chessfee, "
         "chessresults_ind, chessbase_calendar)")
     # next day: one AICF event is edited, chessfee fails
     serve_aicf(web, [row("Plain AICF Open", "400001", end="13-12-2026"), row("Another", "400002")])
@@ -82,7 +84,7 @@ def test_commit_message_from_a_real_run(web, data_dir):
     second = run_all(data_dir, now=NEXT_DAY)
     assert second["changes"] == {"new": 1, "changed": 1, "gone": 0}
     assert daily.commit_message(second) == (
-        "data: 2026-11-25 (+1 new, 1 changed; sources ok: aicf, kca, tnsca, ksca, chessresults_ind, "
+        "data: 2026-11-25 (+1 new, 1 changed; sources ok: aicf, kca, tnsca, ksca, upcsa, chessresults_ind, "
         "chessbase_calendar; failed: chessfee)")
 
 
@@ -244,9 +246,15 @@ CORS = {"content-type": "application/json; charset=utf-8", "access-control-allow
 CSV_CORS = {"content-type": "text/csv; charset=utf-8", "access-control-allow-origin": "*"}
 
 
+STATES_OK = {"window": "upcoming", "events": 5, "by_state": {"Goa": 0, "Kerala": 3, "Uttar Pradesh": 1},
+             "no_state": 1, "abroad": 0}
+
+
 def quality_json(missing=1, duplicates=1, **change):
-    data = {"generated_at": "t", "target": {"fully_known_pct": 95.0, "now_pct": 20.0}, "overall": {},
-            "sources": {}, "review": {"missing": missing, "possible_duplicates": duplicates}, **change}
+    data = {"generated_at": "t", "target": {"fully_known_pct": 95.0, "now_pct": 20.0},
+            "overall": {"upcoming": {"events": 5}}, "sources": {},
+            "review": {"missing": missing, "possible_duplicates": duplicates}, "states": STATES_OK,
+            **change}
     return json.dumps(data)
 
 
@@ -275,6 +283,7 @@ def test_published_files_that_are_right_pass_and_the_headers_are_shown():
     assert "quality.json: HTTP 200" in text and "20.0% fully known (target 95.0%)" in text
     assert "review.csv: HTTP 200" in text and "1 to complete, 1 possible duplicates" in text
     assert "content-type: text/csv" in text
+    assert "upcoming by state: 1 states with none, no state 1, abroad 0" in text
 
 
 @pytest.mark.parametrize("changes, expected", [
@@ -292,6 +301,12 @@ def test_published_files_that_are_right_pass_and_the_headers_are_shown():
      "review.csv has 2 to complete and 1 possible duplicates, but quality.json says 1 and 1"),
     ({"quality_file": (200, CORS, quality_json(missing=0, duplicates=0))},
      "review.csv has 1 to complete and 1 possible duplicates, but quality.json says 0 and 0"),
+    ({"quality_file": (200, CORS, json.dumps({k: v for k, v in json.loads(GOOD_QUALITY).items()
+                                              if k != "states"}))}, "quality.json: has no states"),
+    ({"quality_file": (200, CORS, quality_json(states={"events": 5}))},
+     "quality.json: states has no by_state / no_state / abroad counts"),
+    ({"quality_file": (200, CORS, quality_json(states={**STATES_OK, "no_state": 4}))},
+     "quality.json: the per-state counts add up to 8, but there are 5 upcoming events"),
 ])
 def test_a_wrong_quality_report_or_review_list_fails_with_a_reason(changes, expected):
     ok, lines = vp.verify("https://site.test/repo/", getter(**changes), attempts=2, sleep=lambda s: None)

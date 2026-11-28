@@ -6,7 +6,7 @@ Run from the repository root:
     python scripts/build_events.py
 
 Sources (each its own module in scripts/sources/, switched on or off in
-config/sources.json): aicf, kca, tnsca, ksca, chessfee, chessresults_ind, chessbase_calendar. Plus your
+config/sources.json): aicf, kca, tnsca, ksca, upcsa, chessfee, chessresults_ind, chessbase_calendar. Plus your
 own events in data/manual/events.csv and fixes in data/manual/overrides.csv.
 
 What a run does, in short:
@@ -41,7 +41,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from eventlib import *  # noqa: E402,F401,F403
 from eventlib import _from_iso, _iso, _key  # noqa: E402,F401
-from sources import aicf, chessbase_calendar, chessfee, chessresults_ind, kca, ksca, tnsca  # noqa: E402
+from sources import (aicf, chessbase_calendar, chessfee, chessresults_ind, kca, ksca,  # noqa: E402
+                     tnsca, upcsa)
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
@@ -55,6 +56,7 @@ SOURCE_MODULES = {
     "kca": kca,
     "tnsca": tnsca,
     "ksca": ksca,
+    "upcsa": upcsa,
     "chessfee": chessfee,
     "chessresults_ind": chessresults_ind,
     "chessbase_calendar": chessbase_calendar,

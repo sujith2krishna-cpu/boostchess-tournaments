@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T00:26:01+05:30",
+  "generated_at": "2026-11-28T07:28:10+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -9092,6 +9092,64 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-85",
+      "codes": [],
+      "name": "Srinivasa Ramanujan Trophy International Chess Day Blitz Tournament 2026",
+      "start": "2026-07-20",
+      "end": "2026-07-20",
+      "place_text": "Lucknow, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectous.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-85",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-07-17",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -19302,6 +19360,62 @@
       "overridden": null
     },
     {
+      "id": "upcsa-89",
+      "codes": [],
+      "name": "UP State Chess Championship 2026",
+      "start": "2026-10-23",
+      "end": "2026-10-26",
+      "place_text": "Ghaziabad, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Ghaziabad",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Circular%20Senior%20State%20Championship%202026%20Final.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-89",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-10-15",
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "State Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-487839",
       "codes": [
         "487839"
@@ -20472,6 +20586,64 @@
       "overridden": null
     },
     {
+      "id": "upcsa-91",
+      "codes": [],
+      "name": "SBI GIC Ltd. Presents 2 FIDE RATED OPEN RAPID CHESS TOURNAMENT",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "place_text": "Kanpur Nagar, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Kanpur Nagar",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Brochure%20new.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-91",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": "aicf-505736"
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-485005",
       "codes": [
         "485005"
@@ -21416,7 +21588,7 @@
       "end": "2026-11-01",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Agra",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/09/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
       "source": "aicf",
@@ -21426,13 +21598,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-496209",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -21446,7 +21631,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -21458,6 +21645,64 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-87",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Rapid Chess Tournament 2026",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-496209",
+      "merged_into": "aicf-496209",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -22348,6 +22593,64 @@
       "dates_from": null,
       "first_seen": "2026-11-26",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-88",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Blitz Chess Tournament 2026",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-88",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": "aicf-496210"
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -25095,6 +25398,62 @@
       "overridden": null
     },
     {
+      "id": "upcsa-96",
+      "codes": [],
+      "name": "UP State Senior Women Chess Championship 2026-27",
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "place_text": "Jhansi, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Jhansi",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectus%20Senior%20Women%20State%20Championship%202026%201.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-96",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-11-18",
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "State Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessbase_calendar-6aaa7ca270d3171daede9adc",
       "codes": [],
       "name": "2nd Manchester City International Below 1800 Fide Rated Tournament",
@@ -26748,8 +27107,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -26804,8 +27163,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -26837,7 +27196,7 @@
       "state": "Telangana",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538678&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1538678.aspx?lan=1",
       "sources": [
@@ -26893,7 +27252,7 @@
       "state": "Telangana",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540462&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1540462.aspx?lan=1",
       "sources": [
@@ -26949,7 +27308,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1542669&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1542669.aspx?lan=1",
       "sources": [
@@ -28529,7 +28888,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529932&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529932.aspx?lan=1",
       "sources": [
@@ -28585,7 +28944,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529949&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529949.aspx?lan=1",
       "sources": [
@@ -28641,7 +29000,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529955&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529955.aspx?lan=1",
       "sources": [
@@ -28697,7 +29056,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529958&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529958.aspx?lan=1",
       "sources": [
@@ -28744,62 +29103,6 @@
       "overridden": null
     },
     {
-      "id": "chessresults_ind-1540937",
-      "codes": [],
-      "name": "North Zone Inter University Chess (MEN) Championship 2026-27",
-      "start": "2026-11-24",
-      "end": "2026-11-27",
-      "place_text": "Amity University Gurugram, Haryana",
-      "state": "Haryana",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1540937",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Amity University Gurugram",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-25",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
       "id": "chessresults_ind-1549170",
       "codes": [],
       "name": "West Zone Inter-University Chess (Men) Tournament 2026–27",
@@ -28835,238 +29138,6 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549909",
-      "codes": [],
-      "name": "U8 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549909&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549909",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U8"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549910",
-      "codes": [],
-      "name": "U10 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549910&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549910",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U10"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549911",
-      "codes": [],
-      "name": "U13 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549911&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549911",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U13"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549912",
-      "codes": [],
-      "name": "U17 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549912&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549912",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U17"
-        ],
         "open": null,
         "girls": null,
         "categories": []
@@ -29638,6 +29709,62 @@
       "overridden": null
     },
     {
+      "id": "chessresults_ind-1540937",
+      "codes": [],
+      "name": "North Zone Inter University Chess (MEN) Championship 2026-27",
+      "start": "2026-11-25",
+      "end": "2026-11-27",
+      "place_text": "Amity University Gurugram, Haryana",
+      "state": "Haryana",
+      "city": null,
+      "country": "IN",
+      "brochure_url": null,
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1540937",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Amity University Gurugram",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessbase_calendar-6aaa7ca270d3171daede9add",
       "codes": [],
       "name": "2026 US Masters",
@@ -29755,11 +29882,11 @@
       "name": "1st SIR HARI SINGH GOUR MEMORIAL OPEN RAPID & BLITZ CHESS CHAMPIONSHIP 2026 26 November 2026",
       "start": "2026-11-26",
       "end": "2026-11-26",
-      "place_text": "SNESH BAL VIDYALAYA, TILAKGANJ, SAGAR,MP",
+      "place_text": "HOTEL SINGH EMPIRE , TILAKGANJ, SAGAR,MP",
       "state": "Madhya Pradesh",
       "city": "SAGAR",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533057&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533057.aspx?lan=1",
       "sources": [
@@ -29816,7 +29943,7 @@
       "state": "Madhya Pradesh",
       "city": "SAGAR",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533060&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533060.aspx?lan=1",
       "sources": [
@@ -30288,6 +30415,11 @@
           "register_url": null
         },
         {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
+          "register_url": null
+        },
+        {
           "source": "chessbase_calendar",
           "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
           "register_url": null
@@ -30299,6 +30431,13 @@
       "merged_into": null,
       "also_listed_on": [
         {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
+          "brochure_url": null
+        },
+        {
           "source": "chessbase_calendar",
           "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
           "register_url": null,
@@ -30307,9 +30446,9 @@
         }
       ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "QUEPEM TALUKA CHESS ASSOCIATION AND QUEENS CHESS AND CULTURAL CLUB",
       "tags": {
         "formats": [
           "classical"
@@ -30415,8 +30554,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1487030",
-      "merged_into": null,
+      "group_id": "aicf-487788",
+      "merged_into": "aicf-487788",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
@@ -30869,7 +31008,7 @@
     {
       "id": "chessresults_ind-1550300",
       "codes": [],
-      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-09)♟️ 27/11/2026 VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
+      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-09 & U11) VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
       "start": "2026-11-27",
       "end": "2026-11-27",
       "place_text": "RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
@@ -30902,7 +31041,8 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [
-          "U9"
+          "U9",
+          "U11"
         ],
         "open": null,
         "girls": null,
@@ -30927,7 +31067,7 @@
     {
       "id": "chessresults_ind-1550303",
       "codes": [],
-      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-11)♟️ 27/11/2026 VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
+      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-13) VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
       "start": "2026-11-27",
       "end": "2026-11-27",
       "place_text": "RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
@@ -30960,7 +31100,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [
-          "U11"
+          "U13"
         ],
         "open": null,
         "girls": null,
@@ -33917,7 +34057,9 @@
       "registration_deadline": null,
       "organiser": "IMA AMRAVATI",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -34310,8 +34452,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": false,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -34765,6 +34907,62 @@
       "overridden": null
     },
     {
+      "id": "chessresults_ind-1539596",
+      "codes": [],
+      "name": "Dr O. P. Bansal Memorial One Day Rapid Chess Tournament , Indore | Organised By Ahilya Chess Club",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "SGSITS Indore",
+      "state": "Madhya Pradesh",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539596&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1539596",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Ahilya Chess Club",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessresults_ind-1539869",
       "codes": [],
       "name": "14th LCCA UNDER 08 CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
@@ -34944,9 +35142,9 @@
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546155&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546155.aspx?lan=1",
       "sources": [
@@ -35002,9 +35200,9 @@
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546172&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546172.aspx?lan=1",
       "sources": [
@@ -35062,7 +35260,7 @@
       "state": "Uttar Pradesh",
       "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547602&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547602.aspx?lan=1",
       "sources": [
@@ -35113,7 +35311,7 @@
     {
       "id": "chessresults_ind-1547750",
       "codes": [],
-      "name": "28 Nov | Namma Chess Academy 5th Tamil Nadu State Level Children’s Chess Tournament",
+      "name": "Entries are Still Open!! - 28 Nov | Namma Chess Academy 5th Tamil Nadu State Level Children’s Chess Tournament @ Velankanni School, Kodungaiyur, Chennai",
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Velankanni Public Senior Secondary School, Muthamizh Nagar, Kodungaiyur, Chennai",
@@ -35146,7 +35344,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
         "categories": []
       },
@@ -35225,6 +35423,238 @@
       "overridden": null
     },
     {
+      "id": "chessresults_ind-1549909",
+      "codes": [],
+      "name": "U8 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549909&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549909",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549910",
+      "codes": [],
+      "name": "U10 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549910&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549910",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U10"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549911",
+      "codes": [],
+      "name": "U13 Boys Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549911&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549911",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549912",
+      "codes": [],
+      "name": "U17 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549912&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549912",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessresults_ind-1550089",
       "codes": [],
       "name": "REGULAR PLAYING SESSION 157 ( TOURNAMENT TRAINING IN COGNIZANCE ACADEMY) SPECIAL REGULAR PLAYING SESSION",
@@ -35288,7 +35718,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35344,7 +35774,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35400,7 +35830,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35568,7 +35998,7 @@
       "name": "ARPAN CHESS TOURNAMENT 2026 CONTACT SNA HARSH MALEKAR",
       "start": "2026-11-28",
       "end": "2026-11-28",
-      "place_text": "SUBHASH STADIUM RAIPUR",
+      "place_text": "NETAJI SUBHASH STADIUM RAIPUR",
       "state": "Chhattisgarh",
       "city": null,
       "country": "IN",
@@ -35922,7 +36352,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
         "categories": [
           "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
@@ -35981,7 +36411,7 @@
           "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522214&Uid=1"
         }
       ],
       "register_url": null,
@@ -36025,7 +36455,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522214&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
       "sources": [
@@ -36074,14 +36504,14 @@
     {
       "id": "chessresults_ind-1547690",
       "codes": [],
-      "name": "NOV 28-29, Delhi Classical Chess League 2nd Edition / Prize Fund - Rs.9000 - For Registration",
+      "name": "DELHI CLASSICAL CHESS LEAGUE 2nd EDITION For Registration",
       "start": "2026-11-28",
       "end": "2026-11-29",
       "place_text": "H-1/1B, behind Vijay Sales, Model Town - III",
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547690&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547690.aspx?lan=1",
       "sources": [
@@ -36638,7 +37068,7 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597"
         }
       ],
       "listed_by": "aicf",
@@ -36649,12 +37079,12 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null,
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597",
           "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
           "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1543357&Uid=1"
         }
       ],
-      "register_url": null,
+      "register_url": "https://easypaychess.com/tmt.asp?i=2597",
       "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr. Vasanthakumar M",
@@ -36805,7 +37235,7 @@
           "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532678&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1800",
@@ -36878,7 +37308,7 @@
           "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1514745&Uid=1"
         }
       ],
       "register_url": null,
@@ -36949,7 +37379,7 @@
           "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522216&Uid=1"
         }
       ],
       "register_url": null,
@@ -37964,7 +38394,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1514745&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
       "sources": [
@@ -38192,7 +38622,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522216&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
       "sources": [
@@ -38248,7 +38678,7 @@
       "state": "Karnataka",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522500&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522500.aspx?lan=1",
       "sources": [
@@ -38300,7 +38730,7 @@
       "name": "WMA Presents All Assam Inter School Rapid Rating Chess Championship 2026 For Registration : ( Ravi Kant)",
       "start": "2026-11-29",
       "end": "2026-11-29",
-      "place_text": "The Green School International, Lokhra",
+      "place_text": "Winning Move Academy,Bharalumukh",
       "state": null,
       "city": null,
       "country": "IN",
@@ -38358,7 +38788,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -38418,7 +38848,7 @@
       "state": "Kerala",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532678&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
       "sources": [
@@ -38472,7 +38902,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -38530,7 +38960,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -39390,7 +39820,7 @@
       "end": "2026-11-29",
       "place_text": "Gyan Banquet Hall, Ujhani, Budaun",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Budaun",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -39736,7 +40166,7 @@
       "end": "2026-11-29",
       "place_text": "RIMS Vidyashram School, Kuppam Road, Kathinayanapalli, Krishnagiri – 635120",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Krishnagiri",
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539417&Uid=1",
       "source": "chessresults_ind",
@@ -39779,62 +40209,6 @@
       "first_seen": "2026-11-26",
       "last_seen": "2026-11-27",
       "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1539596",
-      "codes": [],
-      "name": "Dr O. P. Bansal Memorial One Day Rapid Chess Tournament , Indore | Organised By Ahilya Chess Club",
-      "start": "2026-11-29",
-      "end": "2026-11-29",
-      "place_text": "SGSITS Indore",
-      "state": "Madhya Pradesh",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1539596",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Ahilya Chess Club",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-25",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -39969,7 +40343,7 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597"
         }
       ],
       "listed_by": "chess-results",
@@ -39977,7 +40351,7 @@
       "group_id": "aicf-500404",
       "merged_into": "aicf-500404",
       "also_listed_on": [],
-      "register_url": null,
+      "register_url": "https://easypaychess.com/tmt.asp?i=2597",
       "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr. Vasanthakumar M",
@@ -40018,7 +40392,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1544675&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1544675.aspx?lan=1",
       "sources": [
@@ -40416,9 +40790,9 @@
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546166&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546166.aspx?lan=1",
       "sources": [
@@ -40474,9 +40848,9 @@
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546174&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546174.aspx?lan=1",
       "sources": [
@@ -40532,7 +40906,7 @@
       "state": "Uttar Pradesh",
       "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547614&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547614.aspx?lan=1",
       "sources": [
@@ -40700,7 +41074,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547834&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547834.aspx?lan=1",
       "sources": [
@@ -40812,7 +41186,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549077&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549077.aspx?lan=1",
       "sources": [
@@ -41034,7 +41408,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549781&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549781.aspx?lan=1",
       "sources": [
@@ -41092,7 +41466,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549784&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549784.aspx?lan=1",
       "sources": [
@@ -41150,7 +41524,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549789&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549789.aspx?lan=1",
       "sources": [
@@ -41208,7 +41582,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549791&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549791.aspx?lan=1",
       "sources": [
@@ -41722,7 +42096,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1550114&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1550114.aspx?lan=1",
       "sources": [
@@ -41918,8 +42292,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -41944,12 +42318,12 @@
     {
       "id": "chessresults_ind-1550462",
       "codes": [],
-      "name": "All Odisha Open Rapid Chess Tournament 2026",
+      "name": "KT Global School All Odisha Open Rapid Chess Tournament 2026",
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Venue : Bholanath Vidyapith, Puri",
       "state": "Odisha",
-      "city": null,
+      "city": "Puri",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -42007,7 +42381,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1550808&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1550808.aspx?lan=1",
       "sources": [
@@ -43270,7 +43644,7 @@
       "codes": [
         "485283"
       ],
-      "name": "63rd National Chess Championship 2026 AICF code 485283/UP/2026",
+      "name": "63rd National Chess Championship 2026 AICF code 485283/UP/2026 - 29th Nov to 9th Dec 2026",
       "start": "2026-11-29",
       "end": "2026-12-09",
       "place_text": "Seth M R Jaipuria School, Babatpur Campus, Varanasi",
@@ -43301,7 +43675,7 @@
           "classical"
         ],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -43486,7 +43860,7 @@
           "classical"
         ],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -44096,7 +44470,7 @@
       "state": "Tamil Nadu",
       "city": "Kanyakumari",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519059&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
       "sources": [
@@ -44346,7 +44720,7 @@
       "end": "2026-12-06",
       "place_text": "Papa Seth Mahal, Railway Station Road,Tirupattur-635601",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Tirupattur",
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532524&Uid=1",
       "source": "chessresults_ind",
@@ -44576,7 +44950,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1537423&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
       "sources": [
@@ -44729,7 +45103,7 @@
           "source_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
           "register_url": "https://www.primeengage.in/chess/register",
           "results_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1537423&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1875",
@@ -45178,7 +45552,7 @@
           "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
           "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
           "results_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538330&Uid=1"
         }
       ],
       "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
@@ -46178,9 +46552,9 @@
       "end": "2026-12-06",
       "place_text": "Rajashwari Hall Cultural Centre, Vilakkadi Koil Street, Kanchipuram",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Kanchipuram",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533242&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533242.aspx?lan=1",
       "sources": [
@@ -46696,7 +47070,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538330&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
       "sources": [
@@ -46750,7 +47124,7 @@
       "end": "2026-12-06",
       "place_text": "St. Thomas School, Ujjain",
       "state": "Madhya Pradesh",
-      "city": null,
+      "city": "Ujjain",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -46810,7 +47184,7 @@
       "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539367&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
       "sources": [
@@ -46915,14 +47289,14 @@
     {
       "id": "chessresults_ind-1543952",
       "codes": [],
-      "name": "Magic Square Winter Open and U15 Chess Tournament 2026 Deekshith J",
+      "name": "Magic Square Winter Open and U15 Chess Tournament 2026 on 6th December 2026 Deekshith J",
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Mahathma Gandhi Stadium, Tumakuru",
       "state": "Karnataka",
-      "city": null,
+      "city": "Tumakuru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1543952&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1543952.aspx?lan=1",
       "sources": [
@@ -46978,7 +47352,7 @@
       "end": "2026-12-06",
       "place_text": "Belgaum",
       "state": "Karnataka",
-      "city": null,
+      "city": "Belgaum",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -47780,7 +48154,7 @@
           "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
           "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
           "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539367&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1859",
@@ -48519,8 +48893,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": true,
@@ -48575,8 +48949,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -49363,7 +49737,7 @@
       "end": "2026-12-19",
       "place_text": "Nagaland",
       "state": "Nagaland",
-      "city": null,
+      "city": "Dimapur",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/24th-North-East-Fide-Rating-Chess-Championship-2026.pdf",
       "source": "aicf",
@@ -49390,7 +49764,7 @@
           "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519549&Uid=1"
         }
       ],
       "register_url": null,
@@ -49430,11 +49804,11 @@
       "name": "24th North East FIDE Rating Chess Championship",
       "start": "2026-12-15",
       "end": "2026-12-19",
-      "place_text": "The Covenant Hall,",
-      "state": null,
-      "city": null,
+      "place_text": "The Covenant Hall, Christian Higher Secondary Hall, Dimapur, Nagaland",
+      "state": "Nagaland",
+      "city": "Dimapur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519549&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
       "sources": [
@@ -49859,7 +50233,7 @@
       "end": "2026-12-20",
       "place_text": "Guru Bhavan, AVK College Road, Davangere",
       "state": "Karnataka",
-      "city": null,
+      "city": "Davangere",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -51947,6 +52321,7 @@
       "organiser": "JP Anand Chess Academy (Reg. No: UDYAM-TN-) Tiruchengode",
       "tags": {
         "formats": [
+          "classical",
           "rapid"
         ],
         "fide_rated": true,
@@ -51984,7 +52359,7 @@
       "end": "2027-01-03",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Bareilly",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/Tournament-Catlogue-Revised.pdf",
       "source": "aicf",
@@ -51994,12 +52369,83 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-495857",
       "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/Tournament%20Catlogue%20Revised.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-86",
+      "codes": [],
+      "name": "Shri Sanjay Agarwal Memorial International FIDE Rated Rapid Chess Tournament",
+      "start": "2027-01-02",
+      "end": "2027-01-03",
+      "place_text": "Bareilly, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Bareilly",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Tournament%20Catlogue%20Revised.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-495857",
+      "merged_into": "aicf-495857",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -52014,7 +52460,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -52024,8 +52472,8 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -52523,12 +52971,70 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": null
+        "possible_duplicate_of": "upcsa-90"
       },
       "raw_dates": null,
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-90",
+      "codes": [],
+      "name": "1st Kapil Dev Khare Memorial FIDE Rated Open Classical Chess Tournament 2027",
+      "start": "2027-01-05",
+      "end": "2027-01-10",
+      "place_text": "Lakhimpur Kheri, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Lakhimpur Kheri",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Kapil%20Dev%20Khare%20Memorial%20Chess%20Tournament%202027.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-90",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": "aicf-505328"
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,

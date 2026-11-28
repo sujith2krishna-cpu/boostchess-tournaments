@@ -11,6 +11,10 @@ both by start date in Indian time: the next 30 days (today up to today + 30) and
 An event is **fully known** when all of these are known: its format, whether it is FIDE rated
 (true or false, not null), its state, good dates (not suspect), and a register link or a
 brochure link.
+
+`states` counts the shown upcoming events per Indian state and union territory (every one of
+them, so a state with none shows 0), plus `no_state` (an Indian event whose state is not known)
+and `abroad` (an event in another country), to show where coverage is thin.
 """
 from __future__ import annotations
 
@@ -19,7 +23,7 @@ import io
 from collections import defaultdict
 from datetime import date, timedelta
 
-from eventlib import OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY, source_rank, status
+from eventlib import OVERRIDES_CSV_COLUMNS, SOURCE_PRIORITY, STATES, source_rank, status
 
 WINDOW_DAYS = 30
 TARGET_PCT = 95.0  # fully known, for the next 30 days
@@ -88,6 +92,21 @@ def measure(events: list[dict]) -> dict:
     return out
 
 
+def state_counts(upcoming: list[dict]) -> dict:
+    """Shown upcoming events per Indian state / union territory (all of them, 0 included)."""
+    by_state = dict.fromkeys(sorted(STATES), 0)
+    no_state = abroad = 0
+    for event in upcoming:
+        if event["country"] not in (None, "IN"):
+            abroad += 1
+        elif event["state"]:
+            by_state[event["state"]] = by_state.get(event["state"], 0) + 1
+        else:
+            no_state += 1
+    return {"window": "upcoming", "events": len(upcoming), "by_state": by_state,
+            "no_state": no_state, "abroad": abroad}
+
+
 def _alerts(sources: dict, previous: dict | None) -> list[dict]:
     """Compare with the previous run's quality.json: a big drop in fully known, or a halving."""
     alerts = []
@@ -130,6 +149,7 @@ def quality_report(events: list[dict], today: date, generated_at: str,
         "sources": sources,
         "alerts": _alerts(sources, previous),
         "review": review_counts or {"missing": 0, "dates_disagree": 0, "possible_duplicates": 0},
+        "states": state_counts(by_window["upcoming"]),
     }
 
 
@@ -137,7 +157,7 @@ def comparable(quality: dict | None):
     """The numbers only (no times, dates or alerts): has anything changed since the last run?"""
     if not quality:
         return None
-    return {k: quality.get(k) for k in ("target", "overall", "sources", "review")}
+    return {k: quality.get(k) for k in ("target", "overall", "sources", "review", "states")}
 
 
 # --------------------------------------------------------------------------
@@ -275,6 +295,12 @@ def summary_markdown(quality: dict) -> str:
     lines.append(f"**Review list** (`data/review.csv`): {review['missing']} events to complete, "
                  f"{review.get('dates_disagree', 0)} with dates that disagree, "
                  f"{review['possible_duplicates']} possible duplicates.")
+    states = quality.get("states")
+    if states:
+        ranked = sorted(states["by_state"].items(), key=lambda kv: (-kv[1], kv[0]))
+        lines.append("**Upcoming by state:** " + ", ".join(f"{s} {n}" for s, n in ranked if n)
+                     + f"; no state {states['no_state']}; abroad {states['abroad']}. "
+                     + "None yet: " + (", ".join(s for s, n in ranked if not n) or "–") + ".")
     if quality["alerts"]:
         lines += ["", "**Quality alerts** (compared with the previous run):"]
         lines += [f"- {a['message']}" for a in quality["alerts"]]

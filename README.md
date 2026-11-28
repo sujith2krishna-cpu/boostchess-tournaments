@@ -14,7 +14,7 @@ made here shows up in both.
 
 ## What it does
 
-1. Reads up to seven sources (see "The sources"), politely, one after the other.
+1. Reads up to eight sources (see "The sources"), politely, one after the other.
 2. Cleans each entry up (dates, codes, place, state, country).
 3. **Keeps history.** A tournament is never deleted. If a site stops listing one,
    we keep it and mark it `gone_from_source`.
@@ -39,8 +39,9 @@ source fails does the run stop, writing nothing.
 | `kca` | the Kerala Chess Association's events page, <https://www.keralachessassociation.com/events>: the *Upcoming & Ongoing* list, plus events in the *Completed* list that ended in the last 60 days (the previous year's list, through the page's own year menu, only when those 60 days reach back into it; older years are not read); an event's page only for upcoming events that are new or whose row changed | name, KCA event code (in `codes`, e.g. `736/CAK/2026`), dates, district (as `city`), state `Kerala`, venue, the event page link (`source_url`), brochure link, a registration link only if the page has a working one. The type label: **FIDE** gives `fide_rated` = `true` ("stated"); **STATE** gives the category `KCA state rated` and leaves `fide_rated` empty; **EVENT** adds nothing |
 | `tnsca` | the Tamil Nadu State Chess Association calendar, <https://tamilchess.com/tournament-registration/>: this year's page (`?y=2026`, from the page's own year menu), next year's page when the menu offers it, and last year's page only in January and February; one request per page, no event pages. Upcoming events and those that ended in the last 60 days are kept | name, TNSCA event code (in `codes`, e.g. `RR-24/CBE/26-27`), dates, place (as `city`), state `Tamil Nadu`, the event page link (`source_url`). A row that is also in the page's *Fide Rated Events* table gives `fide_rated` = `true` ("stated"). No registration or brochure links (those are on the event pages, which we do not read) |
 | `ksca` | the Karnataka State Chess Association tournaments list, <https://karnatakachess.com/tournaments/>: page 1 and the next pages through the page's own *Next Events* link (at most 8 pages, about 12 events each); upcoming and ongoing events only, no event pages | name, dates (the start from the page's machine-readable date, the end from its text), venue and address (as `place_text`), town (as `city`) and state from the address, the event page link (`source_url`), the category in `tags.categories` (*FIDE Rating Events*, *National Events*, *State Selection Tournaments*, *Monthly Tournaments*). An event filed under **FIDE Rating Events** gives `fide_rated` = `true` ("stated"). No registration or brochure links (those are on the event pages, which we do not read) |
+| `upcsa` | the UP Chess Sports Association tournaments page, <https://upchess.org/tournament.php> (one request, no event pages) | name, dates, district or town (as `city`; often a district such as "Kanpur Nagar"), state `Uttar Pradesh`, the level (`State Level`, `National Level`; and the type when it is not "For All", e.g. `For Schools`) in `tags.categories`, the last day of the normal entry dates as `registration_deadline` (the late-fee dates are not used), the brochure link and a result link when the page has one. `cancelled` when the status says so. Nothing on the page says FIDE rated, so only the name can |
 | `chessfee` | the *Ongoing* and *Upcoming* pages of <https://www.chessfee.com/>; a tournament's details page only when it is new or its listing card changed | name, dates, venue, organiser, the tournament page link (`source_url`), the **Register Now** link (`register_url`), the category label (in `tags.categories`) |
-| `chessresults_ind` | the Chess-Results list for India (`fed=IND`), using the page's own menu: *running (up to 3 weeks)*, *starting in the next 7 days* and *starting later*; a tournament page only when new or changed | name, dates, venue, organiser, tournament page link, a registration link if the page has a clearly labelled one |
+| `chessresults_ind` | the Chess-Results list for India (`fed=IND`), using the page's own menu: *running (up to 3 weeks)*, *starting in the next 7 days* and *starting later*; a tournament page only when new or changed | name, dates, venue, organiser, tournament page link, a registration link if the page has a clearly labelled one. The **Rating calculation** row: "Rating international" (also with "Rating national") gives `fide_rated` = `true` ("stated"); "Rating national" alone or "not rated" gives `false` ("stated"); "-" (most pages) says nothing; if it disagrees with the name, the name's value stays. The brochure link: a file in *Download Files* named brochure / prospectus / circular / invitation, otherwise the only PDF there unless its name looks like results, pairings, starting rank, players, ranking, prizes, rules, minutes or a meeting (several PDFs and none named like a brochure: none). *Number of rounds* is not kept (no place for it in the schema) |
 | `chessbase_calendar` | the ChessBase India calendar, <https://chessbase.in/chess-calendar>: India and abroad, not online-only | name, dates, place, country, the event page link under `/chess-calendar/event/`, a brochure link |
 
 Rules every source follows:
@@ -67,6 +68,13 @@ Things to know:
 - KCA gives a **district**, not a town, as the place (stored as `city`). When records are
   compared, a district matches the towns inside it (Ernakulam matches Kochi or Aluva), two
   different districts never match, and a town we do not know is "unknown", never "different".
+  UPCSA's *District/City* is often a district too ("Lakhimpur Kheri" for Gola Gokaran Nath), so it
+  is treated the same way: it never blocks a match with a different town name.
+- Chess-Results tournament pages are read only when a tournament is new or its line in the list
+  changed. After a change in how those pages are read, the stored ones can be refreshed once, by
+  hand: `python scripts/refresh_chessresults.py fetch <folder outside the repo>` (polite, stops
+  before starting if more than 400 pages would be needed) and then `... apply <folder>`, then a
+  normal build. The daily run never does this.
 - The TNSCA calendar page without `?y=` shows **2017** in its *All Events* table, so we always ask
   for a year from the page's own menu. Its *Place* is sometimes a district rather than the town
   (`Chengalpattu` for suburbs of Chennai), and its spellings can differ from AICF's (`Pudukottai` /
@@ -110,7 +118,7 @@ Many tournaments are listed on two or three sites. **Every site's record stays i
 `events.json`**; records of the same tournament are **grouped**, never removed or hidden.
 
 - Every event has a `group_id`. In a group of several records one is the **primary**: the AICF
-  record if there is one and its dates are not suspect; otherwise manual, then KCA, then TNSCA, then KSCA, then chessfee,
+  record if there is one and its dates are not suspect; otherwise manual, then KCA, then TNSCA, then KSCA, then UPCSA, then chessfee,
   then Chess-Results, then ChessBase. The others get `merged_into` = the primary's `id`.
 - **Website and app: show only events with `merged_into` = `null`** (and `hidden` = `false`).
   The primary lists the other sites in `also_listed_on` and fills its own gaps (registration,
@@ -168,14 +176,14 @@ the above (see "How to say two events are (not) the same").
 
 ### Trust labels
 
-- `listed_by` says who listed it: `aicf`, `kca`, `tnsca`, `ksca`, `chessfee`, `chess-results`, `chessbase`
+- `listed_by` says who listed it: `aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `chessfee`, `chess-results`, `chessbase`
   or `manual`. Names for people: `aicf` All India Chess Federation, `kca` Kerala Chess
-  Association, `tnsca` Tamil Nadu State Chess Association, `ksca` Karnataka State Chess Association, `chessfee` chessfee, `chess-results` Chess-Results, `chessbase` ChessBase India
+  Association, `tnsca` Tamil Nadu State Chess Association, `ksca` Karnataka State Chess Association, `upcsa` UP Chess Sports Association, `chessfee` chessfee, `chess-results` Chess-Results, `chessbase` ChessBase India
   (`SOURCE_LABELS` in `scripts/eventlib.py`; the website keeps its own copy).
-- `verified` is `true` **only for AICF, KCA, TNSCA and KSCA (the state associations, affiliated to AICF)
+- `verified` is `true` **only for AICF, KCA, TNSCA, KSCA and UPCSA (the state associations, affiliated to AICF)
   and manual events** (and for the primary of a group that contains one of them). The other
   sites' events are listed, not verified.
-- Importance when values differ: override > manual > AICF > KCA > TNSCA > KSCA > the other sites.
+- Importance when values differ: override > manual > AICF > KCA > TNSCA > KSCA > UPCSA > the other sites.
 
 ## Running it
 
@@ -262,7 +270,7 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 | **Heartbeat**, "Stale data" | No source has been fetched for over 30 hours: the schedule has stopped or every source fails (the run still published the old data). | Open the Actions tab: are runs happening every 3 hours? If not, see "Pausing the schedule" (it may be switched off). If they run, read the summary of the last ones. |
 | **Heartbeat**, "Missed fetch" | A source was due for over 6 hours and nothing tried to fetch it. Almost always GitHub skipped scheduled runs (it does this when it is busy); the run that raised the alarm has usually fetched it already. | Open the Actions tab: is there a run every 3 hours? A one-off gap needs nothing. If it keeps happening, tell the developer (the schedule may need more runs). If runs happen but fetch nothing, the 12-hour rule has a bug. |
 | **Heartbeat**, "Source ... gone quiet" | One source has had no good fetch for 3 days (the run still published the data). | Look at that source's `last_error`: the site may have changed its pages or blocked us. Fix the module, or switch it off in `config/sources.json`. |
-| **Check the published files** | A published file (`events.json`, `meta.json`, `quality.json`, `review.csv`) is wrong or not reachable, or the review counts in `quality.json` do not match `review.csv`. | Re-run the workflow; if it repeats, check Settings → Pages. |
+| **Check the published files** | A published file (`events.json`, `meta.json`, `quality.json`, `review.csv`) is wrong or not reachable, the review counts in `quality.json` do not match `review.csv`, or its per-state counts do not add up to its upcoming events. | Re-run the workflow; if it repeats, check Settings → Pages. |
 
 If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
 **Problems** list in the summary. The failed source keeps its old events.
@@ -300,7 +308,8 @@ Events are sorted by start date.
 **Schema version 6** (web and Android must read this version). What changed:
 
 - **Version 6:** new field `registration_deadline` (right after `results_url`): the last day to
-  register, `YYYY-MM-DD`, or `null`. For now only set by you in `overrides.csv`.
+  register, `YYYY-MM-DD`, or `null`. Set by you in `overrides.csv`, or by UPCSA (the end of its
+  entry dates); a group's primary fills it from another record of the same tournament.
   `tags.fide_how` can also be `"manual"`: you set `fide_rated` in `overrides.csv`.
 - **Version 5:** records of the same tournament from different sites are no longer folded into
   one event; **all records stay** and are grouped. New fields `group_id`, `merged_into`,
@@ -315,8 +324,8 @@ Events are sorted by start date.
 | `fide_how` | When |
 |---|---|
 | `"manual"` | You set it in `overrides.csv` (`fide_rated` = yes / no). It wins over everything else. |
-| `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so, or another site's record of the same tournament says so. Also an event that counts as rated by the inferred rules below and whose name puts "FIDE" next to Open, Chess, Tournament or TMT ("International Open FIDE Chess Tournament", "International FIDE Open"): this only changes the label from "inferred" to "stated", never a yes or no. |
-| `"inferred"` | The name does not say "FIDE"/"rated", but uses words only FIDE-rated events use: "Grandmaster"/"GM" followed by Open, Tournament, Chess or Category; "IM norm", "GM norm", "norm tournament"; or "International" together with Open, Tournament, Chess or Rating, unless the name contains "school" anywhere (a school's name or a school championship; "FIDE"/"rated" in such a name still counts as stated). On AICF's list only: a "National", "State", "Asian" or "Zonal" championship (one of those words, later "Championship"), since AICF's championships are rated though their names never say so; on other sites the same words also name school and state-rated events, so there they count for nothing. Also a section of a festival whose sibling section is rated: siblings share the same brochure link, or the same name once the section part (category letter, rating limit, age group, format) is removed, with the same start date and city. |
+| `"stated"` | The name says so ("FIDE Rated", "Rating", "Rated", "FIDE RAPID", "FIDE Below 1800"; or "non-rated", "unrated", "not rated", which give `false`), or a site's own flag or label says so (KCA's FIDE label, TNSCA's and KSCA's FIDE lists, Chess-Results' *Rating calculation* row), or another site's record of the same tournament says so. Also an event that counts as rated by the inferred rules below and whose name puts "FIDE" next to Open, Chess, Tournament or TMT ("International Open FIDE Chess Tournament", "International FIDE Open"): this only changes the label from "inferred" to "stated", never a yes or no. |
+| `"inferred"` | The name does not say "FIDE"/"rated", but uses words only FIDE-rated events use: "Grandmaster"/"GM" followed by Open, Tournament, Chess or Category; "IM norm", "GM norm", "norm tournament"; or "International" together with Open, Tournament, Chess or Rating, unless the name contains "school" anywhere (and not from the name of a day: "International Chess Day", "International Women's Day") (a school's name or a school championship; "FIDE"/"rated" in such a name still counts as stated). On AICF's list only: a "National", "State", "Asian" or "Zonal" championship (one of those words, later "Championship"), since AICF's championships are rated though their names never say so; on other sites the same words also name school and state-rated events, so there they count for nothing. Also a section of a festival whose sibling section is rated: siblings share the same brochure link, or the same name once the section part (category letter, rating limit, age group, format) is removed, with the same start date and city. |
 | `null` | `fide_rated` is `null`: nothing says either way. |
 
 A name that says non-rated / unrated / not rated is always `false`, whatever else it says. Only a
@@ -336,13 +345,13 @@ One event looks like this:
 
 | Field | Meaning |
 |---|---|
-| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `kca-<KCA code with / as ->` (e.g. `kca-736-CAK-2026`), `tnsca-<TNSCA code with / as ->` (e.g. `tnsca-RR-24-CBE-26-27`; two rows sharing a code get a short name hash added), `ksca-<WordPress post number>` (e.g. `ksca-7128`), `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. |
+| `id` | `aicf-<first code>`, or `aicf-<short hash>` when AICF gave no code; `kca-<KCA code with / as ->` (e.g. `kca-736-CAK-2026`), `tnsca-<TNSCA code with / as ->` (e.g. `tnsca-RR-24-CBE-26-27`; two rows sharing a code get a short name hash added), `ksca-<WordPress post number>` (e.g. `ksca-7128`), `upcsa-<row number on the page>` (e.g. `upcsa-96`), `chessfee-<number>`, `chessresults_ind-<number>`, `chessbase_calendar-<id>`; `manual-...` for your own. Never changes. |
 | `codes` | The 6-digit AICF codes (some events have two); for a `kca` record its KCA code, like `736/CAK/2026`; for a `tnsca` record its TNSCA code, like `RR-24/CBE/26-27`. |
 | `name` | Name of the tournament. |
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when the source's date is unreadable. |
 | `place_text` | Place as a person would read it, e.g. `Banka, Bihar`. |
 | `state`, `city` | Best guess from the place or title, or `null` when we are not sure. A missing Indian state is filled from: chessfee's label "TAMILNADU STATE LEVEL" (Tamil Nadu); the state letters of an AICF code in the name (`KA` in `499268/KA(R)/2026`); or the venue text when it names **exactly one** town we know ("Hangal Road, Haveri": Karnataka; "SILIGURI INDORE STADIUM" names two, so it stays `null`). |
-| `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
+| `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, upcsa, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
 | `source` | The site this record comes from. |
 | `source_url` | The event's page on that source. |
@@ -353,7 +362,7 @@ One event looks like this:
 | `also_listed_on` | On the primary: `[{source, source_url, register_url, results_url, brochure_url}]` for each other record in the group; `[]` otherwise. |
 | `register_url` | The organiser's registration link, if a site shows one (or you add one). We only link to it. |
 | `results_url` | Where to see results, e.g. the Chess-Results tournament page; `null` when not known. |
-| `registration_deadline` | Last day to register (`YYYY-MM-DD`), or `null`. Only from `overrides.csv` for now. |
+| `registration_deadline` | Last day to register (`YYYY-MM-DD`), or `null`. From `overrides.csv`, or UPCSA's entry dates. |
 | `organiser` | Organiser's name when a site shows one. |
 | `tags` | `formats` (`classical`, `rapid`, `blitz`), `fide_rated` (`true`, `false` when the name says non-rated, or `null`), `fide_how` (`"manual"`, `"stated"`, `"inferred"` or `null`, see "How `fide_rated` is decided"), `age` (list like `["U11"]`, `[]` when unknown), `open`, `girls` (`true` or `null`), `categories` (list of labels from the source, e.g. `"FIDE RAPID"`, `"TAMILNADU STATE LEVEL"`, `"youth"`, and `"abroad"` for an event outside India). Only set when there is evidence (the name, the site's category label, Chess-Results' time control, or another record in the same group); never guessed. |
 | `flags` | `dates_suspect` (the dates look wrong), `code_expanded` (AICF wrote `472175/76`, we read it as `472175` and `472176`), `code_unclear`, `possible_duplicate_of` (an event `id`, or `null`). |
@@ -399,6 +408,10 @@ cancelled, `merged_into` = `null`), by start date in Indian time, in two windows
   events in that window).
 - `review`: how many lines `data/review.csv` has, by kind: `missing`, `dates_disagree`,
   `possible_duplicates`.
+- `states`: where coverage is thin. The shown upcoming events (`window` = `upcoming`, `events` in
+  all) per Indian state and union territory in `by_state` (every one is listed, so a state with
+  none shows `0`), plus `no_state` (an Indian event whose state is not known) and `abroad`. They
+  add up to `overall.upcoming.events`; the published-files check fails if they do not.
 
 ## Daily review (10 minutes)
 

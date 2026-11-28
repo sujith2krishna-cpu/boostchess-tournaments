@@ -6,7 +6,8 @@
 Fetches events.json, meta.json, quality.json and review.csv from the live site and
 checks: the answer is 200, the JSON files are valid JSON, the schema_version is the one
 this code writes, quality.json has its target, overall, sources and review parts,
-review.csv has the review columns, its counts match quality.json, and the site sends
+its per-state counts add up to its upcoming events, review.csv has the review columns, its
+counts match quality.json, and the site sends
 `Access-Control-Allow-Origin: *` (the website reads the files from the browser).
 Prints the headers it saw. Exit code 0 = all good, 1 = something is wrong.
 """
@@ -28,7 +29,7 @@ from eventlib import SCHEMA_VERSION, USER_AGENT  # noqa: E402
 from quality import REVIEW_COLUMNS  # noqa: E402
 
 FILES = ("events.json", "meta.json", "quality.json", "review.csv")
-QUALITY_PARTS = ("target", "overall", "sources", "review")
+QUALITY_PARTS = ("target", "overall", "sources", "review", "states")
 REVIEW_KINDS = {"missing": "missing", "dates_disagree": "dates_disagree",
                 "possible_duplicate": "possible_duplicates"}
 SHOWN_HEADERS = ("content-type", "access-control-allow-origin", "cache-control", "last-modified", "etag")
@@ -75,6 +76,11 @@ def check_file(name: str, status: int, headers: dict, body: str) -> tuple[list[s
                          f"(target {target.get('fully_known_pct')}%), review list: "
                          f"{review.get('missing')} to complete, {review.get('possible_duplicates')} "
                          f"possible duplicates, generated_at {data.get('generated_at')}")
+            problems += _state_problems(name, data)
+            states = data["states"] if isinstance(data["states"], dict) else {}
+            thin = sorted(s for s, n in (states.get("by_state") or {}).items() if not n)
+            shown.append(f"  upcoming by state: {len(thin)} states with none, "
+                         f"no state {states.get('no_state')}, abroad {states.get('abroad')}")
     elif name == "review.csv":
         if not data or tuple(data[0]) != REVIEW_COLUMNS:
             problems.append(f"{name}: the first line is not the review columns "
@@ -92,6 +98,21 @@ def check_file(name: str, status: int, headers: dict, body: str) -> tuple[list[s
             shown.append(f"  {counts['missing']} to complete, {counts['dates_disagree']} dates disagree, "
                          f"{counts['possible_duplicates']} possible duplicates")
     return problems, shown, data
+
+
+def _state_problems(name: str, data: dict) -> list[str]:
+    """The per-state counts must add up to the upcoming events (one window, one build)."""
+    states = data["states"]
+    try:
+        total = sum(states["by_state"].values()) + states["no_state"] + states["abroad"]
+        upcoming = data["overall"]["upcoming"]["events"]
+    except (KeyError, TypeError, AttributeError):
+        return [f"{name}: states has no by_state / no_state / abroad counts, or overall has no "
+                "upcoming events"]
+    if total != states.get("events") or total != upcoming:
+        return [f"{name}: the per-state counts add up to {total}, but there are {upcoming} "
+                "upcoming events"]
+    return []
 
 
 def check_together(read: dict) -> list[str]:
