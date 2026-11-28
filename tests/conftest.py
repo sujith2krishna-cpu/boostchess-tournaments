@@ -125,7 +125,7 @@ def web(monkeypatch):
     monkeypatch.setattr(be.requests, "post", fake.post)
     monkeypatch.setattr(be.time, "sleep", lambda seconds: fake.sleeps.append(seconds))
     for host in ("aicf.in", "www.keralachessassociation.com", "tamilchess.com", "karnatakachess.com",
-                 "upchess.org", "www.chessfee.com",
+                 "upchess.org", "odishachess.com", "biharchess.org", "www.chessfee.com",
                  "chess-results.com", "chessbase.in"):
         fake.add(f"https://{host}/robots.txt", "User-agent: *\nAllow: /\n")
     return fake
@@ -138,6 +138,8 @@ KCA = "https://www.keralachessassociation.com/"
 TNSCA = "https://tamilchess.com/"
 KSCA = "https://karnatakachess.com/"
 UPCSA = "https://upchess.org/"
+AOCA = "https://odishachess.com/"
+ABCA = "https://biharchess.org/"
 CR_FED = CR + "fed.aspx?lan=1&fed=IND"
 
 
@@ -189,6 +191,18 @@ def serve_ksca(web, page2=True):
 def serve_upcsa(web):
     """The saved, trimmed tournaments page (28 Nov 2026)."""
     web.add(UPCSA + "tournament.php", fx("upcsa_tournaments_2026-11-28.html"))
+
+
+def serve_aoca(web):
+    """The saved, trimmed calendar page (28 Nov 2026)."""
+    web.add(AOCA + "calendar/", fx("aoca_calendar_2026-11-28.html"))
+
+
+def serve_abca(web):
+    """The saved, trimmed home page (its menu) and the two newest season pages (28 Nov 2026)."""
+    web.add(ABCA, fx("abca_home_2026-11-28.html"))
+    for season in ("2026-27", "2025-26"):
+        web.add(ABCA + f"calendar-{season}/", fx(f"abca_calendar_{season}_2026-11-28.html"))
 
 
 def serve_aicf(web, rows):

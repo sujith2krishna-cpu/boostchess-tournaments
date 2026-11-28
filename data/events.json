@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T07:52:09+05:30",
+  "generated_at": "2026-11-28T16:28:21+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -21070,6 +21070,62 @@
       "overridden": null
     },
     {
+      "id": "aoca-505918",
+      "codes": [
+        "505918"
+      ],
+      "name": "Odisha State Women Chess Championship",
+      "start": "2026-10-30",
+      "end": "2026-11-02",
+      "place_text": "KIIT University, Odisha",
+      "state": "Odisha",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://odishachess.com/circular/2026/Revised-Odisha_State_Women_2026.pdf",
+      "source": "aoca",
+      "source_url": "https://odishachess.com/calendar/",
+      "sources": [
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aoca",
+      "verified": true,
+      "group_id": "aicf-505918",
+      "merged_into": "aicf-505918",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Jagatsinghpur Chess Association",
+      "tags": {
+        "formats": [],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-500978",
       "codes": [
         "500978",
@@ -22487,7 +22543,7 @@
       "state": "Odisha",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://odishachess.com/circular/2026/Revised-Odisha_State_Women_2026.pdf",
       "source": "aicf",
       "source_url": "https://aicf.in/all-events/",
       "sources": [
@@ -22495,17 +22551,30 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-505918",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://odishachess.com/circular/2026/Revised-Odisha_State_Women_2026.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Jagatsinghpur Chess Association",
       "tags": {
         "formats": [],
         "fide_rated": true,
@@ -22942,6 +23011,65 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aoca-505919",
+      "codes": [
+        "505919",
+        "505920"
+      ],
+      "name": "Odisha State Under 19 (Junior) Chess Championship",
+      "start": "2026-11-12",
+      "end": "2026-11-15",
+      "place_text": "Balasore Station Club, Station Road, Balasore, Odisha",
+      "state": "Odisha",
+      "city": "Balasore",
+      "country": "IN",
+      "brochure_url": "https://odishachess.com/circular/2026/Odisha-State-Junior-U19-2026.pdf",
+      "source": "aoca",
+      "source_url": "https://odishachess.com/calendar/",
+      "sources": [
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aoca",
+      "verified": true,
+      "group_id": "aoca-505919",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Balasore District Chess Association",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U19"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -57356,6 +57484,181 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "abca-19fb180e",
+      "codes": [],
+      "name": "Bihar State Blitz Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-19fb180e",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "13 December",
+        "end": "13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "abca-a2881c6a",
+      "codes": [],
+      "name": "Bihar State Amateur Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Motihari, Bihar",
+      "state": "Bihar",
+      "city": "Motihari",
+      "country": "IN",
+      "brochure_url": null,
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-a2881c6a",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "",
+        "end": ""
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "abca-d1fd24b5",
+      "codes": [],
+      "name": "Bihar State Rapid Chess Championship",
+      "start": null,
+      "end": null,
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-d1fd24b5",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": true,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "12-13 December",
+        "end": "12-13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,

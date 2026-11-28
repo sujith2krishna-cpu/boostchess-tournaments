@@ -1,7 +1,8 @@
 # CLAUDE.md — boostchess-tournaments
 
 Gathers chess tournaments (AICF, Kerala Chess Association, Tamil Nadu State Chess Association,
-Karnataka State Chess Association, UP Chess Sports Association, chessfee, Chess-Results India, ChessBase India calendar)
+Karnataka State Chess Association, UP Chess Sports Association, All Odisha Chess Association,
+All Bihar Chess Association, chessfee, Chess-Results India, ChessBase India calendar)
 into `data/events.json`, keeps history, accepts manual events and overrides. The JSON is
 shared by the web site and the Android app, so changing its shape affects both.
 
@@ -74,7 +75,7 @@ shared by the web site and the Android app, so changing its shape affects both.
   (`data/review.csv`), both pure; a change in either counts as a real change.
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
-- `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `chessfee`, `chessresults_ind`,
+- `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `aoca`, `abca`, `chessfee`, `chessresults_ind`,
   `chessbase_calendar`) with `fetch(client, previous, today, **options)` returning
   `(events, listing_state, stats)`; `polite.py` is the shared client. Switch sources in
   `config/sources.json`; `"publish": false` (needs `"enabled": false`) also keeps a source's records out of
@@ -90,7 +91,7 @@ shared by the web site and the Android app, so changing its shape affects both.
   `pytest` is in `requirements-dev.txt`.
 - Event id: `aicf-<first code>`; no code gives `aicf-<hash of name + start>`; two different events
   sharing a code get a name-hash suffix. Other sources: `<source>-<their id>` (KCA: `kca-736-CAK-2026` from code
-  `736/CAK/2026`, which also goes into `codes`; TNSCA: `tnsca-RR-24-CBE-26-27` from `RR-24/CBE/26-27`, the same way; KSCA: `ksca-7128` from the WordPress post number; UPCSA: `upcsa-96` from the row's `data-id`). Manual ids never
+  `736/CAK/2026`, which also goes into `codes`; TNSCA: `tnsca-RR-24-CBE-26-27` from `RR-24/CBE/26-27`, the same way; KSCA: `ksca-7128` from the WordPress post number; UPCSA: `upcsa-96` from the row's `data-id`; AOCA: `aoca-505919` from the first AICF code in the row; ABCA: `abca-<hash of season + name>`). Manual ids never
   start with `aicf-`.
 - Duplicates (`scripts/dedup.py`): records are **grouped, never removed or hidden**. Every event
   has `group_id`; non-primary members get `merged_into`; the primary gets `also_listed_on` and fills
@@ -99,9 +100,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   (shared AICF code or Chess-Results page beats 2–5; same brochure beats the name only), score
   ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
   algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
-  dates, else manual > kca > tnsca > ksca > upcsa > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
+  dates, else manual > kca > tnsca > ksca > upcsa > aoca > abca > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
   district: it matches the towns inside it (`kerala_district()`), unknown towns never block. A UPCSA `city`
-  is often a district too (`DISTRICT_SOURCES`), so it never blocks either. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames and two TNSCA spellings,
+  is often a district too (`DISTRICT_SOURCES`, also AOCA and ABCA), so it never blocks either. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames and two TNSCA spellings,
   Pudukottai, Tirupattur DT; never a district as its town). If two AICF events share a
   code, that code proves nothing. A pairs.csv "same" across a date gap lets the other copies with
   either date join (`dates_vouched()`). Equal scores: lower ids first (`id_order()`), so rebuilds
@@ -150,11 +151,27 @@ shared by the web site and the Android app, so changing its shape affects both.
   once, by hand (fetch into a folder outside the repo, max 400 pages, then apply offline); never from the workflow.
 - UPCSA (`upchess.org/tournament.php`): one request, the table only. `registration_deadline` = the end of the
   normal entry dates (not the late-fee dates), only when it is a real date not after the event.
+- AOCA (`odishachess.com/calendar/`): one request; every season tab, the state-event columns only (the national
+  columns are AICF's own events). Codes `505919/505920/OD(S)/2026` go into `codes`; a section-only name gets
+  "Odisha State ... Chess Championship". Kept: upcoming, ongoing, ended in the last 60 days; unscheduled rows
+  (a name and nothing else) are not events. `found` = all rows on the page (the half-rule watches the page, not age).
+- ABCA (`biharchess.org`): the home page's *Tournament Calendars* menu, then the newest two season pages. The
+  2026-27 page has **no years** in its dates. A year only from the event itself (date cell, one year in the name,
+  a full date in the circular's file name = first or last day), all agreeing; never from the season. Unclear:
+  no dates, `dates_suspect`, text in `raw_dates`, and review.csv lists it (shown, not past, no start date). Undated
+  rows are kept only from the newest page and only without a results link (played = has results).
+- Telangana (`chesstelangana.com`) is **not** a source: its Terms of Service forbid spidering, crawling and
+  scraping (section 12) and copying without permission (section 2). Its "TSCA Registered Players" list has
+  players' details; never read it. `strip_phones()` also removes a labelled date of birth ("DOB: 12-03-2014");
+  no record field ever holds one (`tests/test_t13.py`).
 - Do not hit live sites while developing. Use `--html tests/fixtures/...` or the test suite.
 
 ## Not done yet
 
 - ChessBase calendar: only the default month of each year page is readable without its data service.
+- Bihar 2026-27: events whose year the event itself does not give wait on review.csv for dates from
+  their circular (overrides.csv). Telangana: only with the association's written permission
+  (`docs/STATE_SOURCES_T13.md`).
 - Website / app (data is ready, not built yet): show "not stated" labels for an unknown format,
   FIDE status or state, show `registration_deadline`, and a review/admin page built from
   `data/review.csv` and `data/quality.json`. Both must accept schema 6.

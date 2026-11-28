@@ -507,11 +507,12 @@ OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_u
 OVERRIDABLE_TAGS = ("formats", "fide_rated", "fide_how", "age")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
-# describe the same event. (Override > manual > aicf > kca > tnsca > ksca > upcsa > the rest.)
-SOURCE_PRIORITY = ("manual", "aicf", "kca", "tnsca", "ksca", "upcsa", "chessfee", "chessresults_ind", "chessbase_calendar")
+# describe the same event. (Override > manual > aicf > kca > tnsca > ksca > upcsa > aoca > abca
+# > the rest.)
+SOURCE_PRIORITY = ("manual", "aicf", "kca", "tnsca", "ksca", "upcsa", "aoca", "abca", "chessfee", "chessresults_ind", "chessbase_calendar")
 AUTOMATIC_SOURCES = SOURCE_PRIORITY[1:]
 LISTED_BY = {"manual": "manual", "aicf": "aicf", "kca": "kca", "tnsca": "tnsca", "ksca": "ksca",
-             "upcsa": "upcsa",
+             "upcsa": "upcsa", "aoca": "aoca", "abca": "abca",
              "chessfee": "chessfee", "chessresults_ind": "chess-results",
              "chessbase_calendar": "chessbase"}
 # What a person should read for each source (the website keeps its own copy: FEED_BY).
@@ -519,10 +520,12 @@ SOURCE_LABELS = {"manual": "Added by hand", "aicf": "All India Chess Federation"
                  "kca": "Kerala Chess Association",
                  "tnsca": "Tamil Nadu State Chess Association",
                  "ksca": "Karnataka State Chess Association",
-                 "upcsa": "UP Chess Sports Association", "chessfee": "chessfee",
+                 "upcsa": "UP Chess Sports Association",
+                 "aoca": "All Odisha Chess Association", "abca": "All Bihar Chess Association",
+                 "chessfee": "chessfee",
                  "chessresults_ind": "Chess-Results", "chessbase_calendar": "ChessBase India"}
 # The national federation, and the state associations affiliated to it.
-VERIFIED_SOURCES = frozenset({"aicf", "kca", "tnsca", "ksca", "upcsa", "manual"})
+VERIFIED_SOURCES = frozenset({"aicf", "kca", "tnsca", "ksca", "upcsa", "aoca", "abca", "manual"})
 
 
 def source_rank(source: str | None) -> int:
@@ -532,7 +535,7 @@ def source_rank(source: str | None) -> int:
 # Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
 # calendar that lists events from many countries must supply its own code per event.
 COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "kca": "IN", "tnsca": "IN", "ksca": "IN",
-                     "upcsa": "IN",
+                     "upcsa": "IN", "aoca": "IN", "abca": "IN",
                      "chessfee": "IN",
                      "chessresults_ind": "IN"}
 ISO_COUNTRIES = frozenset("""
@@ -653,17 +656,30 @@ _PHONE_LABEL = re.compile(
     r"(?i)(?:\b(?:ph(?:one)?|mob(?:ile)?|cell|tel(?:ephone)?|whats\s*app|contact(?:\s+no)?|call)\b"
     r"\.?\s*(?:no\.?|number)?\s*[:\-]?\s*)$")
 _DATE_LIKE = re.compile(r"^\d{1,4}[-/. ]\d{1,2}[-/. ]\d{1,4}$")
+# A date of birth with its label: "DOB: 12-03-2014", "D.O.B 2014-03-12", "Date of Birth 12 March
+# 2014", "born on 12/03/2014". The label and the date go; "Birthday" in a name is not a date.
+_BIRTH_LABEL = r"(?:d\s*\.?\s*o\s*\.?\s*b\b\.?|date\s+of\s+birth|birth\s*date|born(?:\s+on)?)"
+_BIRTH_DATE = (r"(?:\d{1,4}[-/. ]\d{1,2}[-/. ]\d{1,4}"
+               r"|\d{1,2}(?:st|nd|rd|th)?[\s\-]*[A-Za-z]{3,9}\.?[\s\-,]*\d{2,4}"
+               r"|[A-Za-z]{3,9}\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s*\d{2,4})")
+_BIRTH = re.compile(rf"(?i)\b{_BIRTH_LABEL}\s*[:\-–=]?\s*{_BIRTH_DATE}")
+
+
+def strip_birth_dates(text) -> str:
+    """Remove a labelled date of birth ("DOB: 12-03-2014") from a piece of text."""
+    return _BIRTH.sub(" ", str(text or ""))
 
 
 def strip_phones(text) -> str:
-    """Remove phone numbers (and e-mail addresses) from a piece of text.
+    """Remove phone numbers, e-mail addresses and dates of birth from a piece of text.
 
     Anything with 9 or more digits counts, including +91 and spacing like
-    98422 05003. Dates are left alone. A label right before a number
-    ("Ph:", "Mob", "Contact:") goes too. We only store facts, never contact details.
+    98422 05003. Dates are left alone, except a labelled date of birth ("DOB: 12-03-2014"),
+    which goes with its label. A label right before a number ("Ph:", "Mob", "Contact:")
+    goes too. We only store facts, never contact details or players' personal data.
     """
     original = str(text or "")
-    text = _EMAIL.sub(" ", original)
+    text = _EMAIL.sub(" ", strip_birth_dates(original))
     pieces, last = [], 0
     for match in _PHONE_RUN.finditer(text):
         digits = sum(c.isdigit() for c in match.group())

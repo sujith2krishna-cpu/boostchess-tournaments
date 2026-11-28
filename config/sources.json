@@ -4,6 +4,8 @@
   "tnsca": {"enabled": true},
   "ksca": {"enabled": true},
   "upcsa": {"enabled": true},
+  "aoca": {"enabled": true, "publish": true},
+  "abca": {"enabled": true, "publish": true},
   "chessfee": {"enabled": true},
   "chessresults_ind": {"enabled": true},
   "chessbase_calendar": {"enabled": false, "publish": false}

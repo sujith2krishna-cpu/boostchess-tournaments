@@ -1,0 +1,125 @@
+{
+  "source": "aoca",
+  "found": 113,
+  "listing": {
+    "aoca-505918": "c547b64e41cf",
+    "aoca-505919": "c1764af21103"
+  },
+  "events": [
+    {
+      "id": "aoca-505918",
+      "codes": [
+        "505918"
+      ],
+      "name": "Odisha State Women Chess Championship",
+      "start": "2026-10-30",
+      "end": "2026-11-02",
+      "place_text": "KIIT University, Odisha",
+      "state": "Odisha",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://odishachess.com/circular/2026/Revised-Odisha_State_Women_2026.pdf",
+      "source": "aoca",
+      "source_url": "https://odishachess.com/calendar/",
+      "sources": [
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aoca",
+      "verified": true,
+      "group_id": "aoca-505918",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Jagatsinghpur Chess Association",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "aoca-505919",
+      "codes": [
+        "505919",
+        "505920"
+      ],
+      "name": "Odisha State Under 19 (Junior) Chess Championship",
+      "start": "2026-11-12",
+      "end": "2026-11-15",
+      "place_text": "Balasore Station Club, Station Road, Balasore, Odisha",
+      "state": "Odisha",
+      "city": "Balasore",
+      "country": "IN",
+      "brochure_url": "https://odishachess.com/circular/2026/Odisha-State-Junior-U19-2026.pdf",
+      "source": "aoca",
+      "source_url": "https://odishachess.com/calendar/",
+      "sources": [
+        {
+          "source": "aoca",
+          "source_url": "https://odishachess.com/calendar/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "aoca",
+      "verified": true,
+      "group_id": "aoca-505919",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": "Balasore District Chess Association",
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U19"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

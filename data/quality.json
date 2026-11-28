@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T07:52:09+05:30",
+  "generated_at": "2026-11-28T16:28:21+05:30",
   "today": "2026-11-28",
   "windows": {
     "next_30_days": {
@@ -270,6 +270,78 @@
         "no_brochure_pct": null
       }
     },
+    "aoca": {
+      "next_30_days": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      },
+      "upcoming": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      }
+    },
+    "abca": {
+      "next_30_days": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      },
+      "upcoming": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      }
+    },
     "chessfee": {
       "next_30_days": {
         "events": 13,
@@ -379,16 +451,9 @@
       }
     }
   },
-  "alerts": [
-    {
-      "source": "aicf",
-      "window": "upcoming",
-      "what": "fully_known_drop",
-      "message": "aicf: fully known (upcoming) fell from 64.7% to 53.9%"
-    }
-  ],
+  "alerts": [],
   "review": {
-    "missing": 185,
+    "missing": 189,
     "dates_disagree": 0,
     "possible_duplicates": 18
   },
