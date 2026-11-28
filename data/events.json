@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T16:28:21+05:30",
+  "generated_at": "2026-11-28T16:44:08+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -29545,7 +29545,9 @@
       "cancelled": false,
       "hidden": true,
       "note": "Academy training session (Cognizance Academy) not a tournament",
-      "overridden": null
+      "overridden": {
+        "hidden": false
+      }
     },
     {
       "id": "chessresults_ind-1550409",
@@ -30552,7 +30554,9 @@
       "cancelled": false,
       "hidden": true,
       "note": "Test entry on Chess-Results (nonsense name and organiser)",
-      "overridden": null
+      "overridden": {
+        "hidden": false
+      }
     },
     {
       "id": "chessresults_ind-1550805",
@@ -35022,7 +35026,9 @@
       "cancelled": false,
       "hidden": true,
       "note": "Academy training session (Cognizance Academy) not a tournament",
-      "overridden": null
+      "overridden": {
+        "hidden": false
+      }
     },
     {
       "id": "chessresults_ind-1550100",
@@ -36041,7 +36047,9 @@
       "cancelled": false,
       "hidden": true,
       "note": "Test entry on Chess-Results (nonsense name and organiser)",
-      "overridden": null
+      "overridden": {
+        "hidden": false
+      }
     },
     {
       "id": "chessresults_ind-1550576",
@@ -48427,6 +48435,71 @@
       "overridden": null
     },
     {
+      "id": "abca-d1fd24b5",
+      "codes": [],
+      "name": "Bihar State Rapid Chess Championship",
+      "start": "2026-12-12",
+      "end": "2026-12-13",
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-d1fd24b5",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-12-10",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "manual",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "12-13 December",
+        "end": "12-13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "Bihar State Rapid: dates, FIDE rating and entry deadline from the circular Bihar-State-Rapid-Blitz-Circular-26.pdf, linked from the row on biharchess.org/calendar-2026-27/ (dated: \"12th December to 13th December 2026\", AICF codes 511143/BR(S)/2026 rapid and 511144/BR(S)/2026 blitz, \"RATING CHESS CHAMPIONSHIP-2026\", no entry after 10th December 2026). Set 28 Nov 2026",
+      "overridden": {
+        "start": null,
+        "end": null,
+        "tags.fide_rated": null,
+        "tags.fide_how": null,
+        "registration_deadline": null
+      }
+    },
+    {
       "id": "aicf-487700",
       "codes": [
         "487700"
@@ -48483,6 +48556,71 @@
       "hidden": false,
       "note": null,
       "overridden": null
+    },
+    {
+      "id": "abca-19fb180e",
+      "codes": [],
+      "name": "Bihar State Blitz Chess Championship",
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "place_text": "Jehanabad, Bihar",
+      "state": "Bihar",
+      "city": "Jehanabad",
+      "country": "IN",
+      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
+      "source": "abca",
+      "source_url": "https://biharchess.org/calendar-2026-27/",
+      "sources": [
+        {
+          "source": "abca",
+          "source_url": "https://biharchess.org/calendar-2026-27/",
+          "register_url": null
+        }
+      ],
+      "listed_by": "abca",
+      "verified": true,
+      "group_id": "abca-19fb180e",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-12-10",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "manual",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": {
+        "start": "13 December",
+        "end": "13 December"
+      },
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": "Bihar State Blitz: day from the biharchess.org calendar 2026-27 (\"13 December\"); year, FIDE rating and entry deadline from the circular Bihar-State-Rapid-Blitz-Circular-26.pdf, linked from the row on biharchess.org/calendar-2026-27/ (dated: \"12th December to 13th December 2026\", AICF codes 511143/BR(S)/2026 rapid and 511144/BR(S)/2026 blitz, \"RATING CHESS CHAMPIONSHIP-2026\", no entry after 10th December 2026). Set 28 Nov 2026",
+      "overridden": {
+        "start": null,
+        "end": null,
+        "tags.fide_rated": null,
+        "tags.fide_how": null,
+        "registration_deadline": null
+      }
     },
     {
       "id": "aicf-504550",
@@ -57491,65 +57629,6 @@
       "overridden": null
     },
     {
-      "id": "abca-19fb180e",
-      "codes": [],
-      "name": "Bihar State Blitz Chess Championship",
-      "start": null,
-      "end": null,
-      "place_text": "Jehanabad, Bihar",
-      "state": "Bihar",
-      "city": "Jehanabad",
-      "country": "IN",
-      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
-      "source": "abca",
-      "source_url": "https://biharchess.org/calendar-2026-27/",
-      "sources": [
-        {
-          "source": "abca",
-          "source_url": "https://biharchess.org/calendar-2026-27/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "abca",
-      "verified": true,
-      "group_id": "abca-19fb180e",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "blitz"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": true,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": {
-        "start": "13 December",
-        "end": "13 December"
-      },
-      "dates_from": null,
-      "first_seen": "2026-11-28",
-      "last_seen": "2026-11-28",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
       "id": "abca-a2881c6a",
       "codes": [],
       "name": "Bihar State Amateur Chess Championship",
@@ -57602,66 +57681,7 @@
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "abca-d1fd24b5",
-      "codes": [],
-      "name": "Bihar State Rapid Chess Championship",
-      "start": null,
-      "end": null,
-      "place_text": "Jehanabad, Bihar",
-      "state": "Bihar",
-      "city": "Jehanabad",
-      "country": "IN",
-      "brochure_url": "https://biharchess.org/wp-content/uploads/2026/11/Bihar-State-Rapid-Blitz-Circular-26.pdf",
-      "source": "abca",
-      "source_url": "https://biharchess.org/calendar-2026-27/",
-      "sources": [
-        {
-          "source": "abca",
-          "source_url": "https://biharchess.org/calendar-2026-27/",
-          "register_url": null
-        }
-      ],
-      "listed_by": "abca",
-      "verified": true,
-      "group_id": "abca-d1fd24b5",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": true,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": {
-        "start": "12-13 December",
-        "end": "12-13 December"
-      },
-      "dates_from": null,
-      "first_seen": "2026-11-28",
-      "last_seen": "2026-11-28",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
+      "hidden": true,
       "note": null,
       "overridden": null
     },
@@ -57720,7 +57740,7 @@
       "last_seen": "2026-11-27",
       "gone_from_source": false,
       "cancelled": false,
-      "hidden": false,
+      "hidden": true,
       "note": null,
       "overridden": null
     }

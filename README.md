@@ -33,6 +33,11 @@ source fails does the run stop, writing nothing.
 
 ## The sources
 
+**Adding a new source:** first read only the site's `robots.txt` and its terms / terms of use /
+disclaimer pages (found with a web search, not by opening the site's other pages). No other page of
+that site is fetched until both allow automated reading (a site with no terms page at all: say so). If either forbids it, or the pages need a login, the site is not
+added, and the reason is written down (see `docs/STATE_SOURCES_T13.md`).
+
 | Source | What we read | What we store |
 |---|---|---|
 | `aicf` | <https://aicf.in/all-events/> (the whole list, one request) | name, codes, dates, place, brochure link |
@@ -381,9 +386,9 @@ One event looks like this:
 | `dates_from` | Set on a primary whose own dates were suspect: the `id` of the group record whose dates it now shows. `null` otherwise. |
 | `first_seen`, `last_seen` | The first and last day we saw it on a source. |
 | `gone_from_source` | `true` if no source lists it any more. |
-| `cancelled`, `hidden` | `cancelled` is set by you in `overrides.csv` or by a source that says so; `hidden` only by you. The website should skip hidden events. |
+| `cancelled`, `hidden` | `cancelled` is set by you in `overrides.csv` or by a source that says so; `hidden` by you (`hide`), or by the tool for an event that is not over and has **no start date** (it stays in the data and on `data/review.csv` until a date is known). The website should skip hidden events. |
 | `note` | A free note from you. |
-| `overridden` | Bookkeeping: the values that an override replaced. Ignore it. |
+| `overridden` | Bookkeeping: the values that an override replaced (`"hidden": false` when you hid the event with `hide`). Ignore it. |
 
 There is **no status field**. Whether an event is *ongoing*, *upcoming* or *past*
 is worked out from `start` and `end` and today's date in Indian time
@@ -429,7 +434,8 @@ cancelled, `merged_into` = `null`), by start date in Indian time, in two windows
 The tool writes a to-do list for you every run: `data/review.csv`. It lists the shown events
 that **start in the next 30 days and miss something**, soonest first; then the shown events that
 **have no start date at all** and are not over (for example a Bihar calendar line "12-13 December"
-with no year: the `missing` column quotes the page; read the circular and fill in `start_date` and
+with no year: the `missing` column quotes the page. Such an event is **hidden from players** until
+it has a date. Read the circular and fill in `start_date` and
 `end_date`); then the tournaments (not
 yet over) whose grouped records **disagree about the start date by more than a day**
 (`dates_disagree`); and after them any **possible duplicates** still to settle.

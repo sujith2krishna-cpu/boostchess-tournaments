@@ -29,6 +29,12 @@ shared by the web site and the Android app, so changing its shape affects both.
 
 ## Politeness (every source, no exceptions)
 
+- **A new source: robots.txt and the terms first.** Before adding (or even trying) any new site,
+  fetch only its `robots.txt` and its terms / terms of use / disclaimer pages. Find their addresses
+  with a web search, not by opening the site's other pages. Fetch no other page of that site until
+  both allow automated reading (no terms page at all counts as no ban; say so). If either forbids
+  it, or the calendar needs a login, stop: do not add it, and write down why (as in
+  `docs/STATE_SOURCES_T13.md`).
 - Read `robots.txt` at the start of every run; if it disallows a path, skip that source
   and log it. Never work around it (for example: ChessBase's `/api/` and the data
   service its calendar page calls are off limits).

@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 import build_events as be
 import dedup
 import quality
-from conftest import (ABCA, AOCA, NOW, ROOT, by_id, fx, load_events, make_html, row, run_all, serve_abca,
+from conftest import (ABCA, AOCA, NOW, ROOT, build, by_id, fx, load_events, make_html, row, run_all, serve_abca,
                       serve_aoca)
 from eventlib import strip_birth_dates, strip_phones
 from sources import abca, aoca, upcsa
@@ -475,3 +475,83 @@ def test_the_committed_files_hold_no_date_of_birth():
         text = path.read_text("utf-8")
         assert not re.search(r'(?i)"[a-z_]*(?:dob|birth)[a-z_]*"\s*:', text), path.name  # no such field
         assert not re.search(r"(?i)\b(?:d\.?o\.?b\b|date\s+of\s+birth|birth\s*date|born\s+on)", text), path.name
+
+
+# ---- an event with no start date that is not over is hidden, kept, and on review.csv ----------
+def review_lines(data_dir):
+    return list(csv.DictReader(io.StringIO((data_dir / "review.csv").read_text("utf-8"))))
+
+
+def test_undated_events_that_are_not_over_are_hidden_but_kept_and_on_review(web, data_dir):
+    serve_abca(web)
+    run_all(data_dir, config=ONLY["abca"])
+    mine = [e for e in load_events(data_dir) if e["source"] == "abca"]
+    assert len(mine) == 3 and all(e["start"] is None and e["hidden"] is True for e in mine)
+    assert all(e["overridden"] is None for e in mine)  # hidden by the tool, not by a person
+    lines = [r for r in review_lines(data_dir) if r["id"].startswith("abca-")]
+    assert len(lines) == 3 and all("hidden from players" in r["missing"] for r in lines)
+    report = json.loads((data_dir / "quality.json").read_text("utf-8"))
+    assert report["overall"]["upcoming"]["events"] == 0  # nothing of it is shown
+
+
+def test_an_aicf_event_without_dates_is_hidden_and_one_that_is_over_is_not(data_dir):
+    build(data_dir, [row("No Dates Open", "471848", start="", end=""),
+                     row("Ended Open", "400002", start="", end="01-11-2026"),
+                     row("Dated Open", "400003")])
+    events = by_id(data_dir)
+    assert events["aicf-471848"]["hidden"] is True and events["aicf-471848"]["start"] is None
+    assert events["aicf-400002"]["hidden"] is False  # no start, but its end is past: over, not hidden
+    assert events["aicf-400003"]["hidden"] is False
+    ids = [r["id"] for r in review_lines(data_dir) if r["kind"] == "missing"]
+    assert "aicf-471848" in ids and "aicf-400002" not in ids
+
+
+def test_dates_from_overrides_show_the_event_again_and_take_it_off_review(web, data_dir):
+    serve_abca(web)
+    run_all(data_dir, config=ONLY["abca"])
+    rapid = next(e for e in load_events(data_dir) if e["name"] == "Bihar State Rapid Chess Championship")
+    amateur = next(e for e in load_events(data_dir) if e["name"] == "Bihar State Amateur Chess Championship")
+    columns = be.OVERRIDES_CSV_COLUMNS
+    line = dict.fromkeys(columns, "")
+    line.update(key=rapid["id"], start_date="12-12-2026", end_date="13-12-2026", fide_rated="yes",
+                note="from the circular")
+    hide = dict.fromkeys(columns, "")
+    hide.update(key=amateur["id"], hide="yes")
+    (data_dir / "manual" / "overrides.csv").write_text(
+        ",".join(columns) + "\n" + ",".join(line[c] for c in columns) + "\n"
+        + ",".join(hide[c] for c in columns) + "\n", encoding="utf-8")
+    run_all(data_dir, config=ONLY["abca"], now=LATER)
+    events = by_id(data_dir)
+    assert events[rapid["id"]]["hidden"] is False and events[rapid["id"]]["start"] == "2026-12-12"
+    assert events[amateur["id"]]["hidden"] is True  # hidden by a person: off the review list too
+    ids = {r["id"] for r in review_lines(data_dir)}
+    assert rapid["id"] not in ids and amateur["id"] not in ids
+    assert len([i for i in ids if i.startswith("abca-")]) == 1  # only the Blitz is still to do
+
+
+def test_a_year_given_later_by_the_page_shows_the_event_again(web, data_dir):
+    serve_abca(web)
+    run_all(data_dir, config=ONLY["abca"])
+    web.add(ABCA + "calendar-2026-27/", fx(ABCA_NEW).replace(">12-13 December<", ">12-13 December 2026<"))
+    run_all(data_dir, config=ONLY["abca"], now=LATER)
+    rapid = next(e for e in load_events(data_dir) if e["name"] == "Bihar State Rapid Chess Championship")
+    assert rapid["start"] == "2026-12-12" and rapid["hidden"] is False
+
+
+def test_the_committed_bihar_overrides_name_their_source():
+    lines = list(csv.DictReader(io.StringIO((ROOT / "data" / "manual" / "overrides.csv").read_text("utf-8"))))
+    bihar = {r["key"]: r for r in lines if r["key"].startswith("abca-")}
+    assert set(bihar) == {"abca-d1fd24b5", "abca-19fb180e"}  # State Rapid and State Blitz
+    for line in bihar.values():
+        assert "Bihar-State-Rapid-Blitz-Circular-26.pdf" in line["note"] and "2026" in line["note"]
+        assert line["registration_deadline"] == "10-12-2026" and line["fide_rated"] == "yes"
+    assert (bihar["abca-d1fd24b5"]["start_date"], bihar["abca-d1fd24b5"]["end_date"]) == ("12-12-2026", "13-12-2026")
+    assert (bihar["abca-19fb180e"]["start_date"], bihar["abca-19fb180e"]["end_date"]) == ("13-12-2026", "13-12-2026")
+    doc = json.loads((ROOT / "data" / "events.json").read_text("utf-8"))
+    built = doc["generated_at"][:10]  # the day the committed data was built (India)
+    events = {e["id"]: e for e in doc["events"]}
+    for key in bihar:
+        assert events[key]["hidden"] is False and events[key]["start"]
+    for key, event in events.items():  # nothing undated and not over is shown
+        if not event["start"] and not (event["end"] and event["end"] < built):
+            assert event["hidden"] is True, key

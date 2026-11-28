@@ -170,6 +170,19 @@ def status(event: dict, today: date) -> str:
     return "past"
 
 
+def undated(event: dict, today: date) -> bool:
+    """No start date, and not known to be over (an end date in the past makes it past).
+
+    Such an event is kept but hidden from players (`hide_undated()` in build_events.py) and stays
+    on data/review.csv until a person adds its dates."""
+    return not event.get("start") and status(event, today) != "past"
+
+
+def hidden_by_hand(event: dict) -> bool:
+    """`hide` in overrides.csv (remembered in `overridden`), not the build's own hiding."""
+    return "hidden" in (event.get("overridden") or {})
+
+
 # --------------------------------------------------------------------------
 # States, cities, places
 # --------------------------------------------------------------------------

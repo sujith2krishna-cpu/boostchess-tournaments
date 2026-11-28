@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T16:28:21+05:30",
+  "generated_at": "2026-11-28T16:44:08+05:30",
   "today": "2026-11-28",
   "windows": {
     "next_30_days": {
@@ -14,43 +14,43 @@
   "target": {
     "window": "next_30_days",
     "fully_known_pct": 95.0,
-    "now_pct": 18.9,
+    "now_pct": 19.6,
     "met": false
   },
   "overall": {
     "next_30_days": {
-      "events": 228,
-      "fully_known": 43,
-      "fully_known_pct": 18.9,
+      "events": 230,
+      "fully_known": 45,
+      "fully_known_pct": 19.6,
       "unknown_format": 50,
-      "unknown_format_pct": 21.9,
+      "unknown_format_pct": 21.7,
       "unknown_fide": 166,
-      "unknown_fide_pct": 72.8,
+      "unknown_fide_pct": 72.2,
       "no_state": 41,
-      "no_state_pct": 18.0,
+      "no_state_pct": 17.8,
       "suspect_dates": 0,
       "suspect_dates_pct": 0.0,
-      "no_register_link": 172,
-      "no_register_link_pct": 75.4,
+      "no_register_link": 174,
+      "no_register_link_pct": 75.7,
       "no_brochure": 113,
-      "no_brochure_pct": 49.6
+      "no_brochure_pct": 49.1
     },
     "upcoming": {
-      "events": 304,
-      "fully_known": 62,
-      "fully_known_pct": 20.4,
+      "events": 306,
+      "fully_known": 64,
+      "fully_known_pct": 20.9,
       "unknown_format": 94,
-      "unknown_format_pct": 30.9,
+      "unknown_format_pct": 30.7,
       "unknown_fide": 186,
-      "unknown_fide_pct": 61.2,
+      "unknown_fide_pct": 60.8,
       "no_state": 43,
       "no_state_pct": 14.1,
       "suspect_dates": 0,
       "suspect_dates_pct": 0.0,
-      "no_register_link": 243,
-      "no_register_link_pct": 79.9,
+      "no_register_link": 245,
+      "no_register_link_pct": 80.1,
       "no_brochure": 146,
-      "no_brochure_pct": 48.0
+      "no_brochure_pct": 47.7
     }
   },
   "sources": {
@@ -308,38 +308,38 @@
     },
     "abca": {
       "next_30_days": {
-        "events": 0,
-        "fully_known": 0,
-        "fully_known_pct": null,
+        "events": 2,
+        "fully_known": 2,
+        "fully_known_pct": 100.0,
         "unknown_format": 0,
-        "unknown_format_pct": null,
+        "unknown_format_pct": 0.0,
         "unknown_fide": 0,
-        "unknown_fide_pct": null,
+        "unknown_fide_pct": 0.0,
         "no_state": 0,
-        "no_state_pct": null,
+        "no_state_pct": 0.0,
         "suspect_dates": 0,
-        "suspect_dates_pct": null,
-        "no_register_link": 0,
-        "no_register_link_pct": null,
+        "suspect_dates_pct": 0.0,
+        "no_register_link": 2,
+        "no_register_link_pct": 100.0,
         "no_brochure": 0,
-        "no_brochure_pct": null
+        "no_brochure_pct": 0.0
       },
       "upcoming": {
-        "events": 0,
-        "fully_known": 0,
-        "fully_known_pct": null,
+        "events": 2,
+        "fully_known": 2,
+        "fully_known_pct": 100.0,
         "unknown_format": 0,
-        "unknown_format_pct": null,
+        "unknown_format_pct": 0.0,
         "unknown_fide": 0,
-        "unknown_fide_pct": null,
+        "unknown_fide_pct": 0.0,
         "no_state": 0,
-        "no_state_pct": null,
+        "no_state_pct": 0.0,
         "suspect_dates": 0,
-        "suspect_dates_pct": null,
-        "no_register_link": 0,
-        "no_register_link_pct": null,
+        "suspect_dates_pct": 0.0,
+        "no_register_link": 2,
+        "no_register_link_pct": 100.0,
         "no_brochure": 0,
-        "no_brochure_pct": null
+        "no_brochure_pct": 0.0
       }
     },
     "chessfee": {
@@ -453,19 +453,19 @@
   },
   "alerts": [],
   "review": {
-    "missing": 189,
+    "missing": 187,
     "dates_disagree": 0,
     "possible_duplicates": 18
   },
   "states": {
     "window": "upcoming",
-    "events": 304,
+    "events": 306,
     "by_state": {
       "Andaman and Nicobar Islands": 0,
       "Andhra Pradesh": 2,
       "Arunachal Pradesh": 0,
       "Assam": 4,
-      "Bihar": 1,
+      "Bihar": 3,
       "Chandigarh": 0,
       "Chhattisgarh": 6,
       "Dadra and Nagar Haveli and Daman and Diu": 0,

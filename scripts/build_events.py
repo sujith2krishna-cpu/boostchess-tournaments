@@ -490,6 +490,15 @@ def _apply_manual_values(event: dict, item: dict) -> None:
         _change(event, "registration_deadline", item["registration_deadline"])
 
 
+def hide_undated(events: list[dict], today: date) -> None:
+    """An event that is not over and has no start date is never shown to players: it stays in
+    the data and on review.csv, with `hidden` = true, until a date is known (a source gives one,
+    or `start_date` in overrides.csv). Run after grouping, which may give a primary its dates."""
+    for event in events:
+        if undated(event, today):
+            event["hidden"] = True
+
+
 def reapply_manual_values(events: list[dict], overrides: list[dict]) -> None:
     """After grouping: put the manual values back (grouping may have joined other records' tags
     into a primary), on the event the line names and on the primary of its group."""
@@ -550,7 +559,7 @@ def apply_overrides(events: list[dict], overrides: list[dict], errors: list[str]
             elif state_value:
                 change(event, "state", state_value)
             if item["hide"]:
-                event["hidden"] = True
+                change(event, "hidden", True)
             if item["cancelled"]:
                 event["cancelled"] = True
             if item["note"]:
@@ -863,6 +872,7 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
     grouping = dedup.group_events(events, pairs, warnings)
     reapply_manual_values(events, overrides)
+    hide_undated(events, today)
     in_groups = Counter(e["group_id"] for e in events)
     joined = Counter(e["source"] for e in events if in_groups[e["group_id"]] > 1)
     duplicates = grouping["possible"]
