@@ -178,8 +178,11 @@ def test_run_reads_both_pages_politely(web, data_dir):
     serve_ksca(web)
     report = run_all(data_dir, config=ONLY_KSCA)
     assert report["per_source"]["ksca"]["status"] == "ok"
-    assert web.urls("karnatakachess.com") == [KSCA + "robots.txt", LIST, PAGE2]  # nothing else
+    urls = web.urls("karnatakachess.com")
+    assert urls[:3] == [KSCA + "robots.txt", LIST, PAGE2]
     mine = [e for e in load_events(data_dir) if e["source"] == "ksca"]
+    # then only the own pages of listed events that are not over, nothing else
+    assert urls[3:] and set(urls[3:]) <= {e["source_url"] for e in mine if (e["end"] or e["start"] or "9999") >= "2026-11-24"}
     assert len(mine) == 17 and len({e["id"] for e in mine}) == 17
     for e in mine:
         assert e["verified"] is True and e["listed_by"] == "ksca" and e["country"] == "IN"
@@ -198,7 +201,8 @@ def test_page_cap_stops_a_list_that_never_ends(web):
 
     client = Client()
     events, _listing, stats = ksca.fetch(client, {}, TODAY)
-    assert len(client.urls) == ksca.MAX_PAGES == len(events)
+    list_pages = [u for u in client.urls if u == LIST or "/list/page/" in u]
+    assert len(list_pages) == ksca.MAX_PAGES == len(events) == len(set(list_pages))
     assert stats["more_pages_not_read"] is True and stats["pages_read"] == ksca.MAX_PAGES
 
 

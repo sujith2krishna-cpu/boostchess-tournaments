@@ -149,11 +149,19 @@ shared by the web site and the Android app, so changing its shape affects both.
   start is in the year before. Dates set, not suspect, the text kept in `raw_dates` (reading the
   page's format, not guessing; any other end-before-start is still flagged).
 - TNSCA (`tamilchess.com`): always ask for a year (`?y=YYYY`, the page's own menu); without it the
-  *All Events* table shows 2017. One request per year page; event pages are not read.
-- KSCA (`karnatakachess.com/tournaments/`, The Events Calendar): list pages only, following the
-  page's own *Next Events* link (`MAX_PAGES` 8). Start from the `<time datetime>`; an end without a
+  *All Events* table shows 2017. One request per year page, then event pages (below).
+- KSCA (`karnatakachess.com/tournaments/`, The Events Calendar): list pages, following the
+  page's own *Next Events* link (`MAX_PAGES` 8), then event pages (below). Start from the `<time datetime>`; an end without a
   year is in the start's year, else flagged. Category *FIDE Rating Events* = `fide_rated` "stated".
   `tests/fixtures/sources/ksca_tournaments_page2_made.html` is made by hand (said so inside it).
+- KSCA and TNSCA event pages (`sources/event_pages.py`, allowed by both sites' robots.txt and terms,
+  checked 28 Nov 2026): only the own page of an event we list that is not over, only when it is new
+  or its list line changed, at most `MAX_EVENT_PAGES` (45) a run, soonest first. Only the event's
+  text is read (KSCA `.tribe-events-single-event-description`, TNSCA `.detail-text`; TNSCA's theme
+  has a block of unrelated advertising links). brochure = a labelled link or the only PDF;
+  register = a link labelled registration. Never mailto/tel/WhatsApp/"@" (the pages show the
+  organiser's phone and e-mail). Found links live in the listing under `event_pages`; a failed page
+  changes nothing and a found link is never removed.
 - Chess-Results details: the *Rating calculation* row gives `fide_rated` "stated" (international: true; national
   only / not rated: false; "-": nothing; disagrees with the name: the name stays). Brochure: a brochure-named file,
   else the only PDF unless it looks like results / pairings / ranks / players / prizes / rules / minutes.

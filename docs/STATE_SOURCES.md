@@ -73,3 +73,17 @@ Odisha list them, and Tamil Nadu's districts are in TNSCA.
 Maharashtra (MCA) would be worth adding if its calendar is kept up to date again.
 Everything here is shared data: a new source changes `data/events.json` only, the same for
 the website and the Android app.
+
+## KSCA and TNSCA event pages (checked 28 Nov 2026)
+
+Before reading the event pages of KSCA and TNSCA (brochure and registration links), both sites
+were checked again, robots.txt and terms first (the terms pages were found with a web search):
+
+| Site | robots.txt | Terms | Decision |
+|---|---|---|---|
+| KSCA, karnatakachess.com | blocks only `/wp-admin/` | "Terms And Condition" (`/terms-and-condition/`) is the association's bye-laws (name, office bearers, meetings, elections); nothing about using the website. The privacy policy (`/privacy-policy/`) covers personal data people send in. No ban on automated reading | event pages read |
+| TNSCA, tamilchess.com | blocks only `/wp-admin/` | no terms page found (a web search finds only event pages, circulars and the bye-laws); the home page has a copyright line only. No terms page counts as no ban | event pages read |
+
+Only the event's own text is read; both pages show the organiser's phone number and e-mail,
+which are never read or stored. TNSCA's page theme also carries a block of unrelated advertising
+links, which are outside the event text and never read.

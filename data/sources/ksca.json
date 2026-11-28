@@ -27,7 +27,139 @@
     "ksca-7137": "fcae5c575f54",
     "ksca-7322": "71ca6f71a57c",
     "ksca-6973": "d9892ab0b8ba",
-    "ksca-7144": "56529c13d6e1"
+    "ksca-7144": "56529c13d6e1",
+    "event_pages": {
+      "ksca-6769": {
+        "sig": "d3621fcb89f6",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-23rd-Dec.pdf-2-1.pdf",
+        "register_url": null
+      },
+      "ksca-6773": {
+        "sig": "440a4892301b",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-28th-Dec-3-1.pdf",
+        "register_url": null
+      },
+      "ksca-6884": {
+        "sig": "6bddecb99a84",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/DIGISIGNS-INTERNATIONAL-FIDE-RATED-OPEN-CHESS-TOURNAMENT-2027.pdf",
+        "register_url": null
+      },
+      "ksca-6894": {
+        "sig": "3d9225c8183e",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/SARJI_compressed.pdf",
+        "register_url": null
+      },
+      "ksca-6939": {
+        "sig": "73e4e7f929d6",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/Rapid-Brochure_compressed.pdf",
+        "register_url": null
+      },
+      "ksca-6967": {
+        "sig": "be35a55b3a1a",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/INVENTIVE-2.0-FIDE-Rapid-Rated-Chess-Tournament-Dec-5th-2026._compressed.pdf",
+        "register_url": null
+      },
+      "ksca-6973": {
+        "sig": "d9892ab0b8ba",
+        "brochure_url": null,
+        "register_url": null
+      },
+      "ksca-6995": {
+        "sig": "78ea68c50beb",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/5th-Late-Shankar-Shet-Memorial-Rapid-Rating-Tournament-2026.pdf",
+        "register_url": null
+      },
+      "ksca-7043": {
+        "sig": "68810692073a",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1792243044033-15772bf2-fcac-4669-becd-acec2a3375be.pdf",
+        "register_url": null
+      },
+      "ksca-7099": {
+        "sig": "98d540e2516c",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/UGI-chess-2026-Brochere.pdf",
+        "register_url": null
+      },
+      "ksca-7137": {
+        "sig": "fcae5c575f54",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-pixel-brochure-final.pdf",
+        "register_url": null
+      },
+      "ksca-7144": {
+        "sig": "56529c13d6e1",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-Chessbinder.com-Open-FIDE-Rated-Rapid-Tournament-13th-Feb-2027.pdf",
+        "register_url": null
+      },
+      "ksca-7163": {
+        "sig": "5da52b4c23c3",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-7-1.pdf",
+        "register_url": null
+      },
+      "ksca-7199": {
+        "sig": "173cc58de23a",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Sushruta-Reddy-Ascend.pdf",
+        "register_url": null
+      },
+      "ksca-7206": {
+        "sig": "e2f5be43a944",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/PHF-Nagaprakash-Chess-Tournament-Edition-5_compressed.pdf",
+        "register_url": null
+      },
+      "ksca-7226": {
+        "sig": "5f31148a5fbd",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered.pdf",
+        "register_url": null
+      },
+      "ksca-7237": {
+        "sig": "bf52a7937035",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Brochure-ChessFusion-Dec-20th.pdf_11zon.pdf",
+        "register_url": null
+      },
+      "ksca-7258": {
+        "sig": "132d2d71540b",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered-1.pdf",
+        "register_url": null
+      },
+      "ksca-7294": {
+        "sig": "a2afd33eb1a5",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chess-Orbit-brochure-1.pdf",
+        "register_url": null
+      },
+      "ksca-7302": {
+        "sig": "29dc925d2701",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/1003066513.pdf",
+        "register_url": null
+      },
+      "ksca-7309": {
+        "sig": "bead95058f7f",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chadurangotsava-rapid-rating.pdf",
+        "register_url": null
+      },
+      "ksca-7314": {
+        "sig": "30ef51b68bd0",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Rotary_Sahakarnagar_Devin_Chess_Tournament-13th-Dec_2026_Brochure.pdf",
+        "register_url": null
+      },
+      "ksca-7322": {
+        "sig": "71ca6f71a57c",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Zenith_Brochure.pdf",
+        "register_url": null
+      },
+      "ksca-7328": {
+        "sig": "a07ffc0427cc",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-11-at-7.11.42-AM-1.pdf",
+        "register_url": null
+      },
+      "ksca-7333": {
+        "sig": "bb2cfbac7393",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/childrenday_2026_revised-1.pdf",
+        "register_url": null
+      },
+      "ksca-7345": {
+        "sig": "f6763adebb14",
+        "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Revised-7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-2.pdf-2.pdf",
+        "register_url": null
+      }
+    }
   },
   "events": [
     {
@@ -212,7 +344,7 @@
       "state": "Karnataka",
       "city": "Haveri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/SARJI_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sarji-renuka-all-india-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -270,7 +402,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/Rapid-Brochure_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -328,7 +460,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/INVENTIVE-2.0-FIDE-Rapid-Rated-Chess-Tournament-Dec-5th-2026._compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/inventive-2-0-all-india-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -386,7 +518,7 @@
       "state": "Karnataka",
       "city": "Hubli",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026/",
       "sources": [
@@ -442,7 +574,7 @@
       "state": "Karnataka",
       "city": "Hubli",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026-2/",
       "sources": [
@@ -498,7 +630,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chadurangotsava-rapid-rating.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chadurangotsava-all-india-open-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -556,7 +688,7 @@
       "state": "Karnataka",
       "city": "Tumkur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-11-at-7.11.42-AM-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/magicsquare-winter-open-u-15-rapid-chess-tournament-2026/",
       "sources": [
@@ -616,7 +748,7 @@
       "state": "Karnataka",
       "city": "Belgaum",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/childrenday_2026_revised-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/under-18-childrens-day-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -676,7 +808,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/UGI-chess-2026-Brochere.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/4th-universal-age-category-chess-tournament/",
       "sources": [
@@ -732,7 +864,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/PHF-Nagaprakash-Chess-Tournament-Edition-5_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/phf-nagaprakash-memorial-chess-tournament-edition-5-2026/",
       "sources": [
@@ -788,7 +920,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chess-Orbit-brochure-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chess-orbit-rapid-age-category-chess-tournament-2026/",
       "sources": [
@@ -846,7 +978,7 @@
       "state": "Karnataka",
       "city": "Bangalore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Rotary_Sahakarnagar_Devin_Chess_Tournament-13th-Dec_2026_Brochure.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/rotary-sahakarnagar-devin-open-age-category-rapid-chess-tournament-2026/",
       "sources": [
@@ -904,7 +1036,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-7-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026/",
       "sources": [
@@ -962,7 +1094,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Revised-7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-2.pdf-2.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026-2/",
       "sources": [
@@ -1020,7 +1152,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Sushruta-Reddy-Ascend.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-ascend-chess-tournament-2026/",
       "sources": [
@@ -1076,7 +1208,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Brochure-ChessFusion-Dec-20th.pdf_11zon.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chessfusion-legacy-rapid-chess-championship-2026-6th-edition/",
       "sources": [
@@ -1134,7 +1266,7 @@
       "state": "Karnataka",
       "city": "Davangere",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/1003066513.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/puneeth-rajkumar-cup-season-5-all-india-fide-rating-open-rapid-chess-tournament-2026/",
       "sources": [
@@ -1192,7 +1324,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-23rd-Dec.pdf-2-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/3rd-rotaract-ruas-children-chess-academy-all-india-open-fide-rated-classical-chess-tournament-2026/",
       "sources": [
@@ -1250,7 +1382,7 @@
       "state": "Karnataka",
       "city": "Uttara Kannada District",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/5th-Late-Shankar-Shet-Memorial-Rapid-Rating-Tournament-2026.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/5th-late-shri-shankar-shet-memorial-1st-open-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -1308,7 +1440,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-28th-Dec-3-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/4th-rotaract-ruas-children-chess-academy-below-1800-all-india-fide-rated-classical-chess-tournament-2026/",
       "sources": [
@@ -1366,7 +1498,7 @@
       "state": "Karnataka",
       "city": "Sirsi",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1792243044033-15772bf2-fcac-4669-becd-acec2a3375be.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/open-rapid-chess-tournament-sirsi-2027/",
       "sources": [
@@ -1424,7 +1556,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/DIGISIGNS-INTERNATIONAL-FIDE-RATED-OPEN-CHESS-TOURNAMENT-2027.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/digisigns-international-fide-rated-open-chess-tournament-2027/",
       "sources": [
@@ -1480,7 +1612,7 @@
       "state": "Karnataka",
       "city": "Mysuru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-pixel-brochure-final.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/1st-pixel-all-india-open-fide-rated-rapid-chess-tournament-2027/",
       "sources": [
@@ -1538,7 +1670,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Zenith_Brochure.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-zenith-fide-rapid-rating-chess-tournament-2027/",
       "sources": [
@@ -1652,7 +1784,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-Chessbinder.com-Open-FIDE-Rated-Rapid-Tournament-13th-Feb-2027.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
       "sources": [

@@ -145,7 +145,234 @@
     "tnsca-CO-203-MDU-26-27": "a2fa6ca9257c",
     "tnsca-CO-219-SLM-26-27": "ff59937ffec4",
     "tnsca-RR-27-KKI-26-27": "32f1ef17b076",
-    "tnsca-RO-02-VEL-27-28": "341cae7b1418"
+    "tnsca-RO-02-VEL-27-28": "341cae7b1418",
+    "event_pages": {
+      "tnsca-CO-126-CHE-26-27": {
+        "sig": "bc4996bcfcac",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-126.CHE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-139-VNR-26-27": {
+        "sig": "f0a5dd8e9b82",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-139.VNR_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-177-CGL-26-27": {
+        "sig": "07f4a0d25b15",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-177.CGL_.26-27-F02.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-178-CGL-26-27": {
+        "sig": "d91e1c9e94a1",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-178.CGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-193-CGL-26-27": {
+        "sig": "1cb250ab4745",
+        "brochure_url": null,
+        "register_url": null
+      },
+      "tnsca-CO-194-TNV-26-27": {
+        "sig": "54ed6f8cc487",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-194.TNV_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-195-MDU-26-27": {
+        "sig": "8a0caf48f59e",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-195.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-196-CGL-26-27": {
+        "sig": "5a1a547df51f",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-196.CGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-197-CGL-26-27": {
+        "sig": "7b898a839dda",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-197.CGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-198-CGL-26-27": {
+        "sig": "196cdd076d74",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-198.CGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-200-DGL-26-27": {
+        "sig": "d5526dbf3c67",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-200.DGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-201-MDU-26-27": {
+        "sig": "857c9379741d",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-201.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-204-CHE-26-27": {
+        "sig": "c6f807190383",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-204.CHE_.26-27-F02.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-205-CGL-26-27": {
+        "sig": "874ad6e82f42",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-205.CGL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-206-TNJ-26-27": {
+        "sig": "5f6dae99f079",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-206.TNJ_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-208-TUT-26-27": {
+        "sig": "14c113f0da0a",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-208.TUT_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-209-CUD-26-27": {
+        "sig": "d6868ede8cc0",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-209.CUD_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-210-CHE-26-27": {
+        "sig": "936c193a5a79",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-210.CHE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-211-NAM-26-27": {
+        "sig": "6752445b6da8",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-211.NAM_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-213-CHE-26-27": {
+        "sig": "96f24a0bc23b",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-213.CHE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-214-TUT-26-27": {
+        "sig": "bfeeae35938a",
+        "brochure_url": null,
+        "register_url": null
+      },
+      "tnsca-CO-215-TNJ-26-27": {
+        "sig": "b07ad3a7d386",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-215.TNJ_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-216-MYL-26-27": {
+        "sig": "69604cd2865d",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-216.MYL_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-218-RAN-26-27": {
+        "sig": "88cb42a48e7a",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-218.RAN_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-221-TLR-26-27": {
+        "sig": "9d217b526360",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-221.TLR_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-222-CGL-26-27": {
+        "sig": "99715bc2b59b",
+        "brochure_url": null,
+        "register_url": null
+      },
+      "tnsca-CO-223-TPR-26-27": {
+        "sig": "b09257777cea",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-223.TPR_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-224-DPI-26-27": {
+        "sig": "21bdefdbbea1",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-224.DPI_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-CO-226-RAN-26-27": {
+        "sig": "472be5b001d5",
+        "brochure_url": null,
+        "register_url": null
+      },
+      "tnsca-INT-01-TN-26-27": {
+        "sig": "851afa77dae4",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/05/INT-01.TN_.26-27-F01-1.pdf",
+        "register_url": null
+      },
+      "tnsca-INT-02-MDU-26-27": {
+        "sig": "9eea08476616",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-02.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-INT-06-CBE-26-27": {
+        "sig": "5c2e9eb21644",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RBR-07-MDU-26-27": {
+        "sig": "a18a8e442abf",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RBR-07.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RFR-10-CHE-26-27": {
+        "sig": "fc2f651bf932",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RFR-10.CHE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RFR-22-KGI-26-27": {
+        "sig": "88fe5d13d2d9",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-22.KGI_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RFR-25-CHE-26-27": {
+        "sig": "d71170bd91f8",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-25.CHE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RFR-26-SLM-26-27": {
+        "sig": "b79349631153",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-26.SLM_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RFR-28-CBE-26-27": {
+        "sig": "5efe741bb860",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-28.CBE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RO-30-KKI-26-27": {
+        "sig": "7f32f04afc17",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/RO-30.KKI_.26-27-F02.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-18-CBE-26-27": {
+        "sig": "7a44d63c7512",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-21-MDU-26-27": {
+        "sig": "d97ff74532f7",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-21.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-22-MDU-26-27": {
+        "sig": "1e87cfbd6806",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-22.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-23-MDU-26-27": {
+        "sig": "386e5c27fdcf",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-23.MDU_.26-27.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-24-CBE-26-27": {
+        "sig": "c110950d65c7",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-24.CBE_.26-27-F02.pdf",
+        "register_url": null
+      },
+      "tnsca-RR-26-TPT-26-27": {
+        "sig": "4c425a70b331",
+        "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/RR-26.TPT_.26-27-F02.pdf",
+        "register_url": null
+      }
+    }
   },
   "events": [
     {
@@ -5004,7 +5231,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-24.CBE_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-manchester-city-below-1800-international-fide-rated-tournament/",
       "sources": [
@@ -5060,7 +5287,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-213.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/namma-chess-academy-4th-tamil-nadu-state-level-childrens-chess-tournament-2/",
       "sources": [
@@ -5116,7 +5343,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-126.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/shree-rudhraa-state-level-chess-tournament-2026/",
       "sources": [
@@ -5172,7 +5399,7 @@
       "state": "Tamil Nadu",
       "city": "Virudhunagar",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-139.VNR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/genius-chess-academy-state-level-chess-tournament/",
       "sources": [
@@ -5228,7 +5455,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-177.CGL_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/prince-shri-venkateshwara-arts-science-college-state-level-children-chess-tournament-2026/",
       "sources": [
@@ -5284,7 +5511,7 @@
       "state": "Tamil Nadu",
       "city": "Tirunelveli",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-194.TNV_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-masters-cup-state-level-children-tournament/",
       "sources": [
@@ -5340,7 +5567,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-196.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/4th-tn-state-level-chess-tournament-2026-mohamed-sathak-ai-engineering-college/",
       "sources": [
@@ -5396,7 +5623,7 @@
       "state": "Tamil Nadu",
       "city": "Dindigul",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-200.DGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/bvr-marimuthu-memorial-2nd-state-level-open-children-chess-tournament/",
       "sources": [
@@ -5452,7 +5679,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-201.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/global-sports-foundation-11th-state-level-childrens-chess-tournament-2026/",
       "sources": [
@@ -5508,7 +5735,7 @@
       "state": "Tamil Nadu",
       "city": "Thanjavur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-206.TNJ_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/k-r-palanivelu-memorial-2nd-gold-coin-state-level-childrens-chess-tournament/",
       "sources": [
@@ -5564,7 +5791,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-210.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/en-passant-1st-tamil-nadu-state-level-childrens-chess-tournament/",
       "sources": [
@@ -5676,7 +5903,7 @@
       "state": "Tamil Nadu",
       "city": "Krishnagiri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-22.KGI_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-rims-international-fide-rapid-rating-open-chess-tournament-2026/",
       "sources": [
@@ -5734,7 +5961,7 @@
       "state": "Tamil Nadu",
       "city": "Kanyakumari",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/RO-30.KKI_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/dragon-chess-academy-1st-international-open-fide-chess-tournament-2026/",
       "sources": [
@@ -5790,7 +6017,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupattur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/RR-26.TPT_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-2nd-below-1700-chess-tournament-2026/",
       "sources": [
@@ -5846,7 +6073,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-204.CHE_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/prime-engage-childrens-chess-tournament-chennai-edition/",
       "sources": [
@@ -5902,7 +6129,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-178.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/g-d-chess-academy-1st-tamil-nadu-state-level-childrens-tournament-2026/",
       "sources": [
@@ -6014,7 +6241,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-195.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/veteri-chess-academy-1st-tn-state-level-cycle-open-chess-tournament/",
       "sources": [
@@ -6070,7 +6297,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-197.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-mohamed-sathak-college-of-arts-science/",
       "sources": [
@@ -6126,7 +6353,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-198.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/anandhan-chess-academy-12th-state-level-children-chess-tournament/",
       "sources": [
@@ -6182,7 +6409,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-205.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-s3-chess-academy-childrens-tn-state-level-chess-tournament/",
       "sources": [
@@ -6238,7 +6465,7 @@
       "state": "Tamil Nadu",
       "city": "Tuticorin",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-208.TUT_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/unique-chess-academy-1st-tamil-nadu-state-level-children-open-chess-tournament-2026/",
       "sources": [
@@ -6294,7 +6521,7 @@
       "state": "Tamil Nadu",
       "city": "Cuddalore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-209.CUD_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/cqscas-2nd-state-level-childrens-chess-tournament/",
       "sources": [
@@ -6350,7 +6577,7 @@
       "state": "Tamil Nadu",
       "city": "Thanjavur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-215.TNJ_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/dragon-chess-academy-4th-state-level-children-chess-tournament/",
       "sources": [
@@ -6406,7 +6633,7 @@
       "state": "Tamil Nadu",
       "city": "Ranipet",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-218.RAN_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/state-level-childrens-chess-tournament-10/",
       "sources": [
@@ -6462,7 +6689,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-223.TPR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/kangeyam-institutions-1st-tn-state-level-children-open-chess-tournament-2026/",
       "sources": [
@@ -6518,7 +6745,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-25.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/playu-3rd-international-fide-rapid-rated-open-chess-tournament-2026-powered-by-akshayakalpa/",
       "sources": [
@@ -6576,7 +6803,7 @@
       "state": "Tamil Nadu",
       "city": "Salem",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-26.SLM_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/3rd-battle-field-international-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -6634,7 +6861,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-28.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-international-rapid-rating-chess-tournament-organized-by-coimbatore-district-chess-association/",
       "sources": [
@@ -6692,7 +6919,7 @@
       "state": "Tamil Nadu",
       "city": "Namakkal",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-211.NAM_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/kandaswami-junior-chess-championship-2026/",
       "sources": [
@@ -6748,7 +6975,7 @@
       "state": "Tamil Nadu",
       "city": "Mayiladuthurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-216.MYL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/good-samaritan-3rd-state-level-children-chess-tournament-2026/",
       "sources": [
@@ -6804,7 +7031,7 @@
       "state": "Tamil Nadu",
       "city": "Tiruvallur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-221.TLR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/rit-state-level-chess-competition-2026/",
       "sources": [
@@ -6860,7 +7087,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-21.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-b-below-2100/",
       "sources": [
@@ -6916,7 +7143,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-02.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-a-above-2000/",
       "sources": [
@@ -6972,7 +7199,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RBR-07.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-c-blitz/",
       "sources": [
@@ -7030,7 +7257,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-22.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-d-below-1800/",
       "sources": [
@@ -7086,7 +7313,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-23.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-e-below-1600/",
       "sources": [
@@ -7142,7 +7369,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/05/INT-01.TN_.26-27-F01-1.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-group-dr-n-mahalingam-trophy/",
       "sources": [
@@ -7254,7 +7481,7 @@
       "state": "Tamil Nadu",
       "city": "Dharmapuri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-224.DPI_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-sakthi-chess-academy-state-level-open-tournament/",
       "sources": [
@@ -7366,7 +7593,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RFR-10.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/eight-square-chess-academy-4th-international-fide-rated-rapid-chess-tournament-2027/",
       "sources": [
@@ -7424,7 +7651,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-below-2000-rating-players/",
       "sources": [
@@ -7480,7 +7707,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-above-2000-rating-players/",
       "sources": [

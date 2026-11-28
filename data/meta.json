@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-28T21:32:37+05:30",
-  "last_run_at": "2026-11-28T21:32:37+05:30",
+  "generated_at": "2026-11-28T21:48:55+05:30",
+  "last_run_at": "2026-11-28T21:48:55+05:30",
   "scraped_count": 776,
   "manual_count": 0,
   "total": 1020,
@@ -54,7 +54,7 @@
       "last_success": "2026-11-28T07:27:22+05:30",
       "last_error": null,
       "count": 8,
-      "next_due": "2026-11-28T21:32:37+05:30"
+      "next_due": "2026-11-28T21:48:55+05:30"
     },
     "aoca": {
       "enabled": true,

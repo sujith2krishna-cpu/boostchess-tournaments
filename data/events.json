@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T21:32:37+05:30",
+  "generated_at": "2026-11-28T21:48:55+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -33457,7 +33457,7 @@
           "source_url": "https://tamilchess.com/events/2nd-manchester-city-below-1800-international-fide-rated-tournament/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-24.CBE_.26-27-F02.pdf"
         },
         {
           "source": "chessfee",
@@ -33693,7 +33693,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-24.CBE_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-manchester-city-below-1800-international-fide-rated-tournament/",
       "sources": [
@@ -36625,7 +36625,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/28%20NOV-Namma%20Chess%20Academy%20Tournament%202026.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-213.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/namma-chess-academy-4th-tamil-nadu-state-level-childrens-chess-tournament-2/",
       "sources": [
@@ -37958,7 +37958,7 @@
           "source_url": "https://karnatakachess.com/tournaments/sarji-renuka-all-india-fide-rapid-rating-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/SARJI_compressed.pdf"
         },
         {
           "source": "chessresults_ind",
@@ -38115,7 +38115,7 @@
           "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/Rapid-Brochure_compressed.pdf"
         },
         {
           "source": "chessresults_ind",
@@ -38446,7 +38446,7 @@
           "source_url": "https://tamilchess.com/events/1st-rims-international-fide-rapid-rating-open-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-22.KGI_.26-27.pdf"
         },
         {
           "source": "chessfee",
@@ -44196,7 +44196,7 @@
       "state": "Karnataka",
       "city": "Haveri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/SARJI_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sarji-renuka-all-india-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -44254,7 +44254,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/Rapid-Brochure_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -44314,7 +44314,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/SHREE%20RUDHRAA%20PROSPECTUS.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-126.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/shree-rudhraa-state-level-chess-tournament-2026/",
       "sources": [
@@ -44399,7 +44399,7 @@
       "state": "Tamil Nadu",
       "city": "Virudhunagar",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE-%20ARUPPUKOTTAI.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/CO-139.VNR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/genius-chess-academy-state-level-chess-tournament/",
       "sources": [
@@ -44484,7 +44484,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-TN%20STATE%20TMT-GM%20Prince.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-177.CGL_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/prince-shri-venkateshwara-arts-science-college-state-level-children-chess-tournament-2026/",
       "sources": [
@@ -44569,7 +44569,7 @@
       "state": "Tamil Nadu",
       "city": "Tirunelveli",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE%20LVL%20TMT-TIRUNEVELI.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-194.TNV_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-masters-cup-state-level-children-tournament/",
       "sources": [
@@ -44654,7 +44654,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-196.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/4th-tn-state-level-chess-tournament-2026-mohamed-sathak-ai-engineering-college/",
       "sources": [
@@ -44710,7 +44710,7 @@
       "state": "Tamil Nadu",
       "city": "Dindigul",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-200.DGL_.26-27.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-200.DGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/bvr-marimuthu-memorial-2nd-state-level-open-children-chess-tournament/",
       "sources": [
@@ -44781,7 +44781,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/GSF_Tourney%20MADURAI%20-%2029%20NOV.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-201.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/global-sports-foundation-11th-state-level-childrens-chess-tournament-2026/",
       "sources": [
@@ -44866,7 +44866,7 @@
       "state": "Tamil Nadu",
       "city": "Thanjavur",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/29NOV-TN%20STATE%20LVL%20TMT-THANJAVUR.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-206.TNJ_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/k-r-palanivelu-memorial-2nd-gold-coin-state-level-childrens-chess-tournament/",
       "sources": [
@@ -44957,7 +44957,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20Enpassant%20Children%20Chess%20Tournament.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-210.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/en-passant-1st-tamil-nadu-state-level-childrens-chess-tournament/",
       "sources": [
@@ -45113,7 +45113,7 @@
       "state": "Tamil Nadu",
       "city": "Krishnagiri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-22.KGI_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-rims-international-fide-rapid-rating-open-chess-tournament-2026/",
       "sources": [
@@ -45959,7 +45959,7 @@
           "source_url": "https://tamilchess.com/events/dragon-chess-academy-1st-international-open-fide-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/RO-30.KKI_.26-27-F02.pdf"
         },
         {
           "source": "chessfee",
@@ -46137,7 +46137,7 @@
       "state": "Tamil Nadu",
       "city": "Kanyakumari",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/RO-30.KKI_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/dragon-chess-academy-1st-international-open-fide-chess-tournament-2026/",
       "sources": [
@@ -46231,7 +46231,7 @@
           "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-2nd-below-1700-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/RR-26.TPT_.26-27-F02.pdf"
         },
         {
           "source": "chessfee",
@@ -46409,7 +46409,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupattur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/08/RR-26.TPT_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/chessinfo-golden-knights-chess-academy-1st-international-fide-rating-2nd-below-1700-chess-tournament-2026/",
       "sources": [
@@ -46637,7 +46637,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/INVENTIVE-2.0-FIDE-Rapid-Rated-Chess-Tournament-Dec-5th-2026._compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/inventive-2-0-all-india-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -46697,7 +46697,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/5%20DEC-%20TN%20STATE%20LVL%20TMT%20-%20Prime_Engage_Chess.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-204.CHE_.26-27-F02.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/prime-engage-childrens-chess-tournament-chennai-edition/",
       "sources": [
@@ -47176,7 +47176,7 @@
           "source_url": "https://tamilchess.com/events/3rd-battle-field-international-fide-rapid-rating-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-26.SLM_.26-27.pdf"
         },
         {
           "source": "chessresults_ind",
@@ -47254,7 +47254,7 @@
           "source_url": "https://karnatakachess.com/tournaments/chadurangotsava-all-india-open-fide-rated-rapid-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chadurangotsava-rapid-rating.pdf"
         }
       ],
       "register_url": null,
@@ -47328,7 +47328,7 @@
           "source_url": "https://tamilchess.com/events/1st-international-rapid-rating-chess-tournament-organized-by-coimbatore-district-chess-association/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-28.CBE_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -49234,7 +49234,7 @@
       "state": "Karnataka",
       "city": "Hubli",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026/",
       "sources": [
@@ -49290,7 +49290,7 @@
       "state": "Karnataka",
       "city": "Hubli",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/DDCA_SCMA_Chess_Festival_2026_Reordered-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/ddca-scma-chess-festival-2026-2/",
       "sources": [
@@ -49346,7 +49346,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chadurangotsava-rapid-rating.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chadurangotsava-all-india-open-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -49404,7 +49404,7 @@
       "state": "Karnataka",
       "city": "Tumkur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-11-at-7.11.42-AM-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/magicsquare-winter-open-u-15-rapid-chess-tournament-2026/",
       "sources": [
@@ -49464,7 +49464,7 @@
       "state": "Karnataka",
       "city": "Belgaum",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/childrenday_2026_revised-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/under-18-childrens-day-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -49526,7 +49526,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/09/CO-178.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/g-d-chess-academy-1st-tamil-nadu-state-level-childrens-tournament-2026/",
       "sources": [
@@ -49653,7 +49653,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20TN%20STATE%20LVL%20TMT%20-%20MADURAI.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-195.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/veteri-chess-academy-1st-tn-state-level-cycle-open-chess-tournament/",
       "sources": [
@@ -49724,7 +49724,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-197.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-mohamed-sathak-college-of-arts-science/",
       "sources": [
@@ -49780,7 +49780,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/ACA-12th%20TN%20State%20-%206%20DEC.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/CO-198.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/anandhan-chess-academy-12th-state-level-children-chess-tournament/",
       "sources": [
@@ -49865,7 +49865,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-205.CGL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-s3-chess-academy-childrens-tn-state-level-chess-tournament/",
       "sources": [
@@ -49921,7 +49921,7 @@
       "state": "Tamil Nadu",
       "city": "Tuticorin",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-208.TUT_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/unique-chess-academy-1st-tamil-nadu-state-level-children-open-chess-tournament-2026/",
       "sources": [
@@ -49992,7 +49992,7 @@
       "state": "Tamil Nadu",
       "city": "Cuddalore",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20-%20CUDDALORE%20-%20TN%20STATE%20LVL%20TMT.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-209.CUD_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/cqscas-2nd-state-level-childrens-chess-tournament/",
       "sources": [
@@ -50063,7 +50063,7 @@
       "state": "Tamil Nadu",
       "city": "Thanjavur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-215.TNJ_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/dragon-chess-academy-4th-state-level-children-chess-tournament/",
       "sources": [
@@ -50119,7 +50119,7 @@
       "state": "Tamil Nadu",
       "city": "Ranipet",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-218.RAN_.26-27.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-218.RAN_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/state-level-childrens-chess-tournament-10/",
       "sources": [
@@ -50190,7 +50190,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupur",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/Kangeyam%20Institutions%201st%20State%20Level%20Chess%20Tournament%20Prospectus.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-223.TPR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/kangeyam-institutions-1st-tn-state-level-children-open-chess-tournament-2026/",
       "sources": [
@@ -50261,7 +50261,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/10/RFR-25.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/playu-3rd-international-fide-rapid-rated-open-chess-tournament-2026-powered-by-akshayakalpa/",
       "sources": [
@@ -50319,7 +50319,7 @@
       "state": "Tamil Nadu",
       "city": "Salem",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-26.SLM_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/3rd-battle-field-international-fide-rapid-rating-chess-tournament-2026/",
       "sources": [
@@ -50377,7 +50377,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/RFR-28.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-international-rapid-rating-chess-tournament-organized-by-coimbatore-district-chess-association/",
       "sources": [
@@ -50660,7 +50660,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/UGI-chess-2026-Brochere.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/4th-universal-age-category-chess-tournament/",
       "sources": [
@@ -51190,7 +51190,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/PHF-Nagaprakash-Chess-Tournament-Edition-5_compressed.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/phf-nagaprakash-memorial-chess-tournament-edition-5-2026/",
       "sources": [
@@ -51246,7 +51246,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Chess-Orbit-brochure-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chess-orbit-rapid-age-category-chess-tournament-2026/",
       "sources": [
@@ -51304,7 +51304,7 @@
       "state": "Karnataka",
       "city": "Bangalore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Rotary_Sahakarnagar_Devin_Chess_Tournament-13th-Dec_2026_Brochure.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/rotary-sahakarnagar-devin-open-age-category-rapid-chess-tournament-2026/",
       "sources": [
@@ -51364,7 +51364,7 @@
       "state": "Tamil Nadu",
       "city": "Namakkal",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-211.NAM_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/kandaswami-junior-chess-championship-2026/",
       "sources": [
@@ -51420,7 +51420,7 @@
       "state": "Tamil Nadu",
       "city": "Mayiladuthurai",
       "country": "IN",
-      "brochure_url": "https://www.chessfee.com/admin/Brochure/13%20DEC-%20TN%20STATE%20LVL%20TMT%20-%20SIRKALI.pdf",
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-216.MYL_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/good-samaritan-3rd-state-level-children-chess-tournament-2026/",
       "sources": [
@@ -51491,7 +51491,7 @@
       "state": "Tamil Nadu",
       "city": "Tiruvallur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-221.TLR_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/rit-state-level-chess-competition-2026/",
       "sources": [
@@ -51741,7 +51741,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-7-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026/",
       "sources": [
@@ -51799,7 +51799,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Revised-7th-BKCC-Open-Age-Category-Rapid-Tournament-19th-December-2026-2.pdf-2.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/7th-bkcc-open-age-category-rapid-tournament-2026-2/",
       "sources": [
@@ -52161,7 +52161,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Sushruta-Reddy-Ascend.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-ascend-chess-tournament-2026/",
       "sources": [
@@ -52217,7 +52217,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Brochure-ChessFusion-Dec-20th.pdf_11zon.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/chessfusion-legacy-rapid-chess-championship-2026-6th-edition/",
       "sources": [
@@ -52277,7 +52277,7 @@
       "state": "Karnataka",
       "city": "Davangere",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/1003066513.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/puneeth-rajkumar-cup-season-5-all-india-fide-rating-open-rapid-chess-tournament-2026/",
       "sources": [
@@ -52492,7 +52492,7 @@
           "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-b-below-2100/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-21.MDU_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -52536,7 +52536,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-21.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-b-below-2100/",
       "sources": [
@@ -52618,7 +52618,7 @@
           "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-a-above-2000/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-02.MDU_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -52662,7 +52662,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-02.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-a-above-2000/",
       "sources": [
@@ -52743,7 +52743,7 @@
           "source_url": "https://karnatakachess.com/tournaments/3rd-rotaract-ruas-children-chess-academy-all-india-open-fide-rated-classical-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-23rd-Dec.pdf-2-1.pdf"
         }
       ],
       "register_url": null,
@@ -52789,7 +52789,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-23rd-Dec.pdf-2-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/3rd-rotaract-ruas-children-chess-academy-all-india-open-fide-rated-classical-chess-tournament-2026/",
       "sources": [
@@ -52991,7 +52991,7 @@
           "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-c-blitz/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RBR-07.MDU_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -53037,7 +53037,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RBR-07.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-c-blitz/",
       "sources": [
@@ -53467,7 +53467,7 @@
           "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-d-below-1800/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-22.MDU_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -53511,7 +53511,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-22.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-d-below-1800/",
       "sources": [
@@ -53650,7 +53650,7 @@
           "source_url": "https://karnatakachess.com/tournaments/5th-late-shri-shankar-shet-memorial-1st-open-fide-rated-rapid-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/5th-Late-Shankar-Shet-Memorial-Rapid-Rating-Tournament-2026.pdf"
         }
       ],
       "register_url": null,
@@ -53812,7 +53812,7 @@
       "state": "Karnataka",
       "city": "Uttara Kannada District",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/5th-Late-Shankar-Shet-Memorial-Rapid-Rating-Tournament-2026.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/5th-late-shri-shankar-shet-memorial-1st-open-fide-rated-rapid-chess-tournament-2026/",
       "sources": [
@@ -53897,7 +53897,7 @@
           "source_url": "https://karnatakachess.com/tournaments/4th-rotaract-ruas-children-chess-academy-below-1800-all-india-fide-rated-classical-chess-tournament-2026/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-28th-Dec-3-1.pdf"
         }
       ],
       "register_url": null,
@@ -53943,7 +53943,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/08/Brochure-28th-Dec-3-1.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/4th-rotaract-ruas-children-chess-academy-below-1800-all-india-fide-rated-classical-chess-tournament-2026/",
       "sources": [
@@ -54087,7 +54087,7 @@
           "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-e-below-1600/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-23.MDU_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -54131,7 +54131,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RR-23.MDU_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/athens-of-the-east-6th-international-grandmaster-open-chess-tournament-category-e-below-1600/",
       "sources": [
@@ -54461,7 +54461,7 @@
           "source_url": "https://tamilchess.com/events/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-group-dr-n-mahalingam-trophy/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/05/INT-01.TN_.26-27-F01-1.pdf"
         }
       ],
       "register_url": null,
@@ -54505,7 +54505,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/05/INT-01.TN_.26-27-F01-1.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-group-dr-n-mahalingam-trophy/",
       "sources": [
@@ -55076,7 +55076,7 @@
           "source_url": "https://tamilchess.com/events/eight-square-chess-academy-4th-international-fide-rated-rapid-chess-tournament-2027/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RFR-10.CHE_.26-27.pdf"
         },
         {
           "source": "chessfee",
@@ -55366,7 +55366,7 @@
       "state": "Karnataka",
       "city": "Sirsi",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1792243044033-15772bf2-fcac-4669-becd-acec2a3375be.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/open-rapid-chess-tournament-sirsi-2027/",
       "sources": [
@@ -55482,7 +55482,7 @@
       "state": "Tamil Nadu",
       "city": "Dharmapuri",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/11/CO-224.DPI_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/2nd-sakthi-chess-academy-state-level-open-tournament/",
       "sources": [
@@ -55594,7 +55594,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/RFR-10.CHE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/eight-square-chess-academy-4th-international-fide-rated-rapid-chess-tournament-2027/",
       "sources": [
@@ -55678,7 +55678,7 @@
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-below-2000-rating-players/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -55722,7 +55722,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-below-2000-rating-players/",
       "sources": [
@@ -55804,7 +55804,7 @@
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-above-2000-rating-players/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf"
         }
       ],
       "register_url": null,
@@ -55848,7 +55848,7 @@
       "state": "Tamil Nadu",
       "city": "Coimbatore",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://tamilchess.com/wp-content/uploads/2026/06/INT-06.CBE_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-above-2000-rating-players/",
       "sources": [
@@ -56272,7 +56272,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/09/DIGISIGNS-INTERNATIONAL-FIDE-RATED-OPEN-CHESS-TOURNAMENT-2027.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/digisigns-international-fide-rated-open-chess-tournament-2027/",
       "sources": [
@@ -56771,7 +56771,7 @@
           "source_url": "https://karnatakachess.com/tournaments/1st-pixel-all-india-open-fide-rated-rapid-chess-tournament-2027/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-pixel-brochure-final.pdf"
         }
       ],
       "register_url": null,
@@ -56875,7 +56875,7 @@
       "state": "Karnataka",
       "city": "Mysuru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-pixel-brochure-final.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/1st-pixel-all-india-open-fide-rated-rapid-chess-tournament-2027/",
       "sources": [
@@ -57300,7 +57300,7 @@
           "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-zenith-fide-rapid-rating-chess-tournament-2027/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Zenith_Brochure.pdf"
         }
       ],
       "register_url": null,
@@ -57346,7 +57346,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/11/Zenith_Brochure.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/sushruta-reddy-zenith-fide-rapid-rating-chess-tournament-2027/",
       "sources": [
@@ -58985,7 +58985,7 @@
           "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
           "register_url": null,
           "results_url": null,
-          "brochure_url": null
+          "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-Chessbinder.com-Open-FIDE-Rated-Rapid-Tournament-13th-Feb-2027.pdf"
         }
       ],
       "register_url": null,
@@ -59031,7 +59031,7 @@
       "state": "Karnataka",
       "city": "Bengaluru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://karnatakachess.com/wp-content/uploads/2026/10/1st-Chessbinder.com-Open-FIDE-Rated-Rapid-Tournament-13th-Feb-2027.pdf",
       "source": "ksca",
       "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
       "sources": [
