@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T18:40:29+05:30",
+  "generated_at": "2026-11-28T20:52:45+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -38095,6 +38095,11 @@
           "register_url": null
         },
         {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
+          "register_url": null
+        },
+        {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
           "register_url": "https://circlechess.com/registration?id=54993"
@@ -38105,6 +38110,13 @@
       "group_id": "aicf-501318",
       "merged_into": null,
       "also_listed_on": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/khannur-fide-rapid-rating-chess-tournament-2026/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        },
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
@@ -38126,7 +38138,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "FIDE Rating Events"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -38629,28 +38643,15 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
           "register_url": "https://www.chessfee.com/treg.php?id=1817"
-        },
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
-          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1817",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
-          "register_url": null,
-          "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
-          "brochure_url": null
-        }
-      ],
+      "group_id": "tnsca-CO-177-CGL-26-27",
+      "merged_into": "tnsca-CO-177-CGL-26-27",
+      "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1817",
-      "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+      "results_url": null,
       "registration_deadline": null,
       "organiser": "G. MASILAMANI",
       "tags": {
@@ -38670,7 +38671,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-210-CHE-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -38945,28 +38946,15 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1853",
           "register_url": "https://www.chessfee.com/treg.php?id=1853"
-        },
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
-          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1853",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
-          "register_url": null,
-          "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
-          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547773&Uid=1"
-        }
-      ],
+      "group_id": "tnsca-CO-210-CHE-26-27",
+      "merged_into": "tnsca-CO-210-CHE-26-27",
+      "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1853",
-      "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+      "results_url": null,
       "registration_deadline": null,
       "organiser": "Enpassant Chess School",
       "tags": {
@@ -38986,7 +38974,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-210-CHE-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -39084,7 +39072,9 @@
       "registration_deadline": null,
       "organiser": "GLOBAL SPORTS FOUNDATION",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -39186,28 +39176,15 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1869",
           "register_url": "https://www.chessfee.com/treg.php?id=1869"
-        },
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
-          "register_url": null
         }
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1869",
-      "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
-          "register_url": null,
-          "results_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
-          "brochure_url": null
-        }
-      ],
+      "group_id": "tnsca-CO-139-VNR-26-27",
+      "merged_into": "tnsca-CO-139-VNR-26-27",
+      "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1869",
-      "results_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
+      "results_url": null,
       "registration_deadline": null,
       "organiser": "Mr. P. Ramar",
       "tags": {
@@ -39227,7 +39204,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-139-VNR-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -39344,7 +39321,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "ksca-6939"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -40064,8 +40041,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessfee-1817",
-      "merged_into": "chessfee-1817",
+      "group_id": "tnsca-CO-177-CGL-26-27",
+      "merged_into": "tnsca-CO-177-CGL-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
@@ -40086,7 +40063,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-177-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42298,8 +42275,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessfee-1853",
-      "merged_into": "chessfee-1853",
+      "group_id": "tnsca-CO-210-CHE-26-27",
+      "merged_into": "tnsca-CO-210-CHE-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
@@ -42320,7 +42297,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-210-CHE-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42410,8 +42387,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessfee-1869",
-      "merged_into": "chessfee-1869",
+      "group_id": "tnsca-CO-139-VNR-26-27",
+      "merged_into": "tnsca-CO-139-VNR-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
@@ -42432,7 +42409,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-139-VNR-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -42632,8 +42609,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1549720",
-      "merged_into": null,
+      "group_id": "tnsca-CO-222-CGL-26-27",
+      "merged_into": "tnsca-CO-222-CGL-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1549720.aspx?lan=1",
@@ -42654,7 +42631,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-222-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -44117,8 +44094,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1553650",
-      "merged_into": null,
+      "group_id": "tnsca-CO-201-MDU-26-27",
+      "merged_into": "tnsca-CO-201-MDU-26-27",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1553650.aspx?lan=1",
@@ -44139,7 +44116,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "chessfee-1865"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -44289,8 +44266,8 @@
       ],
       "listed_by": "ksca",
       "verified": true,
-      "group_id": "ksca-6939",
-      "merged_into": null,
+      "group_id": "aicf-501318",
+      "merged_into": "aicf-501318",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -44313,7 +44290,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-501318"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -44422,7 +44399,7 @@
       "state": "Tamil Nadu",
       "city": "Virudhunagar",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE-%20ARUPPUKOTTAI.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/genius-chess-academy-state-level-chess-tournament/",
       "sources": [
@@ -44430,25 +44407,54 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/genius-chess-academy-state-level-chess-tournament/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1869",
+          "register_url": "https://www.chessfee.com/treg.php?id=1869"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-139-VNR-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1869",
+          "register_url": "https://www.chessfee.com/treg.php?id=1869",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20TN%20STATE-%20ARUPPUKOTTAI.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1869",
+      "results_url": "https://chess-results.com/tnr1549060.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Mr. P. Ramar",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -44458,7 +44464,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -44478,7 +44484,7 @@
       "state": "Tamil Nadu",
       "city": "Chengalpattu",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-TN%20STATE%20TMT-GM%20Prince.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/prince-shri-venkateshwara-arts-science-college-state-level-children-chess-tournament-2026/",
       "sources": [
@@ -44486,25 +44492,54 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/prince-shri-venkateshwara-arts-science-college-state-level-children-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
+          "register_url": "https://www.chessfee.com/treg.php?id=1817"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-177-CGL-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1817",
+          "register_url": "https://www.chessfee.com/treg.php?id=1817",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-TN%20STATE%20TMT-GM%20Prince.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1817",
+      "results_url": "https://chess-results.com/tnr1534051.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "G. MASILAMANI",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -44514,7 +44549,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -44759,6 +44794,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1865",
           "register_url": "https://www.chessfee.com/treg.php?id=1865"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1553650.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
@@ -44772,14 +44812,23 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1865",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/GSF_Tourney%20MADURAI%20-%2029%20NOV.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1553650.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1553650.aspx?lan=1",
+          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1865",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1553650.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "GLOBAL SPORTS FOUNDATION",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -44908,7 +44957,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20Enpassant%20Children%20Chess%20Tournament.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/en-passant-1st-tamil-nadu-state-level-childrens-chess-tournament/",
       "sources": [
@@ -44916,25 +44965,54 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/en-passant-1st-tamil-nadu-state-level-childrens-chess-tournament/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1853",
+          "register_url": "https://www.chessfee.com/treg.php?id=1853"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-210-CHE-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1853",
+          "register_url": "https://www.chessfee.com/treg.php?id=1853",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/29%20NOV-%20Enpassant%20Children%20Chess%20Tournament.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547773&Uid=1"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1853",
+      "results_url": "https://chess-results.com/tnr1547773.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Enpassant Chess School",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -44944,7 +45022,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -44972,19 +45050,34 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/sfa-chess-academys-5th-tamil-nadu-state-level-children-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549720.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-222-CGL-26-27",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549720.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1549720.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1549720.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "SFA Chess Academy",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -45000,7 +45093,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-25",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -47493,8 +47586,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1850",
-      "merged_into": null,
+      "group_id": "tnsca-CO-195-MDU-26-27",
+      "merged_into": "tnsca-CO-195-MDU-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1850",
       "results_url": null,
@@ -47515,7 +47608,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-195-MDU-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -47571,7 +47664,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-205-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -47687,7 +47780,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -47743,7 +47836,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -47777,8 +47870,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1867",
-      "merged_into": null,
+      "group_id": "tnsca-CO-218-RAN-26-27",
+      "merged_into": "tnsca-CO-218-RAN-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1867",
       "results_url": null,
@@ -47799,7 +47892,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
+        "possible_duplicate_of": "tnsca-CO-205-CGL-26-27"
       },
       "raw_dates": null,
       "dates_from": null,
@@ -47913,7 +48006,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "tnsca-CO-178-CGL-26-27"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -49560,7 +49653,7 @@
       "state": "Tamil Nadu",
       "city": "Madurai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20TN%20STATE%20LVL%20TMT%20-%20MADURAI.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/veteri-chess-academy-1st-tn-state-level-cycle-open-chess-tournament/",
       "sources": [
@@ -49568,17 +49661,30 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/veteri-chess-academy-1st-tn-state-level-cycle-open-chess-tournament/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1850",
+          "register_url": "https://www.chessfee.com/treg.php?id=1850"
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-195-MDU-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1850",
+          "register_url": "https://www.chessfee.com/treg.php?id=1850",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/6%20DEC%20TN%20STATE%20LVL%20TMT%20-%20MADURAI.pdf"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1850",
       "results_url": null,
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Vetri Chess Academy",
       "tags": {
         "formats": [],
         "fide_rated": null,
@@ -49586,7 +49692,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -49596,7 +49704,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -50011,7 +50119,7 @@
       "state": "Tamil Nadu",
       "city": "Ranipet",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-218.RAN_.26-27.pdf",
       "source": "tnsca",
       "source_url": "https://tamilchess.com/events/state-level-childrens-chess-tournament-10/",
       "sources": [
@@ -50019,17 +50127,30 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/state-level-childrens-chess-tournament-10/",
           "register_url": null
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1867",
+          "register_url": "https://www.chessfee.com/treg.php?id=1867"
         }
       ],
       "listed_by": "tnsca",
       "verified": true,
       "group_id": "tnsca-CO-218-RAN-26-27",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1867",
+          "register_url": "https://www.chessfee.com/treg.php?id=1867",
+          "results_url": null,
+          "brochure_url": "https://www.chessfee.com/admin/Brochure/CO-218.RAN_.26-27.pdf"
+        }
+      ],
+      "register_url": "https://www.chessfee.com/treg.php?id=1867",
       "results_url": null,
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "M. Vinoth",
       "tags": {
         "formats": [],
         "fide_rated": null,
@@ -50037,7 +50158,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -50047,7 +50170,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-26",
+      "first_seen": "2026-11-24",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -51994,8 +52117,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1544300",
-      "merged_into": null,
+      "group_id": "ksca-7302",
+      "merged_into": "ksca-7302",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
@@ -52016,7 +52139,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "ksca-7302"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -52144,7 +52267,9 @@
     },
     {
       "id": "ksca-7302",
-      "codes": [],
+      "codes": [
+        "511685"
+      ],
       "name": "Puneeth Rajkumar Cup – Season 5, All India FIDE Rating Open Rapid Chess Tournament 2026",
       "start": "2026-12-20",
       "end": "2026-12-20",
@@ -52160,15 +52285,28 @@
           "source": "ksca",
           "source_url": "https://karnatakachess.com/tournaments/puneeth-rajkumar-cup-season-5-all-india-fide-rating-open-rapid-chess-tournament-2026/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "ksca",
       "verified": true,
       "group_id": "ksca-7302",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1544300.aspx?lan=1",
       "registration_deadline": null,
       "organiser": null,
       "tags": {
@@ -52192,7 +52330,7 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-27",
+      "first_seen": "2026-11-25",
       "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
@@ -58152,7 +58290,7 @@
       "end": "2027-01-31",
       "place_text": "Karnataka",
       "state": "Karnataka",
-      "city": null,
+      "city": "Bengaluru",
       "country": "IN",
       "brochure_url": null,
       "source": "aicf",
@@ -58162,13 +58300,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sportscentric-fide-rated-chess-tournament-2026/",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-503923",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/sportscentric-fide-rated-chess-tournament-2026/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -58180,7 +58331,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "FIDE Rating Events"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -58278,8 +58431,8 @@
       ],
       "listed_by": "ksca",
       "verified": true,
-      "group_id": "ksca-6973",
-      "merged_into": null,
+      "group_id": "aicf-503923",
+      "merged_into": "aicf-503923",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -58300,7 +58453,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-503923"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
@@ -58805,7 +58958,7 @@
       "end": "2027-02-13",
       "place_text": "Karnataka",
       "state": "Karnataka",
-      "city": null,
+      "city": "Bengaluru",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/1st-Chessbinder.com-Open-FIDE-Rated-Rapid-Tournament-13th-Feb-2027.pdf",
       "source": "aicf",
@@ -58815,13 +58968,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-506423",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "ksca",
+          "source_url": "https://karnatakachess.com/tournaments/1st-chessbinder-com-open-fide-rated-rapid-tournament-2027/",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -58835,7 +59001,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "FIDE Rating Events"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -58875,8 +59043,8 @@
       ],
       "listed_by": "ksca",
       "verified": true,
-      "group_id": "ksca-7144",
-      "merged_into": null,
+      "group_id": "aicf-506423",
+      "merged_into": "aicf-506423",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -58899,7 +59067,7 @@
         "dates_suspect": false,
         "code_expanded": false,
         "code_unclear": false,
-        "possible_duplicate_of": "aicf-506423"
+        "possible_duplicate_of": null
       },
       "raw_dates": null,
       "dates_from": null,
