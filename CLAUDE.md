@@ -83,6 +83,8 @@ shared by the web site and the Android app, so changing its shape affects both.
 - `scripts/dedup.py` — finding the same tournament across sources and grouping it (pure).
 - `scripts/quality.py` — the quality report (`data/quality.json`) and the review list
   (`data/review.csv`), both pure; a change in either counts as a real change.
+- `scripts/places.py` — India's districts and sub-districts (LGD copy in `config/lgd/`, Government Open Data
+  License - India, via the planemad GitHub mirror) for filling an empty state (pure, no network).
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
 - `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `aoca`, `abca`, `chessfee`, `chessresults_ind`,
@@ -125,7 +127,10 @@ shared by the web site and the Android app, so changing its shape affects both.
   "TAMILNADU STATE LEVEL" label, the code's state letters, exactly one known town in the venue
   (`town_state_in()`; two towns or none: null), or the name (`name_state_in()`: its towns, state
   names and capital letters in brackets "(TN)" all give one state, and no venue town says otherwise;
-  a short form like "UP" outside brackets never counts; two states or none: null).
+  a short form like "UP" outside brackets never counts; two states or none: null), and last
+  `places.state_from_places()` over the name, venue and organiser: LGD districts and sub-districts;
+  exactly one state; a place in two states never counts alone; a place followed by a venue word
+  ("Indore Stadium") is weak, set aside only when two other places agree; `NOT_PLACES` are words, not places. A set state is never changed.
 - `quality.json` `states`: shown upcoming events per Indian state / UT (all 36 listed, 0 included), `no_state`,
   `abroad`; they add up to `overall.upcoming.events`, which `verify_published.py` checks.
 - review.csv kinds: `missing`, `dates_disagree` (a not-past group whose start dates are >1 day apart),

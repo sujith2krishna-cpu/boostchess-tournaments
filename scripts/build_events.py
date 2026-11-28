@@ -47,6 +47,7 @@ from sources import (abca, aicf, aoca, chessbase_calendar, chessfee, chessresult
 from sources.aicf import (MIN_ROWS, check_page_is_sane, event_from_row,  # noqa: E402,F401
                           events_from_rows, parse_html)
 from sources.polite import PoliteClient  # noqa: E402
+import places  # noqa: E402
 from datetime import timedelta  # noqa: E402
 import daily  # noqa: E402
 import dedup  # noqa: E402
@@ -672,7 +673,9 @@ def fill_codes_and_state(event: dict) -> None:
     "TAMILNADU STATE LEVEL ..." (the site says so); the state letters of a full-form AICF code
     in the name ("499268/KA(R)/2026"); exactly one known town in the venue text; then the name
     itself, when its towns, state names and bracketed state letters ("Kanyakumari (TN)") all
-    point to one state and no known town in the venue says otherwise (name_state_in()).
+    point to one state and no known town in the venue says otherwise (name_state_in()); last,
+    India's districts and sub-districts (LGD, scripts/places.py) in the name, venue and
+    organiser, when they point to exactly one state (an ambiguous place never counts alone).
     """
     if event["source"] in CODES_FROM_NAME_SOURCES:
         codes = list(event["codes"] or [])
@@ -684,7 +687,9 @@ def fill_codes_and_state(event: dict) -> None:
         event["state"] = "Tamil Nadu"
         return
     event["state"] = (aicf_code_state_in(event["name"]) or town_state_in(event["place_text"])
-                      or name_state_in(event["name"], event["place_text"]))
+                      or name_state_in(event["name"], event["place_text"])
+                      or places.state_from_places(event["name"], event["place_text"],
+                                                  event.get("organiser"))[0])
 
 
 def add_fide_event_codes(events: list[dict], fide_ids: dict[str, str]) -> int:
