@@ -310,6 +310,26 @@ GitHub e-mails you when a run fails. Open the run, then *Summary* and the red st
 If only *one* source fails the run still succeeds: you see a yellow warning on the run and a
 **Problems** list in the summary. The failed source keeps its old events.
 
+### Health report and alerts (GitHub issues)
+
+GitHub e-mails you about these, so you hear when something goes wrong:
+
+- **Weekly data health** (`.github/workflows/weekly.yml`, every Monday at 07:00 India time, and
+  on its *Run workflow* button): one issue with that title gets a new comment each week (it is
+  reopened if closed). Warnings come first in bold: a source that failed 2 runs in a row, a source
+  with no new events for 14 days, upcoming events down by more than 20% since last week, or the
+  daily data run not succeeding for 2 days. Then each source (OK or failing, last good read, events,
+  change since last week), the totals (records, tournaments shown, upcoming, new this week) and
+  what needs a decision (possible duplicates, upcoming events with no state, events with no date,
+  upcoming events with no link), with the 20 soonest by name and why.
+- **Data alert: ...** (the *alerts* job at the end of every daily data run): when a source fails
+  2 runs in a row, or the daily run itself fails, an issue named after the problem is opened at
+  once (or reopened; never two for one problem). It closes by itself after 2 runs without the
+  problem.
+
+Both only read the data and write issues (the built-in token, `issues: write`); they never change
+data or publish anything. The weekly numbers for "last week" come from git history.
+
 ### Pausing the schedule
 
 Actions tab → **Daily tournament data** → the **...** menu at the top right → **Disable workflow**
@@ -422,8 +442,9 @@ run, even one that fetched nothing; proof the robot is alive), `scraped_count`, 
 `groups_count` (tournaments after grouping), `merged_count` (records with `merged_into` set),
 `possible_duplicates_count`, and `sources`: for each source `enabled`, `status` (`ok`, `failed`, `skipped`,
 `disabled`), `message` (why, when not ok), `count` (events currently listed),
-`last_success` (time), `last_error` (`{at, message}`) and `next_due` (the earliest time it
-will be fetched again).
+`last_success` (time), `last_error` (`{at, message}`), `failures_in_a_row` (fetch attempts in a
+row that failed or were blocked; 0 after a success; the alerts read it) and `next_due` (the
+earliest time it will be fetched again).
 
 ### `data/quality.json` (quality report)
 

@@ -1,0 +1,23 @@
+{
+  "_note": "Made by hand for tests/test_health.py (not a saved file). Only the fields the report reads.",
+  "events": [
+    {"id": "aicf-1", "name": "Old Open", "source": "aicf", "start": "2026-11-01", "end": "2026-11-02", "state": "Kerala",
+     "register_url": null, "brochure_url": "https://example.org/a.pdf", "first_seen": "2026-10-01", "hidden": false,
+     "cancelled": false, "merged_into": null, "gone_from_source": false, "flags": {"possible_duplicate_of": null}},
+    {"id": "aicf-2", "name": "Kollam Rapid", "source": "aicf", "start": "2026-12-06", "end": "2026-12-06", "state": "Kerala",
+     "register_url": "https://example.org/r", "brochure_url": null, "first_seen": "2026-11-29", "hidden": false,
+     "cancelled": false, "merged_into": null, "gone_from_source": false, "flags": {"possible_duplicate_of": null}},
+    {"id": "aicf-3", "name": "Bilaspur Open", "source": "aicf", "start": "2026-12-19", "end": "2026-12-20", "state": null,
+     "register_url": null, "brochure_url": null, "first_seen": "2026-10-01", "hidden": false,
+     "cancelled": false, "merged_into": null, "gone_from_source": false, "flags": {"possible_duplicate_of": "ksca-9"}},
+    {"id": "aicf-4", "name": "Undated State Rapid", "source": "aicf", "start": null, "end": null, "state": "Bihar",
+     "register_url": null, "brochure_url": null, "first_seen": "2026-11-20", "hidden": true, "overridden": {},
+     "cancelled": false, "merged_into": null, "gone_from_source": false, "flags": {"possible_duplicate_of": null}},
+    {"id": "ksca-9", "name": "Bilaspur Open 2026", "source": "ksca", "start": "2026-12-19", "end": "2026-12-20", "state": null,
+     "register_url": null, "brochure_url": null, "first_seen": "2026-11-01", "hidden": false,
+     "cancelled": false, "merged_into": null, "gone_from_source": false, "flags": {"possible_duplicate_of": null}},
+    {"id": "ksca-10", "name": "Grouped copy", "source": "ksca", "start": "2026-12-06", "end": "2026-12-06", "state": "Kerala",
+     "register_url": null, "brochure_url": null, "first_seen": "2026-11-01", "hidden": false,
+     "cancelled": false, "merged_into": "aicf-2", "gone_from_source": false, "flags": {"possible_duplicate_of": null}}
+  ]
+}

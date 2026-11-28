@@ -76,6 +76,14 @@ shared by the web site and the Android app, so changing its shape affects both.
   attempt (missed fetch; it reads meta.json from before the build via `--before`/`--started`). The schedule is every 3 hours at minute 17; most runs fetch nothing. `tests/test_daily.py` checks these rules in the
   workflow file; keep them true when you edit it.
 - Pages publishes only `data/`. `scripts/verify_published.py` checks the live files.
+- The `alerts` job (needs build and deploy, `if: always()`, `contents: read` + `issues: write` only)
+  runs `scripts/health.py alerts`: one "Data alert: ..." issue per problem (a source with
+  `failures_in_a_row` >= 2 in meta.json, or the build / deploy job failing), closed after 2 runs
+  without it (`<!-- ok-runs: N -->` in the issue body).
+- `.github/workflows/weekly.yml` (Monday 01:30 UTC = 07:00 India time, and by hand): `contents: read`,
+  `issues: write`, `actions: read` only; comments the report on the one "Weekly data health" issue.
+  Neither writes data or publishes. GitHub calls go through `scripts/github_issues.py` (standard
+  library, the built-in token), never through the source client. `tests/test_health.py` checks both.
 
 ## Layout
 
@@ -83,6 +91,8 @@ shared by the web site and the Android app, so changing its shape affects both.
 - `scripts/dedup.py` — finding the same tournament across sources and grouping it (pure).
 - `scripts/quality.py` — the quality report (`data/quality.json`) and the review list
   (`data/review.csv`), both pure; a change in either counts as a real change.
+- `scripts/health.py` — the weekly data health report and the data alerts (pure planning, then
+  GitHub issues via `scripts/github_issues.py`).
 - `scripts/places.py` — India's districts and sub-districts (LGD copy in `config/lgd/`, Government Open Data
   License - India, via the planemad GitHub mirror) for filling an empty state (pure, no network).
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
