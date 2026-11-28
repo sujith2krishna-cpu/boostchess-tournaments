@@ -226,12 +226,15 @@ _CITY_TO_STATE = {
                   "kanyakumari, cuddalore, chengalpattu, thiruvarur, krishnagiri, dindigul, "
                   "kanchipuram, namakkal, kovilpatti, aruppukottai, sirkali, ranipet, "
                   "pallikaranai, pudukkottai, pudukottai, tirupattur",
+    "Punjab": "sangrur",
+    "Goa": "ponda",
     "Maharashtra": "mumbai, navi mumbai, pune, nagpur, nashik, thane, kalyan, sangli, "
                    "nandurbar, bhandara",
     "Karnataka": "bengaluru, bangalore, mysuru, mysore, mangalore, mangaluru, belagavi, belgaum, "
                  "tumakuru, tumkur, davangere, davanagere, haveri, koppal, sullia",
-    "Telangana": "hyderabad, secunderabad, kukatpally, nizampet, pragathi nagar",
-    "West Bengal": "kolkata, siliguri, rishra",
+    "Telangana": "hyderabad, secunderabad, kukatpally, nizampet, pragathi nagar, bhupalpally, "
+                 "bhupalapally",
+    "West Bengal": "kolkata, siliguri, rishra, barasat",
     "Gujarat": "ahmedabad, surat, vadodara",
     "Madhya Pradesh": "bhopal, indore, jabalpur, burhanpur, ujjain",
     "Chhattisgarh": "raipur",
@@ -240,9 +243,10 @@ _CITY_TO_STATE = {
     "Uttar Pradesh": "lucknow, ghaziabad, kanpur, prayagraj, budaun",
     "Rajasthan": "jaipur",
     "Bihar": "patna",
-    "Kerala": "kochi, thiruvananthapuram, edappally, karavaloor",
-    "Odisha": "bhubaneswar, puri",
-    "Jharkhand": "ranchi",
+    "Kerala": "kochi, thiruvananthapuram, edappally, karavaloor, kozhikode, calicut, kannur, "
+              "payyannur, payyanur, thrissur",
+    "Odisha": "bhubaneswar, puri, kalahandi",
+    "Jharkhand": "ranchi, dhanbad",
     "Assam": "guwahati, udharbond",
 }
 _CITY_BY_KEY = {
@@ -258,6 +262,7 @@ _ONE_TOWN = {
     "tirupur": "tiruppur", "pudukottai": "pudukkottai", "pallikaranai": "chennai",
     "edappally": "kochi", "kukatpally": "hyderabad", "nizampet": "hyderabad",
     "pragathi nagar": "hyderabad", "secunderabad": "hyderabad",
+    "calicut": "kozhikode", "payyanur": "payyannur", "bhupalapally": "bhupalpally",
 }
 # A town name followed by one of these words is a street or a part of another place
 # ("Hangal Road, Haveri", "Kalyan Nagar, Bengaluru"), not where the event is.
@@ -266,14 +271,47 @@ _TOWN_PATTERN = re.compile(
     r"(?!\s+(?:road|rd|highway|bypass|street|nagar|colony|layout|cross)\b)")
 
 
+def _towns_in(text) -> set[str]:
+    return {_ONE_TOWN.get(m.group(1), m.group(1)) for m in _TOWN_PATTERN.finditer(_key(text or ""))}
+
+
 def town_state_in(text) -> str | None:
     """The state of the one known town written anywhere in a venue text, else None.
 
     "Jilla Valmiki Bhavan, Hangal Road, Haveri" -> Karnataka. Two different known towns
     ("SILIGURI INDORE STADIUM": Siliguri and Indore) or none: None (best effort, never a guess).
     """
-    towns = {_ONE_TOWN.get(m.group(1), m.group(1)) for m in _TOWN_PATTERN.finditer(_key(text or ""))}
+    towns = _towns_in(text)
     return _CITY_BY_KEY[next(iter(towns))] if len(towns) == 1 else None
+
+
+# State names as words in an event's name ("All Assam ...", "70th PUNJAB STATE SCHOOL GAMES").
+# The short forms (MP, UP, TN, ...) are left out here: "Warm Up" is not Uttar Pradesh. A short
+# form counts only in capitals inside brackets, "at Kanyakumari (TN)" (state_letters below).
+_SHORT_FORMS = frozenset({"mp", "up", "wb", "tn", "ap", "hp", "jk", "j and k"})
+_STATE_WORDS = re.compile(r"\b(" + "|".join(
+    re.escape(k) for k in sorted((k for k in _STATE_BY_KEY if k not in _SHORT_FORMS),
+                                 key=len, reverse=True)) + r")\b")
+_STATE_LETTERS = re.compile(r"\(\s*([A-Z]{2})\s*\)")
+_NOT_STATE_LETTERS = frozenset({"UK"})  # "(UK)" is more often the United Kingdom
+
+
+def name_state_in(name, venue=None) -> str | None:
+    """The one Indian state an event's name points to, else None (evidence only, never a guess).
+
+    Evidence in the name: known towns ("... at Nizampet, Hyderabad"), state names as words
+    ("All Assam Inter School ..."), and a state's letters in capitals in brackets ("at
+    Kanyakumari (TN)"). It all has to point to one state, and any known town in the venue has to
+    be in that state too; two states anywhere, or none: None.
+    """
+    states = {_CITY_BY_KEY[t] for t in _towns_in(name)}
+    states |= {_STATE_BY_KEY[m.group(1)] for m in _STATE_WORDS.finditer(_key(name or ""))}
+    states |= {IN_STATE_CODES[m.group(1)] for m in _STATE_LETTERS.finditer(name or "")
+               if m.group(1) in IN_STATE_CODES and m.group(1) not in _NOT_STATE_LETTERS}
+    if len(states) != 1:
+        return None
+    venue_states = {_CITY_BY_KEY[t] for t in _towns_in(venue)}
+    return next(iter(states)) if venue_states <= states else None
 
 
 # Kerala's 14 districts, with old spellings and the main towns in each. The Kerala Chess

@@ -670,7 +670,9 @@ def fill_codes_and_state(event: dict) -> None:
 
     The state is filled only when it is empty, in this order: chessfee's category
     "TAMILNADU STATE LEVEL ..." (the site says so); the state letters of a full-form AICF code
-    in the name ("499268/KA(R)/2026"); exactly one known town in the venue text.
+    in the name ("499268/KA(R)/2026"); exactly one known town in the venue text; then the name
+    itself, when its towns, state names and bracketed state letters ("Kanyakumari (TN)") all
+    point to one state and no known town in the venue says otherwise (name_state_in()).
     """
     if event["source"] in CODES_FROM_NAME_SOURCES:
         codes = list(event["codes"] or [])
@@ -681,7 +683,8 @@ def fill_codes_and_state(event: dict) -> None:
                                              for c in event["tags"]["categories"]):
         event["state"] = "Tamil Nadu"
         return
-    event["state"] = aicf_code_state_in(event["name"]) or town_state_in(event["place_text"])
+    event["state"] = (aicf_code_state_in(event["name"]) or town_state_in(event["place_text"])
+                      or name_state_in(event["name"], event["place_text"]))
 
 
 def add_fide_event_codes(events: list[dict], fide_ids: dict[str, str]) -> int:

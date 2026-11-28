@@ -120,8 +120,10 @@ shared by the web site and the Android app, so changing its shape affects both.
 - AICF codes in other sites' names: next to "AICF", or AICF's full form `499268/KA(R)/2026` anywhere
   (`aicf_codes_in()`). `fill_codes_and_state()` (each run, also for stored events) adds them to
   chessfee / Chess-Results / ChessBase `codes` and fills an empty Indian state from: chessfee's
-  "TAMILNADU STATE LEVEL" label, the code's state letters, or exactly one known town in the venue
-  (`town_state_in()`; two towns or none: null).
+  "TAMILNADU STATE LEVEL" label, the code's state letters, exactly one known town in the venue
+  (`town_state_in()`; two towns or none: null), or the name (`name_state_in()`: its towns, state
+  names and capital letters in brackets "(TN)" all give one state, and no venue town says otherwise;
+  a short form like "UP" outside brackets never counts; two states or none: null).
 - `quality.json` `states`: shown upcoming events per Indian state / UT (all 36 listed, 0 included), `no_state`,
   `abroad`; they add up to `overall.upcoming.events`, which `verify_published.py` checks.
 - review.csv kinds: `missing`, `dates_disagree` (a not-past group whose start dates are >1 day apart),
