@@ -42,8 +42,10 @@ def _number(event: dict) -> str:
     return event["id"].split("-", 1)[1]
 
 
-def fetch(cache: Path, snapshot: Path = SNAPSHOT, client=None) -> int:
+def fetch(cache: Path, snapshot: Path = SNAPSHOT, client=None, fide_rated_only: bool = False) -> int:
     events = _load(snapshot)["events"]
+    if fide_rated_only:  # only these pages showed a "FIDE-Event-ID" row
+        events = [e for e in events if (e.get("tags") or {}).get("fide_rated") is True]
     cache.mkdir(parents=True, exist_ok=True)
     todo = [e for e in events if not (cache / f"{_number(e)}.html").exists()]
     if len(todo) > MAX_PAGES:
@@ -85,6 +87,8 @@ def apply(cache: Path, today: date | None = None, snapshot: Path = SNAPSHOT) -> 
     doc = _load(snapshot)
     changed, kept, fields = 0, [], Counter()
     events = []
+    listing = doc.setdefault("listing", {})
+    fide_ids = dict(listing.get(cr.FIDE_IDS_KEY) or {})
     for old in doc["events"]:
         old = canonical(old)
         page = cache / f"{_number(old)}.html"
@@ -101,9 +105,17 @@ def apply(cache: Path, today: date | None = None, snapshot: Path = SNAPSHOT) -> 
             continue
         diff = [k for k in new if new[k] != old[k]]
         diff += [f"tags.{k}" for k in new["tags"] if new["tags"][k] != old["tags"][k]]
+        if details.get("fide_event_id") != fide_ids.get(old["id"]):
+            diff.append("fide_event_id (listing)")
+        if details.get("fide_event_id"):
+            fide_ids[old["id"]] = details["fide_event_id"]
+        else:
+            fide_ids.pop(old["id"], None)
         fields.update(diff)
         changed += bool(diff)
         events.append(new)
+    if fide_ids:
+        listing[cr.FIDE_IDS_KEY] = dict(sorted(fide_ids.items()))
     doc["events"] = [canonical(e) for e in sorted(events, key=sort_key)]
     snapshot.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
                         newline="\n")
@@ -119,8 +131,12 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("step", choices=("fetch", "apply"))
     parser.add_argument("cache", type=Path, help="folder for the saved pages (outside the repo)")
+    parser.add_argument("--fide-rated-only", action="store_true",
+                        help="fetch only the pages of events already known to be FIDE rated")
     args = parser.parse_args(argv)
-    return fetch(args.cache) if args.step == "fetch" else apply(args.cache)
+    if args.step == "fetch":
+        return fetch(args.cache, fide_rated_only=args.fide_rated_only)
+    return apply(args.cache)
 
 
 if __name__ == "__main__":

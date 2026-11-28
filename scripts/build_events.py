@@ -88,8 +88,24 @@ def load_config(path: Path = CONFIG_PATH, warnings: list[str] | None = None) -> 
         if not isinstance(flag, bool):
             raise BuildError(f'config/sources.json: "{name}" needs {{"enabled": true}} or '
                              '{"enabled": false}.')
+        publish = setting.get("publish", True)
+        if not isinstance(publish, bool):
+            raise BuildError(f'config/sources.json: "{name}": "publish" must be true or false.')
+        if not publish and flag:
+            raise BuildError(f'config/sources.json: "{name}" has "publish": false, so it must also '
+                             'have "enabled": false (a source we may not publish is not fetched).')
         enabled[name] = flag
     return enabled
+
+
+def unpublished_sources(path: Path = CONFIG_PATH) -> frozenset[str]:
+    """Sources with "publish": false in config/sources.json: not fetched, and none of their
+    records go into the published files (their snapshot is kept outside data/, in archive/)."""
+    load_config(path)  # the same checks, the same plain-words errors
+    if not Path(path).exists():
+        return frozenset()
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    return frozenset(n for n, s in raw.items() if s.get("publish", True) is False)
 
 
 # --------------------------------------------------------------------------
@@ -656,6 +672,30 @@ def fill_codes_and_state(event: dict) -> None:
     event["state"] = aicf_code_state_in(event["name"]) or town_state_in(event["place_text"])
 
 
+def add_fide_event_codes(events: list[dict], fide_ids: dict[str, str]) -> int:
+    """A Chess-Results tournament's "FIDE-Event-ID" becomes one of its AICF codes, only when it is
+    a 6-digit number and an AICF event has exactly that code (FIDE uses AICF's event code for
+    Indian events). Grouping then treats the shared code as proof. Returns how many were added.
+
+    Only an AICF event that has that code and no other one counts: a row with two codes is two
+    sections listed together (494716/494717: Junior open and girls), and a code on two AICF events
+    proves nothing; in those cases the number is not used."""
+    holders: dict[str, list[dict]] = defaultdict(list)
+    for e in events:
+        if e["source"] == "aicf":
+            for c in e["codes"]:
+                holders[c].append(e)
+    added = 0
+    for event in events:
+        number = fide_ids.get(event["id"]) if event["source"] == "chessresults_ind" else None
+        owners = holders.get(number or "", [])
+        if number and re.fullmatch(r"\d{6}", number) and len(owners) == 1 \
+                and owners[0]["codes"] == [number] and number not in event["codes"]:
+            event["codes"] = list(event["codes"]) + [number]
+            added += 1
+    return added
+
+
 def review_csv(rows: list[dict]) -> bytes:
     buffer = io.StringIO(newline="")
     writer = csv.DictWriter(buffer, fieldnames=dedup.REVIEW_COLUMNS, lineterminator="\n")
@@ -688,7 +728,8 @@ def _count(snapshot: dict) -> int:
 
 def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = None,
         min_rows: int = MIN_ROWS, config: dict | None = None,
-        min_hours_between_fetches: float | None = None) -> dict:
+        min_hours_between_fetches: float | None = None,
+        unpublished: frozenset[str] | None = None) -> dict:
     """Do a full build. Returns a report; raises BuildError (and writes nothing) on trouble.
 
     `html` is a saved AICF page (offline use); with it, only AICF is read unless `config` says more.
@@ -704,6 +745,13 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     if config is None:
         config = ({"aicf": True, **{n: False for n in SOURCE_MODULES if n != "aicf"}}
                   if offline else load_config(warnings=warnings))
+        if unpublished is None and not offline:
+            unpublished = unpublished_sources()
+    unpublished = frozenset(unpublished or ())
+    for name in sorted(unpublished):
+        if (data_dir / "sources" / f"{name}.json").exists():
+            warnings.append(f"data/sources/{name}.json is still in data/, so GitHub Pages publishes "
+                            f"it although {name} has \"publish\": false. Move it to archive/.")
 
     previous_doc = load_json(data_dir / "events.json") or {}
     previous_meta = load_json(data_dir / "meta.json") or {}
@@ -726,6 +774,15 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     attempted = succeeded = 0
     for name in AUTOMATIC_SOURCES:
         module = SOURCE_MODULES[name]
+        if name in unpublished:  # not fetched, and nothing of it goes into data/
+            snapshots[name] = {"events": [], "listing": {}, "found": None}
+            source_meta[name] = {"enabled": False, "status": "disabled",
+                                 "message": "switched off and not published "
+                                            "(config/sources.json: \"publish\": false)",
+                                 "last_success": None, "last_error": None, "count": 0,
+                                 "next_due": None}
+            source_stats[name] = {"requests": 0, "due": False}
+            continue
         snapshot = load_snapshot(data_dir, name, previous_events)
         before = previous_sources.get(name)
         if before is None and name == "aicf" and previous_meta.get("generated_at"):
@@ -796,6 +853,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
     for event in events:
         fill_tags(event)
         fill_codes_and_state(event)
+    add_fide_event_codes(events, snapshots["chessresults_ind"]["listing"].get(
+        chessresults_ind.FIDE_IDS_KEY) or {})
     apply_overrides(events, overrides, errors, warnings)
     if errors:
         raise DataFileError("Nothing was written. Please fix:\n  " + "\n  ".join(errors))
@@ -834,6 +893,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
                 "review/dedup_review.csv": review_csv(grouping["review"]),
                 "quality.json": dump_json(quality_doc), "review.csv": review_bytes}
     for name, snapshot in snapshots.items():
+        if name in unpublished:
+            continue
         if snapshot["events"] or (data_dir / "sources" / f"{name}.json").exists():
             payloads[f"sources/{name}.json"] = dump_json({
                 "source": name, "found": snapshot["found"], "listing": snapshot["listing"],

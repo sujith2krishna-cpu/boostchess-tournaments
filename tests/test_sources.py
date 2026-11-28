@@ -347,7 +347,9 @@ def test_config_file_is_validated(tmp_path):
     with pytest.raises(be.BuildError, match='"aicf" needs'):
         be.load_config(path)
     real = be.load_config()  # the committed config/sources.json
-    assert set(real) == set(be.SOURCE_MODULES) and all(real.values())
+    assert set(real) == set(be.SOURCE_MODULES)
+    # ChessBase India is off until they give permission (T12); everything else is on
+    assert [n for n, on in real.items() if not on] == ["chessbase_calendar"]
 
 
 # ---- grouping (schema 5: every record stays, the same tournament shares a group) -----

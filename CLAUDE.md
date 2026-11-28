@@ -77,7 +77,9 @@ shared by the web site and the Android app, so changing its shape affects both.
 - `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `chessfee`, `chessresults_ind`,
   `chessbase_calendar`) with `fetch(client, previous, today, **options)` returning
   `(events, listing_state, stats)`; `polite.py` is the shared client. Switch sources in
-  `config/sources.json`.
+  `config/sources.json`; `"publish": false` (needs `"enabled": false`) also keeps a source's records out of
+  every published file. **ChessBase is off and unpublished** (its terms forbid bulk scraping without
+  permission; drafts in `docs/PERMISSION_EMAILS.md`); its snapshot is in `archive/`, outside `data/`.
 - `data/sources/<name>.json` — per-source snapshots (history, what was already read).
 - `tests/` — pytest, fully offline (a fake web in `conftest.py`). `tests/fixtures/` holds saved,
   trimmed, phone-free pages.
@@ -142,7 +144,9 @@ shared by the web site and the Android app, so changing its shape affects both.
 - Chess-Results details: the *Rating calculation* row gives `fide_rated` "stated" (international: true; national
   only / not rated: false; "-": nothing; disagrees with the name: the name stays). Brochure: a brochure-named file,
   else the only PDF unless it looks like results / pairings / ranks / players / prizes / rules / minutes.
-  *Number of rounds* is not stored (no schema field). `scripts/refresh_chessresults.py` re-reads the stored pages
+  *Number of rounds* is not stored (no schema field). *FIDE-Event-ID* (6 digits) is kept in the snapshot's
+  `listing.fide_event_ids` and becomes an AICF code (`add_fide_event_codes()`) only when exactly one AICF event has
+  that code and no other code. `scripts/refresh_chessresults.py` re-reads the stored pages
   once, by hand (fetch into a folder outside the repo, max 400 pages, then apply offline); never from the workflow.
 - UPCSA (`upchess.org/tournament.php`): one request, the table only. `registration_deadline` = the end of the
   normal entry dates (not the late-fee dates), only when it is a real date not after the event.

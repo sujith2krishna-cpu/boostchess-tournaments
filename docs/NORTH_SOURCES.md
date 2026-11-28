@@ -55,8 +55,8 @@ dates and places, robots.txt allows it, no login.
   Fast!"). Dates and venues are inside sentences, so we would have to guess, which we never do.
 - **Also relevant to our existing `chessbase_calendar` source:** the Terms of Use (updated 16 Sep
   2026) say not to "scrape the site in bulk" without written permission. Our calendar source reads
-  a few calendar pages and some event pages per run. That is not bulk, but it is worth a decision
-  (keep, ask ChessBase India for permission, or switch it off in `config/sources.json`).
+  a few calendar pages and some event pages per run. **Decided 28 Nov 2026:** switched off and not
+  published (`"publish": false`) until ChessBase India gives permission (`docs/PERMISSION_EMAILS.md`).
 
 ## What would help north India instead
 
@@ -64,4 +64,5 @@ dates and places, robots.txt allows it, no login.
   Lakhimpur Kheri): the same kind of page may exist for Delhi, Haryana, Rajasthan, Punjab,
   Uttarakhand, Bihar and Madhya Pradesh. Each needs its own check (robots.txt, plain HTML,
   updated in the last 60 days).
-- The Chess-Results "FIDE-Event-ID" row (above) to group Chess-Results with AICF automatically.
+- The Chess-Results "FIDE-Event-ID" row (above): **done 28 Nov 2026**, used as an AICF code for grouping.
+- **Decided 28 Nov 2026:** the FIDE list is not used.

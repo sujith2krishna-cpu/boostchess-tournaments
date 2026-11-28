@@ -58,6 +58,11 @@ _ROW_INTERNATIONAL = re.compile(r"(?i)\b(?:rating|elo)\s+(?:international|intern
                                 r"internazionale|fide)\b")
 _ROW_NATIONAL = re.compile(r"(?i)\b(?:rating|elo)\s+(?:national|nacional|nazionale)\b")
 _ROW_NOT_RATED = re.compile(r"(?i)\b(?:not\s+rated|unrated|non[\s-]*rated|no\s+rating)\b")
+_SIX_DIGITS = re.compile(r"\d{6}")
+# Where the snapshot's listing state keeps each tournament's "FIDE-Event-ID" ({event id: number}).
+# It is not part of an event; build_events.add_fide_event_codes() turns it into an AICF code
+# only when an AICF event has exactly that code.
+FIDE_IDS_KEY = "fide_event_ids"
 _PDF_NAME = re.compile(r"(?i)\.pdf\s*$")
 # A file that is clearly not a brochure (names flattened: "_" "-" "." read as spaces).
 _NOT_BROCHURE = re.compile(r"(?i)\b(?:results?|pairings?|starting\s*ranks?|start\s*list|players?|"
@@ -144,7 +149,16 @@ def parse_details(html: str, page_url: str) -> dict:
         "files": [(clean_text(a.get_text(" ")), urljoin(page_url, a["href"]))
                   for a in downloads.find_all("a", href=True)] if downloads else [],
         "rating_row": clean_text(rows[rating_key].get_text(" ")) if rating_key else None,
+        "fide_event_id": fide_event_id(rows["FIDE-Event-ID"].get_text(" ")) if "FIDE-Event-ID" in rows
+                         else None,
     }
+
+
+def fide_event_id(text) -> str | None:
+    """The "FIDE-Event-ID" row when it is exactly a 6-digit number (FIDE uses AICF's event code
+    for Indian events), else None."""
+    text = clean_text(text or "")
+    return text if _SIX_DIGITS.fullmatch(text) else None
 
 
 def rating_from_row(text) -> bool | None:
@@ -245,6 +259,7 @@ def fetch(client, previous: dict, today: date, **_options):
     old_events = {e["id"]: e for e in previous.get("events", [])}
     old_listing = previous.get("listing", {})
     events, listing = [], {}
+    fide_ids = dict(old_listing.get(FIDE_IDS_KEY) or {})  # kept for every event ever read
     can_fetch = True
     for item in items.values():
         event_id = f"{NAME}-{item['id']}"
@@ -270,4 +285,10 @@ def fetch(client, previous: dict, today: date, **_options):
             continue  # a tournament we know nothing about yet waits for a later run
         events.append(build_event(item, details, today))
         listing[item["url"]] = signature
+        if details.get("fide_event_id"):
+            fide_ids[event_id] = details["fide_event_id"]
+        else:
+            fide_ids.pop(event_id, None)  # the page no longer says it
+    if fide_ids:
+        listing[FIDE_IDS_KEY] = dict(sorted(fide_ids.items()))
     return events, listing, {"found": len(items), "events_with_details": len(events)}

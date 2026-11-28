@@ -94,7 +94,37 @@
     "https://chess-results.com/tnr1534985.aspx?lan=1": "58f3572e7276",
     "https://chess-results.com/tnr1519549.aspx?lan=1": "0f900b754545",
     "https://chess-results.com/tnr1538330.aspx?lan=1": "ae6b4ccc5942",
-    "https://chess-results.com/tnr1539367.aspx?lan=1": "df84643f10d7"
+    "https://chess-results.com/tnr1539367.aspx?lan=1": "df84643f10d7",
+    "fide_event_ids": {
+      "chessresults_ind-1487030": "487788",
+      "chessresults_ind-1493397": "487790",
+      "chessresults_ind-1502060": "499268",
+      "chessresults_ind-1502344": "501318",
+      "chessresults_ind-1514745": "504058",
+      "chessresults_ind-1519059": "503296",
+      "chessresults_ind-1519549": "503517",
+      "chessresults_ind-1522214": "504554",
+      "chessresults_ind-1522216": "504557",
+      "chessresults_ind-1522500": "506121",
+      "chessresults_ind-1522647": "507029",
+      "chessresults_ind-1526947": "510449",
+      "chessresults_ind-1532524": "494155",
+      "chessresults_ind-1532678": "502180",
+      "chessresults_ind-1538066": "506262",
+      "chessresults_ind-1538330": "510562",
+      "chessresults_ind-1538894": "486240",
+      "chessresults_ind-1539417": "504583",
+      "chessresults_ind-1540498": "508734",
+      "chessresults_ind-1540566": "509456",
+      "chessresults_ind-1543329": "485283",
+      "chessresults_ind-1543357": "500404",
+      "chessresults_ind-1544116": "496730",
+      "chessresults_ind-1544300": "511685",
+      "chessresults_ind-1545661": "510558",
+      "chessresults_ind-1545810": "511857",
+      "chessresults_ind-1548779": "494717",
+      "chessresults_ind-1548787": "494716"
+    }
   },
   "events": [
     {
