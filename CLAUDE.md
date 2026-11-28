@@ -23,7 +23,11 @@ shared by the web site and the Android app, so changing its shape affects both.
    `overrides.csv` are edited by non-programmers on the GitHub website. Keep the
    columns simple, accept both `DD-MM-YYYY` and `YYYY-MM-DD`, and write error
    messages in plain words that name the file, the line number and the problem.
-5. **Tests must pass before any commit:** `python -m pytest`.
+5. **Tests must pass before any commit:** `python -m pytest`. Every pull request now shows a test
+   check (`.github/workflows/tests.yml`, check `pytest`); never merge while it is red. That
+   workflow only reads (`contents: read`, no secrets, no commit, no publishing, its own concurrency
+   group); `tests/test_pr_checks.py` keeps it that way. The tests fail on any real network connection
+   (`no_network` in `conftest.py`).
 6. **No secrets, no screenshots of desktop windows.** The repo is public; store
    no passwords or tokens.
 
