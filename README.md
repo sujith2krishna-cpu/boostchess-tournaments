@@ -182,6 +182,11 @@ How two records from **different sites** are compared, in this order:
 7. **Score** = 0.85 x name + 0.10 x place (same city 1, same state 0.5) + 0.05 x same end
    date. **0.80 or more: same group. 0.50 to 0.80: kept apart and flagged** with
    `flags.possible_duplicate_of` (the better-ranked record's `id`). Below 0.50: different.
+   **Different academies are not flagged:** when both names name their own academy, club,
+   foundation or association ("Vetrious Chess Academy ...", "Dragon Chess Academy ...") and those
+   differ (one spelling of one name, like Vetri / Veteri, counts as the same), a 0.50-0.80 pair is
+   not flagged, unless the venue or the organiser matches. A code, a Chess-Results page or a
+   brochure link still proves "same", and `pairs.csv` still beats it all.
 
 Two records from the same site are never grouped automatically, and a group never takes in two
 records that a rule above calls different (so two sections cannot end up together through a

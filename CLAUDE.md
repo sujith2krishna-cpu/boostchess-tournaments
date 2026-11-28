@@ -108,7 +108,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   only its gaps. Rules in order: country, state/city (only when both known), start within ±1 day,
   name word-set score, section guard (rating limit / age / category letter / format), strong proof
   (shared AICF code or Chess-Results page beats 2–5; same brochure beats the name only), score
-  ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
+  ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`, except when both names name their own, different
+  academy / club / foundation / association (`organisers()`: "Vetrious" vs "Dragon"; Vetri = Veteri) and
+  neither the venue nor the organiser field matches: then different (not hard). Same-source records are never grouped by the
   algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
   dates, else manual > kca > tnsca > ksca > upcsa > aoca > abca > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
   district: it matches the towns inside it (`kerala_district()`), unknown towns never block. A UPCSA `city`
