@@ -3,7 +3,8 @@
   "kca": {"enabled": true},
   "tnsca": {"enabled": true},
   "ksca": {"enabled": true},
+  "upcsa": {"enabled": true},
   "chessfee": {"enabled": true},
   "chessresults_ind": {"enabled": true},
-  "chessbase_calendar": {"enabled": true}
+  "chessbase_calendar": {"enabled": false, "publish": false}
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T00:26:01+05:30",
+  "generated_at": "2026-11-28T07:52:09+05:30",
   "today": "2026-11-28",
   "windows": {
     "next_30_days": {
@@ -14,43 +14,43 @@
   "target": {
     "window": "next_30_days",
     "fully_known_pct": 95.0,
-    "now_pct": 17.6,
+    "now_pct": 18.9,
     "met": false
   },
   "overall": {
     "next_30_days": {
-      "events": 227,
-      "fully_known": 40,
-      "fully_known_pct": 17.6,
-      "unknown_format": 52,
-      "unknown_format_pct": 22.9,
-      "unknown_fide": 165,
-      "unknown_fide_pct": 72.7,
+      "events": 228,
+      "fully_known": 43,
+      "fully_known_pct": 18.9,
+      "unknown_format": 50,
+      "unknown_format_pct": 21.9,
+      "unknown_fide": 166,
+      "unknown_fide_pct": 72.8,
       "no_state": 41,
-      "no_state_pct": 18.1,
+      "no_state_pct": 18.0,
       "suspect_dates": 0,
       "suspect_dates_pct": 0.0,
       "no_register_link": 172,
-      "no_register_link_pct": 75.8,
-      "no_brochure": 135,
-      "no_brochure_pct": 59.5
+      "no_register_link_pct": 75.4,
+      "no_brochure": 113,
+      "no_brochure_pct": 49.6
     },
     "upcoming": {
       "events": 304,
-      "fully_known": 72,
-      "fully_known_pct": 23.7,
-      "unknown_format": 83,
-      "unknown_format_pct": 27.3,
-      "unknown_fide": 185,
-      "unknown_fide_pct": 60.9,
-      "no_state": 44,
-      "no_state_pct": 14.5,
+      "fully_known": 62,
+      "fully_known_pct": 20.4,
+      "unknown_format": 94,
+      "unknown_format_pct": 30.9,
+      "unknown_fide": 186,
+      "unknown_fide_pct": 61.2,
+      "no_state": 43,
+      "no_state_pct": 14.1,
       "suspect_dates": 0,
       "suspect_dates_pct": 0.0,
-      "no_register_link": 244,
-      "no_register_link_pct": 80.3,
-      "no_brochure": 168,
-      "no_brochure_pct": 55.3
+      "no_register_link": 243,
+      "no_register_link_pct": 79.9,
+      "no_brochure": 146,
+      "no_brochure_pct": 48.0
     }
   },
   "sources": {
@@ -93,35 +93,35 @@
     "aicf": {
       "next_30_days": {
         "events": 51,
-        "fully_known": 37,
-        "fully_known_pct": 72.5,
-        "unknown_format": 10,
-        "unknown_format_pct": 19.6,
+        "fully_known": 39,
+        "fully_known_pct": 76.5,
+        "unknown_format": 8,
+        "unknown_format_pct": 15.7,
         "unknown_fide": 2,
         "unknown_fide_pct": 3.9,
         "no_state": 1,
         "no_state_pct": 2.0,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
-        "no_register_link": 42,
-        "no_register_link_pct": 82.4,
+        "no_register_link": 40,
+        "no_register_link_pct": 78.4,
         "no_brochure": 1,
         "no_brochure_pct": 2.0
       },
       "upcoming": {
         "events": 102,
-        "fully_known": 66,
-        "fully_known_pct": 64.7,
-        "unknown_format": 23,
-        "unknown_format_pct": 22.5,
+        "fully_known": 55,
+        "fully_known_pct": 53.9,
+        "unknown_format": 34,
+        "unknown_format_pct": 33.3,
         "unknown_fide": 6,
         "unknown_fide_pct": 5.9,
         "no_state": 3,
         "no_state_pct": 2.9,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
-        "no_register_link": 91,
-        "no_register_link_pct": 89.2,
+        "no_register_link": 89,
+        "no_register_link_pct": 87.3,
         "no_brochure": 14,
         "no_brochure_pct": 13.7
       }
@@ -234,6 +234,42 @@
         "no_brochure_pct": 95.2
       }
     },
+    "upcsa": {
+      "next_30_days": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      },
+      "upcoming": {
+        "events": 0,
+        "fully_known": 0,
+        "fully_known_pct": null,
+        "unknown_format": 0,
+        "unknown_format_pct": null,
+        "unknown_fide": 0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
+        "suspect_dates": 0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
+        "no_brochure": 0,
+        "no_brochure_pct": null
+      }
+    },
     "chessfee": {
       "next_30_days": {
         "events": 13,
@@ -272,38 +308,38 @@
     },
     "chessresults_ind": {
       "next_30_days": {
-        "events": 114,
-        "fully_known": 2,
-        "fully_known_pct": 1.8,
-        "unknown_format": 6,
-        "unknown_format_pct": 5.3,
-        "unknown_fide": 107,
-        "unknown_fide_pct": 93.9,
-        "no_state": 39,
-        "no_state_pct": 34.2,
-        "suspect_dates": 0,
-        "suspect_dates_pct": 0.0,
-        "no_register_link": 98,
-        "no_register_link_pct": 86.0,
-        "no_brochure": 101,
-        "no_brochure_pct": 88.6
-      },
-      "upcoming": {
-        "events": 116,
+        "events": 115,
         "fully_known": 3,
         "fully_known_pct": 2.6,
         "unknown_format": 6,
         "unknown_format_pct": 5.2,
         "unknown_fide": 108,
-        "unknown_fide_pct": 93.1,
+        "unknown_fide_pct": 93.9,
         "no_state": 39,
-        "no_state_pct": 33.6,
+        "no_state_pct": 33.9,
         "suspect_dates": 0,
         "suspect_dates_pct": 0.0,
-        "no_register_link": 98,
-        "no_register_link_pct": 84.5,
-        "no_brochure": 103,
-        "no_brochure_pct": 88.8
+        "no_register_link": 100,
+        "no_register_link_pct": 87.0,
+        "no_brochure": 79,
+        "no_brochure_pct": 68.7
+      },
+      "upcoming": {
+        "events": 117,
+        "fully_known": 4,
+        "fully_known_pct": 3.4,
+        "unknown_format": 6,
+        "unknown_format_pct": 5.1,
+        "unknown_fide": 109,
+        "unknown_fide_pct": 93.2,
+        "no_state": 39,
+        "no_state_pct": 33.3,
+        "suspect_dates": 0,
+        "suspect_dates_pct": 0.0,
+        "no_register_link": 100,
+        "no_register_link_pct": 85.5,
+        "no_brochure": 81,
+        "no_brochure_pct": 69.2
       }
     },
     "chessbase_calendar": {
@@ -325,28 +361,79 @@
         "no_brochure_pct": null
       },
       "upcoming": {
-        "events": 1,
+        "events": 0,
         "fully_known": 0,
-        "fully_known_pct": 0.0,
+        "fully_known_pct": null,
         "unknown_format": 0,
-        "unknown_format_pct": 0.0,
+        "unknown_format_pct": null,
         "unknown_fide": 0,
-        "unknown_fide_pct": 0.0,
-        "no_state": 1,
-        "no_state_pct": 100.0,
+        "unknown_fide_pct": null,
+        "no_state": 0,
+        "no_state_pct": null,
         "suspect_dates": 0,
-        "suspect_dates_pct": 0.0,
-        "no_register_link": 1,
-        "no_register_link_pct": 100.0,
+        "suspect_dates_pct": null,
+        "no_register_link": 0,
+        "no_register_link_pct": null,
         "no_brochure": 0,
-        "no_brochure_pct": 0.0
+        "no_brochure_pct": null
       }
     }
   },
-  "alerts": [],
+  "alerts": [
+    {
+      "source": "aicf",
+      "window": "upcoming",
+      "what": "fully_known_drop",
+      "message": "aicf: fully known (upcoming) fell from 64.7% to 53.9%"
+    }
+  ],
   "review": {
-    "missing": 187,
-    "dates_disagree": 1,
+    "missing": 185,
+    "dates_disagree": 0,
     "possible_duplicates": 18
+  },
+  "states": {
+    "window": "upcoming",
+    "events": 304,
+    "by_state": {
+      "Andaman and Nicobar Islands": 0,
+      "Andhra Pradesh": 2,
+      "Arunachal Pradesh": 0,
+      "Assam": 4,
+      "Bihar": 1,
+      "Chandigarh": 0,
+      "Chhattisgarh": 6,
+      "Dadra and Nagar Haveli and Daman and Diu": 0,
+      "Delhi": 7,
+      "Goa": 4,
+      "Gujarat": 8,
+      "Haryana": 1,
+      "Himachal Pradesh": 0,
+      "Jammu and Kashmir": 0,
+      "Jharkhand": 0,
+      "Karnataka": 43,
+      "Kerala": 15,
+      "Ladakh": 0,
+      "Lakshadweep": 0,
+      "Madhya Pradesh": 4,
+      "Maharashtra": 28,
+      "Manipur": 0,
+      "Meghalaya": 0,
+      "Mizoram": 0,
+      "Nagaland": 1,
+      "Odisha": 1,
+      "Puducherry": 1,
+      "Punjab": 0,
+      "Rajasthan": 4,
+      "Sikkim": 0,
+      "Tamil Nadu": 87,
+      "Telangana": 16,
+      "Tripura": 0,
+      "Uttar Pradesh": 10,
+      "Uttarakhand": 2,
+      "West Bengal": 16
+    },
+    "no_state": 43,
+    "abroad": 0
   }
 }

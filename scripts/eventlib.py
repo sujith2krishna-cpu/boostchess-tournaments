@@ -408,6 +408,9 @@ _INFERRED_RATED = (
 _INTERNATIONAL = re.compile(r"(?i)\binternational\b")
 _SCHOOL = re.compile(r"(?i)\bschools?\b")  # "St. Xavier International ... School": a school's name
 _INTERNATIONAL_WITH = re.compile(r"(?i)\b(?:open|tournaments?|chess|rating)\b")
+# "International Chess Day", "International Women's Day": the name of a day, not an
+# international event, so that part of a name says nothing about FIDE.
+_INTERNATIONAL_DAY = re.compile(r"(?i)\binternational\s+(?:[\w'’]+\s+){0,2}day\b")
 # A National / State / Asian / Zonal championship. Only used for AICF's own list: on other sites
 # the same words also name school, civil-service and KCA state-rated championships.
 _CHAMPIONSHIP = re.compile(r"(?i)\b(?:national|state|asian|zonal)\b.*\bchampionships?\b")
@@ -435,8 +438,9 @@ def fide_evidence(text: str) -> tuple[bool | None, str | None]:
         return False, "stated"
     if _RATED.search(text) or _FIDE_WITH.search(text):
         return True, "stated"
+    plain = _INTERNATIONAL_DAY.sub(" ", text)
     if any(p.search(text) for p in _INFERRED_RATED) or (
-            _INTERNATIONAL.search(text) and _INTERNATIONAL_WITH.search(text) and not _SCHOOL.search(text)):
+            _INTERNATIONAL.search(plain) and _INTERNATIONAL_WITH.search(plain) and not _SCHOOL.search(text)):
         return True, ("stated" if fide_named(text) else "inferred")
     return None, None
 
@@ -503,20 +507,22 @@ OVERRIDABLE_FIELDS = ("start", "end", "place_text", "state", "city", "register_u
 OVERRIDABLE_TAGS = ("formats", "fide_rated", "fide_how", "age")
 
 # Where an event comes from, how much we trust it, and who wins when two sources
-# describe the same event. (Override > manual > aicf > kca > tnsca > ksca > the rest.)
-SOURCE_PRIORITY = ("manual", "aicf", "kca", "tnsca", "ksca", "chessfee", "chessresults_ind", "chessbase_calendar")
+# describe the same event. (Override > manual > aicf > kca > tnsca > ksca > upcsa > the rest.)
+SOURCE_PRIORITY = ("manual", "aicf", "kca", "tnsca", "ksca", "upcsa", "chessfee", "chessresults_ind", "chessbase_calendar")
 AUTOMATIC_SOURCES = SOURCE_PRIORITY[1:]
 LISTED_BY = {"manual": "manual", "aicf": "aicf", "kca": "kca", "tnsca": "tnsca", "ksca": "ksca",
+             "upcsa": "upcsa",
              "chessfee": "chessfee", "chessresults_ind": "chess-results",
              "chessbase_calendar": "chessbase"}
 # What a person should read for each source (the website keeps its own copy: FEED_BY).
 SOURCE_LABELS = {"manual": "Added by hand", "aicf": "All India Chess Federation",
                  "kca": "Kerala Chess Association",
                  "tnsca": "Tamil Nadu State Chess Association",
-                 "ksca": "Karnataka State Chess Association", "chessfee": "chessfee",
+                 "ksca": "Karnataka State Chess Association",
+                 "upcsa": "UP Chess Sports Association", "chessfee": "chessfee",
                  "chessresults_ind": "Chess-Results", "chessbase_calendar": "ChessBase India"}
 # The national federation, and the state associations affiliated to it.
-VERIFIED_SOURCES = frozenset({"aicf", "kca", "tnsca", "ksca", "manual"})
+VERIFIED_SOURCES = frozenset({"aicf", "kca", "tnsca", "ksca", "upcsa", "manual"})
 
 
 def source_rank(source: str | None) -> int:
@@ -526,6 +532,7 @@ def source_rank(source: str | None) -> int:
 # Country codes (ISO 3166-1 alpha-2). The AICF-style sources are all Indian events; a
 # calendar that lists events from many countries must supply its own code per event.
 COUNTRY_BY_SOURCE = {"aicf": "IN", "manual": "IN", "kca": "IN", "tnsca": "IN", "ksca": "IN",
+                     "upcsa": "IN",
                      "chessfee": "IN",
                      "chessresults_ind": "IN"}
 ISO_COUNTRIES = frozenset("""

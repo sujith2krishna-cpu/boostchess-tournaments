@@ -1,0 +1,476 @@
+{
+  "source": "upcsa",
+  "found": 8,
+  "listing": {
+    "upcsa-96": "b7cdc1418aa6",
+    "upcsa-91": "98c952ed2143",
+    "upcsa-90": "4e1faf717473",
+    "upcsa-89": "3c1eb534964c",
+    "upcsa-88": "ca13560d7bb8",
+    "upcsa-87": "01f931798317",
+    "upcsa-86": "9f691e72977e",
+    "upcsa-85": "fb4cf3097192"
+  },
+  "events": [
+    {
+      "id": "upcsa-85",
+      "codes": [],
+      "name": "Srinivasa Ramanujan Trophy International Chess Day Blitz Tournament 2026",
+      "start": "2026-07-20",
+      "end": "2026-07-20",
+      "place_text": "Lucknow, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectous.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-85",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-07-17",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-89",
+      "codes": [],
+      "name": "UP State Chess Championship 2026",
+      "start": "2026-10-23",
+      "end": "2026-10-26",
+      "place_text": "Ghaziabad, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Ghaziabad",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Circular%20Senior%20State%20Championship%202026%20Final.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-89",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-10-15",
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "State Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-91",
+      "codes": [],
+      "name": "SBI GIC Ltd. Presents 2 FIDE RATED OPEN RAPID CHESS TOURNAMENT",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "place_text": "Kanpur Nagar, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Kanpur Nagar",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Brochure%20new.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-91",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-87",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Rapid Chess Tournament 2026",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-87",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-88",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Blitz Chess Tournament 2026",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-88",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-96",
+      "codes": [],
+      "name": "UP State Senior Women Chess Championship 2026-27",
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "place_text": "Jhansi, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Jhansi",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectus%20Senior%20Women%20State%20Championship%202026%201.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-96",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-11-18",
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "State Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-86",
+      "codes": [],
+      "name": "Shri Sanjay Agarwal Memorial International FIDE Rated Rapid Chess Tournament",
+      "start": "2027-01-02",
+      "end": "2027-01-03",
+      "place_text": "Bareilly, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Bareilly",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Tournament%20Catlogue%20Revised.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-86",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-90",
+      "codes": [],
+      "name": "1st Kapil Dev Khare Memorial FIDE Rated Open Classical Chess Tournament 2027",
+      "start": "2027-01-05",
+      "end": "2027-01-10",
+      "place_text": "Lakhimpur Kheri, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Lakhimpur Kheri",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Kapil%20Dev%20Khare%20Memorial%20Chess%20Tournament%202027.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-90",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "classical"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    }
+  ]
+}

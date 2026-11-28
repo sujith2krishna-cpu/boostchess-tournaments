@@ -125,7 +125,7 @@ def web(monkeypatch):
     monkeypatch.setattr(be.requests, "post", fake.post)
     monkeypatch.setattr(be.time, "sleep", lambda seconds: fake.sleeps.append(seconds))
     for host in ("aicf.in", "www.keralachessassociation.com", "tamilchess.com", "karnatakachess.com",
-                 "www.chessfee.com",
+                 "upchess.org", "www.chessfee.com",
                  "chess-results.com", "chessbase.in"):
         fake.add(f"https://{host}/robots.txt", "User-agent: *\nAllow: /\n")
     return fake
@@ -137,6 +137,7 @@ CB = "https://chessbase.in/"
 KCA = "https://www.keralachessassociation.com/"
 TNSCA = "https://tamilchess.com/"
 KSCA = "https://karnatakachess.com/"
+UPCSA = "https://upchess.org/"
 CR_FED = CR + "fed.aspx?lan=1&fed=IND"
 
 
@@ -183,6 +184,11 @@ def serve_ksca(web, page2=True):
     web.add(KSCA + "tournaments/", fx("ksca_tournaments_2026-11-26.html"))
     if page2:
         web.add(KSCA + "tournaments/list/page/2/", fx("ksca_tournaments_page2_made.html"))
+
+
+def serve_upcsa(web):
+    """The saved, trimmed tournaments page (28 Nov 2026)."""
+    web.add(UPCSA + "tournament.php", fx("upcsa_tournaments_2026-11-28.html"))
 
 
 def serve_aicf(web, rows):

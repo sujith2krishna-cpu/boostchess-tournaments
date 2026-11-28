@@ -7,6 +7,19 @@ long-running leagues are not read. Each list shows at most 50 tournaments (the p
 own limit). A tournament's details page gives dates, organiser and venue; it is read
 only for new tournaments or when the title in the list changed.
 
+From the details page we also read:
+
+- the "Rating calculation" row. "Rating international" (also together with "Rating national")
+  says the tournament is FIDE rated: `fide_rated` = true, "stated". "Rating national" alone
+  (national only) or a row that says not rated: false, "stated". "-" (what most pages show) or
+  anything else says nothing. When the row and the name disagree, the name's value stays;
+- the brochure among the "Download Files": a file named brochure / prospectus / circular /
+  invitation; otherwise the only PDF, when its name does not look like results, pairings, a
+  starting rank, a players list, a ranking, prizes, rules or minutes. Several PDFs and none
+  named like a brochure: no brochure. Only the link is kept; the file is never read.
+
+"Number of rounds" is on the page too, but the schema has no place for it, so it is not kept.
+
 We keep facts and links only. Phone numbers and player lists are never stored.
 """
 from __future__ import annotations
@@ -37,6 +50,24 @@ _DATE = re.compile(r"(\d{4})/(\d{2})/(\d{2})")
 _REGISTER_WORDS = re.compile(r"(?i)regist|enrol|enroll|sign\s*up|entry\s*form|apply")
 _BROCHURE_FILE = re.compile(r"(?i)brochure|prospectus|circular|invitation")
 _URL_IN_TEXT = re.compile(r"https?://[^\s<>\")]+")
+# The page is asked for in English (lan=1); the German and Spanish names of the row are
+# accepted too, in case a page comes back in another language.
+_RATING_ROW = re.compile(r"(?i)^(?:rating\s+calculation|elorechnung|elo-?berechnung|"
+                         r"c[aá]lculo\s+de\s+(?:elo|rating))$")
+_ROW_INTERNATIONAL = re.compile(r"(?i)\b(?:rating|elo)\s+(?:international|internacional|"
+                                r"internazionale|fide)\b")
+_ROW_NATIONAL = re.compile(r"(?i)\b(?:rating|elo)\s+(?:national|nacional|nazionale)\b")
+_ROW_NOT_RATED = re.compile(r"(?i)\b(?:not\s+rated|unrated|non[\s-]*rated|no\s+rating)\b")
+_SIX_DIGITS = re.compile(r"\d{6}")
+# Where the snapshot's listing state keeps each tournament's "FIDE-Event-ID" ({event id: number}).
+# It is not part of an event; build_events.add_fide_event_codes() turns it into an AICF code
+# only when an AICF event has exactly that code.
+FIDE_IDS_KEY = "fide_event_ids"
+_PDF_NAME = re.compile(r"(?i)\.pdf\s*$")
+# A file that is clearly not a brochure (names flattened: "_" "-" "." read as spaces).
+_NOT_BROCHURE = re.compile(r"(?i)\b(?:results?|pairings?|starting\s*ranks?|start\s*list|players?|"
+                           r"rankings?|ranks?|standings?|cross\s*tables?|tie\s*breaks?|prizes?|"
+                           r"winners?|rules?|manual|laws?|minutes|meeting|appendix)\b")
 
 
 def parse_form(html: str) -> dict:
@@ -105,6 +136,7 @@ def parse_details(html: str, page_url: str) -> dict:
     kind = re.search(r"\(([^)]*)\)", format_row)
     links = rows.get("Links")
     downloads = rows.get("Download Files")
+    rating_key = next((k for k in rows if _RATING_ROW.match(k)), None)
     return {
         "title": clean_text(heading.get_text(" ")) if heading else "",
         "date_text": clean_text(rows["Date"].get_text(" ")) if "Date" in rows else "",
@@ -116,7 +148,41 @@ def parse_details(html: str, page_url: str) -> dict:
                  if links else [],
         "files": [(clean_text(a.get_text(" ")), urljoin(page_url, a["href"]))
                   for a in downloads.find_all("a", href=True)] if downloads else [],
+        "rating_row": clean_text(rows[rating_key].get_text(" ")) if rating_key else None,
+        "fide_event_id": fide_event_id(rows["FIDE-Event-ID"].get_text(" ")) if "FIDE-Event-ID" in rows
+                         else None,
     }
+
+
+def fide_event_id(text) -> str | None:
+    """The "FIDE-Event-ID" row when it is exactly a 6-digit number (FIDE uses AICF's event code
+    for Indian events), else None."""
+    text = clean_text(text or "")
+    return text if _SIX_DIGITS.fullmatch(text) else None
+
+
+def rating_from_row(text) -> bool | None:
+    """What the "Rating calculation" row says: True (FIDE), False (national only / not rated),
+    None ("-", empty, or anything else)."""
+    text = clean_text(text or "")
+    if _ROW_INTERNATIONAL.search(text):
+        return True
+    if _ROW_NOT_RATED.search(text):
+        return False
+    if _ROW_NATIONAL.search(text) and not _ROW_NATIONAL.sub("", text).strip(" ,;/-"):
+        return False  # only the national rating, nothing else
+    return None
+
+
+def brochure_link(files: list[tuple[str, str]]) -> str | None:
+    """A brochure-named file; else the only PDF, unless its name says it is something else."""
+    named = next((url for name, url in files if _BROCHURE_FILE.search(name)), None)
+    if named:
+        return named
+    pdfs = [(name, url) for name, url in files if _PDF_NAME.search(name)]
+    if len(pdfs) == 1 and not _NOT_BROCHURE.search(re.sub(r"[_\-.]+", " ", pdfs[0][0])):
+        return pdfs[0][1]
+    return None
 
 
 def _register_url(title: str, links: list[tuple[str, str]]) -> str | None:
@@ -147,8 +213,10 @@ def build_event(item: dict, details: dict | None, today: date) -> dict:
     mapped = {"blitz": "blitz", "rapid": "rapid", "standard": "classical", "classical": "classical"}
     if kind in mapped:
         tags = merge_tags(tags, {"formats": [mapped[kind]]})
-    brochure = next((url for name, url in (details or {}).get("files", [])
-                     if _BROCHURE_FILE.search(name)), None)
+    row_says = rating_from_row((details or {}).get("rating_row"))
+    if row_says is not None and tags["fide_rated"] in (None, row_says):
+        tags["fide_rated"], tags["fide_how"] = row_says, "stated"  # the site's own setting
+    brochure = brochure_link((details or {}).get("files", []))
     organiser = strip_phones((details or {}).get("organiser") or "") or None
     return canonical({
         "id": f"{NAME}-{item['id']}",
@@ -191,6 +259,7 @@ def fetch(client, previous: dict, today: date, **_options):
     old_events = {e["id"]: e for e in previous.get("events", [])}
     old_listing = previous.get("listing", {})
     events, listing = [], {}
+    fide_ids = dict(old_listing.get(FIDE_IDS_KEY) or {})  # kept for every event ever read
     can_fetch = True
     for item in items.values():
         event_id = f"{NAME}-{item['id']}"
@@ -216,4 +285,10 @@ def fetch(client, previous: dict, today: date, **_options):
             continue  # a tournament we know nothing about yet waits for a later run
         events.append(build_event(item, details, today))
         listing[item["url"]] = signature
+        if details.get("fide_event_id"):
+            fide_ids[event_id] = details["fide_event_id"]
+        else:
+            fide_ids.pop(event_id, None)  # the page no longer says it
+    if fide_ids:
+        listing[FIDE_IDS_KEY] = dict(sorted(fide_ids.items()))
     return events, listing, {"found": len(items), "events_with_details": len(events)}

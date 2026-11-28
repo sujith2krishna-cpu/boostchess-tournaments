@@ -1,7 +1,7 @@
 # CLAUDE.md — boostchess-tournaments
 
 Gathers chess tournaments (AICF, Kerala Chess Association, Tamil Nadu State Chess Association,
-Karnataka State Chess Association, chessfee, Chess-Results India, ChessBase India calendar)
+Karnataka State Chess Association, UP Chess Sports Association, chessfee, Chess-Results India, ChessBase India calendar)
 into `data/events.json`, keeps history, accepts manual events and overrides. The JSON is
 shared by the web site and the Android app, so changing its shape affects both.
 
@@ -74,10 +74,12 @@ shared by the web site and the Android app, so changing its shape affects both.
   (`data/review.csv`), both pure; a change in either counts as a real change.
 - `scripts/eventlib.py` — pure helpers and the event record (`canonical()`, `status()`, places, tags,
   `country_for()`, `strip_phones()`, regions).
-- `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `chessfee`, `chessresults_ind`,
+- `scripts/sources/` — one module per site (`aicf`, `kca`, `tnsca`, `ksca`, `upcsa`, `chessfee`, `chessresults_ind`,
   `chessbase_calendar`) with `fetch(client, previous, today, **options)` returning
   `(events, listing_state, stats)`; `polite.py` is the shared client. Switch sources in
-  `config/sources.json`.
+  `config/sources.json`; `"publish": false` (needs `"enabled": false`) also keeps a source's records out of
+  every published file. **ChessBase is off and unpublished** (its terms forbid bulk scraping without
+  permission; drafts in `docs/PERMISSION_EMAILS.md`); its snapshot is in `archive/`, outside `data/`.
 - `data/sources/<name>.json` — per-source snapshots (history, what was already read).
 - `tests/` — pytest, fully offline (a fake web in `conftest.py`). `tests/fixtures/` holds saved,
   trimmed, phone-free pages.
@@ -88,7 +90,7 @@ shared by the web site and the Android app, so changing its shape affects both.
   `pytest` is in `requirements-dev.txt`.
 - Event id: `aicf-<first code>`; no code gives `aicf-<hash of name + start>`; two different events
   sharing a code get a name-hash suffix. Other sources: `<source>-<their id>` (KCA: `kca-736-CAK-2026` from code
-  `736/CAK/2026`, which also goes into `codes`; TNSCA: `tnsca-RR-24-CBE-26-27` from `RR-24/CBE/26-27`, the same way; KSCA: `ksca-7128` from the WordPress post number). Manual ids never
+  `736/CAK/2026`, which also goes into `codes`; TNSCA: `tnsca-RR-24-CBE-26-27` from `RR-24/CBE/26-27`, the same way; KSCA: `ksca-7128` from the WordPress post number; UPCSA: `upcsa-96` from the row's `data-id`). Manual ids never
   start with `aicf-`.
 - Duplicates (`scripts/dedup.py`): records are **grouped, never removed or hidden**. Every event
   has `group_id`; non-primary members get `merged_into`; the primary gets `also_listed_on` and fills
@@ -97,8 +99,9 @@ shared by the web site and the Android app, so changing its shape affects both.
   (shared AICF code or Chess-Results page beats 2–5; same brochure beats the name only), score
   ≥0.80 same, 0.50–0.80 `flags.possible_duplicate_of`. Same-source records are never grouped by the
   algorithm; `data/manual/pairs.csv` (same / not_same) beats everything. Primary: AICF with good
-  dates, else manual > kca > tnsca > ksca > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
-  district: it matches the towns inside it (`kerala_district()`), unknown towns never block. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames and two TNSCA spellings,
+  dates, else manual > kca > tnsca > ksca > upcsa > chessfee > chessresults_ind > chessbase_calendar. A KCA `city` is a
+  district: it matches the towns inside it (`kerala_district()`), unknown towns never block. A UPCSA `city`
+  is often a district too (`DISTRICT_SOURCES`), so it never blocks either. Renamed towns are one place (`TOWN_RENAMES`: Bangalore = Bengaluru; official renames and two TNSCA spellings,
   Pudukottai, Tirupattur DT; never a district as its town). If two AICF events share a
   code, that code proves nothing. A pairs.csv "same" across a date gap lets the other copies with
   either date join (`dates_vouched()`). Equal scores: lower ids first (`id_order()`), so rebuilds
@@ -108,11 +111,13 @@ shared by the web site and the Android app, so changing its shape affects both.
   chessfee / Chess-Results / ChessBase `codes` and fills an empty Indian state from: chessfee's
   "TAMILNADU STATE LEVEL" label, the code's state letters, or exactly one known town in the venue
   (`town_state_in()`; two towns or none: null).
+- `quality.json` `states`: shown upcoming events per Indian state / UT (all 36 listed, 0 included), `no_state`,
+  `abroad`; they add up to `overall.upcoming.events`, which `verify_published.py` checks.
 - review.csv kinds: `missing`, `dates_disagree` (a not-past group whose start dates are >1 day apart),
   `possible_duplicate`; `quality.json` `review` counts all three and `verify_published.py` checks them.
 - Tags (format, `fide_rated`) need evidence (name, category label, time control, group member);
   `fide_rated` is true / false (says non-rated) / null, with `fide_how` "stated" / "inferred"
-  (grandmaster, norm or "International ... Open" names, an AICF-listed National / State / Asian /
+  (grandmaster, norm or "International ... Open" names, but not "International Chess Day" and other day names, an AICF-listed National / State / Asian /
   Zonal championship, or a rated sibling section) / null. "FIDE" next to Open / Chess / Tournament /
   TMT turns an inferred true into "stated" (`fide_named()`); it never creates or flips a value. Only a
   true is ever shared (sections, groups); a false never is.
@@ -136,6 +141,15 @@ shared by the web site and the Android app, so changing its shape affects both.
   page's own *Next Events* link (`MAX_PAGES` 8). Start from the `<time datetime>`; an end without a
   year is in the start's year, else flagged. Category *FIDE Rating Events* = `fide_rated` "stated".
   `tests/fixtures/sources/ksca_tournaments_page2_made.html` is made by hand (said so inside it).
+- Chess-Results details: the *Rating calculation* row gives `fide_rated` "stated" (international: true; national
+  only / not rated: false; "-": nothing; disagrees with the name: the name stays). Brochure: a brochure-named file,
+  else the only PDF unless it looks like results / pairings / ranks / players / prizes / rules / minutes.
+  *Number of rounds* is not stored (no schema field). *FIDE-Event-ID* (6 digits) is kept in the snapshot's
+  `listing.fide_event_ids` and becomes an AICF code (`add_fide_event_codes()`) only when exactly one AICF event has
+  that code and no other code. `scripts/refresh_chessresults.py` re-reads the stored pages
+  once, by hand (fetch into a folder outside the repo, max 400 pages, then apply offline); never from the workflow.
+- UPCSA (`upchess.org/tournament.php`): one request, the table only. `registration_deadline` = the end of the
+  normal entry dates (not the late-fee dates), only when it is a real date not after the event.
 - Do not hit live sites while developing. Use `--html tests/fixtures/...` or the test suite.
 
 ## Not done yet

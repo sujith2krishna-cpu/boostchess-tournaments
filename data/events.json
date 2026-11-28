@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T00:26:01+05:30",
+  "generated_at": "2026-11-28T07:52:09+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -9099,6 +9099,64 @@
       "overridden": null
     },
     {
+      "id": "upcsa-85",
+      "codes": [],
+      "name": "Srinivasa Ramanujan Trophy International Chess Day Blitz Tournament 2026",
+      "start": "2026-07-20",
+      "end": "2026-07-20",
+      "place_text": "Lucknow, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Lucknow",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectous.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-85",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-07-17",
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-476110",
       "codes": [
         "476110"
@@ -15770,28 +15828,15 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
-          "register_url": "https://circlechess.com/registration?id=54993"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-494719",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
-          "register_url": "https://circlechess.com/registration?id=54993",
-          "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
-          "brochure_url": null
-        }
-      ],
-      "register_url": "https://circlechess.com/registration?id=54993",
-      "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
       "registration_deadline": null,
       "organiser": null,
       "tags": {
@@ -19302,6 +19347,62 @@
       "overridden": null
     },
     {
+      "id": "upcsa-89",
+      "codes": [],
+      "name": "UP State Chess Championship 2026",
+      "start": "2026-10-23",
+      "end": "2026-10-26",
+      "place_text": "Ghaziabad, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Ghaziabad",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Circular%20Senior%20State%20Championship%202026%20Final.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-89",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": "2026-10-15",
+      "organiser": null,
+      "tags": {
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "State Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-487839",
       "codes": [
         "487839"
@@ -19745,7 +19846,7 @@
       "end": "2026-10-25",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Kanpur Nagar",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/IIT-Tournament-Brochure-Kanpur-25-Oct-2026.pdf",
       "source": "aicf",
@@ -19755,13 +19856,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-505736",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/Brochure%20new.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -19775,7 +19889,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -20472,6 +20588,64 @@
       "overridden": null
     },
     {
+      "id": "upcsa-91",
+      "codes": [],
+      "name": "SBI GIC Ltd. Presents 2 FIDE RATED OPEN RAPID CHESS TOURNAMENT",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "place_text": "Kanpur Nagar, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Kanpur Nagar",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Brochure%20new.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-505736",
+      "merged_into": "aicf-505736",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": true,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "aicf-485005",
       "codes": [
         "485005"
@@ -20731,81 +20905,12 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-jalpaiguri-cppf-international-fide-rated-open-classical-chess-tournament-202-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-492657",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-jalpaiguri-cppf-international-fide-rated-open-classical-chess-tournament-202-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/2nd-Jalpaiguri-CPPF-International-Fide-Rated-Classical-Open-Chess-TMT-2026_S1CYA.pdf"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ad6",
-      "codes": [],
-      "name": "2nd Jalpaiguri CPPF International FIDE Rated Open Classical Chess Tournament 2026",
-      "start": "2026-10-28",
-      "end": "2026-11-02",
-      "place_text": "Jalpaiguri, West Bengal",
-      "state": "West Bengal",
-      "city": "Jalpaiguri",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/2nd-Jalpaiguri-CPPF-International-Fide-Rated-Classical-Open-Chess-TMT-2026_S1CYA.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/2nd-jalpaiguri-cppf-international-fide-rated-open-classical-chess-tournament-202-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-jalpaiguri-cppf-international-fide-rated-open-classical-chess-tournament-202-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-492657",
-      "merged_into": "aicf-492657",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -20864,11 +20969,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/7th-sss-international-below-1800-fide-rated-chess-tournament/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -20882,13 +20982,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/7th-SSS-international-2_11zon_JP8XV.pdf"
         }
       ],
       "register_url": null,
@@ -20896,65 +20989,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ad7",
-      "codes": [],
-      "name": "7TH SSS INTERNATIONAL BELOW 1800 FIDE RATED CHESS TOURNAMENT",
-      "start": "2026-10-30",
-      "end": "2026-11-01",
-      "place_text": "Pudukkottai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Pudukkottai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/7th-SSS-international-2_11zon_JP8XV.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/7th-sss-international-below-1800-fide-rated-chess-tournament-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-490387",
-      "merged_into": "aicf-490387",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -21010,9 +21045,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -21416,7 +21449,7 @@
       "end": "2026-11-01",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Agra",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/09/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
       "source": "aicf",
@@ -21426,13 +21459,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-496209",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -21446,7 +21492,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -21458,6 +21506,64 @@
       "dates_from": null,
       "first_seen": "2026-11-24",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-87",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Rapid Chess Tournament 2026",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-496209",
+      "merged_into": "aicf-496209",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -21503,68 +21609,6 @@
         "open": null,
         "girls": null,
         "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6acd12653abcef75b5f2e3ca",
-      "codes": [],
-      "name": "Bali Chess International Kapal Api FIDE Rated 2000 and Below 2026",
-      "start": "2026-10-31",
-      "end": "2026-11-05",
-      "place_text": "Denpasar, Badung, ID",
-      "state": "Badung",
-      "city": "Denpasar",
-      "country": "ID",
-      "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M4RGSWJB9SEQ6TK2G4N8RDPN.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/bali-chess-international-kapal-api-fide-rated-2000-and-below-2026-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/bali-chess-international-kapal-api-fide-rated-2000-and-below-2026-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "chessbase_calendar-6acd12653abcef75b5f2e3ca",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": [
-          "open",
-          "youth",
-          "school_college",
-          "women",
-          "abroad"
-        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -21664,7 +21708,7 @@
       "end": "2026-11-01",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Agra",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/09/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
       "source": "aicf",
@@ -21674,13 +21718,26 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-496210",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf"
+        }
+      ],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -21694,7 +21751,9 @@
         "age": [],
         "open": true,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -21869,62 +21928,6 @@
           "brochure_url": null
         }
       ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ad8",
-      "codes": [],
-      "name": "Ten Ten Chess Academy 1st International FIDE Rated Rapid Chess Tournament – 2026",
-      "start": "2026-11-01",
-      "end": "2026-11-01",
-      "place_text": "Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/ten-ten-chess-academy-1st-international-fide-rated-rapid-chess-tournament-2026-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/ten-ten-chess-academy-1st-international-fide-rated-rapid-chess-tournament-2026-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9ad8",
-      "merged_into": null,
-      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -22348,6 +22351,64 @@
       "dates_from": null,
       "first_seen": "2026-11-26",
       "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-88",
+      "codes": [],
+      "name": "Lambardar Gaya Prasad Memorial FIDE Rated Blitz Chess Tournament 2026",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "place_text": "Agra, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Agra",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/LGM_-Fide-rated-Rapid-and-Blitz-2026-tournament_Bah_flyer.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-496210",
+      "merged_into": "aicf-496210",
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "blitz"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -22779,81 +22840,12 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/all-india-open-shantikumarji-firodiya-classical-fide-rating-chess-tournament-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-488296",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/all-india-open-shantikumarji-firodiya-classical-fide-rating-chess-tournament-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/IMG-20260716-WA0018_A6RJG.jpg"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ad9",
-      "codes": [],
-      "name": "All India Open Shantikumarji Firodiya Classical Fide Rating Chess Tournament",
-      "start": "2026-11-11",
-      "end": "2026-11-15",
-      "place_text": "Maharashtra",
-      "state": "Maharashtra",
-      "city": null,
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/IMG-20260716-WA0018_A6RJG.jpg",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/all-india-open-shantikumarji-firodiya-classical-fide-rating-chess-tournament-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/all-india-open-shantikumarji-firodiya-classical-fide-rating-chess-tournament-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488296",
-      "merged_into": "aicf-488296",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -22869,65 +22861,6 @@
         "open": true,
         "girls": null,
         "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aea9fa0eefc7b6c11971d9f",
-      "codes": [],
-      "name": "Fallsview International Chess Open",
-      "start": "2026-11-11",
-      "end": "2026-11-15",
-      "place_text": "Niagara Falls, Ontario, CA",
-      "state": "Ontario",
-      "city": "Niagara Falls",
-      "country": "CA",
-      "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M6J7PD4TNRPZF4HQ900ZJ4SK.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/fallsview-international-chess-open-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/fallsview-international-chess-open-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "chessbase_calendar-6aea9fa0eefc7b6c11971d9f",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": [
-          "open",
-          "abroad"
-        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -23097,11 +23030,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/eight-square-chess-academy-3rd-international-fide-rated-below-1700-chess-tournament-2026/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/eight-square-chess-academy-3rd-international-fide-rated-below-1700-chess-tournam-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -23115,13 +23043,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/eight-square-chess-academy-3rd-international-fide-rated-below-1700-chess-tournam-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/ECA_Below1700_Nov2026_3MWSJ.pdf"
         }
       ],
       "register_url": null,
@@ -23129,65 +23050,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ada",
-      "codes": [],
-      "name": "Eight Square Chess Academy – 3rd International FIDE Rated (Below 1700) Chess Tournament 2026",
-      "start": "2026-11-13",
-      "end": "2026-11-15",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/ECA_Below1700_Nov2026_3MWSJ.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/eight-square-chess-academy-3rd-international-fide-rated-below-1700-chess-tournam-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/eight-square-chess-academy-3rd-international-fide-rated-below-1700-chess-tournam-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-485052",
-      "merged_into": "aicf-485052",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -23243,9 +23106,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -24757,26 +24618,13 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-castlemasters-international-open-rapid-fide-rated-chess-tournament-2026-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-492568",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-castlemasters-international-open-rapid-fide-rated-chess-tournament-2026-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/1st_CastleMasters_FIDE_Tournament_Brochure_21_22-Nov26_21X2R.pdf"
-        }
-      ],
+      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -25039,158 +24887,43 @@
       "overridden": null
     },
     {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9adb",
+      "id": "upcsa-96",
       "codes": [],
-      "name": "1st CastleMasters International Open Rapid FIDE Rated Chess Tournament 2026",
+      "name": "UP State Senior Women Chess Championship 2026-27",
       "start": "2026-11-21",
       "end": "2026-11-22",
-      "place_text": "Haryana",
-      "state": "Haryana",
-      "city": null,
+      "place_text": "Jhansi, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Jhansi",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/1st_CastleMasters_FIDE_Tournament_Brochure_21_22-Nov26_21X2R.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/1st-castlemasters-international-open-rapid-fide-rated-chess-tournament-2026-2026",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Prospectus%20Senior%20Women%20State%20Championship%202026%201.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
       "sources": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-castlemasters-international-open-rapid-fide-rated-chess-tournament-2026-2026",
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
           "register_url": null
         }
       ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-492568",
-      "merged_into": "aicf-492568",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9adc",
-      "codes": [],
-      "name": "2nd Manchester City International Below 1800 Fide Rated Tournament",
-      "start": "2026-11-21",
-      "end": "2026-11-23",
-      "place_text": "Coimbatore, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Coimbatore",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-486240",
-      "merged_into": "aicf-486240",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aed8c9471eeb38805e8d632",
-      "codes": [],
-      "name": "The 2nd “Goris Open” International Chess Tournament",
-      "start": "2026-11-21",
-      "end": "2026-11-28",
-      "place_text": "Goris, Syunik Region, AM",
-      "state": "Syunik Region",
-      "city": "Goris",
-      "country": "AM",
-      "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M6QYSJF3P1SFMW8XBG44P4MS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/the-2nd-goris-open-international-chess-tournament-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/the-2nd-goris-open-international-chess-tournament-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "chessbase_calendar-6aed8c9471eeb38805e8d632",
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "upcsa-96",
       "merged_into": null,
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
-      "registration_deadline": null,
+      "registration_deadline": "2026-11-18",
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
+        "formats": [],
+        "fide_rated": null,
+        "fide_how": null,
         "age": [],
-        "open": true,
+        "open": null,
         "girls": null,
         "categories": [
-          "open",
-          "abroad"
+          "State Level"
         ]
       },
       "flags": {
@@ -25201,8 +24934,8 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -26748,8 +26481,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -26804,8 +26537,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
@@ -26837,7 +26570,7 @@
       "state": "Telangana",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538678&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1538678.aspx?lan=1",
       "sources": [
@@ -26893,7 +26626,7 @@
       "state": "Telangana",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1540462&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1540462.aspx?lan=1",
       "sources": [
@@ -26949,7 +26682,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1542669&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1542669.aspx?lan=1",
       "sources": [
@@ -28529,7 +28262,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529932&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529932.aspx?lan=1",
       "sources": [
@@ -28585,7 +28318,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529949&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529949.aspx?lan=1",
       "sources": [
@@ -28641,7 +28374,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529955&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529955.aspx?lan=1",
       "sources": [
@@ -28697,7 +28430,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1529958&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1529958.aspx?lan=1",
       "sources": [
@@ -28744,62 +28477,6 @@
       "overridden": null
     },
     {
-      "id": "chessresults_ind-1540937",
-      "codes": [],
-      "name": "North Zone Inter University Chess (MEN) Championship 2026-27",
-      "start": "2026-11-24",
-      "end": "2026-11-27",
-      "place_text": "Amity University Gurugram, Haryana",
-      "state": "Haryana",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1540937",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Amity University Gurugram",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-25",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
       "id": "chessresults_ind-1549170",
       "codes": [],
       "name": "West Zone Inter-University Chess (Men) Tournament 2026–27",
@@ -28835,238 +28512,6 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549909",
-      "codes": [],
-      "name": "U8 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549909&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549909",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U8"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549910",
-      "codes": [],
-      "name": "U10 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549910&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549910",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U10"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549911",
-      "codes": [],
-      "name": "U13 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549911&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549911",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U13"
-        ],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1549912",
-      "codes": [],
-      "name": "U17 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
-      "start": "2026-11-24",
-      "end": "2026-11-29",
-      "place_text": "Winmore Academy, Jakkur, Bangalore",
-      "state": "Karnataka",
-      "city": "Bangalore",
-      "country": "IN",
-      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549912&Uid=1",
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1549912",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Winmore Academy",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [
-          "U17"
-        ],
         "open": null,
         "girls": null,
         "categories": []
@@ -29638,46 +29083,44 @@
       "overridden": null
     },
     {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9add",
+      "id": "chessresults_ind-1540937",
       "codes": [],
-      "name": "2026 US Masters",
+      "name": "North Zone Inter University Chess (MEN) Championship 2026-27",
       "start": "2026-11-25",
-      "end": "2026-11-29",
-      "place_text": "Charlotte, North Carolina, US",
-      "state": "North Carolina",
-      "city": "Charlotte",
-      "country": "US",
+      "end": "2026-11-27",
+      "place_text": "Amity University Gurugram, Haryana",
+      "state": "Haryana",
+      "city": null,
+      "country": "IN",
       "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/2026-us-masters-2026",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
       "sources": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2026-us-masters-2026",
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
           "register_url": null
         }
       ],
-      "listed_by": "chessbase",
+      "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessbase_calendar-6aaa7ca270d3171daede9add",
+      "group_id": "chessresults_ind-1540937",
       "merged_into": null,
       "also_listed_on": [],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1540937.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "Amity University Gurugram",
       "tags": {
         "formats": [
-          "classical"
+          "rapid"
         ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
         "open": null,
         "girls": null,
-        "categories": [
-          "abroad"
-        ]
+        "categories": []
       },
       "flags": {
         "dates_suspect": false,
@@ -29687,9 +29130,9 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
+      "first_seen": "2026-11-25",
       "last_seen": "2026-11-27",
-      "gone_from_source": false,
+      "gone_from_source": true,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -29755,11 +29198,11 @@
       "name": "1st SIR HARI SINGH GOUR MEMORIAL OPEN RAPID & BLITZ CHESS CHAMPIONSHIP 2026 26 November 2026",
       "start": "2026-11-26",
       "end": "2026-11-26",
-      "place_text": "SNESH BAL VIDYALAYA, TILAKGANJ, SAGAR,MP",
+      "place_text": "HOTEL SINGH EMPIRE , TILAKGANJ, SAGAR,MP",
       "state": "Madhya Pradesh",
       "city": "SAGAR",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533057&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533057.aspx?lan=1",
       "sources": [
@@ -29816,7 +29259,7 @@
       "state": "Madhya Pradesh",
       "city": "SAGAR",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533060&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533060.aspx?lan=1",
       "sources": [
@@ -30288,8 +29731,8 @@
           "register_url": null
         },
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
           "register_url": null
         }
       ],
@@ -30299,73 +29742,17 @@
       "merged_into": null,
       "also_listed_on": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
           "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/qqchess-1800-and-above_CPIM9.pdf"
+          "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
+          "brochure_url": null
         }
       ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9ade",
-      "codes": [],
-      "name": "International FIDE Rated Above 1800 Open Chess Tournament 2026",
-      "start": "2026-11-26",
-      "end": "2026-12-01",
-      "place_text": "Goa",
-      "state": "Goa",
-      "city": null,
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/qqchess-1800-and-above_CPIM9.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-above-1800-open-chess-tournament-2026-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-487788",
-      "merged_into": "aicf-487788",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
+      "organiser": "QUEPEM TALUKA CHESS ASSOCIATION AND QUEENS CHESS AND CULTURAL CLUB",
       "tags": {
         "formats": [
           "classical"
@@ -30395,7 +29782,9 @@
     },
     {
       "id": "chessresults_ind-1487030",
-      "codes": [],
+      "codes": [
+        "487788"
+      ],
       "name": "QQCHESS INTERNATIONAL OPEN 1800 AND ABOVE FIDE RATING CHESS TOURNAMENT 2026",
       "start": "2026-11-26",
       "end": "2026-12-01",
@@ -30415,8 +29804,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1487030",
-      "merged_into": null,
+      "group_id": "aicf-487788",
+      "merged_into": "aicf-487788",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1487030.aspx?lan=1",
@@ -30869,7 +30258,7 @@
     {
       "id": "chessresults_ind-1550300",
       "codes": [],
-      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-09)♟️ 27/11/2026 VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
+      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-09 & U11) VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
       "start": "2026-11-27",
       "end": "2026-11-27",
       "place_text": "RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
@@ -30902,7 +30291,8 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [
-          "U9"
+          "U9",
+          "U11"
         ],
         "open": null,
         "girls": null,
@@ -30927,7 +30317,7 @@
     {
       "id": "chessresults_ind-1550303",
       "codes": [],
-      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-11)♟️ 27/11/2026 VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
+      "name": "♟️ RCC HAVERI DISTRICT INTER-SCHOOL RAPID CHESS TOURNAMENT(U-13) VENUE: RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
       "start": "2026-11-27",
       "end": "2026-11-27",
       "place_text": "RCC 03, KG BUILDING, VINAYAK NAGAR, RANEBENNUR",
@@ -30960,7 +30350,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [
-          "U11"
+          "U13"
         ],
         "open": null,
         "girls": null,
@@ -33446,8 +32836,8 @@
           "register_url": null
         },
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-below-1800-open-chess-tournament-2026-2026",
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1493397.aspx?lan=1",
           "register_url": null
         }
       ],
@@ -33457,73 +32847,17 @@
       "merged_into": null,
       "also_listed_on": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-below-1800-open-chess-tournament-2026-2026",
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1493397.aspx?lan=1",
           "register_url": null,
-          "results_url": null,
+          "results_url": "https://chess-results.com/tnr1493397.aspx?lan=1",
           "brochure_url": null
         }
       ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1493397.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9adf",
-      "codes": [],
-      "name": "International FIDE Rated Below 1800 Open Chess Tournament 2026",
-      "start": "2026-11-27",
-      "end": "2026-11-28",
-      "place_text": "Goa",
-      "state": "Goa",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-below-1800-open-chess-tournament-2026-2026",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/international-fide-rated-below-1800-open-chess-tournament-2026-2026",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-487790",
-      "merged_into": "aicf-487790",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
+      "organiser": "QUEPEM TALUKA CHESS ASSOCIATION AND QUEENS CHESS AND CULTURAL CLUB",
       "tags": {
         "formats": [
           "classical"
@@ -33917,7 +33251,9 @@
       "registration_deadline": null,
       "organiser": "IMA AMRAVATI",
       "tags": {
-        "formats": [],
+        "formats": [
+          "rapid"
+        ],
         "fide_rated": null,
         "fide_how": null,
         "age": [],
@@ -33977,11 +33313,6 @@
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
           "register_url": "https://chessfee.com/tmt_details.php?id=1727"
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -34009,13 +33340,6 @@
           "register_url": "https://chessfee.com/tmt_details.php?id=1727",
           "results_url": "https://chess-results.com/tnr1538894.aspx?lan=1",
           "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538894&Uid=2"
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/2nd-manchester-city-international-below-1800-fide-rated-tournament-2026",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1727",
@@ -34111,7 +33435,9 @@
     },
     {
       "id": "chessresults_ind-1493397",
-      "codes": [],
+      "codes": [
+        "487790"
+      ],
       "name": "QQCHESS INTERNATIONAL BELOW 1800 FIDE RATING CHESS TOURNAMENT 2026",
       "start": "2026-11-27",
       "end": "2026-11-29",
@@ -34131,8 +33457,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1493397",
-      "merged_into": null,
+      "group_id": "aicf-487790",
+      "merged_into": "aicf-487790",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1493397.aspx?lan=1",
@@ -34167,7 +33493,9 @@
     },
     {
       "id": "chessresults_ind-1538894",
-      "codes": [],
+      "codes": [
+        "486240"
+      ],
       "name": "2nd Manchester City Below 1800 International Fide Rated Tournament -> 27 Nov 2026 - 29 Nov 2026 - Coimbatore",
       "start": "2026-11-27",
       "end": "2026-11-29",
@@ -34310,8 +33638,8 @@
       "organiser": null,
       "tags": {
         "formats": [],
-        "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_rated": false,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -34765,6 +34093,62 @@
       "overridden": null
     },
     {
+      "id": "chessresults_ind-1539596",
+      "codes": [],
+      "name": "Dr O. P. Bansal Memorial One Day Rapid Chess Tournament , Indore | Organised By Ahilya Chess Club",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "SGSITS Indore",
+      "state": "Madhya Pradesh",
+      "city": null,
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539596&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1539596",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Ahilya Chess Club",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessresults_ind-1539869",
       "codes": [],
       "name": "14th LCCA UNDER 08 CHESS TOURNAMENT at Kanyakumari (TN) on 28/11/2026 ☎",
@@ -34944,9 +34328,9 @@
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546155&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546155.aspx?lan=1",
       "sources": [
@@ -35002,9 +34386,9 @@
       "end": "2026-11-28",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546172&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546172.aspx?lan=1",
       "sources": [
@@ -35062,7 +34446,7 @@
       "state": "Uttar Pradesh",
       "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547602&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547602.aspx?lan=1",
       "sources": [
@@ -35113,7 +34497,7 @@
     {
       "id": "chessresults_ind-1547750",
       "codes": [],
-      "name": "28 Nov | Namma Chess Academy 5th Tamil Nadu State Level Children’s Chess Tournament",
+      "name": "Entries are Still Open!! - 28 Nov | Namma Chess Academy 5th Tamil Nadu State Level Children’s Chess Tournament @ Velankanni School, Kodungaiyur, Chennai",
       "start": "2026-11-28",
       "end": "2026-11-28",
       "place_text": "Velankanni Public Senior Secondary School, Muthamizh Nagar, Kodungaiyur, Chennai",
@@ -35146,7 +34530,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
         "categories": []
       },
@@ -35225,6 +34609,238 @@
       "overridden": null
     },
     {
+      "id": "chessresults_ind-1549909",
+      "codes": [],
+      "name": "U8 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549909&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549909",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549909.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U8"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549910",
+      "codes": [],
+      "name": "U10 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549910&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549910",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549910.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U10"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549911",
+      "codes": [],
+      "name": "U13 Boys Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549911&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549911",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549911.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U13"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "chessresults_ind-1549912",
+      "codes": [],
+      "name": "U17 Winmore Academy Jakkur Inter-School Chess Tournament 28th Nov 2026",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "place_text": "Winmore Academy, Jakkur, Bangalore",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "country": "IN",
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549912&Uid=1",
+      "source": "chessresults_ind",
+      "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+      "sources": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+          "register_url": null
+        }
+      ],
+      "listed_by": "chess-results",
+      "verified": false,
+      "group_id": "chessresults_ind-1549912",
+      "merged_into": null,
+      "also_listed_on": [],
+      "register_url": null,
+      "results_url": "https://chess-results.com/tnr1549912.aspx?lan=1",
+      "registration_deadline": null,
+      "organiser": "Winmore Academy",
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": null,
+        "fide_how": null,
+        "age": [
+          "U17"
+        ],
+        "open": null,
+        "girls": null,
+        "categories": []
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": true,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
       "id": "chessresults_ind-1550089",
       "codes": [],
       "name": "REGULAR PLAYING SESSION 157 ( TOURNAMENT TRAINING IN COGNIZANCE ACADEMY) SPECIAL REGULAR PLAYING SESSION",
@@ -35288,7 +34904,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35344,7 +34960,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35400,7 +35016,7 @@
       "end": "2026-11-28",
       "place_text": "Oxford School Auditorium, Karavaloor",
       "state": "Kerala",
-      "city": null,
+      "city": "Karavaloor",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -35568,7 +35184,7 @@
       "name": "ARPAN CHESS TOURNAMENT 2026 CONTACT SNA HARSH MALEKAR",
       "start": "2026-11-28",
       "end": "2026-11-28",
-      "place_text": "SUBHASH STADIUM RAIPUR",
+      "place_text": "NETAJI SUBHASH STADIUM RAIPUR",
       "state": "Chhattisgarh",
       "city": null,
       "country": "IN",
@@ -35922,7 +35538,7 @@
         "fide_rated": null,
         "fide_how": null,
         "age": [],
-        "open": null,
+        "open": true,
         "girls": null,
         "categories": [
           "TAMILNADU STATE LEVEL - only TAMILNADU PLAYERS"
@@ -35981,7 +35597,7 @@
           "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522214&Uid=1"
         }
       ],
       "register_url": null,
@@ -36017,7 +35633,9 @@
     },
     {
       "id": "chessresults_ind-1522214",
-      "codes": [],
+      "codes": [
+        "504554"
+      ],
       "name": "3rd Pune International Speed Festival 2026 - RAPID Rating Chess Tournament Organised by 8x8 Chess Academy Pune",
       "start": "2026-11-28",
       "end": "2026-11-29",
@@ -36025,7 +35643,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522214&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522214.aspx?lan=1",
       "sources": [
@@ -36074,14 +35692,14 @@
     {
       "id": "chessresults_ind-1547690",
       "codes": [],
-      "name": "NOV 28-29, Delhi Classical Chess League 2nd Edition / Prize Fund - Rs.9000 - For Registration",
+      "name": "DELHI CLASSICAL CHESS LEAGUE 2nd EDITION For Registration",
       "start": "2026-11-28",
       "end": "2026-11-29",
       "place_text": "H-1/1B, behind Vijay Sales, Model Town - III",
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547690&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547690.aspx?lan=1",
       "sources": [
@@ -36638,7 +36256,7 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597"
         }
       ],
       "listed_by": "aicf",
@@ -36649,12 +36267,12 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null,
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597",
           "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
           "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1543357&Uid=1"
         }
       ],
-      "register_url": null,
+      "register_url": "https://easypaychess.com/tmt.asp?i=2597",
       "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr. Vasanthakumar M",
@@ -36688,14 +36306,15 @@
     {
       "id": "aicf-501318",
       "codes": [
-        "501318"
+        "501318",
+        "494719"
       ],
       "name": "Khannur Rapid Rated Chess Tournament – Bengaluru",
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Karnataka",
       "state": "Karnataka",
-      "city": null,
+      "city": "Bengaluru",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/09/Rapid-Brochure_compressed.pdf",
       "source": "aicf",
@@ -36705,15 +36324,28 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=54993"
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-501318",
       "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "register_url": "https://circlechess.com/registration?id=54993",
+          "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
+      "register_url": "https://circlechess.com/registration?id=54993",
+      "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
       "registration_deadline": null,
       "organiser": null,
       "tags": {
@@ -36805,7 +36437,7 @@
           "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532678&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1800",
@@ -36878,7 +36510,7 @@
           "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1514745&Uid=1"
         }
       ],
       "register_url": null,
@@ -36949,7 +36581,7 @@
           "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522216&Uid=1"
         }
       ],
       "register_url": null,
@@ -37899,7 +37531,8 @@
     {
       "id": "chessresults_ind-1502344",
       "codes": [
-        "494719"
+        "494719",
+        "501318"
       ],
       "name": "Khannur Fide Rapid Rating Chess Tournament 2026 494719/KA(R)/2026 November 29th 2026, 3 lakh cash Prize,",
       "start": "2026-11-29",
@@ -37920,8 +37553,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "aicf-494719",
-      "merged_into": "aicf-494719",
+      "group_id": "aicf-501318",
+      "merged_into": "aicf-501318",
       "also_listed_on": [],
       "register_url": "https://circlechess.com/registration?id=54993",
       "results_url": "https://chess-results.com/tnr1502344.aspx?lan=1",
@@ -37956,7 +37589,9 @@
     },
     {
       "id": "chessresults_ind-1514745",
-      "codes": [],
+      "codes": [
+        "504058"
+      ],
       "name": "1st Raydiance Internationa Open FIDE Rapid Rating Chess Tournament 2026 For More Details Contact IA Gourav Kumar Ray",
       "start": "2026-11-29",
       "end": "2026-11-29",
@@ -37964,7 +37599,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1514745&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1514745.aspx?lan=1",
       "sources": [
@@ -38184,7 +37819,9 @@
     },
     {
       "id": "chessresults_ind-1522216",
-      "codes": [],
+      "codes": [
+        "504557"
+      ],
       "name": "3rd Pune International Speed Festival 2026 - BLITZ Rating Chess Tournament Organised by 8x8 Chess Academy Pune",
       "start": "2026-11-29",
       "end": "2026-11-29",
@@ -38192,7 +37829,7 @@
       "state": "Maharashtra",
       "city": "Pune",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522216&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522216.aspx?lan=1",
       "sources": [
@@ -38248,7 +37885,7 @@
       "state": "Karnataka",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1522500&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1522500.aspx?lan=1",
       "sources": [
@@ -38300,7 +37937,7 @@
       "name": "WMA Presents All Assam Inter School Rapid Rating Chess Championship 2026 For Registration : ( Ravi Kant)",
       "start": "2026-11-29",
       "end": "2026-11-29",
-      "place_text": "The Green School International, Lokhra",
+      "place_text": "Winning Move Academy,Bharalumukh",
       "state": null,
       "city": null,
       "country": "IN",
@@ -38358,7 +37995,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -38418,7 +38055,7 @@
       "state": "Kerala",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532678&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1532678.aspx?lan=1",
       "sources": [
@@ -38472,7 +38109,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -38530,7 +38167,7 @@
       "end": "2026-11-29",
       "place_text": "Puchhalapalli Sundaraiah leela Function Hall, Pragathi Nagar, Kukatpally, HYD",
       "state": "Telangana",
-      "city": null,
+      "city": "Kukatpally",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -39390,7 +39027,7 @@
       "end": "2026-11-29",
       "place_text": "Gyan Banquet Hall, Ujhani, Budaun",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Budaun",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -39730,13 +39367,15 @@
     },
     {
       "id": "chessresults_ind-1539417",
-      "codes": [],
+      "codes": [
+        "504583"
+      ],
       "name": "1st RIMS International FIDE Rapid Rated Chess Tournament 2026 Gold & Silver Coins - Contact Person",
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "RIMS Vidyashram School, Kuppam Road, Kathinayanapalli, Krishnagiri – 635120",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Krishnagiri",
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539417&Uid=1",
       "source": "chessresults_ind",
@@ -39779,62 +39418,6 @@
       "first_seen": "2026-11-26",
       "last_seen": "2026-11-27",
       "gone_from_source": true,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessresults_ind-1539596",
-      "codes": [],
-      "name": "Dr O. P. Bansal Memorial One Day Rapid Chess Tournament , Indore | Organised By Ahilya Chess Club",
-      "start": "2026-11-29",
-      "end": "2026-11-29",
-      "place_text": "SGSITS Indore",
-      "state": "Madhya Pradesh",
-      "city": null,
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessresults_ind",
-      "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-      "sources": [
-        {
-          "source": "chessresults_ind",
-          "source_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chess-results",
-      "verified": false,
-      "group_id": "chessresults_ind-1539596",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": "https://chess-results.com/tnr1539596.aspx?lan=1",
-      "registration_deadline": null,
-      "organiser": "Ahilya Chess Club",
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": null,
-        "fide_how": null,
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-25",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
       "note": null,
@@ -39954,7 +39537,9 @@
     },
     {
       "id": "chessresults_ind-1543357",
-      "codes": [],
+      "codes": [
+        "500404"
+      ],
       "name": "2nd MVIT King Trophy International Rapid FIDE Rating Chess Tournament 2026 | Nov 29th | Prize Fund : ₹3 Lakhs",
       "start": "2026-11-29",
       "end": "2026-11-29",
@@ -39969,7 +39554,7 @@
         {
           "source": "chessresults_ind",
           "source_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
-          "register_url": null
+          "register_url": "https://easypaychess.com/tmt.asp?i=2597"
         }
       ],
       "listed_by": "chess-results",
@@ -39977,7 +39562,7 @@
       "group_id": "aicf-500404",
       "merged_into": "aicf-500404",
       "also_listed_on": [],
-      "register_url": null,
+      "register_url": "https://easypaychess.com/tmt.asp?i=2597",
       "results_url": "https://chess-results.com/tnr1543357.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr. Vasanthakumar M",
@@ -40018,7 +39603,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1544675&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1544675.aspx?lan=1",
       "sources": [
@@ -40066,7 +39651,9 @@
     },
     {
       "id": "chessresults_ind-1545661",
-      "codes": [],
+      "codes": [
+        "510558"
+      ],
       "name": "3S INSTITUTE presents FIESTA All India Rapid Rating Chess Tournament 2026. For Registration Contact : Chess at School",
       "start": "2026-11-29",
       "end": "2026-11-29",
@@ -40416,9 +40003,9 @@
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546166&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546166.aspx?lan=1",
       "sources": [
@@ -40474,9 +40061,9 @@
       "end": "2026-11-29",
       "place_text": "B-16, 5th Ave, Gaur City 1, Sector 4, Ghaziabad",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1546174&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1546174.aspx?lan=1",
       "sources": [
@@ -40532,7 +40119,7 @@
       "state": "Uttar Pradesh",
       "city": "Ghaziabad",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547614&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547614.aspx?lan=1",
       "sources": [
@@ -40700,7 +40287,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1547834&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1547834.aspx?lan=1",
       "sources": [
@@ -40812,7 +40399,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549077&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549077.aspx?lan=1",
       "sources": [
@@ -41034,7 +40621,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549781&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549781.aspx?lan=1",
       "sources": [
@@ -41092,7 +40679,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549784&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549784.aspx?lan=1",
       "sources": [
@@ -41150,7 +40737,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549789&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549789.aspx?lan=1",
       "sources": [
@@ -41208,7 +40795,7 @@
       "state": "West Bengal",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1549791&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1549791.aspx?lan=1",
       "sources": [
@@ -41722,7 +41309,7 @@
       "state": "Tamil Nadu",
       "city": "Tirupur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1550114&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1550114.aspx?lan=1",
       "sources": [
@@ -41918,8 +41505,8 @@
         "formats": [
           "rapid"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -41944,12 +41531,12 @@
     {
       "id": "chessresults_ind-1550462",
       "codes": [],
-      "name": "All Odisha Open Rapid Chess Tournament 2026",
+      "name": "KT Global School All Odisha Open Rapid Chess Tournament 2026",
       "start": "2026-11-29",
       "end": "2026-11-29",
       "place_text": "Venue : Bholanath Vidyapith, Puri",
       "state": "Odisha",
-      "city": null,
+      "city": "Puri",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -42007,7 +41594,7 @@
       "state": "Maharashtra",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1550808&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1550808.aspx?lan=1",
       "sources": [
@@ -43270,7 +42857,7 @@
       "codes": [
         "485283"
       ],
-      "name": "63rd National Chess Championship 2026 AICF code 485283/UP/2026",
+      "name": "63rd National Chess Championship 2026 AICF code 485283/UP/2026 - 29th Nov to 9th Dec 2026",
       "start": "2026-11-29",
       "end": "2026-12-09",
       "place_text": "Seth M R Jaipuria School, Babatpur Campus, Varanasi",
@@ -43301,7 +42888,7 @@
           "classical"
         ],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -43486,7 +43073,7 @@
           "classical"
         ],
         "fide_rated": true,
-        "fide_how": "inferred",
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -43977,6 +43564,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1815",
           "register_url": "https://www.chessfee.com/treg.php?id=1815"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
+          "register_url": "https://chessfee.com/tmt_details.php?id=1815"
         }
       ],
       "listed_by": "aicf",
@@ -43997,14 +43589,23 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1815",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/2-6%20DEC%20Dragon%20Chess%20FIDE%20TMT%20-%20KANYAKUMARI_compressed.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
+          "register_url": "https://chessfee.com/tmt_details.php?id=1815",
+          "results_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519059&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1815",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "DRAGON CHESS ACADEMY",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44060,7 +43661,9 @@
       "registration_deadline": null,
       "organiser": "DRAGON CHESS ACADEMY",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44088,7 +43691,9 @@
     },
     {
       "id": "chessresults_ind-1519059",
-      "codes": [],
+      "codes": [
+        "503296"
+      ],
       "name": "*2-6 DEC*-KANYAKUMARI(TN)-DRAGON CHESS ACADEMY 1ST INTERNATIONAL OPEN FIDE TOURNAMENT;1stPrize-1Lac-Prize - Rs. 11 Lacs; 72Cash+4(iphone 15)+16 (½ GM Gold)",
       "start": "2026-12-02",
       "end": "2026-12-06",
@@ -44096,7 +43701,7 @@
       "state": "Tamil Nadu",
       "city": "Kanyakumari",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519059&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
       "sources": [
@@ -44108,8 +43713,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1519059",
-      "merged_into": null,
+      "group_id": "aicf-503296",
+      "merged_into": "aicf-503296",
       "also_listed_on": [],
       "register_url": "https://chessfee.com/tmt_details.php?id=1815",
       "results_url": "https://chess-results.com/tnr1519059.aspx?lan=1",
@@ -44174,7 +43779,9 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44229,6 +43836,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1848",
           "register_url": "https://www.chessfee.com/treg.php?id=1848"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1532524.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -44249,14 +43861,23 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1848",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/4-6%20BELOW%201800%20Tirupattur_Prospectus%20NEW.pdf"
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1532524.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1532524.aspx?lan=1",
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532524&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1848",
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1532524.aspx?lan=1",
       "registration_deadline": null,
       "organiser": "Mr. D Anand",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44312,7 +43933,9 @@
       "registration_deadline": null,
       "organiser": "Mr. D Anand",
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44340,13 +43963,15 @@
     },
     {
       "id": "chessresults_ind-1532524",
-      "codes": [],
+      "codes": [
+        "494155"
+      ],
       "name": "****Dec 4-6****,Chessinfo & GKCA-1st International FIDE Rating Below 1700 Chess TMT 2026, ****Total Prize Money- Rs.600000 + 3 QLED TV ***",
       "start": "2026-12-04",
       "end": "2026-12-06",
       "place_text": "Papa Seth Mahal, Railway Station Road,Tirupattur-635601",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Tirupattur",
       "country": "IN",
       "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1532524&Uid=1",
       "source": "chessresults_ind",
@@ -44360,8 +43985,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1532524",
-      "merged_into": null,
+      "group_id": "aicf-494155",
+      "merged_into": "aicf-494155",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1532524.aspx?lan=1",
@@ -44426,7 +44051,9 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [],
+        "formats": [
+          "classical"
+        ],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -44576,7 +44203,7 @@
       "state": "Tamil Nadu",
       "city": "Chennai",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1537423&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
       "sources": [
@@ -44729,7 +44356,7 @@
           "source_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
           "register_url": "https://www.primeengage.in/chess/register",
           "results_url": "https://chess-results.com/tnr1537423.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1537423&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1875",
@@ -45178,7 +44805,7 @@
           "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
           "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
           "results_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538330&Uid=1"
         }
       ],
       "register_url": "https://www.easypaychess.com/tmt.asp?i=2586",
@@ -45367,7 +44994,7 @@
       "end": "2026-12-06",
       "place_text": "Karnataka",
       "state": "Karnataka",
-      "city": null,
+      "city": "Belgaum",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/11/childrenday_2026_revised-1.pdf",
       "source": "aicf",
@@ -45377,17 +45004,30 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-511857",
       "merged_into": null,
-      "also_listed_on": [],
+      "also_listed_on": [
+        {
+          "source": "chessresults_ind",
+          "source_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
+          "register_url": null,
+          "results_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
+          "brochure_url": null
+        }
+      ],
       "register_url": null,
-      "results_url": null,
+      "results_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
       "registration_deadline": null,
-      "organiser": null,
+      "organiser": "GIRISTUTI CHECKMATE SCHOOL OF CHESS PRESENTS",
       "tags": {
         "formats": [
           "rapid"
@@ -46178,9 +45818,9 @@
       "end": "2026-12-06",
       "place_text": "Rajashwari Hall Cultural Centre, Vilakkadi Koil Street, Kanchipuram",
       "state": "Tamil Nadu",
-      "city": null,
+      "city": "Kanchipuram",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1533242&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1533242.aspx?lan=1",
       "sources": [
@@ -46688,7 +46328,9 @@
     },
     {
       "id": "chessresults_ind-1538330",
-      "codes": [],
+      "codes": [
+        "510562"
+      ],
       "name": "06 Dec; 3rd Battel Field International Open FIDE Rapid Rating Chess Tournament 2026 Total Cash Prize Rs 250000",
       "start": "2026-12-06",
       "end": "2026-12-06",
@@ -46696,7 +46338,7 @@
       "state": null,
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1538330&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1538330.aspx?lan=1",
       "sources": [
@@ -46750,7 +46392,7 @@
       "end": "2026-12-06",
       "place_text": "St. Thomas School, Ujjain",
       "state": "Madhya Pradesh",
-      "city": null,
+      "city": "Ujjain",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -46810,7 +46452,7 @@
       "state": "Tamil Nadu",
       "city": null,
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539367&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
       "sources": [
@@ -46915,14 +46557,14 @@
     {
       "id": "chessresults_ind-1543952",
       "codes": [],
-      "name": "Magic Square Winter Open and U15 Chess Tournament 2026 Deekshith J",
+      "name": "Magic Square Winter Open and U15 Chess Tournament 2026 on 6th December 2026 Deekshith J",
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Mahathma Gandhi Stadium, Tumakuru",
       "state": "Karnataka",
-      "city": null,
+      "city": "Tumakuru",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1543952&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1543952.aspx?lan=1",
       "sources": [
@@ -46972,13 +46614,15 @@
     },
     {
       "id": "chessresults_ind-1545810",
-      "codes": [],
+      "codes": [
+        "511857"
+      ],
       "name": "GIRISTUTI CHECKMATE SCHOOL OF CHESS PRESENTS Under-18 Children's Day Fide Rapid Rating Chess Tournament 2026",
       "start": "2026-12-06",
       "end": "2026-12-06",
       "place_text": "Belgaum",
       "state": "Karnataka",
-      "city": null,
+      "city": "Belgaum",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -46992,8 +46636,8 @@
       ],
       "listed_by": "chess-results",
       "verified": false,
-      "group_id": "chessresults_ind-1545810",
-      "merged_into": null,
+      "group_id": "aicf-511857",
+      "merged_into": "aicf-511857",
       "also_listed_on": [],
       "register_url": null,
       "results_url": "https://chess-results.com/tnr1545810.aspx?lan=1",
@@ -47780,7 +47424,7 @@
           "source_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
           "register_url": "https://www.easypaychess.com/tmt.asp?i=2592",
           "results_url": "https://chess-results.com/tnr1539367.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1539367&Uid=1"
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1859",
@@ -48519,8 +48163,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": true,
@@ -48575,8 +48219,8 @@
         "formats": [
           "classical"
         ],
-        "fide_rated": null,
-        "fide_how": null,
+        "fide_rated": true,
+        "fide_how": "stated",
         "age": [],
         "open": null,
         "girls": null,
@@ -49363,7 +49007,7 @@
       "end": "2026-12-19",
       "place_text": "Nagaland",
       "state": "Nagaland",
-      "city": null,
+      "city": "Dimapur",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/24th-North-East-Fide-Rating-Chess-Championship-2026.pdf",
       "source": "aicf",
@@ -49390,7 +49034,7 @@
           "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
           "register_url": null,
           "results_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
-          "brochure_url": null
+          "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519549&Uid=1"
         }
       ],
       "register_url": null,
@@ -49426,15 +49070,17 @@
     },
     {
       "id": "chessresults_ind-1519549",
-      "codes": [],
+      "codes": [
+        "503517"
+      ],
       "name": "24th North East FIDE Rating Chess Championship",
       "start": "2026-12-15",
       "end": "2026-12-19",
-      "place_text": "The Covenant Hall,",
-      "state": null,
-      "city": null,
+      "place_text": "The Covenant Hall, Christian Higher Secondary Hall, Dimapur, Nagaland",
+      "state": "Nagaland",
+      "city": "Dimapur",
       "country": "IN",
-      "brochure_url": null,
+      "brochure_url": "https://chess-results.com/UploadData.aspx?lan=1&tnr=1519549&Uid=1",
       "source": "chessresults_ind",
       "source_url": "https://chess-results.com/tnr1519549.aspx?lan=1",
       "sources": [
@@ -49794,7 +49440,9 @@
     },
     {
       "id": "chessresults_ind-1540498",
-      "codes": [],
+      "codes": [
+        "508734"
+      ],
       "name": "1st Late Sunil Swarup Barse Memorial All India Open Fide Rapid Rating Chess Tournament, Jalgaon 20th Dec 2026 (Mr. Jatin Barse )",
       "start": "2026-12-20",
       "end": "2026-12-20",
@@ -49859,7 +49507,7 @@
       "end": "2026-12-20",
       "place_text": "Guru Bhavan, AVK College Road, Davangere",
       "state": "Karnataka",
-      "city": null,
+      "city": "Davangere",
       "country": "IN",
       "brochure_url": null,
       "source": "chessresults_ind",
@@ -51947,6 +51595,7 @@
       "organiser": "JP Anand Chess Academy (Reg. No: UDYAM-TN-) Tiruchengode",
       "tags": {
         "formats": [
+          "classical",
           "rapid"
         ],
         "fide_rated": true,
@@ -51984,7 +51633,7 @@
       "end": "2027-01-03",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": null,
+      "city": "Bareilly",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/Tournament-Catlogue-Revised.pdf",
       "source": "aicf",
@@ -51994,12 +51643,83 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
+        },
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-495857",
       "merged_into": null,
+      "also_listed_on": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null,
+          "results_url": null,
+          "brochure_url": "https://upchess.org/uploads/prospectus/Tournament%20Catlogue%20Revised.pdf"
+        }
+      ],
+      "register_url": null,
+      "results_url": null,
+      "registration_deadline": null,
+      "organiser": null,
+      "tags": {
+        "formats": [
+          "rapid"
+        ],
+        "fide_rated": true,
+        "fide_how": "stated",
+        "age": [],
+        "open": null,
+        "girls": null,
+        "categories": [
+          "National Level"
+        ]
+      },
+      "flags": {
+        "dates_suspect": false,
+        "code_expanded": false,
+        "code_unclear": false,
+        "possible_duplicate_of": null
+      },
+      "raw_dates": null,
+      "dates_from": null,
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-27",
+      "gone_from_source": false,
+      "cancelled": false,
+      "hidden": false,
+      "note": null,
+      "overridden": null
+    },
+    {
+      "id": "upcsa-86",
+      "codes": [],
+      "name": "Shri Sanjay Agarwal Memorial International FIDE Rated Rapid Chess Tournament",
+      "start": "2027-01-02",
+      "end": "2027-01-03",
+      "place_text": "Bareilly, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "city": "Bareilly",
+      "country": "IN",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Tournament%20Catlogue%20Revised.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
+      "sources": [
+        {
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
+          "register_url": null
+        }
+      ],
+      "listed_by": "upcsa",
+      "verified": true,
+      "group_id": "aicf-495857",
+      "merged_into": "aicf-495857",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -52014,7 +51734,9 @@
         "age": [],
         "open": null,
         "girls": null,
-        "categories": []
+        "categories": [
+          "National Level"
+        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -52024,8 +51746,8 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -52116,11 +51838,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-group-dr-n-mahalingam-trophy/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-gro-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -52134,13 +51851,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-gro-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/INT-01.TN_.26-27-F01_LOZPD.pdf"
         }
       ],
       "register_url": null,
@@ -52148,65 +51858,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9aef",
-      "codes": [],
-      "name": "17th Chennai Open International Grandmaster Chess Tournament 2026 for Sakthi Group Dr.N.Mahalingam Trophy",
-      "start": "2027-01-02",
-      "end": "2027-01-09",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/INT-01.TN_.26-27-F01_LOZPD.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-gro-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/17th-chennai-open-international-grandmaster-chess-tournament-2026-for-sakthi-gro-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-482602",
-      "merged_into": "aicf-482602",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -52262,9 +51914,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -52414,7 +52064,7 @@
       "end": "2027-01-10",
       "place_text": "UP",
       "state": "Uttar Pradesh",
-      "city": "Gola Gokaran Nath",
+      "city": "Lakhimpur Kheri",
       "country": "IN",
       "brochure_url": "https://aicf.in/wp-content/uploads/2026/10/Kapil-Dev-Khare-Memorial-Chess-Tournament-2027.pdf",
       "source": "aicf",
@@ -52426,8 +52076,8 @@
           "register_url": null
         },
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/kapil-dev-khare-memorial-fide-rated-open-classical-chess-tournament-2027",
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
           "register_url": null
         }
       ],
@@ -52437,11 +52087,11 @@
       "merged_into": null,
       "also_listed_on": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/kapil-dev-khare-memorial-fide-rated-open-classical-chess-tournament-2027",
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
           "register_url": null,
           "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M4MJBYD1T4WYAY78M0Q4SGRG.pdf"
+          "brochure_url": "https://upchess.org/uploads/prospectus/Kapil%20Dev%20Khare%20Memorial%20Chess%20Tournament%202027.pdf"
         }
       ],
       "register_url": null,
@@ -52458,7 +52108,7 @@
         "open": true,
         "girls": null,
         "categories": [
-          "open"
+          "National Level"
         ]
       },
       "flags": {
@@ -52478,27 +52128,27 @@
       "overridden": null
     },
     {
-      "id": "chessbase_calendar-6acb0bec68860d665eb7566c",
+      "id": "upcsa-90",
       "codes": [],
-      "name": "KAPIL DEV KHARE MEMORIAL FIDE RATED OPEN CLASSICAL CHESS TOURNAMENT",
+      "name": "1st Kapil Dev Khare Memorial FIDE Rated Open Classical Chess Tournament 2027",
       "start": "2027-01-05",
       "end": "2027-01-10",
-      "place_text": "Gola Gokaran Nath, Uttar Pradesh",
+      "place_text": "Lakhimpur Kheri, Uttar Pradesh",
       "state": "Uttar Pradesh",
-      "city": "Gola Gokaran Nath",
+      "city": "Lakhimpur Kheri",
       "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M4MJBYD1T4WYAY78M0Q4SGRG.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/kapil-dev-khare-memorial-fide-rated-open-classical-chess-tournament-2027",
+      "brochure_url": "https://upchess.org/uploads/prospectus/Kapil%20Dev%20Khare%20Memorial%20Chess%20Tournament%202027.pdf",
+      "source": "upcsa",
+      "source_url": "https://upchess.org/tournament.php",
       "sources": [
         {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/kapil-dev-khare-memorial-fide-rated-open-classical-chess-tournament-2027",
+          "source": "upcsa",
+          "source_url": "https://upchess.org/tournament.php",
           "register_url": null
         }
       ],
-      "listed_by": "chessbase",
-      "verified": false,
+      "listed_by": "upcsa",
+      "verified": true,
       "group_id": "aicf-505328",
       "merged_into": "aicf-505328",
       "also_listed_on": [],
@@ -52516,7 +52166,7 @@
         "open": true,
         "girls": null,
         "categories": [
-          "open"
+          "National Level"
         ]
       },
       "flags": {
@@ -52527,8 +52177,8 @@
       },
       "raw_dates": null,
       "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
       "gone_from_source": false,
       "cancelled": false,
       "hidden": false,
@@ -52671,81 +52321,12 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/4th-jabalpur-international-open-fide-rapid-rating-chess-tournament-2027-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-490886",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/4th-jabalpur-international-open-fide-rapid-rating-chess-tournament-2027-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/4TH-JABALPUR-INTERNATIONAL-OPEN-FIDE-RAPID-RATING-CHESS-TOURNAMENT-2027__0TLRN.pdf"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af0",
-      "codes": [],
-      "name": "4th Jabalpur International Open Fide Rapid Rating Chess Tournament 2027",
-      "start": "2027-01-09",
-      "end": "2027-01-10",
-      "place_text": "Jabalpur, Madhya Pradesh",
-      "state": "Madhya Pradesh",
-      "city": "Jabalpur",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/4TH-JABALPUR-INTERNATIONAL-OPEN-FIDE-RAPID-RATING-CHESS-TOURNAMENT-2027__0TLRN.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/4th-jabalpur-international-open-fide-rapid-rating-chess-tournament-2027-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/4th-jabalpur-international-open-fide-rapid-rating-chess-tournament-2027-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-490886",
-      "merged_into": "aicf-490886",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
@@ -53474,11 +53055,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-below-2000-rating-players/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -53492,13 +53068,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": null
         }
       ],
       "register_url": null,
@@ -53506,65 +53075,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af2",
-      "codes": [],
-      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category B) below 2000 rating players only",
-      "start": "2027-01-11",
-      "end": "2027-01-14",
-      "place_text": "Coimbatore, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Coimbatore",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-b-belo-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-482207",
-      "merged_into": "aicf-482207",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -53620,9 +53131,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -53672,11 +53181,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-above-2000-rating-players/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -53690,13 +53194,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": null
         }
       ],
       "register_url": null,
@@ -53704,65 +53201,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af1",
-      "codes": [],
-      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category A) above 2000 rating players only",
-      "start": "2027-01-11",
-      "end": "2027-01-18",
-      "place_text": "Coimbatore, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Coimbatore",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-a-abov-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-482202",
-      "merged_into": "aicf-482202",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -53818,9 +53257,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -53870,11 +53307,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blitz/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -53888,71 +53320,8 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": null
         }
       ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "blitz"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af3",
-      "codes": [],
-      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category C) Blitz",
-      "start": "2027-01-14",
-      "end": "2027-01-14",
-      "place_text": "Coimbatore, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Coimbatore",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-c-blit-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-482298",
-      "merged_into": "aicf-482298",
-      "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
@@ -54074,9 +53443,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -54126,11 +53493,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-below-1700-rating-players/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -54144,13 +53506,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": null
         }
       ],
       "register_url": null,
@@ -54158,130 +53513,13 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
         "open": true,
         "girls": null,
         "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af4",
-      "codes": [],
-      "name": "1st Akshaya International Grandmaster Open Chess Tournament – 2027 (Category D) Below 1700 rating players only",
-      "start": "2027-01-15",
-      "end": "2027-01-18",
-      "place_text": "Coimbatore, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Coimbatore",
-      "country": "IN",
-      "brochure_url": null,
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/1st-akshaya-international-grandmaster-open-chess-tournament-2027-category-d-belo-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-482208",
-      "merged_into": "aicf-482208",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6adf890fcc9694e96bf0b4f9",
-      "codes": [],
-      "name": "VII. SZENTMIKLÓS RAPID OPEN INTERNATIONAL CHESS TOURNAMENT -PRIZE FUND: 1,250 EUR",
-      "start": "2027-01-16",
-      "end": "2027-01-16",
-      "place_text": "Törökszentmiklós, HU",
-      "state": null,
-      "city": "Törökszentmiklós",
-      "country": "HU",
-      "brochure_url": "https://cbin.b-cdn.net/cbin/event-brochures/01M5WJT6NNVX0F5BTHXB5CFXKB.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/vii-szentmiklos-rapid-open-international-chess-tournament-prize-fund-1-250-eur-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/vii-szentmiklos-rapid-open-international-chess-tournament-prize-fund-1-250-eur-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "chessbase_calendar-6adf890fcc9694e96bf0b4f9",
-      "merged_into": null,
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "rapid"
-        ],
-        "fide_rated": true,
-        "fide_how": "stated",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": [
-          "open",
-          "abroad"
-        ]
       },
       "flags": {
         "dates_suspect": false,
@@ -54489,90 +53727,19 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-484272",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af6",
-      "codes": [],
-      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘B’)",
-      "start": "2027-01-21",
-      "end": "2027-01-24",
-      "place_text": "Delhi",
-      "state": "Delhi",
-      "city": null,
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-b-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-484272",
-      "merged_into": "aicf-484272",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -54616,90 +53783,19 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-484271",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af5",
-      "codes": [],
-      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘A’)",
-      "start": "2027-01-21",
-      "end": "2027-01-28",
-      "place_text": "Delhi",
-      "state": "Delhi",
-      "city": null,
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-a-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-484271",
-      "merged_into": "aicf-484271",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -55408,90 +54504,19 @@
           "source": "aicf",
           "source_url": "https://aicf.in/all-events/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
       "verified": true,
       "group_id": "aicf-484273",
       "merged_into": null,
-      "also_listed_on": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf"
-        }
-      ],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": true,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af7",
-      "codes": [],
-      "name": "22nd Delhi International Open Grandmasters Chess Tournament – 2027 (Category ‘C’)",
-      "start": "2027-01-25",
-      "end": "2027-01-28",
-      "place_text": "Delhi",
-      "state": "Delhi",
-      "city": null,
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/Regulations-Delhi-Open-2027_JTEI7.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/22nd-delhi-international-open-grandmasters-chess-tournament-2027-category-c-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-484273",
-      "merged_into": "aicf-484273",
       "also_listed_on": [],
       "register_url": null,
       "results_url": null,
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -55840,11 +54865,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -55858,13 +54878,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -55872,9 +54885,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -55927,11 +54938,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -55945,13 +54951,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -55959,9 +54958,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -56014,11 +55011,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -56032,13 +55024,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -56046,9 +55031,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -56101,11 +55084,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -56119,13 +55097,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -56133,9 +55104,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -56188,11 +55157,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -56206,13 +55170,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -56220,9 +55177,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -56275,11 +55230,6 @@
           "source": "tnsca",
           "source_url": "https://tamilchess.com/events/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-chennai/",
           "register_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
         }
       ],
       "listed_by": "aicf",
@@ -56293,13 +55243,6 @@
           "register_url": null,
           "results_url": null,
           "brochure_url": null
-        },
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null,
-          "results_url": null,
-          "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf"
         }
       ],
       "register_url": null,
@@ -56307,9 +55250,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "inferred",
         "age": [],
@@ -56335,342 +55276,6 @@
         "start": "2027-02-08",
         "end": "2027-02-13"
       }
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af8",
-      "codes": [],
-      "name": "45th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/45th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488283",
-      "merged_into": "aicf-488283",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9af9",
-      "codes": [],
-      "name": "46th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/46th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488284",
-      "merged_into": "aicf-488284",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9afa",
-      "codes": [],
-      "name": "47th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/47th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488285",
-      "merged_into": "aicf-488285",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9afb",
-      "codes": [],
-      "name": "48th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/48th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488286",
-      "merged_into": "aicf-488286",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9afc",
-      "codes": [],
-      "name": "49th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/49th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488287",
-      "merged_into": "aicf-488287",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
-    },
-    {
-      "id": "chessbase_calendar-6aaa7ca270d3171daede9afd",
-      "codes": [],
-      "name": "50th Tamil Nadu IM Norm Closed Circuit Chess Tournament",
-      "start": "2027-01-30",
-      "end": "2027-02-04",
-      "place_text": "Chennai, Tamil Nadu",
-      "state": "Tamil Nadu",
-      "city": "Chennai",
-      "country": "IN",
-      "brochure_url": "https://cbin.b-cdn.net/brochure/5th_SakthiGroup_IMNorm_aug_20_1EMFS.pdf",
-      "source": "chessbase_calendar",
-      "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-      "sources": [
-        {
-          "source": "chessbase_calendar",
-          "source_url": "https://chessbase.in/chess-calendar/event/50th-tamil-nadu-im-norm-closed-circuit-chess-tournament-2027",
-          "register_url": null
-        }
-      ],
-      "listed_by": "chessbase",
-      "verified": false,
-      "group_id": "aicf-488288",
-      "merged_into": "aicf-488288",
-      "also_listed_on": [],
-      "register_url": null,
-      "results_url": null,
-      "registration_deadline": null,
-      "organiser": null,
-      "tags": {
-        "formats": [
-          "classical"
-        ],
-        "fide_rated": true,
-        "fide_how": "inferred",
-        "age": [],
-        "open": null,
-        "girls": null,
-        "categories": []
-      },
-      "flags": {
-        "dates_suspect": false,
-        "code_expanded": false,
-        "code_unclear": false,
-        "possible_duplicate_of": null
-      },
-      "raw_dates": null,
-      "dates_from": null,
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-27",
-      "gone_from_source": false,
-      "cancelled": false,
-      "hidden": false,
-      "note": null,
-      "overridden": null
     },
     {
       "id": "tnsca-IM-45-TN-26-27",
@@ -56704,9 +55309,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -56762,9 +55365,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -56820,9 +55421,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -56878,9 +55477,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -56936,9 +55533,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],
@@ -56994,9 +55589,7 @@
       "registration_deadline": null,
       "organiser": null,
       "tags": {
-        "formats": [
-          "classical"
-        ],
+        "formats": [],
         "fide_rated": true,
         "fide_how": "stated",
         "age": [],

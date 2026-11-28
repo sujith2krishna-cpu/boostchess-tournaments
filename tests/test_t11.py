@@ -80,8 +80,9 @@ REVIEW_NOTES_PAIRS = {
     ("chessfee-1859", "chessresults_ind-1539367"): "same",
 }
 # The notes were unsure about these (check the brochure first): they must stay out.
-LEFT_OUT = [("aicf-494716", "chessresults_ind-1548787"), ("aicf-494716", "chessresults_ind-1548779"),
-            ("aicf-487788", "chessresults_ind-1487030")]
+# (aicf-487788 / chessresults_ind-1487030 was here too; T12 settled it as "same" after the brochure
+# check: both list the file qqchess-1800-and-above.pdf. tests/test_t12.py checks that line.)
+LEFT_OUT = [("aicf-494716", "chessresults_ind-1548787"), ("aicf-494716", "chessresults_ind-1548779")]
 
 
 def test_the_seven_t5_lines_are_now_same_and_nothing_is_undecided():
