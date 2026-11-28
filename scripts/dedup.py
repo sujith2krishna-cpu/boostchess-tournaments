@@ -13,7 +13,9 @@ Matching rules, in this order (see README, "Duplicates across sites"):
   5. section guard (rating limit, age group, category letter, format) differs -> different
   6. strong proof (shared AICF code, same Chess-Results page) beats rules 2-5;
      the same brochure link beats rule 4 only (one brochure often covers several sections)
-  7. score >= 0.80 same group; 0.50-0.80 flags.possible_duplicate_of; below: different
+  7. score >= 0.80 same group; 0.50-0.80 flags.possible_duplicate_of; below: different.
+     A 0.50-0.80 pair whose names name two different academies / clubs / foundations
+     (organisers()) is different, unless the venue or the organiser field matches.
   8. data/manual/pairs.csv forces "same" or "not_same" for a pair of ids, beating all of this
      ("undecided" lines change nothing).
 
@@ -22,6 +24,7 @@ Everything is pure (no files, no network).
 from __future__ import annotations
 
 import copy
+import difflib
 import re
 from collections import defaultdict
 from datetime import date, timedelta
@@ -170,6 +173,72 @@ def section_difference(a: dict, b: dict) -> str | None:
     return None
 
 
+# The academy, club, foundation or association that runs an event, as its name says it
+# ("Vetrious Chess Academy" -> "vetrious", "Global Sports Foundation" -> "globalsports").
+_ORGANISER_WORDS = frozenset({"academy", "academi", "club", "foundation", "association"})
+_ORGANISER_STOP = FILLER | frozenset("""
+state district tn tamil nadu tamilnadu children childrens child kids presents present presented by
+organised organized conducted under no new rapid blitz classical
+""".split())
+
+
+def organisers(name: str, city: str | None = None) -> frozenset[str]:
+    """The one or two words before "(Chess) Academy / Club / Foundation / Association" in a
+    name, joined ("G D Chess Academy" -> "gd"); none when the name names no organiser."""
+    text = _ORDINAL.sub(" ", _POSSESSIVE.sub("", strip_name_tails(name, city).lower()))
+    found = set()
+    # "MADURAI - Vetri Chess Academy ...": a dash, bar or colon ends the organiser's words
+    for part in re.split(r"\s[-–—]\s|[|:]", text):
+        tokens = _flat(part).split()
+        for i, token in enumerate(tokens):
+            if token not in _ORGANISER_WORDS:
+                continue
+            j = i - 1 - (i > 0 and tokens[i - 1] == "chess")
+            words = []
+            while j >= 0 and len(words) < 2 and tokens[j] not in _ORGANISER_STOP \
+                    and not tokens[j].isdigit():
+                words.insert(0, tokens[j])
+                j -= 1
+            if words:
+                found.add("".join(words))
+    return frozenset(found)
+
+
+def _alike(x: str, y: str) -> bool:
+    """One organiser written two ways: equal, one inside the other ("kovilpattiunique" /
+    "unique"), or nearly the same spelling ("vetri" / "veteri")."""
+    if x == y or (min(len(x), len(y)) >= 4 and (x in y or y in x)):
+        return True
+    return difflib.SequenceMatcher(None, x, y).ratio() >= 0.8
+
+
+def different_organisers(a: frozenset, b: frozenset) -> bool:
+    """Both names name an organiser, and no organiser of one is like one of the other."""
+    return bool(a and b) and not any(_alike(x, y) for x in a for y in b)
+
+
+def _venue(event: dict) -> str | None:
+    """The venue's own name (the first part of place_text), when it is more than a town."""
+    first = _flat((event.get("place_text") or "").split(",")[0])
+    if len(first) < 6 or first == _flat(event.get("city") or "") or first in _CITY_BY_KEY \
+            or first in _STATE_BY_KEY:
+        return None
+    return first
+
+
+def _same_venue_or_organiser(a: "Features", b: "Features") -> bool:
+    """The same venue name, the same organiser field, or the organiser one name names is in
+    the other record's organiser field."""
+    va, vb = _venue(a.event), _venue(b.event)
+    if va and vb and (va == vb or va in vb or vb in va):
+        return True
+    fa, fb = (_flat(e.get("organiser") or "").replace(" ", "") for e in (a.event, b.event))
+    if fa and fb and _alike(fa, fb):
+        return True
+    return any(field and any(o in field for o in owners)
+               for owners, field in ((a.organisers, fb), (b.organisers, fa)))
+
+
 def jaccard(a: frozenset, b: frozenset) -> float:
     return len(a & b) / len(a | b) if a and b else 0.0
 
@@ -262,6 +331,7 @@ class Features:
         self.codes = frozenset(event.get("codes") or [])
         self.cr_page = _chess_results_page(event)
         self.brochure = (event.get("brochure_url") or "").strip().lower() or None
+        self.organisers = organisers(event["name"] or "", event.get("city"))
 
 
 def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) -> dict:
@@ -314,6 +384,11 @@ def compare(a: Features, b: Features, ambiguous_codes: frozenset = frozenset()) 
     if score >= SAME_AT:
         return out(score, "same", reason)
     if score >= POSSIBLE_AT:
+        if different_organisers(a.organisers, b.organisers) and not _same_venue_or_organiser(a, b):
+            # "Vetrious Chess Academy ... State Level Children's" and "Dragon Chess Academy ...
+            # State Level Children's": only the plain words match, the organisers differ
+            names = " / ".join(sorted(min(o) for o in (a.organisers, b.organisers)))
+            return out(score, "different", f"{reason}; different organisers ({names})")
         return out(score, "possible", reason)
     return out(score, "different", reason)
 

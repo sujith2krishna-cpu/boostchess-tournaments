@@ -1,6 +1,6 @@
 {
   "schema_version": 6,
-  "generated_at": "2026-11-28T21:48:55+05:30",
+  "generated_at": "2026-11-28T22:23:47+05:30",
   "events": [
     {
       "id": "aicf-461056",
@@ -48154,8 +48154,8 @@
       ],
       "listed_by": "chessfee",
       "verified": false,
-      "group_id": "chessfee-1879",
-      "merged_into": null,
+      "group_id": "tnsca-CO-208-TUT-26-27",
+      "merged_into": "tnsca-CO-208-TUT-26-27",
       "also_listed_on": [],
       "register_url": "https://www.chessfee.com/treg.php?id=1879",
       "results_url": null,
@@ -49934,6 +49934,11 @@
           "source": "chessfee",
           "source_url": "https://www.chessfee.com/tmt_details.php?id=1863",
           "register_url": "https://www.chessfee.com/treg.php?id=1863"
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1879",
+          "register_url": "https://www.chessfee.com/treg.php?id=1879"
         }
       ],
       "listed_by": "tnsca",
@@ -49947,6 +49952,13 @@
           "register_url": "https://www.chessfee.com/treg.php?id=1863",
           "results_url": null,
           "brochure_url": "https://www.chessfee.com/admin/Brochure/Dec%206th-Unique%20Chess%201st%20TN%20State%20Level%20Kovilpatti.pdf"
+        },
+        {
+          "source": "chessfee",
+          "source_url": "https://www.chessfee.com/tmt_details.php?id=1879",
+          "register_url": "https://www.chessfee.com/treg.php?id=1879",
+          "results_url": null,
+          "brochure_url": null
         }
       ],
       "register_url": "https://www.chessfee.com/treg.php?id=1863",

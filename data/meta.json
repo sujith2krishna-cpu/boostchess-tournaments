@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-28T21:48:55+05:30",
-  "last_run_at": "2026-11-28T21:48:55+05:30",
+  "generated_at": "2026-11-28T22:23:47+05:30",
+  "last_run_at": "2026-11-28T22:23:47+05:30",
   "scraped_count": 776,
   "manual_count": 0,
   "total": 1020,
   "suspect_dates_count": 9,
   "missing_state_count": 129,
   "gone_from_source_count": 244,
-  "groups_count": 888,
-  "merged_count": 132,
+  "groups_count": 887,
+  "merged_count": 133,
   "possible_duplicates_count": 0,
   "sources": {
     "aicf": {
@@ -54,7 +54,7 @@
       "last_success": "2026-11-28T07:27:22+05:30",
       "last_error": null,
       "count": 8,
-      "next_due": "2026-11-28T21:48:55+05:30"
+      "next_due": "2026-11-28T22:23:47+05:30"
     },
     "aoca": {
       "enabled": true,
