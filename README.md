@@ -214,7 +214,14 @@ A source fetched less than 12 hours ago is skipped (add `--force` for a delibera
 `--summary-file` and `--github-output` are for the daily Action.
 `--html some-saved-aicf-page.html` runs offline with a saved AICF page only.
 
-To run the tests: `pip install -r requirements-dev.txt` and then `pytest`.
+To run the tests: `pip install -r requirements-dev.txt` and then `pytest`. The tests never use
+the internet (a test that tries fails).
+
+**Every pull request now shows a test check** (**Tests / pytest**, from
+`.github/workflows/tests.yml`): it runs all the tests on the pull request's code. Never merge
+while it is red. It only reads: it fetches no live site, uses no secrets, commits and publishes
+nothing, and does not touch the daily data run. You can also start it by hand: **Actions** tab →
+**Tests** → **Run workflow**.
 
 At the end it prints a short summary per source and overall: events found, how
 many are ongoing, upcoming or past today (Indian time), how many have a register

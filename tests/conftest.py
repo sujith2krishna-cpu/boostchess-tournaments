@@ -1,5 +1,6 @@
 """Shared helpers for the offline tests."""
 import json
+import socket
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -13,6 +14,20 @@ import build_events as be  # noqa: E402
 
 FIXTURE = ROOT / "tests" / "fixtures" / "aicf_all_events_2026-11-24.html"
 NOW = datetime(2026, 11, 24, 10, 30, tzinfo=be.IST)
+
+@pytest.fixture(autouse=True, scope="session")
+def no_network():
+    """The tests never touch the internet (here or in the pull-request check): any real
+    connection fails the test instead of quietly reading a live site."""
+    def refuse(*args, **kwargs):
+        raise AssertionError("a test tried to use the network; use the `web` fixture instead")
+    patch = pytest.MonkeyPatch()
+    patch.setattr(socket.socket, "connect", refuse)
+    patch.setattr(socket.socket, "connect_ex", refuse)
+    patch.setattr(socket, "create_connection", refuse)
+    yield
+    patch.undo()
+
 
 EVENTS_HEADER = ",".join(be.EVENTS_CSV_COLUMNS) + "\n"
 OVERRIDES_HEADER = ",".join(be.OVERRIDES_CSV_COLUMNS) + "\n"
