@@ -13,7 +13,10 @@ and ongoing events, about twelve per page, oldest first. Every event is an <arti
 - the venue name and its address ("Shanti Colony, Hubli, Karnataka, India").
 
 We read page 1 and then follow the page's own "Next Events" link, at most MAX_PAGES pages.
-Event pages are not read (no registration or brochure links yet).
+Then, for events that are not over, the event's own page (the title's link), only when the
+event is new or its list line changed (sources/event_pages.py, at most 45 a run): its text
+(`.tribe-events-single-event-description`) gives the brochure (the embedded PDF) and a
+registration link when one is labelled. The page's organiser phone and e-mail are never read.
 
 Dates: the start comes from the `datetime` attribute. The end is read from the end text; when
 that text has no year, it is the start's year (the calendar writes the year only when it is
@@ -33,11 +36,14 @@ from bs4 import BeautifulSoup
 
 from eventlib import (SourceError, canonical, check_dates, clean_name, clean_text, country_for,
                       derive_tags, locate_text, strip_phones, valid_url)
+from sources.event_pages import EVENT_PAGES_KEY, read_event_pages
 
 NAME = "ksca"
 SITE_URL = "https://karnatakachess.com/"
 LIST_URL = SITE_URL + "tournaments/"
 MAX_PAGES = 8  # 8 pages of ~12 events: months ahead; well inside the per-site request cap
+# The event's own text on its page (The Events Calendar); menus and sidebars are not read.
+EVENT_CONTAINER = ".tribe-events-single-event-description"
 
 # The association's own category names (the home page's "See all ..." links).
 CATEGORY_LABELS = {
@@ -205,5 +211,11 @@ def fetch(client, previous: dict, today: date, **_options):
         events.append(old if old is not None and old_listing.get(key) == sig
                       else build_event(r, today))
         listing[key] = sig
-    stats = {"found": len(events), "pages_read": len(seen_urls), "more_pages_not_read": more}
+    events, pages_state, page_stats = read_event_pages(
+        client, events, listing, old_listing.get(EVENT_PAGES_KEY) or {}, today,
+        EVENT_CONTAINER, LIST_URL, not_links=(LIST_URL,))
+    stats = {"found": len(events), "pages_read": len(seen_urls), "more_pages_not_read": more,
+             **page_stats}
+    if pages_state:
+        listing[EVENT_PAGES_KEY] = pages_state
     return events, listing, stats

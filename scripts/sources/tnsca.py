@@ -11,7 +11,11 @@ year. We read this year's page; next year's page too when the page offers that y
 are announced months ahead); last year's only in January and February, for events that
 ended in the last 60 days. Upcoming events and those that ended in the last 60 days are kept.
 
-One request per page, nothing else: no event pages, no brochures, no player lists.
+One request per calendar page. Then, for events that are not over, the event's own page (the
+name's link, `/events/...`), only when the event is new or its calendar line changed
+(sources/event_pages.py, at most 45 a run): its text (`.detail-text`) gives the brochure (the
+"Download prospectus" PDF) and a registration link when one is labelled. The contact person,
+mobile number and e-mail on that page are never read. No brochure files, no player lists.
 Facts and links only; every piece of text goes through strip_phones().
 """
 from __future__ import annotations
@@ -24,12 +28,16 @@ from bs4 import BeautifulSoup
 
 from eventlib import (SourceError, canonical, check_dates, clean_name, clean_text, country_for,
                       derive_tags, short_hash, strip_phones, valid_url)
+from sources.event_pages import EVENT_PAGES_KEY, read_event_pages
 
 NAME = "tnsca"
 SITE_URL = "https://tamilchess.com/"
 CALENDAR_URL = SITE_URL + "tournament-registration/"
 RECENT_DAYS = 60
 STATE = "Tamil Nadu"
+# The event's own text on its page ("Contact person ... Download prospectus : <link>"). The
+# theme around it carries unrelated links (menus, a block of advertising links): never read.
+EVENT_CONTAINER = ".detail-text"
 
 _COLUMNS = ("name", "event code", "place", "start", "end")
 _CODE = re.compile(r"^[A-Z]{1,5}-?\d{1,4}/[A-Z]{2,4}/\d{2}-\d{2}$")
@@ -184,6 +192,11 @@ def fetch(client, previous: dict, today: date, **_options):
         events.append(old if old is not None and old_listing.get(key) == sig
                       else build_event(r, fide, today, shared))
         listing[key] = sig
+    events, pages_state, page_stats = read_event_pages(
+        client, events, listing, old_listing.get(EVENT_PAGES_KEY) or {}, today,
+        EVENT_CONTAINER, SITE_URL + "events/", not_links=(CALENDAR_URL,))
     stats = {"found": len(events), "listed_this_year": len(pages[0]["all"]),
-             "pages_read": len(pages)}
+             "pages_read": len(pages), **page_stats}
+    if pages_state:
+        listing[EVENT_PAGES_KEY] = pages_state
     return events, listing, stats

@@ -106,7 +106,9 @@ def test_two_rows_sharing_a_code_get_different_ids():
 def test_run_reads_this_year_and_next_year_one_request_each(web, data_dir):
     serve_tnsca(web)
     report = run_all(data_dir, config=ONLY_TNSCA)
-    assert web.urls("tamilchess.com") == [TNSCA + "robots.txt", CAL + "?y=2026", CAL + "?y=2027"]
+    urls = web.urls("tamilchess.com")
+    assert urls[:3] == [TNSCA + "robots.txt", CAL + "?y=2026", CAL + "?y=2027"]
+    assert all(u.startswith(TNSCA + "events/") for u in urls[3:])  # then only event pages
     assert all(c["headers"]["User-Agent"].startswith("BoostchessBot") for c in web.calls)
     assert all(s >= 2.9 for s in web.sleeps)  # polite spacing between the pages
     events = [e for e in load_events(data_dir) if e["source"] == "tnsca"]
@@ -121,7 +123,7 @@ def test_run_reads_this_year_and_next_year_one_request_each(web, data_dir):
 def test_a_year_the_page_does_not_offer_is_not_read(web, data_dir):
     web.add(CAL + "?y=2026", fx(Y2026).replace('<li><a href="?y=2027">2027</a></li>', ""))
     run_all(data_dir, config=ONLY_TNSCA)
-    assert web.urls("tamilchess.com") == [TNSCA + "robots.txt", CAL + "?y=2026"]
+    assert [u for u in web.urls("tamilchess.com") if "/events/" not in u] == [TNSCA + "robots.txt", CAL + "?y=2026"]
 
 
 def test_in_january_last_year_is_read_for_recent_events(web, data_dir):
@@ -129,7 +131,7 @@ def test_in_january_last_year_is_read_for_recent_events(web, data_dir):
     web.add(CAL + "?y=2028", page(years=range(2017, 2030)))  # an empty year, as offered
     january = datetime(2027, 1, 15, 10, 0, tzinfo=be.IST)
     run_all(data_dir, config=ONLY_TNSCA, now=january)
-    assert web.urls("tamilchess.com")[1:] == [CAL + "?y=2027", CAL + "?y=2028", CAL + "?y=2026"]
+    assert [u for u in web.urls("tamilchess.com") if "/events/" not in u][1:] == [CAL + "?y=2027", CAL + "?y=2028", CAL + "?y=2026"]
     events = by_id(data_dir)
     assert "tnsca-RR-24-CBE-26-27" in events  # ended 29 Nov 2026, inside the 60 days
 

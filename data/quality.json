@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T21:32:37+05:30",
+  "generated_at": "2026-11-28T21:48:55+05:30",
   "today": "2026-11-28",
   "windows": {
     "next_30_days": {
@@ -14,14 +14,14 @@
   "target": {
     "window": "next_30_days",
     "fully_known_pct": 95.0,
-    "now_pct": 17.7,
+    "now_pct": 19.2,
     "met": false
   },
   "overall": {
     "next_30_days": {
       "events": 260,
-      "fully_known": 46,
-      "fully_known_pct": 17.7,
+      "fully_known": 50,
+      "fully_known_pct": 19.2,
       "unknown_format": 50,
       "unknown_format_pct": 19.2,
       "unknown_fide": 197,
@@ -32,13 +32,13 @@
       "suspect_dates_pct": 0.0,
       "no_register_link": 203,
       "no_register_link_pct": 78.1,
-      "no_brochure": 143,
-      "no_brochure_pct": 55.0
+      "no_brochure": 121,
+      "no_brochure_pct": 46.5
     },
     "upcoming": {
       "events": 334,
-      "fully_known": 65,
-      "fully_known_pct": 19.5,
+      "fully_known": 69,
+      "fully_known_pct": 20.7,
       "unknown_format": 93,
       "unknown_format_pct": 27.8,
       "unknown_fide": 217,
@@ -49,8 +49,8 @@
       "suspect_dates_pct": 0.0,
       "no_register_link": 272,
       "no_register_link_pct": 81.4,
-      "no_brochure": 174,
-      "no_brochure_pct": 52.1
+      "no_brochure": 149,
+      "no_brochure_pct": 44.6
     }
   },
   "sources": {
@@ -165,8 +165,8 @@
     "tnsca": {
       "next_30_days": {
         "events": 27,
-        "fully_known": 0,
-        "fully_known_pct": 0.0,
+        "fully_known": 1,
+        "fully_known_pct": 3.7,
         "unknown_format": 15,
         "unknown_format_pct": 55.6,
         "unknown_fide": 26,
@@ -177,13 +177,13 @@
         "suspect_dates_pct": 0.0,
         "no_register_link": 9,
         "no_register_link_pct": 33.3,
-        "no_brochure": 9,
-        "no_brochure_pct": 33.3
+        "no_brochure": 1,
+        "no_brochure_pct": 3.7
       },
       "upcoming": {
         "events": 39,
-        "fully_known": 0,
-        "fully_known_pct": 0.0,
+        "fully_known": 1,
+        "fully_known_pct": 2.6,
         "unknown_format": 26,
         "unknown_format_pct": 66.7,
         "unknown_fide": 35,
@@ -194,15 +194,15 @@
         "suspect_dates_pct": 0.0,
         "no_register_link": 21,
         "no_register_link_pct": 53.8,
-        "no_brochure": 21,
-        "no_brochure_pct": 53.8
+        "no_brochure": 12,
+        "no_brochure_pct": 30.8
       }
     },
     "ksca": {
       "next_30_days": {
         "events": 16,
-        "fully_known": 0,
-        "fully_known_pct": 0.0,
+        "fully_known": 3,
+        "fully_known_pct": 18.8,
         "unknown_format": 6,
         "unknown_format_pct": 37.5,
         "unknown_fide": 13,
@@ -213,13 +213,13 @@
         "suspect_dates_pct": 0.0,
         "no_register_link": 15,
         "no_register_link_pct": 93.8,
-        "no_brochure": 16,
-        "no_brochure_pct": 100.0
+        "no_brochure": 2,
+        "no_brochure_pct": 12.5
       },
       "upcoming": {
         "events": 18,
-        "fully_known": 0,
-        "fully_known_pct": 0.0,
+        "fully_known": 3,
+        "fully_known_pct": 16.7,
         "unknown_format": 7,
         "unknown_format_pct": 38.9,
         "unknown_fide": 14,
@@ -230,8 +230,8 @@
         "suspect_dates_pct": 0.0,
         "no_register_link": 17,
         "no_register_link_pct": 94.4,
-        "no_brochure": 18,
-        "no_brochure_pct": 100.0
+        "no_brochure": 2,
+        "no_brochure_pct": 11.1
       }
     },
     "upcsa": {
@@ -453,7 +453,7 @@
   },
   "alerts": [],
   "review": {
-    "missing": 216,
+    "missing": 212,
     "dates_disagree": 0,
     "possible_duplicates": 0
   },
