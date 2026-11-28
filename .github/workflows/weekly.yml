@@ -1,0 +1,47 @@
+name: Weekly data health
+
+# Every Monday at 07:00 India time (01:30 UTC), and on the "Run workflow" button: reads the
+# published data (data/ on main), last week's data from git history and the daily runs, and adds
+# the report as a comment to the one "Weekly data health" issue, so GitHub e-mails it.
+# It never changes data, commits or publishes anything; it only writes that issue.
+on:
+  schedule:
+    - cron: "30 1 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-data-health
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out main, with history (for last week's numbers)
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install requirements
+        run: python -m pip install -r requirements.txt
+
+      - name: Write the report and post it
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: python scripts/health.py weekly --post

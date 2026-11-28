@@ -729,7 +729,10 @@ def review_csv(rows: list[dict]) -> bytes:
 # --------------------------------------------------------------------------
 def _source_meta(previous: dict | None, now_iso: str) -> dict:
     previous = previous or {}
-    return {"last_success": previous.get("last_success"), "last_error": previous.get("last_error")}
+    # failures_in_a_row: fetch attempts in a row that failed or were blocked (0 after a success;
+    # a run in which the source is not due leaves it as it was). The alerts read it.
+    return {"last_success": previous.get("last_success"), "last_error": previous.get("last_error"),
+            "failures_in_a_row": int(previous.get("failures_in_a_row") or 0)}
 
 
 def fetch_due_at(last_success: str | None, hours: float | None) -> datetime | None:
@@ -799,8 +802,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
             source_meta[name] = {"enabled": False, "status": "disabled",
                                  "message": "switched off and not published "
                                             "(config/sources.json: \"publish\": false)",
-                                 "last_success": None, "last_error": None, "count": 0,
-                                 "next_due": None}
+                                 "last_success": None, "last_error": None,
+                                 "failures_in_a_row": 0, "count": 0, "next_due": None}
             source_stats[name] = {"requests": 0, "due": False}
             continue
         snapshot = load_snapshot(data_dir, name, previous_events)
@@ -813,7 +816,8 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
         due_at = fetch_due_at(meta["last_success"], min_hours_between_fetches)
         if not meta["enabled"]:
             meta.update(status="disabled", message=("not read in offline mode (--html)" if offline
-                                                    else "switched off in config/sources.json"))
+                                                    else "switched off in config/sources.json"),
+                        failures_in_a_row=0)
             stats["due"] = False
         elif due_at is not None and due_at > now:
             # Not due yet: nothing is fetched and what meta.json says about it stays as it was.
@@ -838,16 +842,19 @@ def run(data_dir=DATA_DIR, *, html: str | None = None, now: datetime | None = No
                             "listing": listing, "found": found}
                 stats.update(found_stats)
                 meta["last_success"] = now_iso
+                meta["failures_in_a_row"] = 0
                 succeeded += 1
             except SourceSkipped as exc:
                 blocked.add(name)
                 meta.update(status="skipped", message=str(exc))
                 meta["last_error"] = {"at": now_iso, "message": str(exc)}
+                meta["failures_in_a_row"] += 1
                 problems.append(f"{name}: {exc}")
             except Exception as exc:  # one broken site must never stop the others
                 text = str(exc) if isinstance(exc, BuildError) else f"{type(exc).__name__}: {exc}"
                 meta.update(status="failed", message=text)
                 meta["last_error"] = {"at": now_iso, "message": text}
+                meta["failures_in_a_row"] += 1
                 problems.append(f"{name}: {text}")
             stats["requests"] = client.requests_made
         meta["count"] = _count(snapshot)

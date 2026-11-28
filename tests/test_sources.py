@@ -549,7 +549,7 @@ def test_events_json_has_the_new_fields_in_a_fixed_order(web, data_dir):
     meta = json.loads((data_dir / "meta.json").read_text("utf-8"))
     assert set(meta["sources"]) == set(be.SOURCE_MODULES)
     assert set(meta["sources"]["aicf"]) == {"enabled", "status", "message", "count", "last_success",
-                                            "last_error", "next_due"}
+                                            "last_error", "failures_in_a_row", "next_due"}
 
 
 def test_trust_labels(web, data_dir):
