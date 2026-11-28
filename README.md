@@ -385,7 +385,7 @@ One event looks like this:
 | `name` | Name of the tournament. |
 | `start`, `end` | Dates as `YYYY-MM-DD`. `null` when the source's date is unreadable. |
 | `place_text` | Place as a person would read it, e.g. `Banka, Bihar`. |
-| `state`, `city` | Best guess from the place or title, or `null` when we are not sure. A missing Indian state is filled from: chessfee's label "TAMILNADU STATE LEVEL" (Tamil Nadu); the state letters of an AICF code in the name (`KA` in `499268/KA(R)/2026`); or the venue text when it names **exactly one** town we know ("Hangal Road, Haveri": Karnataka; "SILIGURI INDORE STADIUM" names two, so it stays `null`). |
+| `state`, `city` | Best guess from the place or title, or `null` when we are not sure. A missing Indian state is filled from: chessfee's label "TAMILNADU STATE LEVEL" (Tamil Nadu); the state letters of an AICF code in the name (`KA` in `499268/KA(R)/2026`); the venue text when it names **exactly one** town we know ("Hangal Road, Haveri": Karnataka); the name's own towns and state names; and last India's districts and sub-districts (see "How a missing state is filled"). A state that is set is never changed. |
 | `country` | Two-letter country code (ISO 3166). `IN` for aicf, kca, tnsca, ksca, upcsa, aoca, abca, chessfee, chessresults_ind and manual (unless you say otherwise); for chessbase_calendar the event's own country, or `null` if unsure. |
 | `brochure_url` | Link to the brochure, or `null`. |
 | `source` | The site this record comes from. |
@@ -618,6 +618,31 @@ message will show in the run's log.)
 If a **source's** date is wrong, the event is **not dropped**: it is kept, the text
 the source wrote is saved in `raw_dates`, `flags.dates_suspect` is `true`, and
 nothing is guessed. Use `overrides.csv` to correct it once you have checked the brochure.
+
+## How a missing state is filled
+
+An event with no state gets one only on evidence, never by a guess, and a state that is set is
+never changed. In this order: chessfee's "TAMILNADU STATE LEVEL" label; the state letters of an
+AICF code in the name; exactly one known town in the venue; the towns, state names and bracketed
+state letters ("(TN)") in the name; and last **India's districts and sub-districts** (taluks,
+tehsils, mandals) written in the name, the venue or the organiser.
+
+That last step uses the **Local Government Directory (LGD)** of the Ministry of Panchayati Raj,
+Government of India, under the **Government Open Data License - India**, through a GitHub mirror
+of it (<https://github.com/planemad/india-local-government-directory>, retrieved from
+<https://lgdirectory.gov.in/> on 11 March 2022). A copy is kept in `config/lgd/`, so nothing is
+fetched by the daily run; see `config/lgd/README.md`. The data providers do not endorse this project.
+
+- The places found must point to **exactly one** state. Two states (a Kollam venue and a
+  Vizianagaram organiser): no state.
+- A place that LGD lists in more than one state (Bilaspur, Udaipur, Aurangabad, Puttur, ...) never
+  gives a state on its own; it only counts when a clear clue agrees ("Puttur, Dakshina Kannada":
+  Karnataka; "Aurangabad, Maharashtra": Maharashtra).
+- A place followed by a venue word ("Indore Stadium", "Delhi Public School") may be a venue's
+  name: it is set aside only when two or more other places agree. "SILIGURI INDORE STADIUM" with
+  the Darjeeling District Chess Association is West Bengal; the same venue line alone stays `null`.
+- Place names that are also common words or people's names in titles (North, East, Nagar, Anand,
+  Krishna, ...) and one-word sub-districts shorter than six letters ("Bara", "Bass") are not used.
 
 ## Notes
 
